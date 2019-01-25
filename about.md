@@ -1,15 +1,15 @@
 ---
 layout: page
-title: About
+title: О нас
 permalink: /about/
 ---
 
-Some information about you!
+Немного больше информации о нас!
 
-### More Information
+### Больше информации
 
 Место для включения любых других типов информации, которые вы хотели бы включить о себе.
 
-### Contact me
+### Контакты
 
 [email@domain.com](mailto:email@domain.com)
