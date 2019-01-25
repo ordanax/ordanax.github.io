@@ -8,7 +8,7 @@ Some information about you!
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+Место для включения любых других типов информации, которые вы хотели бы включить о себе.
 
 ### Contact me
 
