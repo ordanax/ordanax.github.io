@@ -1,30 +1,51 @@
-<p>Блог создан на Jekyll. <a href="https://www.youtube.com/playlist?list=PLyHuZVg03hQjtV45HPlfuPzHJOtEoK6DT" target="_blank" rel="nofollow">Подробнее</a>.</p>
-<p><a href="#">Вернуться наверх</a></p>
+<footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          {%- for link in site.social-network-links -%}
+            {%- assign curkey = link[0] -%}
+            {%- assign element = site.data.SocialNetworks[curkey] -%}
+            <li>
+            {%- if curkey == 'rss' -%}
+              <a href="{{ '/feed.xml' | prepend: site.baseurl }}" title="{{ element.name }}">
+            {%- elsif curkey == 'yelp' -%}
+              <a href="https://{{ site.social-network-links[curkey] }}.yelp.com" title="{{ element.name }}">
+            {%- else -%}
+              <a href="{{element.baseURL}}{{ site.social-network-links[curkey] }}" title="{{ element.name }}">
+            {%- endif -%}
+                <span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa {{ element.icon }} fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">{{ element.name }}</span>
+              </a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      <p class="copyright text-muted">
+      {{ site.author.name }}
+      &nbsp;&bull;&nbsp;
+      {{ site.time | date: '%Y' }}
 
-<!-- hit.ua -->
-<a href='http://hit.ua/?x=83094' rel='nofollow' target='_blank'>
-<script language="javascript" type="text/javascript"><!--
-Cd=document;Cr="&"+Math.random();Cp="&s=1";
-Cd.cookie="b=b";if(Cd.cookie)Cp+="&c=1";
-Cp+="&t="+(new Date()).getTimezoneOffset();
-if(self!=top)Cp+="&f=1";
-//--></script>
-<script language="javascript1.1" type="text/javascript"><!--
-if(navigator.javaEnabled())Cp+="&j=1";
-//--></script>
-<script language="javascript1.2" type="text/javascript"><!--
-if(typeof(screen)!='undefined')Cp+="&w="+screen.width+"&h="+
-screen.height+"&d="+(screen.colorDepth?screen.colorDepth:screen.pixelDepth);
-//--></script>
-<script language="javascript" type="text/javascript"><!--
-Cd.write("<img src='//c.hit.ua/hit?i=83094&g=0&x=2"+Cp+Cr+
-"&r="+escape(Cd.referrer)+"&u="+escape(window.location.href)+
-"' border='0' wi"+"dth='1' he"+"ight='1'/>");
-//--></script>
-<noscript>
-<img src='//c.hit.ua/hit?i=83094&amp;g=0&amp;x=2' border='0'/>
-</noscript></a>
-<!-- / hit.ua -->
+      {% if site.url-pretty %}
+      &nbsp;&bull;&nbsp;
+      <a href="{{ site.url }}">{{ site.url-pretty }}</a>
+      {% endif %}
 
-
-
+      {% if site.matomo %}
+        {% if site.matomo.opt-out %}
+          &nbsp;&bull;&nbsp;
+          <a href="http://{{- site.matomo.uri -}}/index.php?module=CoreAdminHome&action=optOut" target="_blank" class="text_muted">Do-not-Track</a>
+        {% endif %}
+      {% endif%}
+      </p>
+          <!-- Please don't remove this, keep my open source work credited :) -->
+    <p class="theme-by text-muted">
+      Theme by
+      <a href="https://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+    </p>
+      </div>
+    </div>
+  </div>
+</footer>
