@@ -36,3 +36,8 @@ small, .font_small {font-size: 0.833em;}
 a.nocolor {
   color: inherit;
 }
+
+.social {
+  text-align: center;
+  margin-left:5px;
+}
