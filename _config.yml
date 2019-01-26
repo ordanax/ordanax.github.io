@@ -2,10 +2,10 @@
 title:       "Все об Аrch linux"
 header_title: "Все об Аrch linux"
 email:       your@ema.il
-author:      Your Name
+author:      Alexey Boyko
 description: "Все об Аrch linux"
 baseurl:     "/"
-url:         "https://ordanax.github.io/"
+url:         "https://ordanax.github.io"
 date_format: "%-d.%m.%Y"
 
 # Google services
