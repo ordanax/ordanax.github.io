@@ -36,3 +36,44 @@ small, .font_small {font-size: 0.833em;}
 a.nocolor {
   color: inherit;
 }
+
+#block_90 {
+  background: url(../img/bg.gif);
+  color: #fff;  
+  font-size: 16px;
+  padding: 5px;
+  outline: none;
+  text-decoration: none;
+  text-align: center;   /* Центровка в футере */
+}
+
+/* Футер */
+#block_90 a:hover, a:active, a:focus {
+  color: #177CE8;
+  outline: none;
+  text-decoration: none;
+}
+
+#block_90 a {
+  color: #969696;
+  transition: 0.5s;
+}
+@media (max-width: 768) {
+  #block_90 {
+    padding-left: 50px;
+  }
+}
+@media (max-width: 575px) {
+  #block_90 {
+    text-align: center;
+    padding: 10px;
+  }
+}
+/* Футер конец */
+/* Иконки социальных сетей */
+.social {
+  text-align: center;
+  margin-left:5px;
+  /*color: #6c757d;*/
+}
+/* Иконки социальных сетей конец */
