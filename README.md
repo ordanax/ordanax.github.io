@@ -5,7 +5,7 @@
 This repository is created and maintained by the team and the community of Hexlet, an educational project. [Read more about Hexlet (in Russian)](https://ru.hexlet.io/pages/about?utm_source=github&utm_medium=link&utm_campaign=jekyll-bootstrap4-docker).
 ##
 
-Demo: https://hexlet-boilerplates.github.io/jekyll-bootstrap4-docker/
+Demo: https://ordanax.github.io/
 
 This is a complete Dockerized Jekyll setup with a custom Bootstrap 4 theme. The setup is compatible with Github Pages: there are no unsupported plugins here.
 
@@ -31,7 +31,7 @@ Then open [http://localhost:4000](http://localhost:4000).
 
 ```bash
 # clone repo 
-git clone git@github.com:hexlet-boilerplates/jekyll-bootstrap4-docker.git
+git clone git@github.com:ordanax/jekyll-bootstrap4-docker.git
 
 # cd and install jekyll
 cd jekyll-bootstrap4-docker

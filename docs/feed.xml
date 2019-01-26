@@ -3,8 +3,8 @@
   <channel>
     <title>Jekyll Bootstrap 4 with Docker</title>
     <description>Jekyll static blog boilerplate with Bootstrap 4 and Docker</description>
-    <link>https://hexlet-boilerplates.github.io/jekyll-bootstrap4-docker/</link>
-    <atom:link href="https://hexlet-boilerplates.github.io/jekyll-bootstrap4-docker/feed.xml" rel="self" type="application/rss+xml" />
+    <link>https://ordanax.github.io/</link>
+    <atom:link href="https://ordanax.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
         <title>Hello, world!</title>
@@ -13,8 +13,8 @@
 &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/DbN1EzV.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 20 Dec 2017 00:00:00 -0600</pubDate>
-        <link>https://hexlet-boilerplates.github.io/jekyll-bootstrap4-docker/hello-world/</link>
-        <guid isPermaLink="true">https://hexlet-boilerplates.github.io/jekyll-bootstrap4-docker/hello-world/</guid>
+        <link>https://ordanax.github.io/hello-world/</link>
+        <guid isPermaLink="true">https://ordanax.github.io/hello-world/</guid>
       </item>
     
       <item>
@@ -76,8 +76,8 @@
 &lt;p&gt;Cool, eh?&lt;/p&gt;
 </description>
         <pubDate>Mon, 18 Dec 2017 00:00:00 -0600</pubDate>
-        <link>https://hexlet-boilerplates.github.io/jekyll-bootstrap4-docker/features/</link>
-        <guid isPermaLink="true">https://hexlet-boilerplates.github.io/jekyll-bootstrap4-docker/features/</guid>
+        <link>https://ordanax.github.io/features/</link>
+        <guid isPermaLink="true">https://ordanax.github.io/features/</guid>
       </item>
     
   </channel>
