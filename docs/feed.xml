@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Jekyll Bootstrap 4 with Docker</title>
+    <title>Все об Arch Linuxr</title>
     <description>Jekyll static blog boilerplate with Bootstrap 4 and Docker</description>
     <link>https://ordanax.github.io/</link>
     <atom:link href="https://ordanax.github.io/feed.xml" rel="self" type="application/rss+xml" />
