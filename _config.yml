@@ -1,6 +1,6 @@
 # Site settings
 title:       "Все об Аrch linux"
-header_title: "Все об Аrch linux"
+header_title: ""
 email:       your@ema.il
 author:      Alexey Boyko
 description: "Все об Аrch linux"
@@ -9,7 +9,7 @@ url:         "https://ordanax.github.io"
 date_format: "%-d.%m.%Y"
 
 # Google services
-google_analytics: "UA-1360700-62"
+google_analytics: ""
 google_verification: ""
 
 # Facebook
