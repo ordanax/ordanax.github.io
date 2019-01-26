@@ -2,17 +2,39 @@
 layout: default
 ---
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+<div class="row">
+  <div class="col">  
+    {% for post in paginator.posts %}
+      {% assign minutes = post.content | strip_html | number_of_words | divided_by: 180 %}
+      {% if minutes == 0 %}
+        {% assign minutes = 1 %}
+      {% endif %}
+      <div class="mb-4">
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+        <a href="{{ post.url | prepend: site.baseurl }}" class="nocolor">
+          <h2>{{ post.title }}</h2>
+        </a>
 
-      <div class="entry">
-        {{ post.excerpt }}
+        <div>
+          {{ post.content }}
+        </div>
+
+        <div class="meta text-muted">
+          {{ post.date | date_to_long_string }},
+          <span>
+            <i class="fa fa-clock-o ml-1" aria-hidden="true"></i> {{ minutes }} min
+          </span>
+          /
+          <a href="{{ post.url | prepend: site.baseurl }}">
+            permalink
+          </a>
+        </div>
+        
       </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
+      <hr>
   {% endfor %}
+  </div>
+</div>
+
+  
 </div>
