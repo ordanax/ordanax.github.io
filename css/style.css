@@ -36,3 +36,7 @@ small, .font_small {font-size: 0.833em;}
 a.nocolor {
   color: inherit;
 }
+
+footer {
+  text-align: center;
+}
