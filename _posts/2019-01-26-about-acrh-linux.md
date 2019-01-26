@@ -1,9 +1,7 @@
 ---
 layout: post
-title: Почему я выбрал Arch Linux
+title: 10 ПРИЧИН УСТАНОВИТЬ ARCH LINUX
 ---
-
-# 10 ПРИЧИН УСТАНОВИТЬ ARCH LINUX
 
 ## 01. КОНТРОЛЬ НАД СИСТЕМОЙ
 
