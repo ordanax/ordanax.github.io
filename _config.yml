@@ -1,10 +1,10 @@
 # Site settings
-title:       "💥 Arch Linux 💯 будет тем, что вы из него сделаете! 👍"
+title:       "Все об Аrch linux"
 header_title: "Jekyll Bootstrap 4 with Docker"
 email:       your@ema.il
 author:      Your Name
 description: "Jekyll static blog boilerplate with Bootstrap 4 and Docker"
-baseurl:     "/jekyll-bootstrap4-docker"
+baseurl:     "/"
 url:         "https://hexlet-boilerplates.github.io"
 date_format: "%-d.%m.%Y"
 
@@ -16,8 +16,8 @@ google_verification: ""
 facebook_app_id: "1414002802233483"
 
 # Optional features
-animated:             false
-show_related_posts:   false
+animated:             true
+show_related_posts:   true
 show_post_footer:    true
 show_social_icons:    true
 ajaxify_contact_form: true
@@ -27,19 +27,20 @@ ajaxify_contact_form: true
 disqus_shortname: "disqus_xxx"
 
 # Social icons
-github_username: hexlet
+github_username: ordanax
 bitbucket_username:
 stackoverflow_id:
-twitter_username: hexlet
+twitter_username: 
 google_plus_id:
 linkedin_username:
-facebook_username: hexlet
+facebook_username: 
 angellist_username:
 medium_id:
 bitcoin_url:
 paypal_url:
 flattr_button:
 instagram_username:
+youtube:arch4u
 
 # Post sharing icons
 show_sharing_icons: true
