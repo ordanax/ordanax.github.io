@@ -5,7 +5,7 @@ email:       your@ema.il
 author:      Your Name
 description: "Все об Аrch linux"
 baseurl:     "/"
-url:         "https://ordanax.github.io"
+url:         "https://ordanax.github.io/"
 date_format: "%-d.%m.%Y"
 
 # Google services
@@ -40,11 +40,10 @@ bitcoin_url:
 paypal_url:
 flattr_button:
 instagram_username:
-youtube:arch4u
 
 # Post sharing icons
 show_sharing_icons: true
-share_text: 'Share this post!'
+share_text: 'Пделитесь этим постом!'
 # Change to 'true' to enable individual icons
 share_facebook: true
 share_twitter: true
