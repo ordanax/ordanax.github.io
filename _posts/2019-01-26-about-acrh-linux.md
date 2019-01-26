@@ -69,6 +69,11 @@ P.S. Чек лист по установке ArchLinux https://vk.cc/8a1asw
 
 And here is some code:
 
+```sh
+$ pacman -S linux
+```
+
+
 ```bash
 build:
   docker run --rm \
