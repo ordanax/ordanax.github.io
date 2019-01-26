@@ -1,7 +1,14 @@
 <footer class="footer text-muted py-4">
-  <div class="container">
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
-{% if site.bitbucket_username %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      
+      {% if site.bitbucket_username %}
         <li class="nav-item">
           <a class="nav-link" href="https://bitbucket.org/{{ site.bitbucket_username }}"><span class="mr-1 fa fa-bitbucket"></span></a>
         </li>
@@ -67,6 +74,15 @@
           <a class="nav-link" href="https://www.vk.com/{{ site.vkontakte_username }}"><span class="mr-1 fa fa-vk"></span></a>
         </li>
       {% endif %}
-      </div>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{{ "/feed.xml" | prepend: site.baseurl }}"><span class="mr-1 fa fa-rss"></span></a>
+      </li>
+
+    </ul>
   </div>
+</nav>
+
+
+
 </footer>
