@@ -1,11 +1,11 @@
 # Site settings
 title:       "Все об Аrch linux"
-header_title: "Jekyll Bootstrap 4 with Docker"
+header_title: "Все об Аrch linux"
 email:       your@ema.il
 author:      Your Name
-description: "Jekyll static blog boilerplate with Bootstrap 4 and Docker"
+description: "Все об Аrch linux"
 baseurl:     "/"
-url:         "https://hexlet-boilerplates.github.io"
+url:         "https://ordanax.github.io"
 date_format: "%-d.%m.%Y"
 
 # Google services
