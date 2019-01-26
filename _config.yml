@@ -45,7 +45,7 @@ youtube_username: arch4u
 
 # Post sharing icons
 show_sharing_icons: true
-share_text: 'Поделитесь этим постом!'
+share_text: 'Поделитесь этим постом!!!'
 # Change to 'true' to enable individual icons
 share_facebook: true
 share_twitter: true
