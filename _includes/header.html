@@ -1,24 +1,91 @@
-<header>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
-        <a class="navbar-brand" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div id="navbar" class="collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto">
-                {% assign default_paths = site.pages | map: "path" %}
-                {% assign page_paths = site.header_pages | default: default_paths %}
-                {% if page_paths %}
-                    {% for path in page_paths %}
-                        {% assign my_page = site.pages | where: "path", path | first %}
-                        {% if my_page.title and my_page.autogen == nil %}
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-                            </li>
-                        {% endif %}
-                    {% endfor %}
-                {% endif %}
-            </ul>
-        </div>
-    </nav>
-</header>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="{{ "/" | prepend: site.baseurl }}">
+    Все об <strong>Arch Linux</strong>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/about"><span class="mr-2 fa fa-user"></span>Обо мне</a>
+      </li>
+      <li class="nav-item mr-2">
+        <a class="nav-link" href="/contacts"><span class="mr-2 fa fa-envelope-o"></span>Контакты</a>
+      </li>
+      
+      {% if site.bitbucket_username %}
+        <li class="nav-item">
+          <a class="nav-link" href="https://bitbucket.org/{{ site.bitbucket_username }}"><span class="mr-1 fa fa-bitbucket"></span></a>
+        </li>
+      {% endif %}
+
+      {% if site.stackoverflow_id %}
+        <li class="nav-item">
+          <a class="nav-link" href="https://stackoverflow.com/users/{{ site.stackoverflow_id }}"><span class="mr-1 fa fa-stack-overflow"></span></a>
+        </li>
+      {% endif %}
+
+      {% if site.twitter_username %}
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/{{ site.twitter_username }}"><span class="mr-1 fa fa-twitter"></span></a>
+        </li>
+      {% endif %}
+
+      {% if site.facebook_username %}
+        <li class="nav-item">
+          <a class="nav-link" href="https://facebook.com/{{ site.facebook_username }}"><span class="mr-1 fa fa-facebook"></span></a>
+        </li>
+      {% endif %}
+
+      {% if site.google_plus_id %}
+        <li class="nav-item">
+          <a class="nav-link" href="https://plus.google.com/{{ site.google_plus_id }}/posts"><span class="mr-1 fa fa-google-plus"></span></a>
+        </li>
+      {% endif %}
+
+      {% if site.linkedin_username %}
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.linkedin.com/in/{{ site.linkedin_username }}"><span class="mr-1 fa fa-linkedin"></span></a>
+        </li>
+
+      {% endif %}
+
+      {% if site.angellist_username %}
+        <li class="nav-item">
+          <a class="nav-link" href="https://angel.co/{{ site.angellist_username }}"><span class="mr-1 fa fa-angellist"></span></a>
+        </li>
+      {% endif %}
+
+      {% if site.medium_id %}
+        <li class="nav-item">
+          <a class="nav-link" href="https://medium.com/{{ site.medium_id }}"><span class="mr-1 fa fa-medium"></span></a>
+        </li>
+      {% endif %}
+
+      {% if site.github_username %}
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/{{ site.github_username }}"><span class="mr-1 fa fa-github"></span></a>
+        </li>
+      {% endif %}
+      
+      {% if site.youtube_username %}
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.youtube.com/{{ site.youtube_username }}"><span class="mr-1 fa fa-youtube"></span></a>
+        </li>
+      {% endif %}
+
+      {% if site.vkontakte_username %}
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.vk.com/{{ site.vkontakte_username }}"><span class="mr-1 fa fa-vk"></span></a>
+        </li>
+      {% endif %}
+
+      <li class="nav-item">
+        <a class="nav-link" href="{{ "/feed.xml" | prepend: site.baseurl }}"><span class="mr-1 fa fa-rss"></span></a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
