@@ -1,5 +1,5 @@
-This is as Jekyll theme built to make single page websites, articles, or literary masterpieces readable anywhere.
+# Html Blog
 
-### [Demo and Documentation](https://adueck.github.io/good-clean-read)
+Добро пожаловать в репозиторий моего блога на Jekyll.
 
-Built on top of <a href="http://chibicode.github.io/solo">Solo</a>, by [Shu Uesugi](https://github.com/chibicode)
+Распространение и использование кода желательно при наличии ссылки на источник: https://htmlblog.github.io/
