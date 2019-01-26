@@ -1,7 +1,9 @@
-<!-- 3 -->
-<section id="block_90">
-   <footer>
-      <div class="navbar navbar-expand-lg navbar-light bg-light social">
+<footer class="footer">
+	<!-- 5 -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				
 				{% if site.bitbucket_username %}
 				<li class="nav-item">
 					<a class="nav-link" href="https://bitbucket.org/{{ site.bitbucket_username }}"><span class="mr-1 fa fa-bitbucket"></span></a>
@@ -72,6 +74,9 @@
 				<li class="nav-item">
 					<a class="nav-link" href="{{ "/feed.xml" | prepend: site.baseurl }}"><span class="mr-1 fa fa-rss"></span></a>
 				</li>
-      </div>
-   </footer>
-</section>
+
+			</ul>
+		</div>
+	</nav>
+
+</footer>
