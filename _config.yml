@@ -1,70 +1,28 @@
-# Site settings
-title:       "Все об Аrch linux"
-header_title: "Все об Аrch linux"
-email:       your@ema.il
-author:      Your Name
-description: "Все об Аrch linux"
-baseurl:     "/"
-url:         "https://ordanax.github.io/"
-date_format: "%-d.%m.%Y"
+title: Jekyll Bootstrap
+author: Jekyll
+email: mailbox@example.com
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+twitter_username: jekyllrb
+github_username:  jekyll
+lang: en-US
 
-# Google services
-google_analytics: "UA-1360700-62"
-google_verification: ""
+# Minima date format
+# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+date_format: "%a, %b %d, %Y"
 
-# Facebook
-facebook_app_id: "1414002802233483"
-
-# Optional features
-animated:             true
-show_related_posts:   true
-show_post_footer:    true
-show_social_icons:    true
-ajaxify_contact_form: true
-
-# Disqus post comments
-# (leave blank to disable Disqus)
-disqus_shortname: "disqus_xxx"
-
-# Social icons
-github_username: ordanax
-bitbucket_username:
-stackoverflow_id:
-twitter_username: 
-google_plus_id:
-linkedin_username:
-facebook_username: 
-vkontakte_username: arch4u
-angellist_username:
-medium_id:
-bitcoin_url:
-paypal_url:
-flattr_button:
-instagram_username:
-youtube_username: arch4u
-
-# Post sharing icons
-show_sharing_icons: true
-share_text: 'Поделитесь этим постом!'
-# Change to 'true' to enable individual icons
-share_facebook: true
-share_twitter: true
-share_googleplus: false
-share_linkedin: false
-share_digg: false
-share_tumblr: false
-share_reddit: false
-share_stumbleupon: false
-share_hackernews: false
+# If you want to link only specific pages in your header, uncomment
+# this and add the path to the pages in order as they should show up
+#header_pages:
+# - about.html
 
 # Build settings
-markdown:     kramdown
-redcarpet:
-  extensions: ['smart', 'tables', 'with_toc_data']
-permalink:    "/:title/"
-paginate:     15
-sass:
-  compressed: true
+markdown: kramdown
 
-# Gems
-gems: [jekyll-paginate]
+remote_theme: llorephie/jekyll-bootstrap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
