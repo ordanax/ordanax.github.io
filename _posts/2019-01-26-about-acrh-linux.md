@@ -69,18 +69,21 @@ P.S. Чек лист по установке ArchLinux https://vk.cc/8a1asw
 
 And here is some code:
 
+```code
+$ pacman -S linux
+```
+
 ```sh
 $ pacman -S linux
 ```
 
-
-``bash
+```bash
 build:
   docker run --rm \
     --volume=$(PWD):/srv/jekyll \
     -it jekyll/builder:$(JEKYLL_VERSION) \
     jekyll build
-``
+```
 
 Or some inline code: `const fileName = 'do.xml';`.
 
