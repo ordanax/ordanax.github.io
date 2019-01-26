@@ -16,7 +16,7 @@ avatar: https://i.imgur.com/71x0rfL.png
 #
 
 # Includes an icon in the footer for each username you enter
-footer-links:
+  footer-links:
   dribbble:
   email:
   facebook:
