@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: /index.html
-Host: ordanax.github.io
-Sitemap: https://ordanax.github.io/sitemap.xml
