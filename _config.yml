@@ -3,6 +3,7 @@ name: Alexey Boyko
 description: Установка и настройка Arch Linux, статьи, конфиги, группа поддержки. 
 url: "https://ordanax.github.io/"
 baseurl: "/"
+category_dir: blog
 markdown: kramdown
 theme: minima
 plugins:
