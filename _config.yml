@@ -1,8 +1,8 @@
 title: Все об Arch Linux
 name: Alexey Boyko
 description: Установка и настройка Arch Linux, статьи, конфиги, группа поддержки. 
-url: "https://ordanax.github.io/"
-baseurl: "/"
+url: 'https://ordanax.github.io/'
+baseurl: '/'
 category_dir: blog # Страница где вывоятся все посты
 markdown: kramdown
 theme: minima
@@ -17,7 +17,7 @@ pagination: # Настройка алагина ниже
   trail:
     bebore: 2 # Установка диапазона пагинации
     after: 2
-
+# Исключаем не нужные файлы при генерации сайта. Файлы с нижним подчеркиванием исключаются автоматически
 exclude: ['node_modules', 'gulpfile.js', 'package.json', 'package-lock.json', 'js/common.js', 'npm-debug.log', '**/Thumbs.db', 'libs', 'sass', '**/*.DS_Store']
 
 soc:
