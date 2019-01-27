@@ -1,22 +1,35 @@
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer left column one-half">
-      <section class="small-font">
-        Theme <a href="https://github.com/wild-flame/jekyll-simple"> Simple </a> by <a href="http://wildflame.me">wildflame</a>
-        © 2016 
-        Powered by <a href="https://github.com/jekyll/jekyll">jekyll</a>
-      </section>
-    </div>
+	<footer class="main-footer">
+		<div class="contaiter">
 
-    <div class="footer right column one-half">
-      <section class="small-font">
-        {% if site.github_username %}
-        {% include icon-github.html username=site.github_username %}
-        {% endif %}
-        {% if site.twitter_username %}
-        {% include icon-twitter.html username=site.twitter_username %}
-        {% endif %}
-      </section>
-    </div>
-  </div>
-</footer>
+			<nav class="main-menu footer-menu">
+	{% include /main-menu.html %}
+			</nav>
+
+			<nav class="soc">
+				<ul>
+	{{ site.soc }}
+				</ul>
+			</nav>
+
+		</div>
+	</footer>
+	<footer class="bottom-footer">
+		<div class="container text-center">
+			<div class="footer-copy">{{ site.time | date: '%Y' }} © <span class="logo-footer logo-litera">GeekTOP.ru</span></div>
+			<p>{{ site.copyright }}</p>
+		</div>
+	</footer>
+
+	<script src="js/scripts.min.js"></script>
+
+	<script id="dsq-count-scr" src="//EXAMPLE.disqus.com/count.js" async></script>
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+	<script type="text/javascript" src="//vk.com/js/api/openapi.js?152"></script>
+	<script type="text/javascript">
+	VK.Widgets.Group("vk_groups", {mode: 0, width: 'auto,', height: '300', color2: '202222', color3: '202222'}, you_id);
+	</script>
+
+</body>
+</html>

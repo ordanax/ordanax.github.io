@@ -1,31 +1,32 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+title: GeekTOP - Новости из мира IT
+name: GeekTOP
+description: Новости электроники, технологий, современных гаджетов, и другая актуальная информация современной IT индустрии
 
-# Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "/jekyll-simple" # the subpath of your site, e.g. /blog
-url: "http://wildflame.me" # the base hostname & protocol for your site
-twitter_username: Taffyer 
-github_username:  wild-flame 
+themecolor: '#202225'
+imagehome: img/geektop.jpg
+url: 'http://geektop.ru'
+baseurl: '/'
 
-# Build settings
-markdown: kramdown
-kramdown:
-  input: GFM
+plugins: [jekyll-paginate-v2]
+category_dir: blog
+pagination:
+  enabled: true
+  per_page: 9
+  title: ':title - Страница :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  trail:
+    before: 2
+    after: 2
 
-# Third-party services
-# just leave someone empty to disable it
-# google_analytics: 
-disqus_shortname:
+exclude: ['node_modules', 'gulpfile.js', 'package.json', 'package-lock.json', 'js/common.js', 'npm-debug.log', '**/Thumbs.db', 'libs', 'sass', '**/*.DS_Store']
 
-# used this for post_excerpt at index_page
-excerpt_separator: <!--description-->
+soc:
+  <li><a href="#"><i class="fa fa-vk"></i></a></li>
+  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+  <li><a href="#"><i class="fa fa-odnoklassniki"></i></a></li>
+  <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+  <li><a href="rss.xml"><i class="fa fa-rss"></i></a></li>
+
+copyright: Копирование контента и размещение на других сайтах запрещено.
