@@ -3,8 +3,29 @@ name: Alexey Boyko
 description: Установка и настройка Arch Linux, статьи, конфиги, группа поддержки. 
 url: "https://ordanax.github.io/"
 baseurl: "/"
-category_dir: blog
+category_dir: blog # Страница где вывоятся все посты
 markdown: kramdown
 theme: minima
-plugins:
-  - jekyll-feed
+plugins: [jekyll-paginate-v2] # Подключаем плагины
+pagination: # Настройка алагина ниже
+  anable: true
+  per_page: 9 # Сколько на странице будет выводить статей
+  title: ':title - Страница :num' # Тайтл статей
+  limit: 0
+  sort_field: 'date' # Сотритруем посты по дате, чтобы самые свежие были вверху
+  sort_rewerse: true # Чтобы шли сначала новые, а не старые
+  trail:
+    bebore: 2 # Установка диапазона пагинации
+    after: 2
+
+exclude: ['node_modules', 'gulpfile.js', 'package.json', 'package-lock.json', 'js/common.js', 'npm-debug.log', '**/Thumbs.db', 'libs', 'sass', '**/*.DS_Store']
+
+soc:
+  <li><a href="#"><i class="fa fa-vk"></i></a></li>
+  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+  <li><a href="#"><i class="fa fa-odnoklassniki"></i></a></li>
+  <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+  <li><a href="rss.xml"><i class="fa fa-rss"></i></a></li>
+
+copyright: Копирование контента и размещение на других сайтах запрещено.
+
