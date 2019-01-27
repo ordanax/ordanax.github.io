@@ -7,7 +7,10 @@ baseurl: '/'
 markdown: kramdown
 theme: minima
 
-plugins: [jekyll-paginate-v2] # Подключаем плагины
+gem:
+  -jekyll-paginate-v2
+  
+#plugins: [jekyll-paginate-v2] # Подключаем плагины
 category_dir: blog # Страница где вывоятся все посты
 pagination: # Настройка алагина ниже
   anable: true
