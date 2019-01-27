@@ -1,0 +1,13 @@
+title: Все об Arch Linux
+name: Alexey Boyko
+description: Установка и настройка Arch Linux, статьи, конфиги, группа поддержки. 
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jekyllrb
+github_username:  jekyll
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
