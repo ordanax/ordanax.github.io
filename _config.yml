@@ -11,8 +11,8 @@ gem:
   -jekyll-paginate-v2
   
 #plugins: [jekyll-paginate-v2] # Подключаем плагины
-category_dir: / # Страница где вывоятся все посты
-pagination: # Настройка алагина ниже
+# category_dir: / # Страница где вывоятся все посты
+pagination: # Настройка палагина ниже
   anable: true
   per_page: 9 # Сколько на странице будет выводить статей
   title: ':title - Страница :num' # Тайтл статей
