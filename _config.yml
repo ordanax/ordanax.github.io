@@ -6,13 +6,15 @@ url: 'https://ordanax.github.io'
 baseurl: ''
 markdown: kramdown
 theme: minima
+permalink: "/:title"
 
 gems:
-  -jekyll-paginate-v2
+#  - jekyll-paginate-v2
+  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-feed
   
-plugins: [jekyll-paginate-v2] # Подключаем плагины
+# plugins: [jekyll-paginate-v2] # Подключаем плагины
 category_dir: / # Страница где вывоятся все посты
 pagination: # Настройка палагина ниже
   anable: true
@@ -36,9 +38,3 @@ soc:
   <li><a href="rss.xml"><i class="fa fa-rss"></i></a></li>
 
 copyright: Копирование контента и размещение на других сайтах запрещено.
-
-permalink: "/:title"
-gems:
-- jekyll-paginate
-- jekyll-sitemap
-- jekyll-feed
