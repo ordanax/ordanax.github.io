@@ -6,6 +6,7 @@ url: 'https://ordanax.github.io/'
 baseurl: '/'
 markdown: kramdown
 theme: minima
+avatar: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Archlinux-icon-crystal-64.svg/2000px-Archlinux-icon-crystal-64.svg.png
 
 gem:
   -jekyll-paginate-v2
