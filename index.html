@@ -24,31 +24,36 @@ layout: default
 
 <hr>
 
-{% if paginator.total_pages > 1 %}
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Назад</a>
-  {% else %}
-    <span>Назад</span>
-  {% endif %}
+	<div class="cat-list">
+		<div class="container-fluid">
+			<div class="row">
 
-  {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-      <em>{{ page }}</em>
-    {% elsif page == 1 %}
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-    {% else %}
-      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-    {% endif %}
-  {% endfor %}
+				<div class="col-md-8">
 
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Вперед</a>
-  {% else %}
-    <span>Вперед</span>
-  {% endif %}
-</div>
-{% endif %}
+					<div class="all-posts-header">{{ page.title }}</div>
+
+					<div class="cat-list-wrap">
+
+{% for post in paginator.posts %}
+{% include /category-list-item.html %}
+{% endfor %}
+		
+					</div>
+
+{% include /pagination-first.html %}
+
+				</div>
+
+				<div class="col-md-4">
+{% include /category-aside.html %}
+				</div>
+
+			</div>
+		</div>
+
+{% include /pagination-second.html %}
+
+	</div>
 
 <p style="text-indent: 25px; text-align: justify;">
     Друзья, <strong>рекомендую</strong> вам отличную биржу фриланс-услуг, которой пользуюсь сам.
