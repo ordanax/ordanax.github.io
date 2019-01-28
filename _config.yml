@@ -7,11 +7,13 @@ baseurl: ''
 markdown: kramdown
 theme: minima
 
-gem:
+gems:
   -jekyll-paginate-v2
+  - jekyll-sitemap
+  - jekyll-feed
   
-#plugins: [jekyll-paginate-v2] # Подключаем плагины
-# category_dir: / # Страница где вывоятся все посты
+plugins: [jekyll-paginate-v2] # Подключаем плагины
+category_dir: / # Страница где вывоятся все посты
 pagination: # Настройка палагина ниже
   anable: true
   per_page: 9 # Сколько на странице будет выводить статей
@@ -24,7 +26,7 @@ pagination: # Настройка палагина ниже
     after: 2
 
 # Исключаем не нужные файлы при генерации сайта. Файлы с нижним подчеркиванием исключаются автоматически
-exclude: ['node_modules', 'gulpfile.js', 'package.json', 'package-lock.json', 'js/common.js', 'npm-debug.log', '**/Thumbs.db', 'libs', 'sass', '**/*.DS_Store']
+exclude: ['node_modules', 'gulpfile.js', 'package.json', 'package-lock.json', 'js/common.js', 'npm-debug.log', '**/Thumbs.db', 'libs', 'sass', '**/*.DS_Store','Gemfile','Gemfile.lock']
 
 soc:
   <li><a href="#"><i class="fa fa-vk"></i></a></li>
@@ -34,3 +36,9 @@ soc:
   <li><a href="rss.xml"><i class="fa fa-rss"></i></a></li>
 
 copyright: Копирование контента и размещение на других сайтах запрещено.
+
+permalink: "/:title"
+gems:
+- jekyll-paginate
+- jekyll-sitemap
+- jekyll-feed
