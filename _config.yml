@@ -1,5 +1,5 @@
 ---
-title: Html Blog
+title: Все об Arch Linux
 timezone: UTC
 collections:
   posts:
@@ -8,11 +8,9 @@ collections:
   uploads:
     title: Uploads
     output: true
-email: mikhailyand@ya.ru
-description: Блог программиста. Создание сайтов на php, html, а также с помощью популярных
-  CMS.
+description: Установка и настройка Arch Linux, статьи, конфиги, группа поддержки.
 baseurl: ''
-url: https://htmlblog.github.io
+url: https://ordanax.github.io
 permalink: "/:title"
 markdown: kramdown
 gems:
