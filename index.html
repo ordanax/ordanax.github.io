@@ -28,16 +28,6 @@ pagination:
 
 <hr>
 
-	{% for post in paginator.posts %}
-  <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-  <p>
-    <span class="date">{{ post.date|date:"%d.%m.%Y" }}</span>
-  </p>
-  <br>
-{% endfor %}
-
-<hr>
-
 <!-- Pagination links -->
   {% if paginator.total_pages > 1 %}
   <div class="pagination">

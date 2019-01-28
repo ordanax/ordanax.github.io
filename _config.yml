@@ -15,7 +15,7 @@ permalink: "/:title"
 markdown: kramdown
 gems:
 - jekyll-paginate-v2
--jekyll-sitemap
+#- jekyll-sitemap
 - jekyll-feed
 
 plugins: [jekyll-paginate-v2]
