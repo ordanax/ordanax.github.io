@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-28T23:17:37+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Все об Arch Linux</title><subtitle>Установка и настройка Arch Linux, статьи, конфиги, группа поддержки.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2019/01/28/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2019-01-28T11:17:09+00:00</published><updated>2019-01-28T11:17:09+00:00</updated><id>http://localhost:4000/jekyll/update/2019/01/28/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/01/28/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">Алиса приложение от Яндекс</title><link href="http://localhost:4000/useful/2019/01/23/alisa-prilozhieniie-ot-iandieks.html" rel="alternate" type="text/html" title="Алиса приложение от Яндекс" /><published>2019-01-23T11:36:00+00:00</published><updated>2019-01-23T11:36:00+00:00</updated><id>http://localhost:4000/useful/2019/01/23/alisa-prilozhieniie-ot-iandieks</id><content type="html" xml:base="http://localhost:4000/useful/2019/01/23/alisa-prilozhieniie-ot-iandieks.html">&lt;p&gt;&lt;img src=&quot;/uploads/yandex-alisa-skachat.jpg&quot; alt=&quot;скачать голосовой помощник Яндекс Алиса&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;В современном мире все больше пользователей связывают свою работу так или иначе с компьютером и часто прибегают к использованию голосового помощника. Благодаря искусственному разуму можно быстрее управлять операционными системами. Не каждый знает о таком голосовом помощнике как Алиса.&lt;/p&gt;
+
+&lt;h2 id=&quot;что-такое-алиса&quot;&gt;Что такое Алиса&lt;/h2&gt;
+
+&lt;p&gt;Алиса - программа, которая вам поможет в виртуальном мире. Данную программу представляют создатели компании Яндекс. Программа способна распознать речь и имитировать диалог с человеком, также может отвечать на запрос и решить некоторые задания. Яндекс Алиса может работать на смартфоне, в машинах и в Яндекс.Станции. По некоторой информации Алиса работает более чем у 30 миллионов человек.&lt;/p&gt;
+
+&lt;p&gt;Если прочитать некоторые отзывы о программе, то будет понятно, что Алису можно использовать не только для работы, но и для отдыха или развлечений. С Алисой можно отлично скоротать время поболтав с ней. У голосового помощника в словарном запасе есть множество фраз. Так можно даже подумать будто пользователь просто говорит с человеком. Программа также обижается или наоборот радуется определенным словам. Но все же Алиса способна понять не все изречения человека. Возможно Алиса даже скажет, что не сможет обработать информацию.&lt;/p&gt;
+
+&lt;div&gt;
+&lt;script async=&quot;&quot; src=&quot;//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&quot;&gt;&lt;/script&gt;
+&lt;!-- html blog article adaptive --&gt;
+&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block&quot; data-ad-client=&quot;ca-pub-7700451254687983&quot; data-ad-slot=&quot;1629640353&quot; data-ad-format=&quot;auto&quot; data-full-width-responsive=&quot;true&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;
+(adsbygoogle = window.adsbygoogle || []).push({});
+&lt;/script&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;когда-появилась-программа-яндекс-алиса&quot;&gt;Когда появилась программа Яндекс Алиса&lt;/h2&gt;
+
+&lt;p&gt;Разрабатывать Алису начале в 2016 году, тогда уже была представлена Siri и много других голосовых помощников. Тогда в Яндексе уже работало управление голосом. Но взаимодействие с человеческой речью процесс, требующий больших разработок, основанных на многослойной нейронной сети. Алиса голосовой помощник придет на помощь всегда.&lt;/p&gt;
+
+&lt;p&gt;Уже весной в 2017 году начали тестировать Алису. 21 сентября приложение смог протестировать сам Владимир Владимирович Путин на юбилее компании Яндекс. Владимир Владимирович задал вопросы о положении дел Алисы и еще пару других вопросов. Приложение Алиса имеется в нескольких версиях для разных платформ: Android, iOS от девятой версии, Microsoft Windows. А вот другие операционные системы запустить Алису не могут. &lt;strong&gt;Скачать программу Алиса бесплатно&lt;/strong&gt; можно на &lt;a href=&quot;https://alice.yandex.ru/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;официальном сайте&lt;/a&gt; или на данной странице после статьи.&lt;/p&gt;
+
+&lt;p&gt;В настоящее время Алиса может выполнять множество функций, но много нового еще находится в разработке. А что в разработке, остается секретом. Но даже этих функций уже достаточно для работы с Алисой за компьютером.&lt;/p&gt;
+
+&lt;p&gt;В мае Яндексом было проведено исследование, что программа уже работает в 53% телефонов по России, а также больше чем в двадцати миллионов автомобилей.&lt;/p&gt;
+
+&lt;p&gt;Разработкой Алисы занимался журналист и бывший руководитель маркетинга Владимир Гуриев. В качестве голосового ассистента стала молодая девушка, она и приходит на помощь владельцам смартфонов. Роль Алисы выполняет Татьяна Шитова, которая уже озвучивала героиню Скарлетт Йохансон.&lt;/p&gt;
+
+&lt;p&gt;Лицензия на приложение Алиса распространяется бесплатно. &lt;strong&gt;Скачать программу Алиса на андроид&lt;/strong&gt; можно бесплатно прямо сейчас на нашем сайте в конце статьи.&lt;/p&gt;
+
+&lt;p&gt;Приложение Алиса встраивается в другие приложения от Яндекса. Например, в поисковую систему, навигатор, браузер.&lt;/p&gt;
+
+&lt;p&gt;С ассистентом можно общаться при помощи голоса либо текстового запроса. Алиса вследствие запроса может ответить голосом, открывает приложения или показать необходимый поисковой запрос. Алиса работает не только с запросами. Также она может включать музыку, ставить будильники, вызывать такси, также с ней можно играть в игры. Алиса, к сожалению, может распознавать не все запросы. Но это несущественный недочет. При помощи голосового помощника можно отлично управлять гаджетом.&lt;/p&gt;
+
+&lt;div&gt;
+&lt;script async=&quot;&quot; src=&quot;//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&quot;&gt;&lt;/script&gt;
+&lt;!-- html blog article adaptive --&gt;
+&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block&quot; data-ad-client=&quot;ca-pub-7700451254687983&quot; data-ad-slot=&quot;1629640353&quot; data-ad-format=&quot;auto&quot; data-full-width-responsive=&quot;true&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;
+(adsbygoogle = window.adsbygoogle || []).push({});
+&lt;/script&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;технологии-голосового-помощника-алиса&quot;&gt;Технологии голосового помощника Алиса&lt;/h2&gt;
+
+&lt;p&gt;Алиса распознает голос на основе технологии SpeechKit. Голос отделяется от фонового шума. А выделить правильные слова несмотря на акцент помогает база, которая имеется у Яндекса.&lt;/p&gt;
+
+&lt;p&gt;Правильный ответ Алиса выдает при помощи технологии Turing. По этой технологии Алиса показывает нужные запросы и общается с пользователями на разные темы.&lt;/p&gt;
+
+&lt;p&gt;Изначально нейронная сеть Алисы проходила обучение на основе текстов классиков: Толстого, Достоевского и Гоголя. По началу Алиса часто переходила на хамство, поэтому пришлось ввести фильтр на стоп-слова.&lt;/p&gt;
+
+&lt;p&gt;Ответ озвучивается при помощи технологии Text-to-speech. В студии был заложен словарный запас, далее его порезали на фонемы. Они-то и служат основой. Так при помощи нейросети речь Алисы приближается к человеческой. Алиса также имеет возможность интеграции сторонних сервисов. В марте у Яндекса открывается новая платформа Яндекс.Диалоги. С ней можно подключаться к Алисе. Алиса даже принимала участие тотального диктанта и читала его в Новосибирском  университете. А в мае Алису уже научили распознованию изображений. Алиса также работает и на Яндекс Маркет, там она может подбирать похожие товары по запросам. А в ноябре 2018 Алиса уже смогла заказать товар на маркетплейсе Беру.&lt;/p&gt;
+
+&lt;p&gt;В октябре прошел год как Алиса была представлена на свет. У яндекса вышла акция «Премия Алисы». Организация Elari в августе 2018 года выпускает умные часы для детей, там встроен помощник Алиса. У яндекса также имеются колонки, которые выпустила компания Irbis и DEXP. У них меньше размер и хуже звук по сравнению с Яндекс.Станцией.&lt;/p&gt;
+
+&lt;p&gt;В декабре 2018 года Яндекс представляет свой первый телефон. Там главное место занимает Алиса. Алиса может предоставить всю актуальную информацию буквально за секунду. Алиса работает даже при заблокированном телефоне.&lt;/p&gt;
+
+&lt;p&gt;Пользователи активно применяют Алису, ведь она умеет не плохо шутить и давать ответы на интересные вопросы. Одно время по сети даже гуляли интересные скриншоты, в них голосовой помощник могла дерзить и переговариваться с пользователями. Алиса читала популярные стихотворения, пела, рассказывала анекдоты. Алису успели даже заснять в мультфильме Монстры на каникулах третья часть. Там один из главных героев разговаривал с голосовым помощником. Конечно, это все было оговорено с компанией Яндекс. Также Алису успели запечатлеть в российском фильме Я худею. А в 2018 году выходит фильм Алиса, по сюжету было показано как общались бортовой компьютер и водитель Яндекс.Такси.&lt;/p&gt;
+
+&lt;p&gt;Большинство пользователей отмечают, что данной программой легко управлять, с ней может справиться любой школьник.&lt;/p&gt;
+
+&lt;p&gt;У приложения есть некоторые настройки. Запросы делаются через программный чат. Там будут фразы голосового помощника и фразы пользователя.&lt;/p&gt;
+
+&lt;div&gt;
+&lt;script async=&quot;&quot; src=&quot;//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&quot;&gt;&lt;/script&gt;
+&lt;!-- html blog article adaptive --&gt;
+&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block&quot; data-ad-client=&quot;ca-pub-7700451254687983&quot; data-ad-slot=&quot;1629640353&quot; data-ad-format=&quot;auto&quot; data-full-width-responsive=&quot;true&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;
+(adsbygoogle = window.adsbygoogle || []).push({});
+&lt;/script&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Таким образом, &lt;strong&gt;Яндекс Алиса&lt;/strong&gt; - это отличная программа-робот с чувством юмора, умеющая выполнять простые задания. Программа поможет скоротать вам время или быстро найти нужную информацию.&lt;/p&gt;
+
+&lt;p&gt;Свои главные задачи Алиса выполняет успешно. Она быстро и точно находит всю информацию. На смартфоне голосовой помощник Алиса  работает идеально. Большая часть пользователей активно применяет это приложение в работе и остаются довольными. Поэтому &lt;a href=&quot;https://alice.yandex.ru/windows&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;&lt;strong&gt;скачать программу Алиса для Windows бесплатно&lt;/strong&gt;&lt;/a&gt; однозначно стоит! Она всегда придет на помощь. Программу &lt;strong&gt;Алиса от Яндекс&lt;/strong&gt; можно легко скачать бесплатно. &lt;a href=&quot;https://play.google.com/store/apps/details?id=ru.yandex.searchplugin&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;&lt;strong&gt;Скачать программу Алиса на андроид телефон&lt;/strong&gt;&lt;/a&gt; или &lt;a href=&quot;https://itunes.apple.com/ru/app/yandex/id1050704155&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;&lt;strong&gt;скачать Алису на iOS&lt;/strong&gt;&lt;/a&gt; также не сложно.&lt;/p&gt;</content><author><name></name></author><category term="soft" /><category term="Яндекс" /><category term="Алиса" /><category term="голосовой помощник" /><category term="Алиса Яндекс скачать" /><summary type="html"></summary></entry><entry><title type="html">Редактор Bluefish: FTP подключение в Ubuntu</title><link href="http://localhost:4000/useful/2018/09/23/riedaktor-bluefish-ftp-podkliuchieniie-v-ubuntu.html" rel="alternate" type="text/html" title="Редактор Bluefish: FTP подключение в Ubuntu" /><published>2018-09-23T13:11:00+00:00</published><updated>2018-09-23T13:11:00+00:00</updated><id>http://localhost:4000/useful/2018/09/23/riedaktor-bluefish-ftp-podkliuchieniie-v-ubuntu</id><content type="html" xml:base="http://localhost:4000/useful/2018/09/23/riedaktor-bluefish-ftp-podkliuchieniie-v-ubuntu.html">&lt;p&gt;&lt;img src=&quot;/uploads/Bluefish-FTP.jpg&quot; alt=&quot;редактор Bluefish FTP подключение&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Некоторые начинающие веб разработчики, использующие в качестве основной операционной системы Ubuntu, часто выбирают в качестве редактора кода Bluefish. Данный редактор чем-то похож на популярный NotePad++, но в Bluefish есть один существенный минус - отсутствие FTP подключения.&lt;/p&gt;
+
+&lt;p&gt;На самом деле в редакторе &lt;strong&gt;Bluefish FTP подключение&lt;/strong&gt; создать можно. В данной статье я покажу как это сделать. Предположим, что Ubuntu и Bluefish у вас уже установлены.&lt;/p&gt;
+
+&lt;p&gt;1) Откройте в левом верхнем углу выпадающее меню “Файл” и затем нажмите “Открыть URL”.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/111.png&quot; alt=&quot;Файл затем Открыть URL&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;2) В открывшемся окне вам необходимо ввести логин FTP-пользователя вашего хостинга и адрес подключения.&lt;/p&gt;
+
+&lt;p&gt;Формат такой: &lt;strong&gt;ftp://пользователь@сервер/&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/222.png&quot; alt=&quot;логин FTP-пользователя и сервер&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;3) После того как вы укажите данные и нажмете “ОК” вас попросят ввести пароль FTP-пользователя.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/4444.png&quot; alt=&quot;пароль FTP-пользователя&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;4) Далее Ubuntu вам предложит внести пароль от FTP-подключения в связку ключей. Введите свой пароль от связки ключей и нажмите “Разблокировать”.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/555.png&quot; alt=&quot;сохранить пароль FTP подключения&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;5) После этого в редакторе Bluefish слева в обозревателе файлов в выпадающем меню появится пункт с вашим сайтом. Выберите его, чтобы увидеть файлы на сервере.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/6666.png&quot; alt=&quot;6666.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Теперь вы можете редактировать файлы вашего веб-проекта с помощью Bluefish удаленно через FTP.&lt;/strong&gt; А также на рабочем столе появилась FTP-папка в которой все файлы сайта. Вы можете просматривать их с помощью любой программы.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/7777.png&quot; alt=&quot;FTP папка&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;В следующий раз когда вам нужно будет подключиться к сайту через FTP в Bluefish все будет намного быстрее.&lt;/p&gt;
+
+&lt;p&gt;Нажмите “Файл” -&amp;gt; “Открыть URL”, но вместо ввода данных FTP-подключения нажмите на стрелку справа от поля ввода - ваши прошлые подключения сохранились! А пароль вы сохранили в связке ключей Ubuntu. Нажмите “ОК”, введите пароль от связки ключей и можете работать.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/3333.png&quot; alt=&quot;список FTP подключений Bluefish&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Надеюсь моя статья вам помогла. Не забудьте про кнопки репоста в знак благодарности! &lt;strong&gt;Задавайте свои вопросы в комментариях.&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><category term="Bluefish" /><category term="FTP" /><category term="SFTP" /><category term="Bluefish remote FTP" /><category term="Ubuntu" /><summary type="html"></summary></entry><entry><title type="html">Проверить ИКС сайта онлайн</title><link href="http://localhost:4000/seo/2018/09/04/provierit-iks-saita-onlain.html" rel="alternate" type="text/html" title="Проверить ИКС сайта онлайн" /><published>2018-09-04T17:28:00+00:00</published><updated>2018-09-04T17:28:00+00:00</updated><id>http://localhost:4000/seo/2018/09/04/provierit-iks-saita-onlain</id><content type="html" xml:base="http://localhost:4000/seo/2018/09/04/provierit-iks-saita-onlain.html">&lt;p&gt;&lt;img src=&quot;/uploads/proverit-iks-saita-online.jpg&quot; alt=&quot;Как узнать ИКС сайта&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;В данном материале хочу поделиться с вами как &lt;strong&gt;узнать ИКС сайта онлайн&lt;/strong&gt;. А также как популярные онлайн сервисы создают свои инструменты для &lt;strong&gt;проверки ИКС сайтов&lt;/strong&gt;. Индекс качества сайта отражает востребованность сайта пользователями и был внедрен вместо показателя ТИЦ.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Не стоит рассматривать данный пост как исчерпывающий источник в вопросе &lt;strong&gt;анализа ИКС&lt;/strong&gt; вашего интернет ресурса.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;проверка-икс-онлайн&quot;&gt;Проверка ИКС онлайн&lt;/h2&gt;
+
+&lt;p&gt;На данный момент еще практически ни один онлайн сервис не внедрил инструменты для &lt;strong&gt;определения ИКС онлайн&lt;/strong&gt;. Единственным инструментом, чтобы &lt;strong&gt;узнать ИКС сайта онлайн&lt;/strong&gt; служит форма проверки от Яндекс. Чтобы проверить индекс качества сайта перейдите по &lt;a href=&quot;https://webmaster.yandex.ru/sqi/?host=&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;ссылке&lt;/a&gt; и введите в поле адрес своего сайта.&lt;/p&gt;
+
+&lt;div&gt;
+&lt;script async=&quot;&quot; src=&quot;//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&quot;&gt;&lt;/script&gt;
+&lt;!-- html blog article adaptive --&gt;
+&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block&quot; data-ad-client=&quot;ca-pub-7700451254687983&quot; data-ad-slot=&quot;1629640353&quot; data-ad-format=&quot;auto&quot; data-full-width-responsive=&quot;true&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;
+(adsbygoogle = window.adsbygoogle || []).push({});
+&lt;/script&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;создать-сервис-оценки-икс-сайта&quot;&gt;Создать сервис оценки ИКС сайта&lt;/h2&gt;
+
+&lt;p&gt;Абсолютно все разработчики для создания своих сервисов анализа используют предоставляемый им API от Яндекс. Это библиотека функций, который позволяют получать данные об ИКС сайта.&lt;/p&gt;
+
+&lt;p&gt;Ознакомиться с API для работы с данными индекса качества сайта можно на &lt;a href=&quot;https://tech.yandex.ru/webmaster/doc/dg/reference/sqi-history-docpage/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;данной странице документации Яндекса&lt;/a&gt;.
+Чтобы получить значение параметра сайта необходимо отправить GET-запрос в определенном формате. У тех, кто знаком с языком программирования php проблем не возникнет. Тем более, что в документации все шаги по работе с API расписаны пошагово.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Читайте также статью &lt;a href=&quot;https://ordanax.github.io/kak-podniat-iks-saita-novyi-rieitingh-ot-iandieks&quot;&gt;“Как поднять ИКС сайта”&lt;/a&gt;. Личные наблюдения и советы.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;На этом у меня все. Пишите в комментариях свои вопросы и сервисы на которых уже сегодня реализована проверка параметра ИКС.&lt;/p&gt;</content><author><name></name></author><category term="икс сайта" /><category term="проверить икс сайта" /><category term="узнать икс сайта" /><category term="анализ икс сайта" /><category term="определить икс сайта" /><category term="показатель икс сайта" /><category term="какой икс сайта" /><category term="измерить икс сайта" /><summary type="html"></summary></entry><entry><title type="html">Как поднять ИКС сайта. Новый рейтинг от Яндекс</title><link href="http://localhost:4000/useful/2018/09/02/kak-podniat-iks-saita-novyi-rieitingh-ot-iandieks.html" rel="alternate" type="text/html" title="Как поднять ИКС сайта. Новый рейтинг от Яндекс" /><published>2018-09-02T14:09:00+00:00</published><updated>2018-09-02T14:09:00+00:00</updated><id>http://localhost:4000/useful/2018/09/02/kak-podniat-iks-saita-novyi-rieitingh-ot-iandieks</id><content type="html" xml:base="http://localhost:4000/useful/2018/09/02/kak-podniat-iks-saita-novyi-rieitingh-ot-iandieks.html">&lt;p&gt;&lt;strong&gt;Как поднять ИКС сайта в Яндексе?&lt;/strong&gt; Индекс качества сайта - новый показатель заменивший ТИЦ в поисковой системе Яндекс.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/kak%20podnyat%20iks%20saita.jpg&quot; alt=&quot;Как поднять ИКС сайта&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;В середине августа поисковый гигант России неожиданно для многих опубликовал в своем блоге Яндекса для вебмастеров новость о том, что в ближайшее время будет отменен ТИЦ - тематический индекс цитирования на который привыкли ровняться многие сеошники и простые любители сайтостроения при покупке доменов, сайтов и внешних ссылок. Я уже публиковал материал на данную тему &lt;a href=&quot;https://ordanax.github.io/iandieks-zamieniaiet-tits-na-iks-indieks-kachiestva-saita&quot; target=&quot;_blank&quot;&gt;здесь&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;И вот наконец это случилось. Уже сегодня, 2 сентября 2018, в панели управления сайтами Яндекс показатель ТИЦ был заменен на Yandex ИКС. Вместе с этим заметно был изменен алгоритм ранжирования сайтов в поисковой выдаче Яндекс. Естественно новый показатель ИКС стал влиять на выдачу прямым образом.
+&lt;br /&gt;&lt;/p&gt;
+&lt;div&gt;
+&lt;script async=&quot;&quot; src=&quot;//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&quot;&gt;&lt;/script&gt;
+&lt;!-- html blog article adaptive --&gt;
+&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block&quot; data-ad-client=&quot;ca-pub-7700451254687983&quot; data-ad-slot=&quot;1629640353&quot; data-ad-format=&quot;auto&quot; data-full-width-responsive=&quot;true&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;
+(adsbygoogle = window.adsbygoogle || []).push({});
+&lt;/script&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Далее предлагаю свои мысли про то как можно &lt;strong&gt;поднять ИКС сайта в Яндекс&lt;/strong&gt;, сделанные на основе анализа изменений на моих 15 сайтах сразу после введения ИКС:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;ТИЦ и ИКС слабо связаны между собой. Сайты с высоким ТИЦ не обязательно получили высокий ИКС;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Посещаемость ресурса и низкий процент отказов &lt;strong&gt;сильно влияют на ИКС&lt;/strong&gt;;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Наличие ссылок из социальных сетей и переходы из них &lt;strong&gt;сильно влияет на ИКС&lt;/strong&gt;;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Наличие статей в Яндекс Дзен и карточек в Яндекс коллекциях заметно влияет на ИКС;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Количество страниц на сайте также влияет на ИКС;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Уникальность контента влияет на ИКС, но не так существенно как ожидалось. Сайт с уникальным контентом и копипастом 50% на 50% имеет право на ТОП выдачи даже по скопированным материалам.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;В принципе думаю этого уже достаточно для понимания &lt;strong&gt;как поднять рейтинг ИКС в Яндекс&lt;/strong&gt;. Добавлю только, что закупать ссылки теперь следует ориентируясь не только на ИКС, но и на потенциальные переходы по ним. Просто ссылки мало что дадут для раскрутки ИКС сайта. Такой вывод я сделал когда несколько сайтов, которые имели огромный ТИЦ из статейных прогонов получили минимальный ИКС.&lt;/p&gt;
+
+&lt;p&gt;На этом все. Удачи в продвижении Yandex ИКС ваших сайтов!&lt;/p&gt;</content><author><name></name></author><category term="ИКС" /><category term="как поднять ИКС" /><category term="как поднять рейтинг икс в яндексе" /><category term="поднять икс" /><category term="Яндекс ИКС" /><category term="раскрутить ИКС сайта" /><category term="Yandex ИКС" /><summary type="html">Как поднять ИКС сайта в Яндексе? Индекс качества сайта - новый показатель заменивший ТИЦ в поисковой системе Яндекс.</summary></entry><entry><title type="html">Яндекс заменяет тИЦ на ИКС — индекс качества сайта</title><link href="http://localhost:4000/useful/2018/08/22/iandieks-zamieniaiet-tits-na-iks-indieks-kachiestva-saita.html" rel="alternate" type="text/html" title="Яндекс заменяет тИЦ на ИКС — индекс качества сайта" /><published>2018-08-22T14:13:00+00:00</published><updated>2018-08-22T14:13:00+00:00</updated><id>http://localhost:4000/useful/2018/08/22/iandieks-zamieniaiet-tits-na-iks-indieks-kachiestva-saita</id><content type="html" xml:base="http://localhost:4000/useful/2018/08/22/iandieks-zamieniaiet-tits-na-iks-indieks-kachiestva-saita.html">&lt;p&gt;На следующей неделе в Яндексе перестанет отображаться тИЦ на всех наших ресурсах. Ему на смену придёт &lt;strong&gt;ИКС — индекс качества сайта&lt;/strong&gt;. Он будет использоваться вместо старого показателя.&lt;/p&gt;
+
+&lt;p&gt;Тематический индекс цитирования, или тИЦ, Яндекс представил в 1999 году. Этот показатель служил для определения авторитетности сайта на основании количества и качества других сайтов, которые на него ссылаются. С тех пор прошло почти 20 лет, и за это время интернет сильно изменился: развились соцсети, выросло количество мобильных сайтов и пользователей, прошла эпоха SEO-ссылок… Алгоритмы ранжирования сайтов тоже сильно изменились: современные поисковые системы учитывают при формировании выдачи сотни различных сигналов. Сейчас ссылки — далеко не единственный показатель качества, на который стоит ориентироваться владельцам сайтов.&lt;/p&gt;
+
+&lt;div&gt;
+&lt;script async=&quot;&quot; src=&quot;//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&quot;&gt;&lt;/script&gt;
+&lt;!-- html blog article adaptive --&gt;
+&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block&quot; data-ad-client=&quot;ca-pub-7700451254687983&quot; data-ad-slot=&quot;1629640353&quot; data-ad-format=&quot;auto&quot; data-full-width-responsive=&quot;true&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;
+(adsbygoogle = window.adsbygoogle || []).push({});
+&lt;/script&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Таким образом, стала очевидна необходимость метрики, учитывающей помимо ссылок и другие аспекты качества сайта, известные Яндексу. В Яндексе решили назвать её &lt;strong&gt;ИКС — индекс качества сайта&lt;/strong&gt;. Под &lt;strong&gt;ИКС&lt;/strong&gt;, то есть под качеством сайта, Яндекс понимает в первую очередь востребованность сайта аудиторией. Чем больше пользователей смогли с помощью сайта удовлетворить свои потребности, чем больше задач они решили, тем он полезней. При этом важно не просто количество пользователей, но и степень их удовлетворённости, общий уровень доверия к сайту. Похожие принципы используются нами для нашей основной метрики качества поиска.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ИКС полностью заменит тИЦ&lt;/strong&gt;. Тематический индекс цитирования больше не будет рассчитываться и отображаться. Любой пользователь или владелец сайта сможет узнать индекс качества своего и других сайтов в Яндекс.Вебмастере уже на следующей неделе.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/indeks%20kachestva%20saita%20iks%20yandex.png&quot; alt=&quot;ИКС заменит тИЦ Яндекс&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;При расчёте &lt;strong&gt;ИКС&lt;/strong&gt; в компании Яндекс намерены использовать всевозможные имеющиеся у поисковика данные как о сайте, так и о стоящем за ним бизнесе. Эти данные могут быть получены как из Поиска, так и из любых других сервисов Яндекса: например, Метрики, Карт, Дзена и так далее. По мере учёта этих данных алгоритм расчета ИКС будет меняться. Поэтому сейчас мы получим его пока в виде беты.&lt;/p&gt;</content><author><name></name></author><category term="Яндекс" /><category term="тИЦ" /><category term="ИКС" /><category term="индекс качества сайта" /><category term="тематический индекс цитирования" /><summary type="html">На следующей неделе в Яндексе перестанет отображаться тИЦ на всех наших ресурсах. Ему на смену придёт ИКС — индекс качества сайта. Он будет использоваться вместо старого показателя.</summary></entry><entry><title type="html">Как заработать на kwork ru новичку</title><link href="http://localhost:4000/useful/2018/02/10/kak-zarabotat-na-kwork-ru-novichku.html" rel="alternate" type="text/html" title="Как заработать на kwork ru новичку" /><published>2018-02-10T13:48:00+00:00</published><updated>2018-02-10T13:48:00+00:00</updated><id>http://localhost:4000/useful/2018/02/10/kak-zarabotat-na-kwork-ru-novichku</id><content type="html" xml:base="http://localhost:4000/useful/2018/02/10/kak-zarabotat-na-kwork-ru-novichku.html">&lt;p&gt;&lt;img src=&quot;/uploads/kwork-kak-zarabotat-novichku.jpg&quot; alt=&quot;как заработать на kwork ru новичку&quot; style=&quot;width: 100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Как зарабатывать на сайте kwork.ru&lt;/strong&gt; новичкам и не только? - наиболее популярный вопрос, который можно встретить в интернете.&lt;/p&gt;
+
+&lt;p&gt;Для начала немного поговорим про сам сайт. Данный фриланс сервис позиционируется как сервис где оказываются услуги по фиксированной цене в 500 рублей. Сразу же отмечу, что комиссия сайта составляет 20%. Итого после выполнения заказа на свой счет вы получите 400 рублей.&lt;/p&gt;
+
+&lt;p&gt;Итак, для того, чтобы начать оказывать услуги на сайте kwork.ru вам для начала необходимо там зарегистрироваться и заполнить свой профиль. И вот тут важно! - качественно заполняйте свой профиль. Реклама нам врет со всех устройств, вот и мы немного приврем.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Поставьте настоящую фотографию - можно свою хорошего качества, на которой ваше лицо четко видно. Психологический момент - человек не скрывающий лицо вызывает больше доверия у заказчика. На крайний случай скачайте фотографию другого малоизвестного человека, чтобы не было вопросов.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Информация о себе. Напишите, что вы занимаетесь оказанием выбранной вами услуги для &lt;strong&gt;заработка на кворк&lt;/strong&gt; уже несколько лет на других фриланс биржах и вообще основная ваша работа напрямую связана с этой услугой.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Половина дела сделано. Теперь давайте определяться с помощью продажи каких услуг можно &lt;strong&gt;зарабатывать на кворк новичку&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Мы рассмотрим вариант, что вы ничего не умеете сами и будем заниматься перепродажей услуг. Но где их найти? Это конечно не проблема.&lt;/p&gt;
+
+&lt;script async=&quot;&quot; src=&quot;//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- html blog article adaptive --&gt;
+&lt;p&gt;&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block&quot; data-ad-client=&quot;ca-pub-7700451254687983&quot; data-ad-slot=&quot;1629640353&quot; data-ad-format=&quot;auto&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;
+(adsbygoogle = window.adsbygoogle || []).push({});
+&lt;/script&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Друзья, если вас заинтересовала данная статья помогите мне повысить посещаемость блога. В конце статьи есть кнопки для репоста. Поделитесь материалом на своих страницах в соц сетях. Это поможет мне писать больше полезных материалов для вас. Заранее благодарю!&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Перед началом поиска идем на сайт и смотрим какие кворки пользуются популярностью у заказчиков.&lt;/p&gt;
+
+&lt;p&gt;Смотрим первые три категории в каталоге услуг - первая связанная с дизайном нас не интересует. Найти исполнителя еще дешевле врятли получится. А вот категория “Тексты и переводы” нам вполне подойдет.&lt;/p&gt;
+
+&lt;p&gt;Далее одна &lt;strong&gt;тонкость&lt;/strong&gt;! - подкатегории автоматически размещаются в родительской категории по популярности среди заказчиков. Видим, что категория “Статьи” первая. Заходим.&lt;/p&gt;
+
+&lt;p&gt;Выставим в фильтре слева “положительных отзывов - более 100” и “уровень продавца - профессионал”. Так мы увидим кворки, которые давно на сайте и регулярно пользуются спросом. Далее смотрим на скриншот.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/zarabotok-na-kwork-pisat-statii.jpg&quot; alt=&quot;kwork как заработать&quot; style=&quot;width: 100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;На данном изображении видим, что товарищ под ником IRANA предлагает написать статью объемом 3500 символов за 500 рублей (по факту конечно за 400 руб. см начало статьи).&lt;/p&gt;
+
+&lt;p&gt;Давайте откроем один из популярных сайтов услуг копирайта и рерайта copylancer.ru и ознакомимся с ценами. Для того, чтобы точно узнать расценки регистрируемся как заказчик и создаем заказ на 3500 символов. В качестве исполнителей выбираем &lt;strong&gt;новичков&lt;/strong&gt;. Выбор исполнителя доверяем системе, чтобы самому не тратить время на это. Она выберет человека с наибольшим рейтингом.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Не бойтесь выбирать новичков. Текст всегда можно вернуть на доработку. Да и новичкам не выгодно писать плохие тексты. Им как и на любой бирже нужно набирать положительные отзывы для доступа к дорогим заказам.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/zaraboto-kwork-novichki-teksty.jpg&quot; alt=&quot;kwork как заработать copylancer&quot; style=&quot;width: 100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;В итоге мы видим, что для заказа текста 3500 символов нам понадобится 82 рубля. С каждого такого заказа мы будем &lt;strong&gt;зарабатывать на kwork&lt;/strong&gt; по 300 рублей. Неплохо для того, кто ничего сам не умеет :)&lt;/p&gt;
+
+&lt;p&gt;Друзья, это только один из нескольких способов автоматизации &lt;strong&gt;заработка на кворк для новичков&lt;/strong&gt; чужими руками. Поддержите меня монетой и я опубликую следующий материал, где расскажу &lt;strong&gt;еще 3 проверенных способа&lt;/strong&gt; как можно &lt;strong&gt;зарабатывать на кворк&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Тем, кто поддержит меня достойной суммой сразу отправлю 3 способа заработка на email, указанный при переводе средств.&lt;/p&gt;
+
+&lt;iframe frameborder=&quot;0&quot; allowtransparency=&quot;true&quot; scrolling=&quot;no&quot; src=&quot;https://money.yandex.ru/embed/donate.xml?account=410011216089107&amp;amp;quickpay=donate&amp;amp;payment-type-choice=on&amp;amp;mobile-payment-type-choice=on&amp;amp;default-sum=99&amp;amp;targets=%D0%9F%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D1%82%D0%B5+%D0%B5%D1%89%D0%B5+3+%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%B0+%D0%B7%D0%B0%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0+%D0%BD%D0%B0+kwork.ru&amp;amp;target-visibility=on&amp;amp;project-name=ordanax.github.io&amp;amp;project-site=https%3A%2F%2Fordanax.github.io&amp;amp;button-text=05&amp;amp;mail=on&amp;amp;successURL=https%3A%2F%2Fordanax.github.io%2Fkak-zarabotat-na-kwork-ru-novichku&quot; width=&quot;508&quot; height=&quot;117&quot;&gt;&lt;/iframe&gt;
+
+&lt;script async=&quot;&quot; src=&quot;//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- html blog article adaptive --&gt;
+&lt;p&gt;&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block&quot; data-ad-client=&quot;ca-pub-7700451254687983&quot; data-ad-slot=&quot;1629640353&quot; data-ad-format=&quot;auto&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;
+(adsbygoogle = window.adsbygoogle || []).push({});
+&lt;/script&gt;&lt;/p&gt;</content><author><name></name></author><category term="kwork" /><category term="kwork.ru" /><category term="заработок" /><category term="заработать" /><category term="новички" /><category term="новичку" /><summary type="html"></summary></entry><entry><title type="html">Продвижение сайта ссылками в 2017 году</title><link href="http://localhost:4000/seo/2017/11/28/prodvizhieniie-saita-ssylkami-v-2017-ghodu.html" rel="alternate" type="text/html" title="Продвижение сайта ссылками в 2017 году" /><published>2017-11-28T06:56:00+00:00</published><updated>2017-11-28T06:56:00+00:00</updated><id>http://localhost:4000/seo/2017/11/28/prodvizhieniie-saita-ssylkami-v-2017-ghodu</id><content type="html" xml:base="http://localhost:4000/seo/2017/11/28/prodvizhieniie-saita-ssylkami-v-2017-ghodu.html">&lt;p&gt;В 2017 году рынок SEO услуг по &lt;strong&gt;продвижению сайтов ссылками&lt;/strong&gt; сильно перенасыщен предложениями. На рынке появилось множество фриланс-бирж с предложениями за 500 рублей и даже ниже.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Как не загнать свой сайт под “Минусинск”&lt;/strong&gt; неправильным выбором услуги или исполнителя я расскажу дальше.&lt;/p&gt;
+
+&lt;p&gt;Итак, &lt;strong&gt;во-первых&lt;/strong&gt;, не стоит пользоваться услугами фрилансеров на сомнительных биржах. Даже, если администрация сайта вернет вам деньги за плохое выполнение заказа, то угробленный сайт вам придется восстанавливать самому.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Биржи которыми я пользуюсь для заказа разовых SEO-услуг: &lt;a href=&quot;//kwork.ru/ref/10649&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;kwork.ru&lt;/a&gt;, &lt;a href=&quot;//www.fl.ru/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;FL.ru&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Почему именно эти биржи? Все просто - на данных сайтах очень хорошо реализована система рейтинга и отзывов. Накрутить отзывы просто так не получиться. К тому же на данных биржах очень большая посещаемость. Проекты “живые” и активно развиваются.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Во-вторых&lt;/strong&gt;, даже на проверенных биржах встречаются неопытные сеошники готовые вам продать любые услуги (в том числе и некачественные) ради получения денег.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;И вот тут я пишу конкретно про &lt;strong&gt;продвижение ссылками в 2017&lt;/strong&gt;!
+Сухо и кратко, чтобы вы поняли. что работает и продвигает, а что вредит.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Поисковые системы уже давно умеют индексировать ссылки с &lt;strong&gt;nofollow&lt;/strong&gt; и &lt;strong&gt;даже с редиректом&lt;/strong&gt;!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Это не мои фантазии, а факт. Ссылки появляются в разделе “Внешние ссылки” в кабинете вебмастера.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Любые прогоны по большим базам ссылок (даже статейные) &lt;strong&gt;вредят сайту&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Беда в том, что доступа к таким ссылкам практически всегда после прогона нет. Если попадете под санкции и потребуется снять эти 500-5000 ссылок, то ничего не получится.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Забудьте про ТИЦ и ТРАСТ&lt;/strong&gt; сайтов с которых вам предлагают ссылки.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;ТРАСТ понятие относительное и не известно поисковым системам как мера сайта. ТРАСТ придумали энтузиасты СЕО. 
+ТИЦ не влияет на позиции сайта. Это написано в кабинете Яндекс.Вебмастер!&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Ручное размещение ссылок в профилях, блогах, комментариях и крауд-маркетинг!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Акцент на последнее. &lt;strong&gt;Крауд-ссылки&lt;/strong&gt; это самое актуальное и безопасное на сегодня размещение ссылок. И да! Яндекс говорил такие ссылки. Это в большинстве случаев хорошие ссылки.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Вот и все что вам нужно. Не забивайте голову покупкой искусственного траффика и накруткой поведенческих факторов. За накрутку ПФ вам грозит &lt;strong&gt;8 месяцев на дне выдачи&lt;/strong&gt;. Сроки не меняются даже, если написать Платону. Робот придет к вам с очередной проверкой точно через 8 месяцев.&lt;/p&gt;
+
+&lt;p&gt;Ссылка на биржу &lt;a href=&quot;//kwork.ru/ref/10649&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;kwork.ru&lt;/a&gt; с моей реффкой. Думаю справедливо ))
+&lt;strong&gt;Удачи в продвижении сайта!&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">В 2017 году рынок SEO услуг по продвижению сайтов ссылками сильно перенасыщен предложениями. На рынке появилось множество фриланс-бирж с предложениями за 500 рублей и даже ниже.</summary></entry><entry><title type="html">Пагинация постов Jekyll по категориям</title><link href="http://localhost:4000/jekyll-post-pagination-in-category" rel="alternate" type="text/html" title="Пагинация постов Jekyll по категориям" /><published>2017-04-15T11:30:00+00:00</published><updated>2017-04-15T11:30:00+00:00</updated><id>http://localhost:4000/paghinatsiia-jekyll-po-katieghoriiam</id><content type="html" xml:base="http://localhost:4000/jekyll-post-pagination-in-category">&lt;p&gt;Популярный в интернете вопрос - &lt;strong&gt;как организовать постраничный вывод постов в категориях Jekyll?&lt;/strong&gt;
+Не думал, что &lt;em&gt;пагинация постов в категориях Jekyll&lt;/em&gt; такой сложный вопрос для многих людей :) Ну давайте тогда будем разбираться.&lt;/p&gt;
+
+&lt;p&gt;Скажу сразу - стандартный плагин пагинации &lt;strong&gt;jekyll-paginate&lt;/strong&gt; такого не умеет. Если он у вас используется, то смело удаляйте все упоминания о нем с вашего сайта. Сейчас мы сделаем &lt;strong&gt;пагинацию&lt;/strong&gt; через более функциональный плагин &lt;strong&gt;jekyll-paginate-v2&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;далее-по-шагам-выполняем-следующие-действия&quot;&gt;Далее по шагам выполняем следующие действия:&lt;/h3&gt;
+
+&lt;p&gt;1) Устанавливаем плагин пагинации. Открываем консоль (Shift + правая кнопка мыши. Выбираем “Открыть окно команд”) и выполняем команду:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;gem install jekyll-paginate-v2&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;2) Далее открываем файл настроек вашего сайта &lt;strong&gt;_config.yml&lt;/strong&gt;. Он лежит в корне вашего сайта на &lt;strong&gt;Jekyll&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Важно! Проверяем задана ли у вас переменная &lt;strong&gt;baseurl&lt;/strong&gt;. Если нет, то пишем вверху файла, где-нибудь рядом с title:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;baseurl: /&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Задаем дефолтные настройки для нашего &lt;strong&gt;плагина постраничного вывода постов&lt;/strong&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;pagination:&lt;br /&gt;&lt;/p&gt;
+  &lt;blockquote&gt;
+    &lt;p&gt;enabled: true&lt;br /&gt;
+per_page: 4&lt;br /&gt;
+category: posts&lt;/p&gt;
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Подключаем плагин:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;gem:&lt;br /&gt;&lt;/p&gt;
+  &lt;blockquote&gt;
+    &lt;p&gt;-jekyll-paginate-v2&lt;/p&gt;
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;С файлом настроек закончили. Включили плагин, сказали ему выводить по умолчанию 4 записи из всех категорий (подойдет для главной страницы). Двигаемся дальше.&lt;/p&gt;
+
+&lt;div&gt;
+&lt;script async=&quot;&quot; src=&quot;//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&quot;&gt;&lt;/script&gt;
+&lt;!-- html blog article adaptive --&gt;
+&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block&quot; data-ad-client=&quot;ca-pub-7700451254687983&quot; data-ad-slot=&quot;1629640353&quot; data-ad-format=&quot;auto&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;
+(adsbygoogle = window.adsbygoogle || []).push({});
+&lt;/script&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;3) Открываем, также в корне вашего проекта &lt;strong&gt;Jekyll&lt;/strong&gt;, файл &lt;strong&gt;Gemfile&lt;/strong&gt;. Добавляем в него следующий код:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;group :jekyll_plugins do&lt;br /&gt;&lt;/p&gt;
+  &lt;blockquote&gt;
+    &lt;p&gt;gem “jekyll-paginate-v2”&lt;/p&gt;
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;end&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Если у вас уже есть данная конструкция в файле, то просто добавьте между строками &lt;em&gt;group&lt;/em&gt; и &lt;em&gt;end&lt;/em&gt; строку &lt;strong&gt;gem “jekyll-paginate-v2”&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;4) На данном шаге нам необходимо изменить код вывода постов в категориях и на главной странице, если требуется.&lt;/p&gt;
+
+&lt;p&gt;Начнем с главной - откройте в корне сайта файл &lt;em&gt;index.html&lt;/em&gt;. В шапке где задается &lt;em&gt;title&lt;/em&gt; и &lt;em&gt;layout&lt;/em&gt; добавьте код:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;pagination:&lt;/p&gt;
+  &lt;blockquote&gt;
+    &lt;p&gt;enabled: true&lt;/p&gt;
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Далее ищем код, который в цикле выводит посты и меняем его на код как на скриншоте:
+&lt;img src=&quot;/uploads/jekyll-post-category-paginate.jpg&quot; alt=&quot;постраничный вывод записей в категориях Jekyll&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://github.com/htmlblog/ordanax.github.io/blob/master/_uploads/paginate.txt&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Скачать файл с кодом &lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Далее вставляем код &lt;strong&gt;постраничного вывода постов Jekyll&lt;/strong&gt; как на скриншоте:
+&lt;img src=&quot;/uploads/jekyll-posts-category-paginate.jpg&quot; alt=&quot;пагинация постов в категориях Jekyll&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://github.com/htmlblog/ordanax.github.io/blob/master/_uploads/paginate.txt&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Скачать файл с кодом пагинации&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Важно!&lt;/strong&gt; Для главной страницы сайта! &lt;br /&gt;
+Замените в коде пагинации у ссылок &lt;em&gt;‘/news/’&lt;/em&gt; на &lt;em&gt;’/’&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Сохраняем файл и перезапускаем сервер сайта. Теперь у нас на главной странице выводятся последние четыре поста сайта.&lt;/p&gt;
+
+&lt;p&gt;Давайте теперь сделаем &lt;strong&gt;пагинацию постов в категории&lt;/strong&gt;, например &lt;em&gt;sport&lt;/em&gt;. Открываем файл в котором выводятся посты из категории &lt;em&gt;sport&lt;/em&gt;. Повторяем действия, которые проводили на главной странице сайта с небольшими изменениями. Добавляем в шапку страницы код:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;pagination:&lt;/p&gt;
+  &lt;blockquote&gt;
+    &lt;p&gt;enabled: true&lt;br /&gt;
+category: sport&lt;/p&gt;
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Можно указать несколько категорий через запятую:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;categories: sport, politica&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Важно! У вас обязательно должен быть указан постоянный адрес страницы категории:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;permalink: sport/&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Далее копируем сюда из файла главной страницы код для вывода постов и код вывода постраничной навигации, &lt;strong&gt;но!&lt;/strong&gt; меняем в коде пагинации &lt;em&gt;/news/&lt;/em&gt; на постоянный url вашей категории -
+ &lt;em&gt;/sport/&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;На скриншоте выше выделены три участка кода, где требуется произвести замену.&lt;/p&gt;
+
+&lt;p&gt;После перезапуска сервера по адресу &lt;em&gt;localhost:4000/sport/&lt;/em&gt; будут выводится посты из категории &lt;em&gt;sport&lt;/em&gt; по 4 штуки на страницу. Если требуется изменить число выводимых постов, то добавьте в шапку файла категории параметр:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;per_page: число постов&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;На этом все. Смотрите видеоурок по данной статье на моем канале.&lt;/p&gt;</content><author><name></name></author><summary type="html">Популярный в интернете вопрос - как организовать постраничный вывод постов в категориях Jekyll? Не думал, что пагинация постов в категориях Jekyll такой сложный вопрос для многих людей :) Ну давайте тогда будем разбираться.</summary></entry><entry><title type="html">Подключение админки Jekyll к GitHub</title><link href="http://localhost:4000/jekyll/2017/04/04/anons-podkliuchieniie-adminka-jekyll-k-github.html" rel="alternate" type="text/html" title="Подключение админки Jekyll к GitHub" /><published>2017-04-04T16:10:00+00:00</published><updated>2017-04-04T16:10:00+00:00</updated><id>http://localhost:4000/jekyll/2017/04/04/anons-podkliuchieniie-adminka-jekyll-k-github</id><content type="html" xml:base="http://localhost:4000/jekyll/2017/04/04/anons-podkliuchieniie-adminka-jekyll-k-github.html">&lt;p&gt;В одном из &lt;a href=&quot;https://ordanax.github.io/kak-perenesti-site-jekyll-na-github&quot;&gt;прошлых уроков&lt;/a&gt; мы зарегистрировались на GitHub, создали в нем репозиторий и перенесли туда наш &lt;strong&gt;сайт на Jekyll&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Большинство вебмастеров на этом останавливаются т.к. им для &lt;strong&gt;администрирования сайта на Jekyll&lt;/strong&gt; вполне хватает интерфейса самого GitHub, но мы пойдем другим путем и подключим удобную &lt;strong&gt;админку&lt;/strong&gt; для нашего репозитория с сайтом.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/jekyll-admin-panel.jpg&quot; alt=&quot;jekyll-admin-panel.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Авторизуйтесь на сайте GitHub. Перейдите на сервис &lt;a href=&quot;https://www.siteleaf.com/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Siteleaf&lt;/a&gt; и зарегистрируйтесь, нажав в правом верхнем углу кнопку “Sign up”. Введите свой логин, пароль, а также любое имя. Нажмите внизу снова “Sign up”.&lt;/p&gt;
+
+&lt;p&gt;На втором шаге регистрации введите название своего сайта. В поле для указания домена ничего не указывайте. Нажмите сразу под ним галочку “Use a custom domain”. В правой колонке нажмите на кнопку “Connect existing repo”. В открывшемся окне выберите “Public repos”.&lt;/p&gt;
+
+&lt;p&gt;На следующем шаге в поле “REPO” вам необходимо выбрать репозиторий GitHub на котором размещен ваш &lt;strong&gt;сайт на Jekyll&lt;/strong&gt;. Просто поставьте в него курсор и появится список ваших публичных репозиториев.&lt;/p&gt;
+
+&lt;p&gt;В поле “BRANCH” введите “master” или другое название ветки, если понимаете о чем идет речь. После этого нажмите внизу “Connect and create site”.&lt;/p&gt;
+
+&lt;p&gt;Отлично! Сейчас файлы вашего сайта будут скопированы в данный сервис и вы попадете в &lt;strong&gt;админку Jekyll&lt;/strong&gt;, где сможете создавать или редактировать посты и страницы вашего сайта. Все изменения будут автоматически отправляться на GitHub и отобразятся на сайте. 
+Здорово не правда ли?&lt;/p&gt;
+
+&lt;p&gt;Подробнее о данной &lt;strong&gt;админке для Jekyll&lt;/strong&gt; вы можете ознакомиться в данном видео:&lt;/p&gt;
+
+&lt;div class=&quot;myvideo&quot;&gt;
+&lt;iframe width=&quot;610&quot; height=&quot;343&quot; src=&quot;https://www.youtube.com/embed/CK12Q9OhoFw&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="jekyll" /><category term="github" /><category term="admin" /><summary type="html">В одном из прошлых уроков мы зарегистрировались на GitHub, создали в нем репозиторий и перенесли туда наш сайт на Jekyll.</summary></entry></feed>

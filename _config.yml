@@ -11,7 +11,7 @@ collections:
 description: Установка и настройка Arch Linux, статьи, конфиги, группа поддержки.
 baseurl: ''
 url: https://ordanax.github.io
-permalink: "/:title"
+#permalink: "/:title"
 markdown: kramdown
 
 plugins:
@@ -21,15 +21,14 @@ plugins:
 category_dir: ''
 pagination:
   enabled: true
-  per_page: 9
+  paginate: 6
   title: ':title - Страница :num'
   limit: 0
   sort_field: 'date'
   sort_reverse: true
   trail:
-    before: 4
-    after: 4
-
+    before: 2
+    after: 2
 exclude:
 - Gemfile
 - Gemfile.lock
