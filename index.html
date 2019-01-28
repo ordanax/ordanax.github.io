@@ -24,8 +24,36 @@ layout: default
 
 <hr>
 
-{{ include pagination-first.html }}
-{{ include pagination-second.html }}
+	<div class="cat-list">
+		<div class="container-fluid">
+			<div class="row">
+
+				<div class="col-md-8">
+
+					<div class="all-posts-header">{{ page.title }}</div>
+
+					<div class="cat-list-wrap">
+
+{% for post in paginator.posts %}
+{% include /category-list-item.html %}
+{% endfor %}
+		
+					</div>
+
+{% include /pagination-first.html %}
+
+				</div>
+
+				<div class="col-md-4">
+{% include /category-aside.html %}
+				</div>
+
+			</div>
+		</div>
+
+{% include /pagination-second.html %}
+
+	</div>
 
 <p style="text-indent: 25px; text-align: justify;">
     Друзья, <strong>рекомендую</strong> вам отличную биржу фриланс-услуг, которой пользуюсь сам.

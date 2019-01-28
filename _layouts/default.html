@@ -18,38 +18,7 @@
 
   		</div>
   	</div>
-
-  		<div class="cat-list">
-		<div class="container-fluid">
-			<div class="row">
-
-				<div class="col-md-8">
-
-					<div class="all-posts-header">{{ page.title }}</div>
-
-					<div class="cat-list-wrap">
-
-{% for post in paginator.posts %}
-{% include /category-list-item.html %}
-{% endfor %}
-		
-					</div>
-
-{% include /pagination-first.html %}
-
-				</div>
-
-				<div class="col-md-4">
-{% include /category-aside.html %}
-				</div>
-
-			</div>
-		</div>
-
-{% include /pagination-second.html %}
-
-	</div>
-	
+  	
   	<div class="blog-footer">
   		{% include footer.html %}
   	</div>
