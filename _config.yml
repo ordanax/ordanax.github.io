@@ -19,7 +19,7 @@ gems:
 - jekyll-feed
 
 plugins: [jekyll-paginate-v2]
-category_dir: blog
+category_dir: ''
 pagination:
   enabled: true
   per_page: 9
