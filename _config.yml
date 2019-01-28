@@ -13,12 +13,11 @@ baseurl: ''
 url: https://ordanax.github.io
 permalink: "/:title"
 markdown: kramdown
-gems:
+
+plugins:
 - jekyll-paginate-v2
-#- jekyll-sitemap
 - jekyll-feed
 
-plugins: [jekyll-paginate-v2]
 category_dir: ''
 pagination:
   enabled: true
