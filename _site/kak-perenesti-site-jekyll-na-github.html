@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+  <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<link href="/assets/bootstrap.min.css" rel="stylesheet">
+	<link href="/assets/blog.css" rel="stylesheet">
+	<link href="/assets/breadcrumb-style.css" rel="stylesheet">
+	
+	<title>Как перенести сайт Jekyll на GitHub</title>
+	<meta name="description" content="Переносим сайт созданный на Jekyll на GitHub хостинг. Подробная инструкция по работе с терминалом и видео урок.">
+	
+	<!-- Put this script tag to the <head> of your page -->
+	<script type="text/javascript" src="//vk.com/js/api/openapi.js?142"></script>
+
+	<script type="text/javascript">
+	  VK.init({apiId: 5949051, onlyWidgets: true});
+	</script>
+	
+	<meta name="yandex-verification" content="805b49eb4e4e9adf" />
+	<meta name="google-site-verification" content="Cow6hdfnPNIg8_IaHo9RpbGNwL_xHNus5MdQ3EzQeyE" />
+	
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	
+	<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Все об Arch Linux" />
+	
+	<!-- feed meta -->
+</head>
+
+
+  <body>
+    <div class="blog-masthead">
+      <div class="container">
+       <nav class="blog-nav">
+  <a class="blog-nav-item" href="/">Главная</a>
+  <a class="blog-nav-item" href="https://htmlblog.github.io/jekyll/">Jekyll</a>
+  <a class="blog-nav-item" href="https://htmlblog.github.io/seo/">SEO</a>
+  <a class="blog-nav-item" href="https://htmlblog.github.io/useful/">Полезное</a>
+  <a class="blog-nav-item" href="https://www.youtube.com/c/HtmlBlog" target="_blank" rel="nofollow">Канал на Youtube</a>
+  <a class="blog-nav-item" href="https://htmlblog.github.io/about/">Об авторе</a>
+</nav>
+
+  	   </div>
+     </div>
+     
+     <div class="container">
+        <div class="blog-header">
+	<a href="/"><img class="blog-logo" src="/uploads/logo.png" alt="logo"></a>
+	<span class="blog-title">Все об Arch Linux</span>
+	<p class="lead blog-description">Уроки по созданию сайтов на русском языке. У нас тут своя матрица.</p>
+</div>
+
+        <div class="row">
+		  <div class="col-md-12">
+
+  <nav class="breadcrumbs hidden-sm-down">
+
+    <a class="breadcrumb-item" href=http://localhost:4000//>Главная</a>
+
+    <ol class="list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <!-- Skip if root -->
+      
+      
+     
+      
+     
+
+      
+      
+
+          
+              
+          
+
+       
+
+      
+      
+
+          
+              
+
+              
+
+              <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                 <a class="breadcrumb-item" itemprop="item" href="http://localhost:4000blog/jekyll/">
+                   <span itemprop="name">jekyll</span>
+                 </a>
+                <meta itemprop="position" content="1" />
+              </li>
+
+              
+          
+
+       
+
+      
+      
+
+          
+              
+          
+
+       
+
+      
+      
+
+          
+              
+          
+
+       
+      
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+             <span class="breadcrumb-item" itemprop="name">Как перенести сайт Jekyll на GitHub</span>
+        </li>
+
+    </ol>
+
+  </nav>
+
+</div>
+          <div class="col-md-8 blog-main"><div class="blog-post">
+    <h1 class="blog-post-title">Публикация сайта Jekyll на GitHub хостинге</h1>
+    <p class="blog-post-meta">29.03.2017</p>
+    <p>После того как вы установили Jekyll на свой компьютер и создали сайт встает вопрос - как и на каком хостинге лучше его разместить. В связи с тем, что для Jekyll не существует официального плагина <a href="https://htmlblog.github.io/plugin-adminka-dlja-jekyll">админки</a> разработчики с самого начала позиционируют Jekyll как инструмент, который предпочтительно использовать с GitHub. Данный факт способствовал популяризации Jekyll в отличие от подобных генераторов.</p>
+
+<p>Конечно сайт созданный на Jekyll можно размещать и на обычном хостинге, но как по мне это менее удобно для начинающих сайтостроителей.</p>
+
+<p>В данной статье я предлагаю <strong>разместить сайт на GitHub</strong> и забыть о его локальной копии на компьютере (по крайней мере до глобальных изменений).</p>
+
+<p>Если вы любите читать, то посмотрите подробный урок <strong>как перенести Jekyll на Github</strong></p>
+
+<div class="myvideo"><iframe width="610" height="343" src="https://www.youtube.com/embed/PXKPI2e1zZY" frameborder="0" allowfullscreen=""></iframe></div>
+
+<p><br /></p>
+<h3 id="порядок-действий-для-публикации-сайта-на-гитхаб">Порядок действий для публикации сайта на гитхаб:</h3>
+<p><br />
+<strong>1. Скачайте и установите Git:</strong> <a href="https://git-scm.com/download/win" target="_blank" rel="nofollow">https://git-scm.com/download/win</a></p>
+
+<p>В процессе установки можете ничего не менять и просто нажимать “Далее”.</p>
+
+<p><strong>2. Зарегистрироваться на сайте GitHub:</strong> <a href="https://github.com/" target="_blank" rel="nofollow">https://github.com/</a></p>
+
+<p>После того как зарегистрируетесь на GitHub создайте репозиторий. Нажмите на главной странице кнопку <strong>Start a project</strong>. Далее необходимо ввести название репозитория в следующем формате!:</p>
+
+<blockquote>
+  <p>вашлогин.github.io</p>
+</blockquote>
+
+<p>Если назвать репозиторий по-другому, то он не будет доступен как домен. Т.е. <em>вашлогин.github.io</em> вы сможете открыть в любого устройства как сайт.</p>
+
+<p>После того как создали репозиторий скопируйте на его главной странице в самом верху ссылку формата:</p>
+
+<blockquote>
+  <p>https://github.com/вашлогин/название репозитория.git</p>
+</blockquote>
+
+<p><strong>3. Отправляем файлы сайта Jekyll на GitHub</strong></p>
+
+<p>Перейдите в любой удобный каталог, где будете создавать локальный репозиторий. Нажмите в нем правой кнопкой мыши и выберите в контекстном меню <em>Git Bash Here</em>. В открывшемся терминале введите команду:</p>
+
+<p><code class="highlighter-rouge">git clone https://github.com/вашлогин/название репозитория.git</code></p>
+
+<p>В папке будет создана локальная копия вашего репозитория с именем <em>вашлогин.github.io</em>. Пока пустая. Скопируйте в эту папку файлы своего сайта. Вернитесь в терминал и перейдите в данную папку:</p>
+
+<p><code class="highlighter-rouge">cd вашлогин.github.io</code></p>
+
+<p>После этого выполните команды:</p>
+
+<p><code class="highlighter-rouge">git config --global user.name "My name"</code></p>
+
+<p><code class="highlighter-rouge">git config --global user.email "myname@mail.ru"</code></p>
+
+<p><code class="highlighter-rouge">git add .</code></p>
+
+<p><code class="highlighter-rouge">git commit -m "comment"</code></p>
+
+<p><code class="highlighter-rouge">git push -u origin master</code></p>
+
+<p>При выполнении последней команды терминал спросит ваш логин и пароль от учетной записи на GitHub. Введите их и подождите когда сайт скопируется на хостинг.</p>
+
+<p>На этом все. Сайт на <strong>Jekyll перенесен на GitHub хостинг</strong> и доступен для просмотра по адресу <em>вашлогин.github.io</em>.</p>
+
+	<div class="blog-post-tags">
+	  
+	    <span>jekyll</span>
+	  
+	    <span>github</span>
+	  
+	</div>
+    <hr>
+    	<div id="disqus_thread"></div>
+
+	<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,blogger,evernote,tumblr" data-counter=""></div>
+	<span class="small-left"> Не забудьте сказать спасибо. Поставьте лайк!</span>
+	<br>
+	
+	<!-- Put this div tag to the place, where the Comments block will be -->
+	<div id="vk_comments"></div>
+	<script type="text/javascript">
+	VK.Widgets.Comments("vk_comments", {limit: 10, attach: "*"});
+	</script>
+</div>
+</div>
+		      <div class="col-md-3 col-sm-offset-1 blog-sidebar"><div class="sidebar-module sidebar-module-inset">
+	<h3>Блог</h3>
+	<ol class="list-unstyled right-menu">
+		<li><a href="https://htmlblog.github.io/jekyll/">Уроки Jekyll</a></li>
+		<li><a href="https://htmlblog.github.io/seo/">SEO</a></li>
+		<li><a href="https://htmlblog.github.io/useful/">Полезное</a></li>
+	</ol>
+</div>
+
+<div class="sidebar-module sidebar-module-inset">
+	<h4>Подписка на новости</h4>
+	<form style="text-align:center;" action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=JekyllHtml', 'popupwindow', 'scrollbars=yes,width=242,height=auto');return true">
+		<p style="text-align: justify; font-style: italic;">Подпишитесь на обновления блога, чтобы получать новости первым.</p>
+		<p><input type="text" style="width:100%;color: #969696; padding-left: 5px;" name="email" value="Укажите ваш email адрес" /></p>
+		<input type="hidden" value="JekyllHtml" name="uri"/><input type="hidden" name="loc" value="ru_RU"/>
+		<input type="submit" value="Подписаться" />
+	</form>
+</div>
+
+<div class="sidebar-module sidebar-module-ads">
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- html blog article adaptive -->
+	<ins class="adsbygoogle"
+	     style="display:block"
+	     data-ad-client="ca-pub-7700451254687983"
+	     data-ad-slot="1629640353"
+	     data-ad-format="auto"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</div>
+</div>
+
+        </div>
+	   </div>
+    <div class="blog-footer">
+      <p>Блог создан на Jekyll. <a href="https://www.youtube.com/playlist?list=PLyHuZVg03hQjtV45HPlfuPzHJOtEoK6DT" target="_blank" rel="nofollow">Подробнее</a>.</p>
+<p><a href="#">Вернуться наверх</a></p>
+
+<!-- hit.ua -->
+<a href='http://hit.ua/?x=83094' rel='nofollow' target='_blank'>
+<script language="javascript" type="text/javascript"><!--
+Cd=document;Cr="&"+Math.random();Cp="&s=1";
+Cd.cookie="b=b";if(Cd.cookie)Cp+="&c=1";
+Cp+="&t="+(new Date()).getTimezoneOffset();
+if(self!=top)Cp+="&f=1";
+//--></script>
+<script language="javascript1.1" type="text/javascript"><!--
+if(navigator.javaEnabled())Cp+="&j=1";
+//--></script>
+<script language="javascript1.2" type="text/javascript"><!--
+if(typeof(screen)!='undefined')Cp+="&w="+screen.width+"&h="+
+screen.height+"&d="+(screen.colorDepth?screen.colorDepth:screen.pixelDepth);
+//--></script>
+<script language="javascript" type="text/javascript"><!--
+Cd.write("<img src='//c.hit.ua/hit?i=83094&g=0&x=2"+Cp+Cr+
+"&r="+escape(Cd.referrer)+"&u="+escape(window.location.href)+
+"' border='0' wi"+"dth='1' he"+"ight='1'/>");
+//--></script>
+<noscript>
+<img src='//c.hit.ua/hit?i=83094&amp;g=0&amp;x=2' border='0'/>
+</noscript></a>
+<!-- / hit.ua -->
+
+
+
+
+    </div>
+	
+<script>
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://htmlblog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	  
+	<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+	<script src="//yastatic.net/share2/share.js"></script>      
+	  
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript">
+	    (function (d, w, c) {
+		(w[c] = w[c] || []).push(function() {
+		    try {
+			w.yaCounter43813279 = new Ya.Metrika({
+			    id:43813279,
+			    clickmap:true,
+			    trackLinks:true,
+			    accurateTrackBounce:true,
+			    webvisor:true
+			});
+		    } catch(e) { }
+		});
+
+		var n = d.getElementsByTagName("script")[0],
+		    s = d.createElement("script"),
+		    f = function () { n.parentNode.insertBefore(s, n); };
+		s.type = "text/javascript";
+		s.async = true;
+		s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+		if (w.opera == "[object Opera]") {
+		    d.addEventListener("DOMContentLoaded", f, false);
+		} else { f(); }
+	    })(document, window, "yandex_metrika_callbacks");
+	</script>
+	<noscript><div><img src="https://mc.yandex.ru/watch/43813279" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	<!-- /Yandex.Metrika counter -->
+  </body>
+
+</html>
