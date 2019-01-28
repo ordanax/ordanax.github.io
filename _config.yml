@@ -5,8 +5,8 @@ description: Установка и настройка Arch Linux, статьи, 
 url: 'https://ordanax.github.io'
 baseurl: ''
 markdown: kramdown
-theme: minima
 permalink: "/:title"
+timezone: UTC
 
 gems:
 #  - jekyll-paginate-v2

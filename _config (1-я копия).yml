@@ -1,0 +1,25 @@
+---
+title: Html Blog
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+email: mikhailyand@ya.ru
+description: Блог программиста. Создание сайтов на php, html, а также с помощью популярных
+  CMS.
+baseurl: ''
+url: https://htmlblog.github.io
+permalink: "/:title"
+markdown: kramdown
+gems:
+- jekyll-paginate
+- jekyll-sitemap
+- jekyll-feed
+paginate: 7
+exclude:
+- Gemfile
+- Gemfile.lock
