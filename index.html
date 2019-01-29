@@ -2,13 +2,12 @@
 layout: default
 pagination:
   enabled: true
-
-
+  per_page: 4
 ---
 
 <!-- This loops through the paginated posts -->
 <div class="posts">
-  {% for post in site.posts %}
+  {% for post in site.posts limit: 2 offset:3 %}
     <article class="post">
 
       <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
