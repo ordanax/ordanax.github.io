@@ -14,14 +14,11 @@ url: https://ordanax.github.io
 #permalink: "/:title"
 markdown: kramdown
 
-plugins:
-- jekyll-paginate-v2
-- jekyll-feed
-
-category_dir: ''
+plugins: [jekyll-paginate-v2]
+category_dir: blog
 pagination:
   enabled: true
-  paginate: 6
+  per_page: 9
   title: ':title - Страница :num'
   limit: 0
   sort_field: 'date'
@@ -29,6 +26,7 @@ pagination:
   trail:
     before: 2
     after: 2
+    
 exclude:
 - Gemfile
 - Gemfile.lock
