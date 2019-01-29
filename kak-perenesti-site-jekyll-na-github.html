@@ -7,8 +7,8 @@
 	<link href="/assets/blog.css" rel="stylesheet">
 	<link href="/assets/breadcrumb-style.css" rel="stylesheet">
 	
-	<title>Все об Arch Linux</title>
-	<meta name="description" content="Установка и настройка Arch Linux, статьи, конфиги, группа поддержки.">
+	<title>Как перенести сайт Jekyll на GitHub</title>
+	<meta name="description" content="Переносим сайт созданный на Jekyll на GitHub хостинг. Подробная инструкция по работе с терминалом и видео урок.">
 	
 	<!-- Put this script tag to the <head> of your page -->
 	<script type="text/javascript" src="//vk.com/js/api/openapi.js?142"></script>
@@ -71,12 +71,7 @@
       
 
           
-
-       
-
-      
-      
-
+              
           
 
        
@@ -85,18 +80,42 @@
       
 
           
+              
+
+              
+
+              <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                 <a class="breadcrumb-item" itemprop="item" href="http://localhost:4000/jekyll/">
+                   <span itemprop="name">jekyll</span>
+                 </a>
+                <meta itemprop="position" content="1" />
+              </li>
+
+              
+          
 
        
 
       
       
 
+          
+              
+          
+
+       
+
+      
+      
+
+          
+              
           
 
        
       
         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-             <span class="breadcrumb-item" itemprop="name">Все об Arch Linux</span>
+             <span class="breadcrumb-item" itemprop="name">Как перенести сайт Jekyll на GitHub</span>
         </li>
 
     </ol>
@@ -104,143 +123,87 @@
   </nav>
 
 </div>
-  			<div class="col-md-8 blog-main"><!-- This loops through the paginated posts -->
-<div class="posts">
-  
-  
-    <article class="post">
+  			<div class="col-md-8 blog-main"><div class="blog-post">
+    <h1 class="blog-post-title">Публикация сайта Jekyll на GitHub хостинге</h1>
+    <p class="blog-post-meta">29.03.2017</p>
+    <p>После того как вы установили Jekyll на свой компьютер и создали сайт встает вопрос - как и на каком хостинге лучше его разместить. В связи с тем, что для Jekyll не существует официального плагина <a href="https://ordanax.github.io/plugin-adminka-dlja-jekyll">админки</a> разработчики с самого начала позиционируют Jekyll как инструмент, который предпочтительно использовать с GitHub. Данный факт способствовал популяризации Jekyll в отличие от подобных генераторов.</p>
 
-      <h3><a href="/jekyll/update/2019/01/28/welcome-to-jekyll.html">Welcome to Jekyll!</a></h3>
-      <p>
-       <span class="date">28.01.2019</span>
-      </p>
+<p>Конечно сайт созданный на Jekyll можно размещать и на обычном хостинге, но как по мне это менее удобно для начинающих сайтостроителей.</p>
 
-      <div class="entry">
-        <p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+<p>В данной статье я предлагаю <strong>разместить сайт на GitHub</strong> и забыть о его локальной копии на компьютере (по крайней мере до глобальных изменений).</p>
 
+<p>Если вы любите читать, то посмотрите подробный урок <strong>как перенести Jekyll на Github</strong></p>
 
-      </div>
+<div class="myvideo"><iframe width="610" height="343" src="https://www.youtube.com/embed/PXKPI2e1zZY" frameborder="0" allowfullscreen=""></iframe></div>
 
-      <a href="/jekyll/update/2019/01/28/welcome-to-jekyll.html" class="read-more">Читать далее >></a>
-    </article>
+<p><br /></p>
+<h3 id="порядок-действий-для-публикации-сайта-на-гитхаб">Порядок действий для публикации сайта на гитхаб:</h3>
+<p><br />
+<strong>1. Скачайте и установите Git:</strong> <a href="https://git-scm.com/download/win" target="_blank" rel="nofollow">https://git-scm.com/download/win</a></p>
+
+<p>В процессе установки можете ничего не менять и просто нажимать “Далее”.</p>
+
+<p><strong>2. Зарегистрироваться на сайте GitHub:</strong> <a href="https://github.com/" target="_blank" rel="nofollow">https://github.com/</a></p>
+
+<p>После того как зарегистрируетесь на GitHub создайте репозиторий. Нажмите на главной странице кнопку <strong>Start a project</strong>. Далее необходимо ввести название репозитория в следующем формате!:</p>
+
+<blockquote>
+  <p>вашлогин.github.io</p>
+</blockquote>
+
+<p>Если назвать репозиторий по-другому, то он не будет доступен как домен. Т.е. <em>вашлогин.github.io</em> вы сможете открыть в любого устройства как сайт.</p>
+
+<p>После того как создали репозиторий скопируйте на его главной странице в самом верху ссылку формата:</p>
+
+<blockquote>
+  <p>https://github.com/вашлогин/название репозитория.git</p>
+</blockquote>
+
+<p><strong>3. Отправляем файлы сайта Jekyll на GitHub</strong></p>
+
+<p>Перейдите в любой удобный каталог, где будете создавать локальный репозиторий. Нажмите в нем правой кнопкой мыши и выберите в контекстном меню <em>Git Bash Here</em>. В открывшемся терминале введите команду:</p>
+
+<p><code class="highlighter-rouge">git clone https://github.com/вашлогин/название репозитория.git</code></p>
+
+<p>В папке будет создана локальная копия вашего репозитория с именем <em>вашлогин.github.io</em>. Пока пустая. Скопируйте в эту папку файлы своего сайта. Вернитесь в терминал и перейдите в данную папку:</p>
+
+<p><code class="highlighter-rouge">cd вашлогин.github.io</code></p>
+
+<p>После этого выполните команды:</p>
+
+<p><code class="highlighter-rouge">git config --global user.name "My name"</code></p>
+
+<p><code class="highlighter-rouge">git config --global user.email "myname@mail.ru"</code></p>
+
+<p><code class="highlighter-rouge">git add .</code></p>
+
+<p><code class="highlighter-rouge">git commit -m "comment"</code></p>
+
+<p><code class="highlighter-rouge">git push -u origin master</code></p>
+
+<p>При выполнении последней команды терминал спросит ваш логин и пароль от учетной записи на GitHub. Введите их и подождите когда сайт скопируется на хостинг.</p>
+
+<p>На этом все. Сайт на <strong>Jekyll перенесен на GitHub хостинг</strong> и доступен для просмотра по адресу <em>вашлогин.github.io</em>.</p>
+
+	<div class="blog-post-tags">
+	  
+	    <span>jekyll</span>
+	  
+	    <span>github</span>
+	  
+	</div>
     <hr>
-  
-    <article class="post">
+    	<div id="disqus_thread"></div>
 
-      <h3><a href="/useful/2019/01/23/alisa-prilozhieniie-ot-iandieks.html">Алиса приложение от Яндекс</a></h3>
-      <p>
-       <span class="date">23.01.2019</span>
-      </p>
-
-      <div class="entry">
-        <p><img src="/uploads/yandex-alisa-skachat.jpg" alt="скачать голосовой помощник Яндекс Алиса" /></p>
-
-
-      </div>
-
-      <a href="/useful/2019/01/23/alisa-prilozhieniie-ot-iandieks.html" class="read-more">Читать далее >></a>
-    </article>
-    <hr>
-  
-    <article class="post">
-
-      <h3><a href="/useful/2018/09/23/riedaktor-bluefish-ftp-podkliuchieniie-v-ubuntu.html">Редактор Bluefish: FTP подключение в Ubuntu</a></h3>
-      <p>
-       <span class="date">23.09.2018</span>
-      </p>
-
-      <div class="entry">
-        <p><img src="/uploads/Bluefish-FTP.jpg" alt="редактор Bluefish FTP подключение" /></p>
-
-
-      </div>
-
-      <a href="/useful/2018/09/23/riedaktor-bluefish-ftp-podkliuchieniie-v-ubuntu.html" class="read-more">Читать далее >></a>
-    </article>
-    <hr>
-  
-    <article class="post">
-
-      <h3><a href="/seo/2018/09/04/provierit-iks-saita-onlain.html">Проверить ИКС сайта онлайн</a></h3>
-      <p>
-       <span class="date">04.09.2018</span>
-      </p>
-
-      <div class="entry">
-        <p><img src="/uploads/proverit-iks-saita-online.jpg" alt="Как узнать ИКС сайта" /></p>
-
-
-      </div>
-
-      <a href="/seo/2018/09/04/provierit-iks-saita-onlain.html" class="read-more">Читать далее >></a>
-    </article>
-    <hr>
-  
-    <article class="post">
-
-      <h3><a href="/useful/2018/09/02/kak-podniat-iks-saita-novyi-rieitingh-ot-iandieks.html">Как поднять ИКС сайта. Новый рейтинг от Яндекс</a></h3>
-      <p>
-       <span class="date">02.09.2018</span>
-      </p>
-
-      <div class="entry">
-        <p><strong>Как поднять ИКС сайта в Яндексе?</strong> Индекс качества сайта - новый показатель заменивший ТИЦ в поисковой системе Яндекс.</p>
-
-
-      </div>
-
-      <a href="/useful/2018/09/02/kak-podniat-iks-saita-novyi-rieitingh-ot-iandieks.html" class="read-more">Читать далее >></a>
-    </article>
-    <hr>
-  
-</div>
-
-<!-- Pagination links -->
-  
-  <div class="pagination">
-    
-    <span class="page-item">&laquo;</span>
-    
-  
-    
-    
-      <span class="page-item">1</span>
-    
-    
-    
-      <a href="/page2" class="page-item">2</a>
-    
-    
-    
-      <a href="/page3" class="page-item">3</a>
-    
-    
-    
-      <a href="/page4" class="page-item">4</a>
-    
-    
-  
-    
-    <a href="/page2/" class="page-item">&raquo;</a>
-    
-  </div>
-
-
-<p style="text-indent: 25px; text-align: justify;">
-    Друзья, <strong>рекомендую</strong> вам отличную биржу фриланс-услуг, которой пользуюсь сам.
-</p>
-<p style="text-indent: 25px; text-align: justify;">
-    За фиксированную стоимость вы сможете получить различные услуги - заказать дизайн для группы или сайта, заказать разработку логотипа, создание и продвижение сайта, рекламные услуги, обработку фото и видео материалов, а также написание статьи, получить консультацию специалиста и многое другое.
-</p>  
-<p style="text-indent: 25px; text-align: justify;">
-  Переходите, <strong>кликнув по баннеру ниже</strong>, и начинайте экономить свои деньги.
-</p>
-<div style="text-align: center; margin-bottom: 35px;">
-  <noindex>
-    <a href="https://kwork.ru?ref=10649" target="_blank" rel="nofollow">
-      <img src="https://kwork.ru/images/partner/01.jpg" alt="Kwork.ru - услуги фрилансеров от 500 руб." style="margin: 0 auto;">
-    </a>
-  </noindex>
+	<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,blogger,evernote,tumblr" data-counter=""></div>
+	<span class="small-left"> Не забудьте сказать спасибо. Поставьте лайк!</span>
+	<br>
+	
+	<!-- Put this div tag to the place, where the Comments block will be -->
+	<div id="vk_comments"></div>
+	<script type="text/javascript">
+	VK.Widgets.Comments("vk_comments", {limit: 10, attach: "*"});
+	</script>
 </div>
 </div>
   			<div class="col-md-3 col-sm-offset-1 blog-sidebar"><div class="sidebar-module sidebar-module-inset">

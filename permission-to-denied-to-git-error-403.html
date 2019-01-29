@@ -7,8 +7,8 @@
 	<link href="/assets/blog.css" rel="stylesheet">
 	<link href="/assets/breadcrumb-style.css" rel="stylesheet">
 	
-	<title>Все об Arch Linux</title>
-	<meta name="description" content="Установка и настройка Arch Linux, статьи, конфиги, группа поддержки.">
+	<title>Git ошибка remote: Permission to user/repo denied to user/other-repo</title>
+	<meta name="description" content="Варианты решения ошибки Git remote: Permission to denied to fatal: unable to access The requested URL returned error: 403.">
 	
 	<!-- Put this script tag to the <head> of your page -->
 	<script type="text/javascript" src="//vk.com/js/api/openapi.js?142"></script>
@@ -71,12 +71,18 @@
       
 
           
+              
 
-       
+              
 
-      
-      
+              <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                 <a class="breadcrumb-item" itemprop="item" href="http://localhost:4000/useful/">
+                   <span itemprop="name">useful</span>
+                 </a>
+                <meta itemprop="position" content="1" />
+              </li>
 
+              
           
 
        
@@ -85,18 +91,31 @@
       
 
           
+              
+          
 
        
 
       
       
 
+          
+              
+          
+
+       
+
+      
+      
+
+          
+              
           
 
        
       
         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-             <span class="breadcrumb-item" itemprop="name">Все об Arch Linux</span>
+             <span class="breadcrumb-item" itemprop="name">Git ошибка remote: Permission to user/repo denied to user/other-repo</span>
         </li>
 
     </ol>
@@ -104,143 +123,88 @@
   </nav>
 
 </div>
-  			<div class="col-md-8 blog-main"><!-- This loops through the paginated posts -->
-<div class="posts">
-  
-  
-    <article class="post">
+  			<div class="col-md-8 blog-main"><div class="blog-post">
+    <h1 class="blog-post-title">Решение ошибки remote: Permission to user/repo denied to user/other-repo. fatal: unable to access user/repo: The requested URL returned error: 403</h1>
+    <p class="blog-post-meta">27.03.2017</p>
+    <p>В данном уроке рассмотрим варианты решения данной оишбки:</p>
 
-      <h3><a href="/jekyll/update/2019/01/28/welcome-to-jekyll.html">Welcome to Jekyll!</a></h3>
-      <p>
-       <span class="date">28.01.2019</span>
-      </p>
+<blockquote>
+  <p><strong>remote: Permission to user/repo denied to user/other-repo.</strong>
+<strong>fatal: unable to access user/repo: The requested URL returned error: 403</strong></p>
+</blockquote>
 
-      <div class="entry">
-        <p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+<p>Возникает она чаще всего у новичков при попытке выполнить команду:</p>
 
+<p><code class="highlighter-rouge">$ git push </code></p>
 
-      </div>
+<p>Пример ошибки на скриншоте ниже.</p>
 
-      <a href="/jekyll/update/2019/01/28/welcome-to-jekyll.html" class="read-more">Читать далее >></a>
-    </article>
-    <hr>
-  
-    <article class="post">
+<p><img src="/uploads/git-permission-to-denied-to-error-403.jpg" alt="git-permission-to-denied-to-error-403.jpg" /></p>
 
-      <h3><a href="/useful/2019/01/23/alisa-prilozhieniie-ot-iandieks.html">Алиса приложение от Яндекс</a></h3>
-      <p>
-       <span class="date">23.01.2019</span>
-      </p>
+<p>Данная ошибка возникает довольно часто при работе с Git в терминале Windows. Суть ошибка довольно таки простая, но почему-то в интернете постоянно создаются темы с вопросом на данную тему и нет внятного ответа на русском языке.</p>
 
-      <div class="entry">
-        <p><img src="/uploads/yandex-alisa-skachat.jpg" alt="скачать голосовой помощник Яндекс Алиса" /></p>
-
-
-      </div>
-
-      <a href="/useful/2019/01/23/alisa-prilozhieniie-ot-iandieks.html" class="read-more">Читать далее >></a>
-    </article>
-    <hr>
-  
-    <article class="post">
-
-      <h3><a href="/useful/2018/09/23/riedaktor-bluefish-ftp-podkliuchieniie-v-ubuntu.html">Редактор Bluefish: FTP подключение в Ubuntu</a></h3>
-      <p>
-       <span class="date">23.09.2018</span>
-      </p>
-
-      <div class="entry">
-        <p><img src="/uploads/Bluefish-FTP.jpg" alt="редактор Bluefish FTP подключение" /></p>
-
-
-      </div>
-
-      <a href="/useful/2018/09/23/riedaktor-bluefish-ftp-podkliuchieniie-v-ubuntu.html" class="read-more">Читать далее >></a>
-    </article>
-    <hr>
-  
-    <article class="post">
-
-      <h3><a href="/seo/2018/09/04/provierit-iks-saita-onlain.html">Проверить ИКС сайта онлайн</a></h3>
-      <p>
-       <span class="date">04.09.2018</span>
-      </p>
-
-      <div class="entry">
-        <p><img src="/uploads/proverit-iks-saita-online.jpg" alt="Как узнать ИКС сайта" /></p>
-
-
-      </div>
-
-      <a href="/seo/2018/09/04/provierit-iks-saita-onlain.html" class="read-more">Читать далее >></a>
-    </article>
-    <hr>
-  
-    <article class="post">
-
-      <h3><a href="/useful/2018/09/02/kak-podniat-iks-saita-novyi-rieitingh-ot-iandieks.html">Как поднять ИКС сайта. Новый рейтинг от Яндекс</a></h3>
-      <p>
-       <span class="date">02.09.2018</span>
-      </p>
-
-      <div class="entry">
-        <p><strong>Как поднять ИКС сайта в Яндексе?</strong> Индекс качества сайта - новый показатель заменивший ТИЦ в поисковой системе Яндекс.</p>
-
-
-      </div>
-
-      <a href="/useful/2018/09/02/kak-podniat-iks-saita-novyi-rieitingh-ot-iandieks.html" class="read-more">Читать далее >></a>
-    </article>
-    <hr>
-  
+<p>Ошибка говорит нам о том, что мы пытаемся отправить данные в чужой репозиторий. И о том, что текущий пользователь Git не имеет прав для отправки данных в указанный в команде репозиторий.</p>
+<div>
+<script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- htmlblog в тело статьи -->
+<ins class="adsbygoogle" style="display:inline-block;width:600px;height:90px" data-ad-client="ca-pub-7700451254687983" data-ad-slot="6654417156"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 </div>
+<p><br /></p>
+<h3 id="существует-два-способа-решить-данную-ошибку">Существует два способа решить данную ошибку:</h3>
+<hr />
 
-<!-- Pagination links -->
-  
-  <div class="pagination">
-    
-    <span class="page-item">&laquo;</span>
-    
-  
-    
-    
-      <span class="page-item">1</span>
-    
-    
-    
-      <a href="/page2" class="page-item">2</a>
-    
-    
-    
-      <a href="/page3" class="page-item">3</a>
-    
-    
-    
-      <a href="/page4" class="page-item">4</a>
-    
-    
-  
-    
-    <a href="/page2/" class="page-item">&raquo;</a>
-    
-  </div>
+<p><strong>Вариант 1. Дать текущему пользователю права для работы с репозиторием</strong></p>
 
+<p>Данный способ подойдет, если вы являетесь владельцем обеих учетных записей указанных в ошибке. Необходимо зайти на GitHub под именем того пользователя, в чей репозиторий вы не можете отправить данные. В настройках репозитория указать необходимого соавтора. Ему на почту отправится приглашение, которое необходимо подтвердить, перейдя по ссылке в письме.</p>
 
-<p style="text-indent: 25px; text-align: justify;">
-    Друзья, <strong>рекомендую</strong> вам отличную биржу фриланс-услуг, которой пользуюсь сам.
-</p>
-<p style="text-indent: 25px; text-align: justify;">
-    За фиксированную стоимость вы сможете получить различные услуги - заказать дизайн для группы или сайта, заказать разработку логотипа, создание и продвижение сайта, рекламные услуги, обработку фото и видео материалов, а также написание статьи, получить консультацию специалиста и многое другое.
-</p>  
-<p style="text-indent: 25px; text-align: justify;">
-  Переходите, <strong>кликнув по баннеру ниже</strong>, и начинайте экономить свои деньги.
-</p>
-<div style="text-align: center; margin-bottom: 35px;">
-  <noindex>
-    <a href="https://kwork.ru?ref=10649" target="_blank" rel="nofollow">
-      <img src="https://kwork.ru/images/partner/01.jpg" alt="Kwork.ru - услуги фрилансеров от 500 руб." style="margin: 0 auto;">
-    </a>
-  </noindex>
+<p><img src="/uploads/github-repo-config.jpg" alt="github-repo-config.jpg" /></p>
+
+<p>После этого вы сможете работать с репозиторием как со своим и ошибка больше не появится.</p>
+<hr />
+
+<p><strong>Вариант 2. Назначить в системе текущим пользователем Git ту учетную запись, в которую не можете отправить данные</strong></p>
+
+<p>Для этого необходимо перейти в Панель управления Windows. Выбрать отображение в виде категорий.</p>
+
+<p><img src="/uploads/win-panel.jpg" alt="win-panel.jpg" /></p>
+
+<p>Перейти в раздел “Учетные записи пользователей и семейная безопасность”. Далее в раздел “Диспетчер учетных данных”. В самом низу будет блок “Общие учетные данные”. Нажмите в нем ссылку “Удаление из хранилища”.</p>
+
+<p><img src="/uploads/delete-git-config.jpg" alt="delete-git-config.jpg" /></p>
+
+<p>После этого при попытке выполнить команду:</p>
+
+<p><code class="highlighter-rouge">$ git push -u origin master</code></p>
+
+<p>Терминал запросит у вас пароль от учетной записи на Github в чей репозиторий вы пытаетесь отправить данные.</p>
+
+<p>После ввода пароля система установит данного пользователя как основного и будет использовать его в дальнейшем при работе с Git.</p>
+<hr />
+
+<p>Надеюсь данный пост поможет вам решить ошибку, с которой я разбирался почти сутки.</p>
+
+	<div class="blog-post-tags">
+	  
+	    <span>git</span>
+	  
+	    <span>github</span>
+	  
+	</div>
+    <hr>
+    	<div id="disqus_thread"></div>
+
+	<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,blogger,evernote,tumblr" data-counter=""></div>
+	<span class="small-left"> Не забудьте сказать спасибо. Поставьте лайк!</span>
+	<br>
+	
+	<!-- Put this div tag to the place, where the Comments block will be -->
+	<div id="vk_comments"></div>
+	<script type="text/javascript">
+	VK.Widgets.Comments("vk_comments", {limit: 10, attach: "*"});
+	</script>
 </div>
 </div>
   			<div class="col-md-3 col-sm-offset-1 blog-sidebar"><div class="sidebar-module sidebar-module-inset">
