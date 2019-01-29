@@ -7,7 +7,8 @@ pagination:
 
 <!-- This loops through the paginated posts -->
 <div class="posts">
-  {% for post in site.posts limit: 5 offset:10 %}
+  
+  {% for post in site.posts limit: 5 offset:0 %}
     <article class="post">
 
       <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
