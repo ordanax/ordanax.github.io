@@ -1,0 +1,39 @@
+---
+title: Уроки по Jekyll
+permalink: jekyll/
+layout: default
+---
+
+<div class="posts">
+	{% for post in site.categories.jekyll %}
+    <article class="post">
+
+      <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+      <p>
+       <span class="date">{{ post.date|date:"%d.%m.%Y" }}</span>
+      </p>
+
+      <div class="entry">
+        {{ post.excerpt }}
+      </div>
+
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Читать далее >></a>
+    </article>
+    <hr>
+  {% endfor %}
+</div>
+
+<hr>
+
+<hr>
+<noindex>
+<p>Фриланс биржа на который можно найти абсолютно любые услуги. Покупаю на ней услуги с момента ее открытия. Рекомендую! Переходи!</p><br>
+<div class="row">
+  <div class="col-md-6">
+      <a href="https://kwork.ru?ref=10649" target="_blank" rel="nofollow"><img src="https://kwork.ru/images/partner/19.jpg" alt="Kwork.ru - услуги фрилансеров от 500 руб."></a>
+  </div>
+  <div class="col-md-6">
+      <a href="https://kwork.ru?ref=10649" target="_blank" rel="nofollow"><img src="https://kwork.ru/images/partner/14.jpg" alt="Kwork.ru - услуги фрилансеров от 500 руб."></a>
+  </div>  
+</div>
+</noindex>

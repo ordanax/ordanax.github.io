@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+  <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<link href="/assets/bootstrap.min.css" rel="stylesheet">
+	<link href="/assets/blog.css" rel="stylesheet">
+	<link href="/assets/breadcrumb-style.css" rel="stylesheet">
+	
+	<title>Пагинация постов Jekyll по категориям</title>
+	<meta name="description" content="В данной статье рассмотрим как подключить плагин для постраничного вывода постов в категориях Jekyll. Пагинация постов Jekyll по категориям важный вопрос при создании блога.">
+	
+	<!-- Put this script tag to the <head> of your page -->
+	<script type="text/javascript" src="//vk.com/js/api/openapi.js?142"></script>
+
+	<script type="text/javascript">
+	  VK.init({apiId: 5949051, onlyWidgets: true});
+	</script>
+	
+	<meta name="yandex-verification" content="805b49eb4e4e9adf" />
+	<meta name="google-site-verification" content="Cow6hdfnPNIg8_IaHo9RpbGNwL_xHNus5MdQ3EzQeyE" />
+	
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	
+	<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Все об Arch Linux" />
+	
+	<!-- feed meta -->
+</head>
+
+
+  <body>
+  	<div class="blog-masthead">
+  		<div class="container">
+  			<nav class="blog-nav">
+  <a class="blog-nav-item" href="/">Главная</a>
+  <a class="blog-nav-item" href="https://ordanax.github.io/jekyll/">Jekyll</a>
+  <a class="blog-nav-item" href="https://ordanax.github.io/seo/">SEO</a>
+  <a class="blog-nav-item" href="https://ordanax.github.io/useful/">Полезное</a>
+  <a class="blog-nav-item" href="https://www.youtube.com/c/HtmlBlog" target="_blank" rel="nofollow">Канал на Youtube</a>
+  <a class="blog-nav-item" href="https://ordanax.github.io/about/">Об авторе</a>
+</nav>
+
+  		</div>
+  	</div>
+
+  	<div class="container">
+  		<div class="blog-header">
+	<a href="/"><img class="blog-logo" src="/uploads/logo.png" alt="logo"></a>
+	<span class="blog-title">Все об Arch Linux</span>
+	<p class="lead blog-description">Установка и настройка Arch Linux, статьи, конфиги, группа поддержки.</p>
+</div>
+
+  		<div class="row">
+  			<div class="col-md-12">
+
+  <nav class="breadcrumbs hidden-sm-down">
+
+    <a class="breadcrumb-item" href=http://localhost:4000/>Главная</a>
+
+    <ol class="list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <!-- Skip if root -->
+      
+      
+     
+      
+     
+
+      
+      
+
+          
+              
+          
+
+       
+
+      
+      
+
+          
+              
+
+              
+
+              <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                 <a class="breadcrumb-item" itemprop="item" href="http://localhost:4000//jekyll/">
+                   <span itemprop="name">jekyll</span>
+                 </a>
+                <meta itemprop="position" content="1" />
+              </li>
+
+              
+          
+
+       
+
+      
+      
+
+          
+              
+          
+
+       
+
+      
+      
+
+          
+              
+          
+
+       
+      
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+             <span class="breadcrumb-item" itemprop="name">Пагинация постов Jekyll по категориям</span>
+        </li>
+
+    </ol>
+
+  </nav>
+
+</div>
+  			<div class="col-md-8 blog-main"><div class="blog-post">
+    <h1 class="blog-post-title">Постраничный вывод постов в категориях Jekyll </h1>
+    <p class="blog-post-meta">15.04.2017</p>
+    <p>Популярный в интернете вопрос - <strong>как организовать постраничный вывод постов в категориях Jekyll?</strong>
+Не думал, что <em>пагинация постов в категориях Jekyll</em> такой сложный вопрос для многих людей :) Ну давайте тогда будем разбираться.</p>
+
+<p>Скажу сразу - стандартный плагин пагинации <strong>jekyll-paginate</strong> такого не умеет. Если он у вас используется, то смело удаляйте все упоминания о нем с вашего сайта. Сейчас мы сделаем <strong>пагинацию</strong> через более функциональный плагин <strong>jekyll-paginate-v2</strong>.</p>
+
+<p><br /></p>
+<h3 id="далее-по-шагам-выполняем-следующие-действия">Далее по шагам выполняем следующие действия:</h3>
+
+<p>1) Устанавливаем плагин пагинации. Открываем консоль (Shift + правая кнопка мыши. Выбираем “Открыть окно команд”) и выполняем команду:</p>
+
+<blockquote>
+  <p>gem install jekyll-paginate-v2</p>
+</blockquote>
+
+<p>2) Далее открываем файл настроек вашего сайта <strong>_config.yml</strong>. Он лежит в корне вашего сайта на <strong>Jekyll</strong>.</p>
+
+<p>Важно! Проверяем задана ли у вас переменная <strong>baseurl</strong>. Если нет, то пишем вверху файла, где-нибудь рядом с title:</p>
+
+<blockquote>
+  <p>baseurl: /</p>
+</blockquote>
+
+<p>Задаем дефолтные настройки для нашего <strong>плагина постраничного вывода постов</strong>:</p>
+<blockquote>
+  <p>pagination:<br /></p>
+  <blockquote>
+    <p>enabled: true<br />
+per_page: 4<br />
+category: posts</p>
+  </blockquote>
+</blockquote>
+
+<p>Подключаем плагин:</p>
+<blockquote>
+  <p>gem:<br /></p>
+  <blockquote>
+    <p>-jekyll-paginate-v2</p>
+  </blockquote>
+</blockquote>
+
+<p>С файлом настроек закончили. Включили плагин, сказали ему выводить по умолчанию 4 записи из всех категорий (подойдет для главной страницы). Двигаемся дальше.</p>
+
+<div>
+<script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- html blog article adaptive -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7700451254687983" data-ad-slot="1629640353" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<p><br /></p>
+
+<p>3) Открываем, также в корне вашего проекта <strong>Jekyll</strong>, файл <strong>Gemfile</strong>. Добавляем в него следующий код:</p>
+<blockquote>
+  <p>group :jekyll_plugins do<br /></p>
+  <blockquote>
+    <p>gem “jekyll-paginate-v2”</p>
+  </blockquote>
+</blockquote>
+
+<blockquote>
+  <p>end</p>
+</blockquote>
+
+<p>Если у вас уже есть данная конструкция в файле, то просто добавьте между строками <em>group</em> и <em>end</em> строку <strong>gem “jekyll-paginate-v2”</strong>.</p>
+
+<p>4) На данном шаге нам необходимо изменить код вывода постов в категориях и на главной странице, если требуется.</p>
+
+<p>Начнем с главной - откройте в корне сайта файл <em>index.html</em>. В шапке где задается <em>title</em> и <em>layout</em> добавьте код:</p>
+<blockquote>
+  <p>pagination:</p>
+  <blockquote>
+    <p>enabled: true</p>
+  </blockquote>
+</blockquote>
+
+<p>Далее ищем код, который в цикле выводит посты и меняем его на код как на скриншоте:
+<img src="/uploads/jekyll-post-category-paginate.jpg" alt="постраничный вывод записей в категориях Jekyll" /></p>
+<blockquote>
+  <p><a href="https://github.com/htmlblog/ordanax.github.io/blob/master/_uploads/paginate.txt" target="_blank" rel="nofollow">Скачать файл с кодом </a></p>
+</blockquote>
+
+<p>Далее вставляем код <strong>постраничного вывода постов Jekyll</strong> как на скриншоте:
+<img src="/uploads/jekyll-posts-category-paginate.jpg" alt="пагинация постов в категориях Jekyll" /></p>
+<blockquote>
+  <p><a href="https://github.com/htmlblog/ordanax.github.io/blob/master/_uploads/paginate.txt" target="_blank" rel="nofollow">Скачать файл с кодом пагинации</a></p>
+</blockquote>
+
+<p><strong>Важно!</strong> Для главной страницы сайта! <br />
+Замените в коде пагинации у ссылок <em>‘/news/’</em> на <em>’/’</em>.</p>
+
+<p>Сохраняем файл и перезапускаем сервер сайта. Теперь у нас на главной странице выводятся последние четыре поста сайта.</p>
+
+<p>Давайте теперь сделаем <strong>пагинацию постов в категории</strong>, например <em>sport</em>. Открываем файл в котором выводятся посты из категории <em>sport</em>. Повторяем действия, которые проводили на главной странице сайта с небольшими изменениями. Добавляем в шапку страницы код:</p>
+<blockquote>
+  <p>pagination:</p>
+  <blockquote>
+    <p>enabled: true<br />
+category: sport</p>
+  </blockquote>
+</blockquote>
+
+<p>Можно указать несколько категорий через запятую:</p>
+<blockquote>
+  <p>categories: sport, politica</p>
+</blockquote>
+
+<p>Важно! У вас обязательно должен быть указан постоянный адрес страницы категории:</p>
+<blockquote>
+  <p>permalink: sport/</p>
+</blockquote>
+
+<p>Далее копируем сюда из файла главной страницы код для вывода постов и код вывода постраничной навигации, <strong>но!</strong> меняем в коде пагинации <em>/news/</em> на постоянный url вашей категории -
+ <em>/sport/</em>.</p>
+
+<p>На скриншоте выше выделены три участка кода, где требуется произвести замену.</p>
+
+<p>После перезапуска сервера по адресу <em>localhost:4000/sport/</em> будут выводится посты из категории <em>sport</em> по 4 штуки на страницу. Если требуется изменить число выводимых постов, то добавьте в шапку файла категории параметр:</p>
+<blockquote>
+  <p>per_page: число постов</p>
+</blockquote>
+
+<p>На этом все. Смотрите видеоурок по данной статье на моем канале.</p>
+
+	<div class="blog-post-tags">
+	  
+	</div>
+    <hr>
+    	<div id="disqus_thread"></div>
+
+	<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,blogger,evernote,tumblr" data-counter=""></div>
+	<span class="small-left"> Не забудьте сказать спасибо. Поставьте лайк!</span>
+	<br>
+	
+	<!-- Put this div tag to the place, where the Comments block will be -->
+	<div id="vk_comments"></div>
+	<script type="text/javascript">
+	VK.Widgets.Comments("vk_comments", {limit: 10, attach: "*"});
+	</script>
+</div>
+</div>
+  			<div class="col-md-3 col-sm-offset-1 blog-sidebar"><div class="sidebar-module sidebar-module-inset">
+	<h3>Блог</h3>
+	<ol class="list-unstyled right-menu">
+		<li><a href="https://ordanax.github.io/jekyll/">Уроки Jekyll</a></li>
+		<li><a href="https://ordanax.github.io/seo/">SEO</a></li>
+		<li><a href="https://ordanax.github.io/useful/">Полезное</a></li>
+	</ol>
+</div>
+
+<div class="sidebar-module sidebar-module-inset">
+	<h4>Подписка на новости</h4>
+	<form style="text-align:center;" action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=JekyllHtml', 'popupwindow', 'scrollbars=yes,width=242,height=auto');return true">
+		<p style="text-align: justify; font-style: italic;">Подпишитесь на обновления блога, чтобы получать новости первым.</p>
+		<p><input type="text" style="width:100%;color: #969696; padding-left: 5px;" name="email" value="Укажите ваш email адрес" /></p>
+		<input type="hidden" value="JekyllHtml" name="uri"/><input type="hidden" name="loc" value="ru_RU"/>
+		<input type="submit" value="Подписаться" />
+	</form>
+</div>
+
+<div class="sidebar-module sidebar-module-ads">
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- html blog article adaptive -->
+	<ins class="adsbygoogle"
+	     style="display:block"
+	     data-ad-client="ca-pub-7700451254687983"
+	     data-ad-slot="1629640353"
+	     data-ad-format="auto"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</div>
+</div>
+
+  		</div>
+  	</div>
+  	
+  	<div class="blog-footer">
+  		<p>Блог создан на Jekyll. <a href="https://www.youtube.com/playlist?list=PLyHuZVg03hQjtV45HPlfuPzHJOtEoK6DT" target="_blank" rel="nofollow">Подробнее</a>.</p>
+<p><a href="#">Вернуться наверх</a></p>
+
+<!-- hit.ua -->
+<a href='http://hit.ua/?x=83094' rel='nofollow' target='_blank'>
+<script language="javascript" type="text/javascript"><!--
+Cd=document;Cr="&"+Math.random();Cp="&s=1";
+Cd.cookie="b=b";if(Cd.cookie)Cp+="&c=1";
+Cp+="&t="+(new Date()).getTimezoneOffset();
+if(self!=top)Cp+="&f=1";
+//--></script>
+<script language="javascript1.1" type="text/javascript"><!--
+if(navigator.javaEnabled())Cp+="&j=1";
+//--></script>
+<script language="javascript1.2" type="text/javascript"><!--
+if(typeof(screen)!='undefined')Cp+="&w="+screen.width+"&h="+
+screen.height+"&d="+(screen.colorDepth?screen.colorDepth:screen.pixelDepth);
+//--></script>
+<script language="javascript" type="text/javascript"><!--
+Cd.write("<img src='//c.hit.ua/hit?i=83094&g=0&x=2"+Cp+Cr+
+"&r="+escape(Cd.referrer)+"&u="+escape(window.location.href)+
+"' border='0' wi"+"dth='1' he"+"ight='1'/>");
+//--></script>
+<noscript>
+<img src='//c.hit.ua/hit?i=83094&amp;g=0&amp;x=2' border='0'/>
+</noscript></a>
+<!-- / hit.ua -->
+
+
+
+
+  	</div>
+	
+<script>
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://htmlblog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	  
+	<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+	<script src="//yastatic.net/share2/share.js"></script>      
+	  
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript">
+	    (function (d, w, c) {
+		(w[c] = w[c] || []).push(function() {
+		    try {
+			w.yaCounter43813279 = new Ya.Metrika({
+			    id:43813279,
+			    clickmap:true,
+			    trackLinks:true,
+			    accurateTrackBounce:true,
+			    webvisor:true
+			});
+		    } catch(e) { }
+		});
+
+		var n = d.getElementsByTagName("script")[0],
+		    s = d.createElement("script"),
+		    f = function () { n.parentNode.insertBefore(s, n); };
+		s.type = "text/javascript";
+		s.async = true;
+		s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+		if (w.opera == "[object Opera]") {
+		    d.addEventListener("DOMContentLoaded", f, false);
+		} else { f(); }
+	    })(document, window, "yandex_metrika_callbacks");
+	</script>
+	<noscript><div><img src="https://mc.yandex.ru/watch/43813279" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	<!-- /Yandex.Metrika counter -->
+  </body>
+
+</html>
