@@ -1,0 +1,35 @@
+---
+title: Все об Arch Linux
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+description: Установка и настройка Arch Linux, статьи, конфиги, группа поддержки.
+baseurl: ''
+url: https://ordanax.github.io
+#permalink: "/:title"
+markdown: kramdown
+
+plugins:
+- jekyll-paginate-v2
+- jekyll-feed
+
+category_dir: '/'
+pagination:
+  enabled: true
+  paginate: 6
+  title: ':title - Страница :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  trail:
+    before: 2
+    after: 2
+    
+exclude:
+- Gemfile
+- Gemfile.lock

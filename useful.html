@@ -1,0 +1,69 @@
+---
+title: Полезные статьи
+permalink: useful/
+layout: default
+---
+
+<div class="posts">
+    {% for post in site.categories.useful %}
+    <article class="post">
+
+      <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+      <p>
+       <span class="date">{{ post.date|date:"%d.%m.%Y" }}</span>
+      </p>
+
+      <div class="entry">
+        {{ post.excerpt }}
+      </div>
+
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Читать далее >></a>
+    </article>
+    <hr>
+  {% endfor %}
+</div>
+
+<hr>
+
+
+<!-- test paginate cat useful-->
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Назад</a>
+  {% else %}
+    <span>Назад</span>
+  {% endif %}
+
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <em>{{ page }}</em>
+    {% elsif page == 1 %}
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+    {% else %}
+      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+    {% endif %}
+  {% endfor %}
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Вперед</a>
+  {% else %}
+    <span>Вперед</span>
+  {% endif %}
+</div>
+{% endif %}
+
+
+
+<hr>
+<noindex>
+<p>Фриланс биржа на который можно найти абсолютно любые услуги. Покупаю на ней услуги с момента ее открытия. Рекомендую! Переходи!</p><br>
+<div class="row">
+  <div class="col-md-6">
+      <a href="https://kwork.ru?ref=10649" target="_blank" rel="nofollow"><img src="https://kwork.ru/images/partner/06.jpg" alt="Kwork.ru - услуги фрилансеров от 500 руб."></a>
+  </div>
+  <div class="col-md-6">
+      <a href="https://kwork.ru?ref=10649" target="_blank"  rel="nofollow"><img src="https://kwork.ru/images/partner/07.jpg" alt="Kwork.ru - услуги фрилансеров от 500 руб."></a>
+  </div>  
+</div>
+</noindex>
