@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<link href="/assets/bootstrap.min.css" rel="stylesheet">
+	<link href="/assets/blog.css" rel="stylesheet">
+	<link href="/assets/breadcrumb-style.css" rel="stylesheet">
+	
+	<title>Редактор Bluefish: FTP подключение в Ubuntu</title>
+	<meta name="description" content="Как создать в редакторе Bluefish FTP-подключение для удаленного редактирования файлов вашего веб-проекта. Пошаговая инструкция со скриншотами в Ubuntu 18.04.">
+	
+	<!-- vk -->
+	<script type="text/javascript" src="https://vk.com/js/api/openapi.js?160"></script>
+	<script type="text/javascript">
+	  VK.init({apiId: 6841969, onlyWidgets: true});
+	</script>
+	<!--/ vk -->
+
+		<meta name="yandex-verification" content="805b49eb4e4e9adf" />
+	<meta name="google-site-verification" content="Cow6hdfnPNIg8_IaHo9RpbGNwL_xHNus5MdQ3EzQeyE" />
+	
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Все об Arch Linux" />
+	
+	<!-- feed meta -->
+</head>
+
+
+<body>
+	<div class="blog-masthead">
+		<div class="container">
+			<nav class="blog-nav">
+  <a class="blog-nav-item" href="/">Главная</a>
+  <a class="blog-nav-item" href="https://ordanax.github.io/jekyll/">Jekyll</a>
+  <a class="blog-nav-item" href="https://ordanax.github.io/seo/">SEO</a>
+  <a class="blog-nav-item" href="https://ordanax.github.io/useful/">Полезное</a>
+  <a class="blog-nav-item" href="https://www.youtube.com/c/HtmlBlog" target="_blank" rel="nofollow">Канал на Youtube</a>
+  <a class="blog-nav-item" href="https://ordanax.github.io/about/">Об авторе</a>
+</nav>
+
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="blog-header">
+	<a href="/"><img class="blog-logo" src="/img/archlinux-logo.png" alt="logo"></a>
+	<span class="blog-title">Все об Arch Linux</span>
+	<p class="lead blog-description">Установка и настройка Arch Linux, статьи, конфиги, группа поддержки.</p>
+</div>
+
+		<div class="row">
+			<div class="col-md-12">
+
+  <nav class="breadcrumbs hidden-sm-down">
+
+    <a class="breadcrumb-item" href=/>Главная</a>
+
+    <ol class="list-unstyled" vocab="https://schema.org/" typeof="BreadcrumbList">
+
+      <!-- Skip if root -->
+      
+      
+     
+      
+     
+
+      
+      
+
+          
+              
+
+              
+
+              <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                 <a class="breadcrumb-item" itemprop="item" href="//useful/">
+                   <span itemprop="name">useful</span>
+                 </a>
+                <meta itemprop="position" content="1" />
+              </li>
+
+              
+          
+
+       
+
+      
+      
+
+          
+              
+          
+
+       
+
+      
+      
+
+          
+              
+          
+
+       
+
+      
+      
+
+          
+              
+          
+
+       
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+             <span class="breadcrumb-item" itemprop="name">Редактор Bluefish: FTP подключение в Ubuntu</span>
+        </li>
+
+    </ol>
+
+  </nav>
+
+</div>
+			<div class="col-md-8 blog-main"><div class="blog-post">
+    <h1 class="blog-post-title">Редактор кода Bluefish: как создать FTP подключение</h1>
+    <p class="blog-post-meta">23.09.2018</p>
+    <p><img src="/uploads/Bluefish-FTP.jpg" alt="редактор Bluefish FTP подключение" /></p>
+
+<p>Некоторые начинающие веб разработчики, использующие в качестве основной операционной системы Ubuntu, часто выбирают в качестве редактора кода Bluefish. Данный редактор чем-то похож на популярный NotePad++, но в Bluefish есть один существенный минус - отсутствие FTP подключения.</p>
+
+<p>На самом деле в редакторе <strong>Bluefish FTP подключение</strong> создать можно. В данной статье я покажу как это сделать. Предположим, что Ubuntu и Bluefish у вас уже установлены.</p>
+
+<p>1) Откройте в левом верхнем углу выпадающее меню “Файл” и затем нажмите “Открыть URL”.</p>
+
+<p><img src="/uploads/111.png" alt="Файл затем Открыть URL" /></p>
+
+<p>2) В открывшемся окне вам необходимо ввести логин FTP-пользователя вашего хостинга и адрес подключения.</p>
+
+<p>Формат такой: <strong>ftp://пользователь@сервер/</strong></p>
+
+<p><img src="/uploads/222.png" alt="логин FTP-пользователя и сервер" /></p>
+
+<p>3) После того как вы укажите данные и нажмете “ОК” вас попросят ввести пароль FTP-пользователя.</p>
+
+<p><img src="/uploads/4444.png" alt="пароль FTP-пользователя" /></p>
+
+<p>4) Далее Ubuntu вам предложит внести пароль от FTP-подключения в связку ключей. Введите свой пароль от связки ключей и нажмите “Разблокировать”.</p>
+
+<p><img src="/uploads/555.png" alt="сохранить пароль FTP подключения" /></p>
+
+<p>5) После этого в редакторе Bluefish слева в обозревателе файлов в выпадающем меню появится пункт с вашим сайтом. Выберите его, чтобы увидеть файлы на сервере.</p>
+
+<p><img src="/uploads/6666.png" alt="6666.png" /></p>
+
+<p><strong>Теперь вы можете редактировать файлы вашего веб-проекта с помощью Bluefish удаленно через FTP.</strong> А также на рабочем столе появилась FTP-папка в которой все файлы сайта. Вы можете просматривать их с помощью любой программы.</p>
+
+<p><img src="/uploads/7777.png" alt="FTP папка" /></p>
+
+<p>В следующий раз когда вам нужно будет подключиться к сайту через FTP в Bluefish все будет намного быстрее.</p>
+
+<p>Нажмите “Файл” -&gt; “Открыть URL”, но вместо ввода данных FTP-подключения нажмите на стрелку справа от поля ввода - ваши прошлые подключения сохранились! А пароль вы сохранили в связке ключей Ubuntu. Нажмите “ОК”, введите пароль от связки ключей и можете работать.</p>
+
+<p><img src="/uploads/3333.png" alt="список FTP подключений Bluefish" /></p>
+
+<p>Надеюсь моя статья вам помогла. Не забудьте про кнопки репоста в знак благодарности! <strong>Задавайте свои вопросы в комментариях.</strong></p>
+
+	<div class="blog-post-tags">
+	  
+	    <span>Bluefish</span>
+	  
+	    <span>FTP</span>
+	  
+	    <span>SFTP</span>
+	  
+	    <span>Bluefish remote FTP</span>
+	  
+	    <span>Ubuntu</span>
+	  
+	</div>
+    <hr>
+    	<div id="disqus_thread"></div>
+	<!-- vk like -->
+<div id="vk_like"></div>
+<script type="text/javascript">
+VK.Widgets.Like("vk_like", {type: "full"});
+</script>
+<!-- vk like -->
+	<span class="small-left"> Забери пост себе на стену, чтобы легко найти! Или поделись с друзьями!</span>
+<br>
+<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+<script src="//yastatic.net/share2/share.js"></script>
+<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir,twitter,blogger,evernote,lj,viber,whatsapp,skype,telegram" data-counter=""></div>
+<br>
+	Поставь оценку посту и напиши комментарий!
+<div id="wpac-comment"></div>
+<script type="text/javascript">
+wpac_init = window.wpac_init || [];
+wpac_init.push({widget: 'Comment', id: 16415});
+(function() {
+    if ('WIDGETPACK_LOADED' in window) return;
+    WIDGETPACK_LOADED = true;
+    var mc = document.createElement('script');
+    mc.type = 'text/javascript';
+    mc.async = true;
+    mc.src = 'https://embed.widgetpack.com/widget.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+})();
+</script>
+</div>
+</div>
+			<div class="col-md-3 offset-1 blog-sidebar"><div class="sidebar-module sidebar-module-inset">
+	<h3>Блог</h3>
+	<ol class="list-unstyled right-menu">
+		<li><a href="https://ordanax.github.io/jekyll/">Уроки Jekyll</a></li>
+		<li><a href="https://ordanax.github.io/seo/">SEO</a></li>
+		<li><a href="https://ordanax.github.io/useful/">Полезное</a></li>
+	</ol>
+</div>
+
+<div class="sidebar-module sidebar-module-inset">
+	<h4>Подписка на новости</h4>
+	<form style="text-align:center;" action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=github/MaeS', 'popupwindow', 'scrollbars=yes,width=242,height=auto');return true">
+		<p style="text-align: justify; font-style: italic;">Подпишитесь на обновления блога, чтобы получать новости первым.</p>
+		<p><input type="text" style="width:100%;color: #969696; padding-left: 5px;" name="email" value="Укажите ваш email адрес" /></p>
+		<input type="hidden" value="github/MaeS" name="uri"/><input type="hidden" name="loc" value="ru_RU"/>
+		<input type="submit" value="Подписаться" />
+	</form>
+</div>
+<div id="vk_groups"></div>
+<script type="text/javascript">
+VK.Widgets.Group("vk_groups", {mode: 3, no_cover: 1}, 129498031);
+</script>
+
+
+<div class="sidebar-module sidebar-module-ads">
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- html blog article adaptive -->
+	<ins class="adsbygoogle"
+	     style="display:block"
+	     data-ad-client="ca-pub-7700451254687983"
+	     data-ad-slot="1629640353"
+	     data-ad-format="auto"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</div>
+</div>
+		</div>
+	</div>
+	<div class="blog-footer">
+		<footer class="main-footer">
+	<div class="contaiter">
+		<nav class="soc">
+			<ul>
+				<li><a href="https://vk.com/arch4u"><i class="fab fa-vk"></i></a></li> <li><a href="https://www.youtube.com/Arch4u"><i class="fab fa-youtube"></i></a></li> <li><a href="/feed.xml"><i class="fas fa-rss"></i></a></li>
+			</ul>
+		</nav>
+
+	</div>
+</footer>
+<footer class="bottom-footer">
+	<div class="container text-center">
+		<div class="footer-copy">2019 © <span class="logo-footer logo-litera">Бойко Алексей</span>
+		</div>
+		<p></p>
+	</div>
+</footer>
+	</div>
+
+
+</body>
+
+</html>               
