@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"
-    xmlns:atom="http://www.w3.org/2005/Atom"
-    xmlns:dc="http://purl.org/dc/elements/1.1/"
-    xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+    xmlns:atom="//www.w3.org/2005/Atom"
+    xmlns:dc="//purl.org/dc/elements/1.1/"
+    xmlns:sy="//purl.org/rss/1.0/modules/syndication/"
 >
     <channel>
         <title></title>
         <description>Установка и настройка Arch Linux, статьи, конфиги, группа поддержки.</description>      
         <sy:updatePeriod>daily</sy:updatePeriod>
         <sy:updateFrequency>1</sy:updateFrequency>
-        <link>http://localhost:4000</link>
-        <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+        <link>//localhost:4000</link>
+        <atom:link href="//localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
         <lastBuildDate>Mon, 28 Jan 2019 11:17:09 +0000</lastBuildDate>
         
         
@@ -23,8 +23,8 @@
 </description>
                 
                 <pubDate>Mon, 28 Jan 2019 11:17:09 +0000</pubDate>
-                <link>http://localhost:4000/welcome-to-jekyll</link>
-                <guid isPermaLink="true">http://localhost:4000/welcome-to-jekyll</guid>
+                <link>//localhost:4000/welcome-to-jekyll</link>
+                <guid isPermaLink="true">//localhost:4000/welcome-to-jekyll</guid>
             </item>
         
             <item>
@@ -36,8 +36,8 @@
 </description>
                 
                 <pubDate>Wed, 23 Jan 2019 11:36:00 +0000</pubDate>
-                <link>http://localhost:4000/alisa-prilozhieniie-ot-iandieks</link>
-                <guid isPermaLink="true">http://localhost:4000/alisa-prilozhieniie-ot-iandieks</guid>
+                <link>//localhost:4000/alisa-prilozhieniie-ot-iandieks</link>
+                <guid isPermaLink="true">//localhost:4000/alisa-prilozhieniie-ot-iandieks</guid>
             </item>
         
             <item>
@@ -49,8 +49,8 @@
 </description>
                 
                 <pubDate>Sun, 23 Sep 2018 13:11:00 +0000</pubDate>
-                <link>http://localhost:4000/riedaktor-bluefish-ftp-podkliuchieniie-v-ubuntu</link>
-                <guid isPermaLink="true">http://localhost:4000/riedaktor-bluefish-ftp-podkliuchieniie-v-ubuntu</guid>
+                <link>//localhost:4000/riedaktor-bluefish-ftp-podkliuchieniie-v-ubuntu</link>
+                <guid isPermaLink="true">//localhost:4000/riedaktor-bluefish-ftp-podkliuchieniie-v-ubuntu</guid>
             </item>
         
             <item>
@@ -62,8 +62,8 @@
 </description>
                 
                 <pubDate>Tue, 04 Sep 2018 17:28:00 +0000</pubDate>
-                <link>http://localhost:4000/provierit-iks-saita-onlain</link>
-                <guid isPermaLink="true">http://localhost:4000/provierit-iks-saita-onlain</guid>
+                <link>//localhost:4000/provierit-iks-saita-onlain</link>
+                <guid isPermaLink="true">//localhost:4000/provierit-iks-saita-onlain</guid>
             </item>
         
             <item>
@@ -75,8 +75,8 @@
 </description>
                 
                 <pubDate>Sun, 02 Sep 2018 14:09:00 +0000</pubDate>
-                <link>http://localhost:4000/kak-podniat-iks-saita-novyi-rieitingh-ot-iandieks</link>
-                <guid isPermaLink="true">http://localhost:4000/kak-podniat-iks-saita-novyi-rieitingh-ot-iandieks</guid>
+                <link>//localhost:4000/kak-podniat-iks-saita-novyi-rieitingh-ot-iandieks</link>
+                <guid isPermaLink="true">//localhost:4000/kak-podniat-iks-saita-novyi-rieitingh-ot-iandieks</guid>
             </item>
         
             <item>
@@ -88,8 +88,8 @@
 </description>
                 
                 <pubDate>Wed, 22 Aug 2018 14:13:00 +0000</pubDate>
-                <link>http://localhost:4000/iandieks-zamieniaiet-tits-na-iks-indieks-kachiestva-saita</link>
-                <guid isPermaLink="true">http://localhost:4000/iandieks-zamieniaiet-tits-na-iks-indieks-kachiestva-saita</guid>
+                <link>//localhost:4000/iandieks-zamieniaiet-tits-na-iks-indieks-kachiestva-saita</link>
+                <guid isPermaLink="true">//localhost:4000/iandieks-zamieniaiet-tits-na-iks-indieks-kachiestva-saita</guid>
             </item>
         
             <item>
@@ -101,8 +101,8 @@
 </description>
                 
                 <pubDate>Sat, 10 Feb 2018 13:48:00 +0000</pubDate>
-                <link>http://localhost:4000/kak-zarabotat-na-kwork-ru-novichku</link>
-                <guid isPermaLink="true">http://localhost:4000/kak-zarabotat-na-kwork-ru-novichku</guid>
+                <link>//localhost:4000/kak-zarabotat-na-kwork-ru-novichku</link>
+                <guid isPermaLink="true">//localhost:4000/kak-zarabotat-na-kwork-ru-novichku</guid>
             </item>
         
             <item>
@@ -114,8 +114,8 @@
 </description>
                 
                 <pubDate>Tue, 28 Nov 2017 06:56:00 +0000</pubDate>
-                <link>http://localhost:4000/prodvizhieniie-saita-ssylkami-v-2017-ghodu</link>
-                <guid isPermaLink="true">http://localhost:4000/prodvizhieniie-saita-ssylkami-v-2017-ghodu</guid>
+                <link>//localhost:4000/prodvizhieniie-saita-ssylkami-v-2017-ghodu</link>
+                <guid isPermaLink="true">//localhost:4000/prodvizhieniie-saita-ssylkami-v-2017-ghodu</guid>
             </item>
         
             <item>
@@ -128,8 +128,8 @@
 </description>
                 
                 <pubDate>Sat, 15 Apr 2017 11:30:00 +0000</pubDate>
-                <link>http://localhost:4000/jekyll-post-pagination-in-category</link>
-                <guid isPermaLink="true">http://localhost:4000/jekyll-post-pagination-in-category</guid>
+                <link>//localhost:4000/jekyll-post-pagination-in-category</link>
+                <guid isPermaLink="true">//localhost:4000/jekyll-post-pagination-in-category</guid>
             </item>
         
             <item>
@@ -141,8 +141,8 @@
 </description>
                 
                 <pubDate>Tue, 04 Apr 2017 16:10:00 +0000</pubDate>
-                <link>http://localhost:4000/anons-podkliuchieniie-adminka-jekyll-k-github</link>
-                <guid isPermaLink="true">http://localhost:4000/anons-podkliuchieniie-adminka-jekyll-k-github</guid>
+                <link>//localhost:4000/anons-podkliuchieniie-adminka-jekyll-k-github</link>
+                <guid isPermaLink="true">//localhost:4000/anons-podkliuchieniie-adminka-jekyll-k-github</guid>
             </item>
         
     </channel>
