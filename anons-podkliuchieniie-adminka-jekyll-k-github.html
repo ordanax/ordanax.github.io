@@ -7,7 +7,7 @@
 	<link href="/assets/blog.css" rel="stylesheet">
 	<link href="/assets/breadcrumb-style.css" rel="stylesheet">
 	
-	<title>Все об Arch Linux</title>
+	<title>Подключение админки Jekyll к GitHub</title>
 	<meta name="description" content="Установка и настройка Arch Linux, статьи, конфиги, группа поддержки.">
 	
 	<!-- Put this script tag to the <head> of your page -->
@@ -71,12 +71,7 @@
       
 
           
-
-       
-
-      
-      
-
+              
           
 
        
@@ -85,18 +80,42 @@
       
 
           
+              
+
+              
+
+              <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                 <a class="breadcrumb-item" itemprop="item" href="http://localhost:4000//jekyll/">
+                   <span itemprop="name">jekyll</span>
+                 </a>
+                <meta itemprop="position" content="1" />
+              </li>
+
+              
+          
 
        
 
       
       
 
+          
+              
+          
+
+       
+
+      
+      
+
+          
+              
           
 
        
       
         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-             <span class="breadcrumb-item" itemprop="name">Все об Arch Linux</span>
+             <span class="breadcrumb-item" itemprop="name">Подключение админки Jekyll к GitHub</span>
         </li>
 
     </ol>
@@ -104,105 +123,51 @@
   </nav>
 
 </div>
-			<div class="col-md-8 blog-main">
-  <h2><a href="/welcome-to-jekyll">Welcome to Jekyll!</a></h2>
-  <p>
-    <span class="date">28.01.2019</span>
-  </p>
-  <div class="entry">
-        <p><img src="https://bestbuycomp.com.ua/files/products/U0234665_big.200x200.jpg" alt="My helpful screenshot" /></p>
+			<div class="col-md-8 blog-main"><div class="blog-post">
+    <h1 class="blog-post-title">Подключаем админку Jekyll к репозиторию GitHub</h1>
+    <p class="blog-post-meta">04.04.2017</p>
+    <p>В одном из <a href="https://ordanax.github.io/kak-perenesti-site-jekyll-na-github">прошлых уроков</a> мы зарегистрировались на GitHub, создали в нем репозиторий и перенесли туда наш <strong>сайт на Jekyll</strong>.</p>
 
+<p>Большинство вебмастеров на этом останавливаются т.к. им для <strong>администрирования сайта на Jekyll</strong> вполне хватает интерфейса самого GitHub, но мы пойдем другим путем и подключим удобную <strong>админку</strong> для нашего репозитория с сайтом.</p>
 
-      </div>
+<p><img src="/uploads/jekyll-admin-panel.jpg" alt="jekyll-admin-panel.jpg" /></p>
 
-      <a href="/welcome-to-jekyll" class="read-more">Читать далее &raquo;</a>
-  <br>
-  <hr>
+<p>Авторизуйтесь на сайте GitHub. Перейдите на сервис <a href="https://www.siteleaf.com/" target="_blank" rel="nofollow">Siteleaf</a> и зарегистрируйтесь, нажав в правом верхнем углу кнопку “Sign up”. Введите свой логин, пароль, а также любое имя. Нажмите внизу снова “Sign up”.</p>
 
-  <h2><a href="/alisa-prilozhieniie-ot-iandieks">Алиса приложение от Яндекс</a></h2>
-  <p>
-    <span class="date">23.01.2019</span>
-  </p>
-  <div class="entry">
-        <p><img src="/uploads/yandex-alisa-skachat.jpg" alt="скачать голосовой помощник Яндекс Алиса" /></p>
+<p>На втором шаге регистрации введите название своего сайта. В поле для указания домена ничего не указывайте. Нажмите сразу под ним галочку “Use a custom domain”. В правой колонке нажмите на кнопку “Connect existing repo”. В открывшемся окне выберите “Public repos”.</p>
 
+<p>На следующем шаге в поле “REPO” вам необходимо выбрать репозиторий GitHub на котором размещен ваш <strong>сайт на Jekyll</strong>. Просто поставьте в него курсор и появится список ваших публичных репозиториев.</p>
 
-      </div>
+<p>В поле “BRANCH” введите “master” или другое название ветки, если понимаете о чем идет речь. После этого нажмите внизу “Connect and create site”.</p>
 
-      <a href="/alisa-prilozhieniie-ot-iandieks" class="read-more">Читать далее &raquo;</a>
-  <br>
-  <hr>
+<p>Отлично! Сейчас файлы вашего сайта будут скопированы в данный сервис и вы попадете в <strong>админку Jekyll</strong>, где сможете создавать или редактировать посты и страницы вашего сайта. Все изменения будут автоматически отправляться на GitHub и отобразятся на сайте. 
+Здорово не правда ли?</p>
 
-  <h2><a href="/riedaktor-bluefish-ftp-podkliuchieniie-v-ubuntu">Редактор Bluefish: FTP подключение в Ubuntu</a></h2>
-  <p>
-    <span class="date">23.09.2018</span>
-  </p>
-  <div class="entry">
-        <p><img src="/uploads/Bluefish-FTP.jpg" alt="редактор Bluefish FTP подключение" /></p>
+<p>Подробнее о данной <strong>админке для Jekyll</strong> вы можете ознакомиться в данном видео:</p>
 
-
-      </div>
-
-      <a href="/riedaktor-bluefish-ftp-podkliuchieniie-v-ubuntu" class="read-more">Читать далее &raquo;</a>
-  <br>
-  <hr>
-
-  <h2><a href="/provierit-iks-saita-onlain">Проверить ИКС сайта онлайн</a></h2>
-  <p>
-    <span class="date">04.09.2018</span>
-  </p>
-  <div class="entry">
-        <p><img src="/uploads/proverit-iks-saita-online.jpg" alt="Как узнать ИКС сайта" /></p>
-
-
-      </div>
-
-      <a href="/provierit-iks-saita-onlain" class="read-more">Читать далее &raquo;</a>
-  <br>
-  <hr>
-
-
-<!-- Pagination links -->
-
-<div class="pagination justify-content-center">
-  
-  <span class="page-item page-link">&laquo;</span>
-  
-  
-  
-  
-  <span class="page-item page-link">1</span>
-  
-  
-  
-  <li class="page-item">
-    <a href="/page2" class="page-item page-link">2</a>
-  </li>
-  
-  
-  
-  <li class="page-item">
-    <a href="/page3" class="page-item page-link">3</a>
-  </li>
-  
-  
-  
-  <li class="page-item">
-    <a href="/page4" class="page-item page-link">4</a>
-  </li>
-  
-  
-  
-  
-  <li class="page-item">
-    <a href="/page2/" class="page-item page-link">&raquo;</a>
-  </li>
-  
+<div class="myvideo">
+<iframe width="610" height="343" src="https://www.youtube.com/embed/CK12Q9OhoFw" frameborder="0" allowfullscreen=""></iframe>
 </div>
 
-<!-- Pagination links End-->
+	<div class="blog-post-tags">
+	  
+	    <span>jekyll</span>
+	  
+	    <span>github</span>
+	  
+	    <span>admin</span>
+	  
+	</div>
+    <hr>
+    	<div id="disqus_thread"></div>
 
-Текст редактируется в _includes/footer-ads.html</div>
+	<span class="small-left"> Не забудьте сказать спасибо. Поставьте лайк!</span>
+<br>
+<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+<script src="//yastatic.net/share2/share.js"></script>
+<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir,twitter,blogger,evernote,lj,viber,whatsapp,skype,telegram" data-counter=""></div>	
+</div>
+</div>
 			<div class="col-md-3 offset-1 blog-sidebar"><div class="sidebar-module sidebar-module-inset">
 	<h3>Блог</h3>
 	<ol class="list-unstyled right-menu">
