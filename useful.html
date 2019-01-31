@@ -5,7 +5,7 @@ layout: default
 ---
 
 <div class="posts">
-    {% for post in site.categories.useful %}
+	{% for post in site.categories.useful %}
     <article class="post">
 
       <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
@@ -56,14 +56,4 @@ layout: default
 
 
 <hr>
-<noindex>
-<p>Фриланс биржа на который можно найти абсолютно любые услуги. Покупаю на ней услуги с момента ее открытия. Рекомендую! Переходи!</p><br>
-<div class="row">
-  <div class="col-md-6">
-      <a href="https://kwork.ru?ref=10649" target="_blank" rel="nofollow"><img src="https://kwork.ru/images/partner/06.jpg" alt="Kwork.ru - услуги фрилансеров от 500 руб."></a>
-  </div>
-  <div class="col-md-6">
-      <a href="https://kwork.ru?ref=10649" target="_blank"  rel="nofollow"><img src="https://kwork.ru/images/partner/07.jpg" alt="Kwork.ru - услуги фрилансеров от 500 руб."></a>
-  </div>  
-</div>
-</noindex>
+{% include footer-ads.html %}

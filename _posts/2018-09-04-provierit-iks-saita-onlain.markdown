@@ -15,6 +15,7 @@ tags:
 header: Узнать ИКС сайта онлайн
 description: 'Как проверить ИКС сайта онлайн. Какие инструменты позволяют анализировать
   ИКС сайта в интернете онлайн. '
+layout: post
 ---
 
 ![proverit-iks-saita-online.jpg](/uploads/proverit-iks-saita-online.jpg){:alt="Как узнать ИКС сайта"}

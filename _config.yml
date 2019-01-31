@@ -11,7 +11,7 @@ collections:
 description: Установка и настройка Arch Linux, статьи, конфиги, группа поддержки.
 baseurl: ''
 url: https://ordanax.github.io
-#permalink: "/:title"
+permalink: "/:title"
 markdown: kramdown
 
 plugins:
@@ -30,6 +30,12 @@ pagination:
     before: 2
     after: 2
     
-exclude:
-- Gemfile
-- Gemfile.lock
+exclude: ['Gemfile','Gemfile.lock','node_modules', 'gulpfile.js', 'package.json', 'package-lock.json', 'js/common.js', 'npm-debug.log', '**/Thumbs.db', 'libs', 'sass', '**/*.DS_Store']
+
+soc:
+  <li><a href="https://vk.com/arch4u"><i class="fab fa-vk"></i></a></li>
+  <li><a href="https://www.youtube.com/Arch4u"><i class="fab fa-youtube"></i></a></li>
+  <li><a href="/feed.xml"><i class="fas fa-rss"></i></a></li>
+
+
+

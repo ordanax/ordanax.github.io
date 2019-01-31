@@ -12,6 +12,7 @@ tags:
 header: 'Редактор кода Bluefish: как создать FTP подключение'
 description: Как создать в редакторе Bluefish FTP-подключение для удаленного редактирования
   файлов вашего веб-проекта. Пошаговая инструкция со скриншотами в Ubuntu 18.04.
+layout: post
 ---
 
 ![Bluefish-FTP.jpg](/uploads/Bluefish-FTP.jpg){:alt="редактор Bluefish FTP подключение"}
