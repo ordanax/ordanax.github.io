@@ -5,7 +5,5 @@ date:   2019-01-28 16:17:09 +0500
 categories: jekyll update
 ---
 
-Это мой новый пост
-
-Харрис советует почитать {% extlink здесь https://1200baud.wordpress.com/2012/10/14/build-your-own-c64-2400-baud-usb-device-for-less-than-15/ %}
+![kwork-kak-zarabotat-novichku.jpg](/uploads/kwork-kak-zarabotat-novichku.jpg){:alt="как заработать на kwork ru новичку" style="width: 100%"}
 
