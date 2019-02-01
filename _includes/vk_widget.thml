@@ -1,7 +1,9 @@
 <div class="sidebar-module sidebar-module-inset">
 <h4>Наша группа Вконтакте</h4>
 <p>Присоеденяйся! У нас много активных пользователей, которые помогут тебе справится с любой проблемой в Arch Linux</p>
-
+<br>
+<noindex><a href="https://vk.com/arch4u"><img src="{{ site.url }}/img/archlinux-logo.png" rel="nofollow" title="Присоедениться" alt="archlinux"></a></noindex>
+<br>
 <center>
 <!-- VK Widget -->
 <script type="text/javascript" src="https://vk.com/js/api/openapi.js?160"></script>
