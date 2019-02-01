@@ -4,11 +4,8 @@ title:  "New post"
 date:   2019-01-28 16:17:09 +0500
 categories: jekyll update
 ---
-![My helpful screenshot](https://bestbuycomp.com.ua/files/products/U0234665_big.200x200.jpg)
-
 
 Это мой новый пост
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+Харрис советует почитать {% extlink здесь https://1200baud.wordpress.com/2012/10/14/build-your-own-c64-2400-baud-usb-device-for-less-than-15/ %}
+
