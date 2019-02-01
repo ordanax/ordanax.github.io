@@ -1,7 +1,8 @@
 <div class="sidebar-module sidebar-module-inset">
-<h3>Присоеденяйся к нам Вконтакте</h3>
-<p>У нас много активных пользователей, которые помогут тебе справится с любой проблемой в Arch Linux</p>
+<h4>Наша группа Вконтакте</h4>
+<p>Присоеденяйся! У нас много активных пользователей, которые помогут тебе справится с любой проблемой в Arch Linux</p>
 
+<center>
 <!-- VK Widget -->
 <script type="text/javascript" src="https://vk.com/js/api/openapi.js?160"></script>
 <div id="vk_groups"></div>
@@ -9,4 +10,5 @@
 VK.Widgets.Group("vk_groups", {mode: 3, no_cover: 1}, 129498031);
 </script>
 <!--/ VK Widget -->
+</center>
 </div>
