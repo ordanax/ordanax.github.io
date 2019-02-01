@@ -12,7 +12,7 @@ layout: default
         {{ post.excerpt }}
       </div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Читать далее >></a>
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Читать далее &raquo;</a>
   <br>
    <hr>
 {% endfor %}
@@ -37,9 +37,9 @@ layout: default
   {% endfor %}
 
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Вперед</a>
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Вперед &raquo;</a>
   {% else %}
-    <span>Вперед</span>
+    <span>Вперед &raquo;</span>
   {% endif %}
 </div>
 {% endif %}
