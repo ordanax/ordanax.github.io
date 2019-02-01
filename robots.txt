@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: /index.html
-Host: yousite.ru
-Sitemap: //yousite.ru/sitemap.xml
