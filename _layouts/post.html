@@ -7,10 +7,8 @@ layout: default
     <p class="blog-post-meta">{{ page.date|date:"%d.%m.%Y" }}</p>
     {{ content }}
 	<div class="blog-post-tags">
-	  {% for categories in page.categories %}
 	  {% for tags in page.tags %}
-	  <span><a href="/{{ categories }}">{{ tags }}</a></span>
-	  {% endfor %}
+	    <span>{{ tags }}</span>
 	  {% endfor %}
 	</div>
     <hr>
