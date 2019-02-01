@@ -13,6 +13,7 @@ description: Установка и настройка Arch Linux, статьи, 
 baseurl: ''
 url: https://ordanax.github.io
 permalink: "/:title"
+tag_permalink_style: pretty
 markdown: kramdown
 gems:
 - jekyll-paginate
