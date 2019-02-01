@@ -1,0 +1,34 @@
+---
+title: Все об Arch Linux
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+description: Установка и настройка Arch Linux, статьи, конфиги, группа поддержки.
+  CMS.
+baseurl: ''
+url: https://ordanax.github.io
+permalink: "/:title"
+tag_permalink_style: pretty
+markdown: kramdown
+gems:
+- jekyll-paginate
+- jekyll-sitemap
+- jekyll-feed
+
+tag_page_layout: tag_page
+tag_page_dir: tag
+
+paginate: 7
+exclude:
+- Gemfile
+- Gemfile.lock
+
+soc:
+  <li><a href="https://vk.com/arch4u"><i class="fab fa-vk"></i></a></li>
+  <li><a href="https://www.youtube.com/Arch4u"><i class="fab fa-youtube"></i></a></li>
+  <li><a href="/feed.xml"><i class="fas fa-rss"></i></a></li>
