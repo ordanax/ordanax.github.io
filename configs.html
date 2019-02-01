@@ -1,11 +1,11 @@
 ---
-title: Уроки по Jekyll
-permalink: jekyll/
+title: Конфиги
+permalink: configs/
 layout: default
 ---
 
 <div class="posts">
-	{% for post in site.categories.jekyll %}
+	{% for post in site.categories.configs %}
     <article class="post">
 
       <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
@@ -22,7 +22,5 @@ layout: default
     <hr>
   {% endfor %}
 </div>
-
-<hr>
 
 {% include footer-ads.html %}
