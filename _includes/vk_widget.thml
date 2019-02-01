@@ -2,7 +2,7 @@
 <h4>Наша группа Вконтакте</h4>
 <p>Присоеденяйся! У нас много активных пользователей, которые помогут тебе справится с любой проблемой в Arch Linux</p>
 <br>
-<noindex><a href="https://vk.com/arch4u"><img src="{{ site.url }}/img/archlinux-logo.png" rel="nofollow" title="Присоедениться" alt="archlinux"></a></noindex>
+<noindex><a href="https://vk.com/arch4u"><img src="{{ site.url }}/img/vk.jpg" rel="nofollow" title="Присоедениться" alt="archlinux"></a></noindex>
 <br>
 <center>
 <!-- VK Widget -->
