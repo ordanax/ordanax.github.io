@@ -18,13 +18,13 @@ plugins:
 - jekyll-paginate-v2
 - jekyll-feed
 
-category_dir: '/'
+category_dir: "/"
 pagination:
   enabled: true
   paginate: 6
-  title: ':title - Страница :num'
+  title: ":title - Страница :num"
   limit: 0
-  sort_field: 'date'
+  sort_field: "date"
   sort_reverse: true
   trail:
     before: 2
