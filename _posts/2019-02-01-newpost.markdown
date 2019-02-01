@@ -5,5 +5,5 @@ date:   2019-01-28 16:17:09 +0500
 categories: jekyll update
 ---
 
-![kwork-kak-zarabotat-novichku.jpg](/uploads/kwork-kak-zarabotat-novichku.jpg){:alt="как заработать на kwork ru новичку" style="width: 100%"}
-
+![kwork-kak-zarabotat-novichku.jpg](https://droidnews.ru/img/2017/october/yandeks-sdelal-sobstvennogo-golosovogo-pomoschnika-alisu_1.jpg){:alt="дратути" style="width: 100%"}
+ **Скачать программу Алиса бесплатно** можно на [официальном сайте](https://alice.yandex.ru/){: target="_blank" rel="nofollow"} или на данной странице после статьи.
