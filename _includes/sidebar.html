@@ -1,25 +1,4 @@
-<div class="sidebar-module sidebar-module-inset">
-	<h3>Блог</h3>
-	<ol class="list-unstyled right-menu">
-		<li><a href="https://ordanax.github.io/jekyll/">Уроки Jekyll</a></li>
-		<li><a href="https://ordanax.github.io/seo/">SEO</a></li>
-		<li><a href="https://ordanax.github.io/useful/">Полезное</a></li>
-	</ol>
-</div>
-
+{% include right-menu.html %}
 {% include feedburner.html %}
 {% include vk_widget.html %}
-
-
-<div class="sidebar-module sidebar-module-ads">
-	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<!-- html blog article adaptive -->
-	<ins class="adsbygoogle"
-	     style="display:block"
-	     data-ad-client="ca-pub-7700451254687983"
-	     data-ad-slot="1629640353"
-	     data-ad-format="auto"></ins>
-	<script>
-	(adsbygoogle = window.adsbygoogle || []).push({});
-	</script>
-</div>
+{% include sidebar-module-ads.html %}
