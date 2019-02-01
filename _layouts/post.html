@@ -7,6 +7,7 @@ layout: default
     <p class="blog-post-meta">{{ page.date|date:"%d.%m.%Y" }}</p>
     {{ content }}
     <hr>
+	{% include similar-posts.html %}
     	<div id="disqus_thread"></div>
 	{% include share.html %}
 	{% include comments.html %}
