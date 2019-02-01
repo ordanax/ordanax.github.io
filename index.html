@@ -21,9 +21,9 @@ layout: default
 {% if paginator.total_pages > 1 %}
 <div class="pagination">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Назад</a>
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Назад</a>
   {% else %}
-    <span>Назад</span>
+    <span>&laquo; Назад</span>
   {% endif %}
 
   {% for page in (1..paginator.total_pages) %}
