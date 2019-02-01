@@ -1,61 +1,28 @@
 ---
+title: Все об Arch Linux
+permalink: jekyll/
 layout: default
-pagination:
-  enabled: true
-  per_page: 4
 ---
-{% for post in paginator.posts %}
-  <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-  <p>
-    <span class="date">{{ post.date|date:"%d.%m.%Y" }}</span>
-  </p>
-  <div class="entry">
+
+<div class="posts">
+	{% for post in site.categories.jekyll %}
+    <article class="post">
+
+      <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+      <p>
+       <span class="date">{{ post.date|date:"%d.%m.%Y" }}</span>
+      </p>
+
+      <div class="entry">
         {{ post.excerpt }}
       </div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Читать далее &raquo;</a>
-  <br>
-  <hr>
-{% endfor %}
-
-<!-- Pagination links -->
-{% if paginator.total_pages > 1 %}
-<div class="pagination justify-content-center">
-  {% if paginator.previous_page == 1 %}
-  <li class="page-item">
-    <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}" class="page-item page-link">&laquo;</a>
-  </li>
-  {% elsif paginator.previous_page%}
-  <li class="page-item">
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="page-item page-link">&laquo;</a>
-  </li>
-  {% else %}
-  <span class="page-item page-link">&laquo;</span>
-  {% endif %}
-  
-  {% for page in (1..paginator.total_pages) %}
-  {% if page == paginator.page %}
-  <span class="page-item page-link">{{ page }}</span>
-  {% elsif page == 1 %}
-  <li class="page-item">
-    <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}" class="page-item page-link">{{ page }}</a>
-  </li>
-  {% else %}
-  <li class="page-item">
-    <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" class="page-item page-link">{{ page }}</a>
-  </li>
-  {% endif %}
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Читать далее >></a>
+    </article>
+    <hr>
   {% endfor %}
-  
-  {% if paginator.next_page %}
-  <li class="page-item">
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="page-item page-link">&raquo;</a>
-  </li>
-  {% else %}
-  <span class="page-item page-link">&raquo;</span>
-  {% endif %}
 </div>
-{% endif %}
-<!-- Pagination links End-->
+
+<hr>
 
 {% include footer-ads.html %}
