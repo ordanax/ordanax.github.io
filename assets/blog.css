@@ -32,7 +32,7 @@ h6, .h6 {
 .blog-post-tags span {
     display: inline-block;
     height: 25px;
-    background: url(../uploads/tag.png) no-repeat;
+    background: url(../img/tag.png) no-repeat;
     font: bold 11px/22px Arial, sans-serif;
     color: #fff;
     text-decoration: none;
@@ -47,7 +47,7 @@ h6, .h6 {
     right: 0;
     width: 8px;
     height: 25px;
-    background: url(../uploads/tag.png) 100% 0 no-repeat;
+    background: url(../img/tag.png) 100% 0 no-repeat;
 }
 .blog-post-tags span:hover {
     color: #FFF;
