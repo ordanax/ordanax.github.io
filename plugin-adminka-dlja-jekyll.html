@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<link href="/assets/bootstrap.min.css" rel="stylesheet">
+	<link href="/assets/blog.css" rel="stylesheet">
+	<link href="/assets/breadcrumb-style.css" rel="stylesheet">
+	
+	<title>Подключаем админку для Jekyll</title>
+	<meta name="description" content="Рассмотрим как подключить визуальную админку для Jelyll с помощью плагина jekyll-admin. Все лишь одна строчка кода.">
+	
+	<!-- vk -->
+	<script type="text/javascript" src="https://vk.com/js/api/openapi.js?160"></script>
+	<script type="text/javascript">
+	  VK.init({apiId: 6841969, onlyWidgets: true});
+	</script>
+	<!--/ vk -->
+
+		<meta name="yandex-verification" content="805b49eb4e4e9adf" />
+	<meta name="google-site-verification" content="Cow6hdfnPNIg8_IaHo9RpbGNwL_xHNus5MdQ3EzQeyE" />
+	
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Все об Arch Linux" />
+	
+	<!-- feed meta -->
+</head>
+
+
+<body>
+	<div class="blog-masthead">
+		<div class="container">
+			<nav class="blog-nav">
+  <a class="blog-nav-item" href="/">Главная</a>
+  <a class="blog-nav-item" href="https://ordanax.github.io/jekyll/">Jekyll</a>
+  <a class="blog-nav-item" href="https://ordanax.github.io/seo/">SEO</a>
+  <a class="blog-nav-item" href="https://ordanax.github.io/useful/">Полезное</a>
+  <a class="blog-nav-item" href="https://www.youtube.com/c/HtmlBlog" target="_blank" rel="nofollow">Канал на Youtube</a>
+  <a class="blog-nav-item" href="https://ordanax.github.io/about/">Об авторе</a>
+</nav>
+
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="blog-header">
+	<a href="/"><img class="blog-logo" src="http://localhost:4000/img/archlinux-logo.png" alt="logo"></a>
+	<span class="blog-title">Все об Arch Linux</span>
+	<p class="lead blog-description">Установка и настройка Arch Linux, статьи, конфиги, группа поддержки.</p>
+</div>
+
+		<div class="row">
+			<div class="col-md-12">
+
+  <nav class="breadcrumbs hidden-sm-down">
+
+    <a class="breadcrumb-item" href=http://localhost:4000/>Главная</a>
+
+    <ol class="list-unstyled" vocab="//schema.org/" typeof="BreadcrumbList">
+
+      <!-- Skip if root -->
+      
+      
+     
+      
+     
+
+      
+      
+
+          
+              
+          
+
+       
+
+      
+      
+
+          
+              
+
+              
+
+              <li itemprop="itemListElement" itemscope itemtype="//schema.org/ListItem">
+                 <a class="breadcrumb-item" itemprop="item" href="http://localhost:4000//jekyll/">
+                   <span itemprop="name">jekyll</span>
+                 </a>
+                <meta itemprop="position" content="1" />
+              </li>
+
+              
+          
+
+       
+
+      
+      
+
+          
+              
+          
+
+       
+
+      
+      
+
+          
+              
+          
+
+       
+      
+        <li itemprop="itemListElement" itemscope itemtype="//schema.org/ListItem">
+             <span class="breadcrumb-item" itemprop="name">Подключаем админку для Jekyll</span>
+        </li>
+
+    </ol>
+
+  </nav>
+
+</div>
+			<div class="col-md-8 blog-main"><div class="blog-post">
+    <h1 class="blog-post-title">Плагин визуальной админки для Jekyll</h1>
+    <p class="blog-post-meta">31.03.2017</p>
+    <p>В данной статье рассмотрим как очень быстро подключить к вашему сайту на <strong>Jekyll</strong> визуальную <strong>админку</strong>. Для этого мы будем использовать официальный плагин от разработчиков <strong>jekyll-admin</strong>. Как выглядит <strong>админ-панель Jekyll</strong> показано на рисунке ниже.</p>
+
+<p><img src="/uploads/adminka-dlya-jekyll-plugin.jpg" alt="adminka-dlya-jekyll-plugin.jpg" /></p>
+
+<p>Итак. Чтобы подключить данный плагин откройте в редакторе файл Gemfile. Данный файл лежит в корне вашего сайта. Если такого файла там нет, то создайте его. Расширения у файла нет!</p>
+
+<p>Далее найдите в вашем файле код:</p>
+
+<p><code class="highlighter-rouge">group :jekyll_plugins do</code></p>
+
+<p>Сразу после этой строчки напишите:</p>
+
+<p><code class="highlighter-rouge">gem "jekyll-admin"</code></p>
+
+<p>В итоге у вас должно получиться что-то вроде:</p>
+
+<p><code class="highlighter-rouge">group :jekyll_plugins do</code></p>
+
+<p><code class="highlighter-rouge">gem "jekyll-admin"</code></p>
+
+<p><code class="highlighter-rouge">/*перечень других плагинов*/</code></p>
+
+<p><code class="highlighter-rouge">end</code></p>
+
+<p>Если данной конструкции нет в вашем Gemfile, то скопируйте код из данной статьи и ставьте в конце файла.</p>
+
+<p>Вторым шагом необходимо запустить терминал из папки вашего <strong>сайта на Jekyll</strong>. Перейдите в папке сайта и нажмите Shift + правая кнопка мыши. В контекстном меню выберите “Открыть окно команд”.</p>
+
+<p>Запустите в терминале следующую команду:</p>
+
+<p><code class="highlighter-rouge">bundle install</code></p>
+
+<p>После того как плагин установится запустите сервер сайта:</p>
+
+<p><code class="highlighter-rouge">jekyll s</code></p>
+
+<p>Перейдите по адресу: <em>localhost:4000/admin</em>.</p>
+
+<p>Данная <strong>админка Jekyll</strong> не имеет защиты паролем. Ее удобно использовать на своем локальном сервере и затем копировать сайт на хостинг.</p>
+
+<p>Вы также можете посмотреть видео урок как установить <strong>плагин админки для Jekyll</strong>.</p>
+
+<div class="myvideo">
+<iframe width="610" height="343" src="https://www.youtube.com/embed/r2DgWZTle9M" frameborder="0" allowfullscreen=""></iframe>
+</div>
+
+<p>На этом все. Удобного администрирования :)</p>
+
+	<div class="blog-post-tags">
+	  
+	    <span>jekyll</span>
+	  
+	    <span>admin</span>
+	  
+	</div>
+    <hr>
+    	<div id="disqus_thread"></div>
+	<!-- vk like -->
+<div id="vk_like"></div>
+<script type="text/javascript">
+VK.Widgets.Like("vk_like", {type: "full"});
+</script>
+<!-- vk like -->
+	<span class="small-left"> Забери пост себе на стену, чтобы легко найти! Или поделись с друзьями!</span>
+<br>
+<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+<script src="//yastatic.net/share2/share.js"></script>
+<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir,twitter,blogger,evernote,lj,viber,whatsapp,skype,telegram" data-counter=""></div>
+<br>
+	Поставь оценку посту и напиши комментарий!
+<div id="wpac-comment"></div>
+<script type="text/javascript">
+wpac_init = window.wpac_init || [];
+wpac_init.push({widget: 'Comment', id: 16415});
+(function() {
+    if ('WIDGETPACK_LOADED' in window) return;
+    WIDGETPACK_LOADED = true;
+    var mc = document.createElement('script');
+    mc.type = 'text/javascript';
+    mc.async = true;
+    mc.src = 'https://embed.widgetpack.com/widget.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+})();
+</script>
+</div>
+</div>
+			<div class="col-md-3 offset-1 blog-sidebar"><div class="sidebar-module sidebar-module-inset">
+	<h3>Блог</h3>
+	<ol class="list-unstyled right-menu">
+		<li><a href="https://ordanax.github.io/jekyll/">Уроки Jekyll</a></li>
+		<li><a href="https://ordanax.github.io/seo/">SEO</a></li>
+		<li><a href="https://ordanax.github.io/useful/">Полезное</a></li>
+	</ol>
+</div>
+
+<div class="sidebar-module sidebar-module-inset">
+	<h4>Подписка на новости</h4>
+	<form style="text-align:center;" action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=github/MaeS', 'popupwindow', 'scrollbars=yes,width=242,height=auto');return true">
+		<p style="text-align: justify; font-style: italic;">Подпишитесь на обновления блога, чтобы получать новости первым.</p>
+		<p><input type="text" style="width:100%;color: #969696; padding-left: 5px;" name="email" value="Укажите ваш email адрес" /></p>
+		<input type="hidden" value="github/MaeS" name="uri"/><input type="hidden" name="loc" value="ru_RU"/>
+		<input type="submit" value="Подписаться" />
+	</form>
+</div>
+<div id="vk_groups"></div>
+<script type="text/javascript">
+VK.Widgets.Group("vk_groups", {mode: 3, no_cover: 1}, 129498031);
+</script>
+
+
+<div class="sidebar-module sidebar-module-ads">
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- html blog article adaptive -->
+	<ins class="adsbygoogle"
+	     style="display:block"
+	     data-ad-client="ca-pub-7700451254687983"
+	     data-ad-slot="1629640353"
+	     data-ad-format="auto"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</div>
+</div>
+		</div>
+	</div>
+	<div class="blog-footer">
+		<footer class="main-footer">
+	<div class="contaiter">
+		<nav class="soc">
+			<ul>
+				<li><a href="https://vk.com/arch4u"><i class="fab fa-vk"></i></a></li> <li><a href="https://www.youtube.com/Arch4u"><i class="fab fa-youtube"></i></a></li> <li><a href="/feed.xml"><i class="fas fa-rss"></i></a></li>
+			</ul>
+		</nav>
+
+	</div>
+</footer>
+<footer class="bottom-footer">
+	<div class="container text-center">
+		<div class="footer-copy">2019 © <span class="logo-footer logo-litera">Бойко Алексей</span>
+		</div>
+		<p></p>
+	</div>
+</footer>
+	</div>
+
+
+</body>
+
+</html>               
