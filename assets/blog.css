@@ -205,7 +205,8 @@ h6, .h6 {
 }
 .blog-post-meta {
   margin-bottom: 20px;
-  color: #999;
+  color: #555;
+  font-size: 14px;
 }
 
 
