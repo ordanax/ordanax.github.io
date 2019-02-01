@@ -8,8 +8,7 @@ collections:
   uploads:
     title: Uploads
     output: true
-email: mikhailyand@ya.ru
-description: Блог программиста. Создание сайтов на php, html, а также с помощью популярных
+description: Установка и настройка Arch Linux, статьи, конфиги, группа поддержки.
   CMS.
 baseurl: ''
 url: https://ordanax.github.io
@@ -23,3 +22,8 @@ paginate: 7
 exclude:
 - Gemfile
 - Gemfile.lock
+
+soc:
+  <li><a href="https://vk.com/arch4u"><i class="fab fa-vk"></i></a></li>
+  <li><a href="https://www.youtube.com/Arch4u"><i class="fab fa-youtube"></i></a></li>
+  <li><a href="/feed.xml"><i class="fas fa-rss"></i></a></li>
