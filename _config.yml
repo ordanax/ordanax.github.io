@@ -9,7 +9,7 @@ collections:
     title: Uploads
     output: true
 description: Установка и настройка Arch Linux, статьи, конфиги, группа поддержки.
-baseurl: ''
+baseurl: 'blog'
 url: https://ordanax.github.io
 permalink: "/:title"
 markdown: kramdown
