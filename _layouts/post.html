@@ -8,7 +8,7 @@ layout: default
     {{ content }}
 	<div class="blog-post-tags">
 	  {% for categories in page.categories %}
-	  <span><a href="{{site.url}}/{{ categories }}"></a></span>
+	  <span><a href="/{{ categories }}">{{ categories }}</a></span>
 	  {% endfor %}
 	</div>
     <hr>
