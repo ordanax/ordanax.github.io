@@ -1,7 +1,7 @@
 ---
 title: Об Arch Linux
 permalink: archlinux/
-layout: default
+layout: post
 ---
 
 # 10 ПРИЧИН ПОЧЕМУ Я ВЫБРАЛ ARCH LINUX

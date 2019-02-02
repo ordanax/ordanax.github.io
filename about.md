@@ -1,7 +1,7 @@
 ---
 title: О сайте
 permalink: about/
-layout: default
+layout: post
 ---
 # О сайте
 Сайт посвящен исключительно Arch Linux. 
