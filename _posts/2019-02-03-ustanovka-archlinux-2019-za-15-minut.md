@@ -13,13 +13,12 @@ tags:
 - install
 - archlinux
 ---
-<div>
 ![Установка Archlinux 2019 за 15 минут]({{% site.url %}}/img/ustanovka-archlinux-2019-za-15-minut.png "Установка Archlinux 2019 за 15 минут"){:class="post-image rounded"}
 
 В этом видео я показываю быстрое разворачиванеи системы на своей машине.
 Я использую скрипт, который написал на основе своего чек листа. Время на установку нулевой системы уходит 15 минут. В основном время тратится на скачивание. Все остальное происходит моментально.
 
-<blockquote>Keep it simple stupeed</blockquote>
+>Keep it simple stupeed
 
 ## Как использовать скрипт
 
@@ -28,4 +27,3 @@ tags:
 ```sh
 wget git.io/arch1.sh && sh arch1.sh
 ```
-</div>
