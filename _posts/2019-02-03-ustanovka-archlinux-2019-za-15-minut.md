@@ -8,6 +8,7 @@ categories:
 - install
 - scripts
 - video
+- news
 tags:
 - install
 - archlinux
