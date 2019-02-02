@@ -25,7 +25,3 @@ end
 gem "jekyll-paginate"
 
 gem "jekyll-sitemap"
-
-gem 'wdm', '>= 0.1.0'
-
-gem 'jekyll-feed'
