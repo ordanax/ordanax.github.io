@@ -19,10 +19,10 @@ tags:
 <p><iframe frameborder="0" height="360" src="https://www.youtube.com/embed/nvVF_qKDUeM" width="640"></iframe></p>
 
 
-<h3>Как использовать скрипт</h3>>
+<h2>Как использовать скрипт</h2>
 
 <p>Скачивается и запускается скрипт следующей командой:</p>
 
 <blockquote>
-<p>wget git.io/arch1.sh &amp;&amp; sh arch1.sh<br /></p>
+wget git.io/arch1.sh &amp;&amp; sh arch1.sh
 </blockquote>
