@@ -1,0 +1,28 @@
+---
+title: Чеклисты
+permalink: checklists/
+layout: default
+---
+
+<div class="posts">
+	{% for post in site.categories.checklists %}
+    <article class="post">
+
+      <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+      <p>
+       <span class="blog-post-meta">{{ post.date|date:"%d.%m.%Y" }}</span>
+      </p>
+
+      <div class="entry">
+        {{ post.excerpt }}
+      </div>
+
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Читать далее &raquo;</a>
+    </article>
+    <hr>
+  {% endfor %}
+</div>
+
+<hr>
+
+{% include footer-ads.html %}
