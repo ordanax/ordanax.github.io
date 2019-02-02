@@ -13,4 +13,4 @@ tags:
 ---
 ![Установка Archlinux 2019 за 15 минут]({{% site.url %}}/img/ustanovka-archlinux-2019-za-15-minut.png "Установка Archlinux 2019 за 15 минут"){:class="post-image rounded"}
 
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/nvVF_qKDUeM/0.jpg)](http://www.youtube.com/watch?v=nvVF_qKDUeM)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nvVF_qKDUeM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
