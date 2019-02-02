@@ -11,6 +11,6 @@ tags:
 - install
 - archlinux
 ---
-![Установка Archlinux 2019 за 15 минут]({{% site.url %}}/img//home/ordanax/Загрузки/ustanovka-archlinux-2019-za-15-minut.png "Установка Archlinux 2019 за 15 минут"){:class="post-image rounded"}
+![Установка Archlinux 2019 за 15 минут]({{% site.url %}}/img/ustanovka-archlinux-2019-za-15-minut.png "Установка Archlinux 2019 за 15 минут"){:class="post-image rounded"}
 
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/nvVF_qKDUeM/0.jpg)](http://www.youtube.com/watch?v=nvVF_qKDUeM)
