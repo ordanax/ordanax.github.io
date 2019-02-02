@@ -232,7 +232,7 @@ h6, .h6 {
  */
 
 .blog-footer {
-  /*padding: 40px 0;*/
+  padding: 40px 0;
   color: #999;
   text-align: center;
   background-color: #f9f9f9;
@@ -270,13 +270,16 @@ h6, .h6 {
 	}
 }
 
-nav.soc li {
-	display: inline-block;
-}
-
 .similar-posts {
 	display: inline-block;
 }
 
+nav.soc li {
+	display: inline-block;
+}
+
+nav.soc ul {
+	padding-left:0px;
+}
 
 
