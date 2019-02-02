@@ -18,12 +18,13 @@ layout: default
 {% endfor %}
 
 
+<!-- paginate cat -->
 {% if paginator.total_pages > 1 %}
-<div class="text-center">
+<div class="pagination">
   {% if paginator.previous_page %}
     <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Назад</a>
   {% else %}
-    <span>&laquo; Назад</span>
+    <span>Назад</span>
   {% endif %}
 
   {% for page in (1..paginator.total_pages) %}
@@ -43,6 +44,6 @@ layout: default
   {% endif %}
 </div>
 {% endif %}
-<br>
 
+<hr>
 {% include google-ads-footer.html %}

@@ -1,7 +1,7 @@
 ---
 title: Конфиги
 permalink: configs/
-layout: post
+layout: default
 ---
 
 <div class="posts">
@@ -23,7 +23,7 @@ layout: post
   {% endfor %}
 </div>
 
-<!-- test paginate cat useful-->
+<!-- paginate cat -->
 {% if paginator.total_pages > 1 %}
 <div class="pagination">
   {% if paginator.previous_page %}
@@ -49,8 +49,6 @@ layout: post
   {% endif %}
 </div>
 {% endif %}
-
-
 
 <hr>
 {% include google-ads-footer.html %}
