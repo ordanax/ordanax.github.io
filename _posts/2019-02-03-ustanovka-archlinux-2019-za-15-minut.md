@@ -7,6 +7,7 @@ permalink: /ustanovka-archlinux-2019-za-15-minut
 categories: 
 - install
 - scripts
+- video
 tags:
 - install
 - archlinux
