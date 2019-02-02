@@ -17,8 +17,6 @@ tags:
 В этом видео я показываю быстрое разворачиванеи системы на своей машине.
 Я использую скрипт, который написал на основе своего чек листа. Время на установку нулевой системы уходит 15 минут. В основном время тратится на скачивание. Все остальное происходит моментально.
 
-<br><iframe width="560" height="315" src="https://www.youtube.com/embed/nvVF_qKDUeM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 ## Как использовать скрипт
 
 Скачивается и запускается скрипт следующей командой:
