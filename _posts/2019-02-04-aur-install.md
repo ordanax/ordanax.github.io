@@ -32,7 +32,7 @@ tags:
 </p>
 
 <h2>Результаты опроса</h2>
-<div>
+<div class="text-center">
 	<table width="50%" cellspacing="0">
 		<tr> 
 			<td>
