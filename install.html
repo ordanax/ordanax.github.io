@@ -1,11 +1,11 @@
 ---
-title: Полезное
-permalink: useful/
+title: Установка
+permalink: install/
 layout: default
 ---
 
 <div class="posts">
-	{% for post in site.categories.useful %}
+	{% for post in site.categories.install %}
     <article class="post">
 
       <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
@@ -22,7 +22,6 @@ layout: default
     <hr>
   {% endfor %}
 </div>
-
 
 <!-- paginate cat -->
 {% if paginator.total_pages > 1 %}
@@ -50,8 +49,6 @@ layout: default
   {% endif %}
 </div>
 {% endif %}
-
-
 
 <hr>
 {% include google-ads-footer.html %}
