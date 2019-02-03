@@ -18,7 +18,17 @@ tags:
 ---
 <p><img alt="Какой AUR helper выбрать?" class="post-image rounded" src="https://ordanax.github.io/img/aur-install.png" />
 Если вы посмотрите таблицу <noindex><a href="https://vk.cc/88yr8q" target="_blank" rel="nofollow">https://vk.cc/88yr8q</a></noindex> из нее можно увидеть что yaourt и aurman помечан как более не поддерживаемые.
-Большинство пользователей скланяются к yay
+Большинство пользователей склоняются к yay. 
+Чтобы установить yay вы можете вопрользоваться скриптом ниже. Достаточно вбить всего 1 троку. Синтаксис точно такй-же как и в pacmam.
+
+Чтобы установить программу пишем
+<code>yay -S nazvanie_paketa</code>
+
+Для поиска по AUR можно не писать -Ss
+<code>yay nazvanie_paketa</code>
+
+Чтобы обновить всю систему включая AUR пакеты
+<code>yay -Syu</code>
 </p>
 
 <h2>Результаты опроса</h2>
