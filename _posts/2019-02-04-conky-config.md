@@ -16,7 +16,7 @@ tags:
 <br>Вот некоторые из этих конфигов.<br>
 
 <img src="https://pp.userapi.com/c830209/v830209600/11879b/8bz5y9DvYzE.jpg" width="150" alt="https://pp.userapi.com/c830209/v830209600/11879b/8bz5y9DvYzE.jpg">
-<br><img src="https://pp.userapi.com/c830209/v830209600/1187a3/_TNvS9MqeX0.jpg" width="150" alt="https://pp.userapi.com/c830209/v830209600/1187a3/_TNvS9MqeX0.jpg">
+<img src="https://pp.userapi.com/c830209/v830209600/1187a3/_TNvS9MqeX0.jpg" width="150" alt="https://pp.userapi.com/c830209/v830209600/1187a3/_TNvS9MqeX0.jpg">
 <br><br>
 Ссылки:<br>
 <noindex><a href="https://vk.cc/90bloM" target="_blank" rel="nofollow">https://vk.cc/90bloM</a></noindex><br>
