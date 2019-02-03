@@ -37,16 +37,10 @@ tags:
 <div class="container">
   <div class="row">
     <div class="col-sm">
-      Одна из трёх колонок
-    </div>
-    <div class="col-sm">
        <div id="vk_poll"></div>
 		<script type="text/javascript">
 		VK.Widgets.Poll("vk_poll", {}, "320990931_a910f4b472d3a23482");
 		</script>
-    </div>
-    <div class="col-sm">
-      Одна из трёх колонок
     </div>
   </div>
 </div>
