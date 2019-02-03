@@ -8,8 +8,7 @@ collections:
   uploads:
     title: Uploads
     output: true
-description: Установка и настройка Arch Linux, статьи, конфиги, группа поддержки.
-  CMS.
+description: Arch Linux будет тем, что вы из него сделаете!
 baseurl: ''
 url: https://ordanax.github.io
 permalink: "/:title"

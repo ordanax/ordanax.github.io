@@ -1,22 +1,27 @@
 ---
+title: Видео
+permalink: video/
 layout: default
 ---
 
-<!-- This loops through the paginated posts -->
-{% for post in paginator.posts %}
-  <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-  <p>
-    <span class="blog-post-meta">{{ post.date|date:"%d.%m.%Y" }}</span>
-  </p>
-        <div class="entry">
+<div class="posts">
+	{% for post in site.categories.video %}
+    <article class="post">
+
+      <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+      <p>
+       <span class="blog-post-meta">{{ post.date|date:"%d.%m.%Y" }}</span>
+      </p>
+
+      <div class="entry">
         {{ post.excerpt }}
       </div>
 
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Читать далее &raquo;</a>
-  <br>
-   <hr>
-{% endfor %}
-
+    </article>
+    <hr>
+  {% endfor %}
+</div>
 
 <!-- paginate cat -->
 {% if paginator.total_pages > 1 %}

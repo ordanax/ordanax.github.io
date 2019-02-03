@@ -1,5 +1,5 @@
 ---
-title: Полезные статьи
+title: Полезное
 permalink: useful/
 layout: default
 ---
@@ -10,27 +10,25 @@ layout: default
 
       <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
       <p>
-       <span class="date">{{ post.date|date:"%d.%m.%Y" }}</span>
+       <span class="blog-post-meta">{{ post.date|date:"%d.%m.%Y" }}</span>
       </p>
 
       <div class="entry">
         {{ post.excerpt }}
       </div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Читать далее >></a>
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Читать далее &raquo;</a>
     </article>
     <hr>
   {% endfor %}
 </div>
 
-<hr>
 
-
-<!-- test paginate cat useful-->
+<!-- paginate cat -->
 {% if paginator.total_pages > 1 %}
 <div class="pagination">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Назад</a>
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Назад</a>
   {% else %}
     <span>Назад</span>
   {% endif %}
@@ -46,9 +44,9 @@ layout: default
   {% endfor %}
 
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Вперед</a>
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Вперед &raquo;</a>
   {% else %}
-    <span>Вперед</span>
+    <span>Вперед &raquo;</span>
   {% endif %}
 </div>
 {% endif %}
@@ -56,4 +54,4 @@ layout: default
 
 
 <hr>
-{% include footer-ads.html %}
+{% include google-ads-footer.html %}

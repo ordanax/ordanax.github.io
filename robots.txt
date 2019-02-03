@@ -1,4 +1,5 @@
 User-agent: *
 Disallow: /index.html
-Host: yousite.ru
-Sitemap: http://yousite.ru/sitemap.xml
+Disallow: /assets/
+Host: ordanax.github.io
+Sitemap: https://ordanax.github.io/sitemap.xml
