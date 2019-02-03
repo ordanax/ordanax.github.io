@@ -7,9 +7,11 @@ permalink: /chek-list-po-ustanovke-archlinux-2019
 categories: 
 - install
 - video
+- checklists
 tags:
+- video
 - install
-- archlinux
+- checklists
 ---
 <p><img alt="Чек лист по установке Archlinux 2019" class="post-image rounded" src="https://ordanax.github.io/img/chek-list-po-ustanovke-archlinux-2019.png" /><p>Чек лист для установки Arch Linux делал для себя. Выложил в гугл документы 
 <noindex><a href="https://vk.cc/8a1asw" target="_blank" rel="nofollow" title="Чеклист по установке Archlinux 2019">https://vk.cc/8a1asw</a></noindex> и там же его постоянно обновляю и привжу в соответсвиие по мере необходимости для актуальности чек листа. В чек листе вы найдете не только данные по установке системы, но и различные данные по кастомизации.

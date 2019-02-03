@@ -7,7 +7,7 @@ permalink: /obzor-linux-arch
 categories: 
 - video
 tags:
-- archlinux
+- video
 ---
 <p><img alt="Обзор Linux Arch" class="post-image rounded" src="https://ordanax.github.io/img/obzor-linux-arch.png" /><p>Я на Arch Linux уже более 2-х лет и считаю что это лучший дистрибутив. В этом видео я рассказываю свои первые впечатления от Arch Linux. Сейчас я бы конечно большего всего нарассказал, но для первого впечатления вполне. <noindex><a href="https://vk.com/arch4u?w=wall-129498031_4 " target="_blank" rel="nofollow" title="Arch Linux">Первый пост</a></noindex>, который вы можете видеть на  видео, датирован 28 сен 2016 Это и дата рождения группы по Arch Linux <noindex><a href="https://vk.com/arch4u" target="_blank" rel="nofollow" title="Arch Linux">https://vk.com/arch4u</a></noindex> и эту же дату можно считать дату, когда я перешел на ArchLinux. 
 
