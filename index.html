@@ -6,7 +6,7 @@ layout: default
 {% for post in paginator.posts %}
   <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
   <p>
-    <span class="blog-post-meta">{{ post.date|date:"%d.%m.%Y" }}</span>
+    <span class="date">{{ post.date|date:"%d.%m.%Y" }}</span>
   </p>
         <div class="entry">
         {{ post.excerpt }}
@@ -18,13 +18,12 @@ layout: default
 {% endfor %}
 
 
-<!-- paginate cat -->
 {% if paginator.total_pages > 1 %}
-<div class="pagination">
+<div class="text-center">
   {% if paginator.previous_page %}
     <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Назад</a>
   {% else %}
-    <span>Назад</span>
+    <span>&laquo; Назад</span>
   {% endif %}
 
   {% for page in (1..paginator.total_pages) %}
@@ -44,6 +43,6 @@ layout: default
   {% endif %}
 </div>
 {% endif %}
+<br>
 
-<hr>
-{% include google-ads-footer.html %}
+{% include footer-ads.html %}
