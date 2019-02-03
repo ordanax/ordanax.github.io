@@ -23,5 +23,5 @@ tags:
 <p>Скачивается и запускается скрипт следующей командой:</p>
 
 <code class="jush">
-wget git.io/arch1.sh &amp;&amp; sh arch1.sh
+wget git.io/arch1.sh &amp;&amp; sh arch1.sh 1
 </code>
