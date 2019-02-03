@@ -105,7 +105,6 @@ h6, .h6 {
 }
 .blog-nav-item:hover,
 .blog-nav-item:focus {
- text-decoration: none;
 }
 
 /* Active state gets a caret at the bottom */
