@@ -13,14 +13,24 @@ baseurl: ''
 url: https://ordanax.github.io
 permalink: "/:title"
 markdown: kramdown
-gems:
-- jekyll-paginate
-- jekyll-sitemap
+
+plugins:
+- jekyll-paginate-v2
 - jekyll-feed
-paginate: 7
-exclude:
-- Gemfile
-- Gemfile.lock
+
+category_dir: '/'
+pagination:
+  enabled: true
+  paginate: 6
+  title: ':title - Страница :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  trail:
+    before: 2
+    after: 2
+    
+exclude: ['Gemfile','Gemfile.lock','node_modules', 'gulpfile.js', 'package.json', 'package-lock.json', 'js/common.js', 'npm-debug.log', '**/Thumbs.db', 'libs', 'sass', '**/*.DS_Store']
 
 soc:
   <li><a href="https://vk.com/arch4u"><i class="fab fa-vk"></i></a></li>
