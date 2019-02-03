@@ -32,15 +32,20 @@ tags:
 </p>
 
 <h2>Результаты опроса</h2>
+<div>
+	<table width="50%" cellspacing="0">
+		<tr> 
+			<td>
+				<div id="vk_poll"></div>
+				<script type="text/javascript">
+					VK.Widgets.Poll("vk_poll", {}, "320990931_a910f4b472d3a23482");
+				</script>
+			</td>
+		</tr>
+	</table>
+</div>
 
-<div class="row">
-<div class="col-sm">
-   <div id="vk_poll"></div>
-	<script type="text/javascript">
-	VK.Widgets.Poll("vk_poll", {}, "320990931_a910f4b472d3a23482");
-	</script>
-</div>
-</div>
+
 
 
 <br><h3>Простой способ установить yay:<h3>
