@@ -15,4 +15,4 @@ tags:
 <noindex><a href="https://vk.cc/8a1asw" target="_blank" rel="nofollow" title="Че  лист по установке Archlinux 2019">https://vk.cc/8a1asw</a></noindex> и там же его постоянно обновляю и привжу в соответсвиие по мере необходимости для актуальности чек листа. В чек листе вы найдете не только данные по установке системы, но и различные данные по кастомизации.
 
 В этом видео я показываю установку по чек листу. Напоминаю что последние и актуальные данные по установке именно в чек листе а не в видео. 
-<p><iframe frameborder="0" height="360" src="https://www.youtube.com/watch?v=PemucgRrdPk" width="640"></iframe></p>
+<p><iframe frameborder="0" height="360" src="https://www.youtube.com/embed/PemucgRrdPk" width="640"></iframe></p>
