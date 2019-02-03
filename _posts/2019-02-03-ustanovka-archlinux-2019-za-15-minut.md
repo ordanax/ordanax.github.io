@@ -31,3 +31,11 @@ wget git.io/arch1.sh &amp;&amp; sh arch1.sh
 wget git.io/arch1.sh &amp;&amp; sh arch1.sh
 wget git.io/arch1.sh &amp;&amp; sh arch1.sh
 </pre>
+
+<pre class="prettyprint linenums:10">
+        ...
+        <?php
+        echo 'hello world';
+        ?>
+        ...
+</pre>
