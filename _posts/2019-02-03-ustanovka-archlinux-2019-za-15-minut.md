@@ -23,7 +23,11 @@ tags:
 <p>Скачивается и запускается скрипт следующей командой:</p>
 
 <code>
-wget git.io/arch1.sh &amp;&amp; sh arch1.sh 1
+wget git.io/arch1.sh &amp;&amp; sh arch1.sh
 </code>
 
-<pre class="prettyprint linenums"><!-- ваш программный код к статье, исходник. --></pre>
+<pre class="prettyprint linenums">
+wget git.io/arch1.sh &amp;&amp; sh arch1.sh
+wget git.io/arch1.sh &amp;&amp; sh arch1.sh
+wget git.io/arch1.sh &amp;&amp; sh arch1.sh
+</pre>
