@@ -25,3 +25,5 @@ tags:
 <code>
 wget git.io/arch1.sh &amp;&amp; sh arch1.sh 1
 </code>
+
+<pre class="prettyprint linenums"><!-- ваш программный код к статье, исходник. --></pre>
