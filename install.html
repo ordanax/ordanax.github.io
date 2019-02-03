@@ -10,7 +10,7 @@ layout: default
 
       <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
       <p>
-       <span class="blog-post-meta">{{ post.date|date:"%d.%m.%Y" }}</span>
+       <span class="date">{{ post.date|date:"%d.%m.%Y" }}</span>
       </p>
 
       <div class="entry">
@@ -50,4 +50,5 @@ layout: default
 </div>
 {% endif %}
 
+<hr>
 {% include google-ads-footer.html %}
