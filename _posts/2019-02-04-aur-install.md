@@ -22,21 +22,36 @@ tags:
 Чтобы установить yay вы можете вопрользоваться скриптом ниже. Достаточно вбить всего 1 троку. Синтаксис точно такй-же как и в pacmam.</p>
 
 <p>Чтобы установить программу пишем
-<code>yay -S nazvanie_paketa</code></p>
+<br><code>yay -S nazvanie_paketa</code></p>
 
 <p>Для поиска по AUR можно не писать -Ss
-<code>yay nazvanie_paketa</code></p>
+<br><code>yay nazvanie_paketa</code></p>
 
 <p>Чтобы обновить всю систему включая AUR пакеты
-<code>yay -Syu</code>
+<br><code>yay -Syu</code>
 </p>
 
 <h2>Результаты опроса</h2>
-<div id="vk_poll"></div>
-<script type="text/javascript">
-VK.Widgets.Poll("vk_poll", {}, "320990931_a910f4b472d3a23482");
-</script>
 
-<h3>Простой способ установить yay:<h3>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      Одна из трёх колонок
+    </div>
+    <div class="col-sm">
+       <div id="vk_poll"></div>
+		<script type="text/javascript">
+		VK.Widgets.Poll("vk_poll", {}, "320990931_a910f4b472d3a23482");
+		</script>
+    </div>
+    <div class="col-sm">
+      Одна из трёх колонок
+    </div>
+  </div>
+</div>
+
+
+<br><h3>Простой способ установить yay:<h3>
 <code>wget git.io/yay-install.sh && sh yay-install.sh</code>
 
