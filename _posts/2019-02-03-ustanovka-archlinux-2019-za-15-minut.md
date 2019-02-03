@@ -26,16 +26,10 @@ tags:
 wget git.io/arch1.sh &amp;&amp; sh arch1.sh
 </code>
 
-<pre class="prettyprint linenums">
-wget git.io/arch1.sh &amp;&amp; sh arch1.sh 111
-wget git.io/arch1.sh &amp;&amp; sh arch1.sh 222
-wget git.io/arch1.sh &amp;&amp; sh arch1.sh 333
-</pre>
-
-<pre class="prettyprint linenums:10">
-        ...
-        <?php
-        echo 'hello world';
-        ?>
-        ...
-</pre>
+<h3>Форматирование разделов<h3>
+<code>
+mkfs.ext2  /dev/sda1 -L boot
+mkfs.ext4  /dev/sda2 -L root
+mkswap /dev/sda3 -L swap
+mkfs.ext4  /dev/sda4 -L home
+</code>
