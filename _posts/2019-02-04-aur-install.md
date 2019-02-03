@@ -44,7 +44,5 @@ tags:
 		</tr>
 	</table>
 </div>
-
 <br><h3>Простой способ установить yay:</h3>
 <code>wget git.io/yay-install.sh && sh yay-install.sh</code>
-
