@@ -27,9 +27,9 @@ wget git.io/arch1.sh &amp;&amp; sh arch1.sh
 </code>
 
 <pre class="prettyprint linenums">
-wget git.io/arch1.sh &amp;&amp; sh arch1.sh
-wget git.io/arch1.sh &amp;&amp; sh arch1.sh
-wget git.io/arch1.sh &amp;&amp; sh arch1.sh
+wget git.io/arch1.sh &amp;&amp; sh arch1.sh 111
+wget git.io/arch1.sh &amp;&amp; sh arch1.sh 222
+wget git.io/arch1.sh &amp;&amp; sh arch1.sh 333
 </pre>
 
 <pre class="prettyprint linenums:10">
