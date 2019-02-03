@@ -1,0 +1,50 @@
+/* background div for all the code */
+.doc-code {
+	border: 1px solid #292929;
+	background-color: #383a3f;
+	color: #9c9fa7;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+	overflow: hidden;
+	margin: 20px 0;
+	width: 100%;
+}
+.doc-code pre {
+	max-height: 150px;
+	margin: 10px;
+	overflow: auto;
+}
+
+/* JUSH for Mibbo
+ * -------------------------------------------------------------------------- */
+.jush { color: #9c9fa7; }
+.jush a, .jush a:link, .jush a:visited { text-decoration: none; }
+.jush a:hover { text-decoration: underline; }
+.jush-htm_com, .jush-com, .jush-com_code, .jush-one, .jush-php_doc, .jush-php_com, .jush-php_one, .jush-js_one, .jush-js_doc { color: #686c75; }
+.jush-php { color: #666699; background-color: #383a3f; }
+.jush-php_quo, .jush-quo, .jush-quo_one, .jush-php_eot, .jush-apo, .jush-sql_apo, .jush-sqlite_apo, .jush-sql_quo, .jush-sql_eot { color: #dcc175; }
+.jush-php_apo { color: #9faa6f; }
+/*.jush-php_halt2 { background-color: white; color: black; }*/
+.jush-tag_css, .jush-att_css .jush-att_quo, .jush-att_css .jush-att_apo, .jush-att_css .jush-att_val { color: #9faa6f; background-color: #383a3f; }
+.jush-tag_js, .jush-att_js .jush-att_quo, .jush-att_js .jush-att_apo, .jush-att_js .jush-att_val, .jush-css_js { color: #9fd0ec; background-color: #383a3f; }
+.jush-tag, .jush-xml_tag { color: #3d89b2; }
+.jush-att, .jush-xml_att, .jush-att_js, .jush-att_css, .jush-att_http { color: #9fd0ec; }
+.jush-att_quo, .jush-att_apo, .jush-att_val { color: #dcc175; }
+/*.jush-ent { color: purple; }*/
+/*.jush-js_reg { color: navy; }*/
+.jush-php_sql .jush-php_quo, .jush-php_sql .jush-php_apo,
+.jush-php_sqlite .jush-php_quo, .jush-php_sqlite .jush-php_apo,
+.jush-php_pgsql .jush-php_quo, .jush-php_pgsql .jush-php_apo,
+.jush-php_mssql .jush-php_quo, .jush-php_mssql .jush-php_apo,
+.jush-php_oracle .jush-php_quo, .jush-php_oracle .jush-php_apo
+{ background-color: #383a3f; }
+/*.jush-bac, .jush-php_bac, .jush-bra, .jush-mssql_bra, .jush-sqlite_quo { color: red; }*/
+.jush-num, .jush-clr { color: #908de5; }
+.jush a { color: inherit; }
+.jush-tag a, .jush-att a, .jush-apo a, .jush-quo a, .jush-php_apo a, .jush-php_quo a, .jush-php_eot2 a { color: inherit; color: expression(parentNode.currentStyle.color); }
+a.jush-custom:link, a.jush-custom:visited { font-weight: normal; color: inherit; color: expression(parentNode.currentStyle.color); }
+/* code html */
+.jush-htm .jush-tag { color: #f386ac; }
+/* code php */
+.jush-php a { color: #908de5; }
+.jush-php .jush-sql_code a { color: inherit; }
+.jush-php .jush-php_var { color:  #666699; }
