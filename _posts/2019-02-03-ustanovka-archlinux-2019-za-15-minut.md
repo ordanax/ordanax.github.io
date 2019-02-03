@@ -28,8 +28,8 @@ wget git.io/arch1.sh &amp;&amp; sh arch1.sh
 
 <h3>Форматирование разделов<h3>
 <code>
-mkfs.ext2  /dev/sda1 -L boot
-mkfs.ext4  /dev/sda2 -L root
-mkswap /dev/sda3 -L swap
-mkfs.ext4  /dev/sda4 -L home
+mkfs.ext2  /dev/sda1 -L boot<br>
+mkfs.ext4  /dev/sda2 -L root<br>
+mkswap /dev/sda3 -L swap<br>
+mkfs.ext4  /dev/sda4 -L home<br>
 </code>
