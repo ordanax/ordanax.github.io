@@ -27,8 +27,8 @@ wget git.io/arch1.sh &amp;&amp; sh arch1.sh
 </code>
 
 <h3>Форматирование разделов<h3>
-<code>mkfs.ext2  /dev/sda1 -L boot</code>
-<code>mkfs.ext4  /dev/sda2 -L root</code>
-<code>mkswap /dev/sda3 -L swap</code>
+<code>mkfs.ext2  /dev/sda1 -L boot</code><br>
+<code>mkfs.ext4  /dev/sda2 -L root</code><br>
+<code>mkswap /dev/sda3 -L swap</code><br>
 <code>mkfs.ext4  /dev/sda4 -L home</code>
 
