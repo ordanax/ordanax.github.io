@@ -167,6 +167,9 @@ h6, .h6 {
   .blog-header {
   text-align: center;
 	}
+  .blog-description {
+  font-size: 14px;
+	}
 }
 
 /*
