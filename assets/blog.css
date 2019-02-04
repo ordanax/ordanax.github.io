@@ -160,6 +160,11 @@ h6, .h6 {
   margin-right: 25px;
 }
 
+@media (max-width:768px) {
+  .blog-logo {
+  float: center; 
+	}
+}
 
 /*
  * Main column and sidebar layout
