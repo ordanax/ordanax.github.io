@@ -182,6 +182,9 @@ h6, .h6 {
   .blog-title {
   font-size:35px !important;
 	}
+  .blog-description  {
+  font-size: 13px !important;
+	}
 }
 
 /*
