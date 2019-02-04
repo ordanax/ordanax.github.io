@@ -167,7 +167,10 @@ h6, .h6 {
   .blog-header {
   text-align: center;
 	}
-  .blog-description {
+}
+
+@media (min-width:455px) {
+ .blog-description {
   font-size: 14px;
 	}
 }
