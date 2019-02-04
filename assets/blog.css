@@ -178,6 +178,12 @@ h6, .h6 {
 	}
 }
 
+@media (max-width:398px) {
+  .blog-title {
+  font-size:35px !important;
+	}
+}
+
 /*
  * Main column and sidebar layout
  */
