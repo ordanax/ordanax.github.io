@@ -146,7 +146,10 @@ h6, .h6 {
 
 @media (max-width:768px) {
   .blog-title  {
-    font-size: 25px;
+    font-size: 30px;
+  }
+  .blog-description {
+  font-size: 14px;
   }
 }
 
