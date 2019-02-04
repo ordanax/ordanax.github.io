@@ -148,6 +148,7 @@ h6, .h6 {
   .blog-title  {
     font-size: 40px;
     align-items: center;
+  	text-align: center;
   }
 }
 
@@ -201,6 +202,7 @@ h6, .h6 {
 .pager {
   margin-bottom: 60px;
   text-align: left;
+
 }
 .pager > li > a {
   width: 140px;
