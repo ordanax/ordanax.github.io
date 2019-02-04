@@ -33,7 +33,7 @@ tags:
 
 <h2>Результаты опроса</h2>
 <div class="text-center">
-	<table width="80%" cellspacing="0">
+	<table width="100%" cellspacing="0">
 		<tr> 
 			<td>
 				<div id="vk_poll"></div>
