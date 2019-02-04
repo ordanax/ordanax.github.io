@@ -171,10 +171,10 @@ h6, .h6 {
 
 @media (max-width:489px) {
   .blog-title {
-  font-size: 30px !important;
+  font-size:45px !important;
 	}
   .blog-description  {
-  font-size: 13px !important;
+  font-size: 14px !important;
 	}
 }
 
