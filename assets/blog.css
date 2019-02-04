@@ -144,9 +144,14 @@ h6, .h6 {
   color: #0056b3;
 }
 
-@media (max-width:768px) {
+@media (max-width:437px) {
   .blog-title  {
   font-size: 35px;
+  }
+  .blog-header {
+	}
+.blog-description {
+  font-size: 14px;
   }
 }
 
