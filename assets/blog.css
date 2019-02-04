@@ -169,12 +169,6 @@ h6, .h6 {
 	}
 }
 
-@media (max-width:768px) {
- .blog-description {
-  font-size: 14px;
-	}
-}
-
 /*
  * Main column and sidebar layout
  */
