@@ -14,5 +14,6 @@ tags:
 	
 Мой переход на Arch linux был спонтанным. У меня стоял Debian и я делал какие-то очередные эксерименты с системой и убил ее. В то время я бын наслышан об Arch Linux и решил, что раз уж я убил Debian то пора переходить на новый уровень и стаить Arclinux. На этом мои поиски лучшей системы были окончены.
 
-
-<p><iframe frameborder="0" height="360" src="https://www.youtube.com/embed/x1-Chu4ZDHY" width="640"></iframe></p>
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe frameborder="0" height="360" src="https://www.youtube.com/embed/x1-Chu4ZDHY" width="640"></iframe>
+</div>

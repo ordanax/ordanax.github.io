@@ -16,8 +16,9 @@ tags:
 <p><img alt="Установка Archlinux 2019 за 15 минут" class="post-image rounded" src="https://ordanax.github.io/img/ustanovka-archlinux-2019-za-15-minut.png" />В этом видео я показываю быстрое разворачиванеи системы на своей машине.<br />
 Я использую скрипт, который написал на основе своего чек листа. Время на установку нулевой системы уходит 15 минут. В основном время тратится на скачивание. Все остальное происходит моментально.</p>
 
-<p><iframe frameborder="0" height="360" src="https://www.youtube.com/embed/nvVF_qKDUeM" width="640"></iframe></p>
-
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe frameborder="0" height="360" src="https://www.youtube.com/embed/nvVF_qKDUeM" width="640"></iframe>
+</div>
 
 <h2>Как использовать скрипт</h2>
 
