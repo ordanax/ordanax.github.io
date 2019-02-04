@@ -147,9 +147,13 @@ h6, .h6 {
   font-size: 20px;
   color: #999;
 }
-.blog-logo {
+
+
+@media (min-width:768px) {
+	.blog-logo {
   float: left; 
   margin-right: 25px;
+	}
 }
 
 @media (max-width:768px) {
