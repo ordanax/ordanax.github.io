@@ -169,7 +169,7 @@ h6, .h6 {
 	}
 }
 
-@media (min-width:455px) {
+@media (max-width:455px) {
  .blog-description {
   font-size: 14px;
 	}
