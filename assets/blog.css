@@ -143,14 +143,20 @@ h6, .h6 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #0056b3;
 }
+
 .blog-description {
   font-size: 20px;
   color: #999;
 }
-.blog-logo {
-  float: left; 
-  margin-right: 25px;
+
+@media (min-width: 768px) {
+	.blog-logo {
+	  float: left; 
+	  margin-right: 25px;
+	}
 }
+
+
 
 
 /*
@@ -169,11 +175,7 @@ h6, .h6 {
   margin: 0 -15px 15px;
 }
 
-@media (max-width:768px) {
-  .sidebar-module {
-    margin: 0 15px 15px;
-  }
-}
+
 
 .sidebar-module-inset {
   padding: 15px;
