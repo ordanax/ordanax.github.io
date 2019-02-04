@@ -137,27 +137,15 @@ h6, .h6 {
   margin-top: 10px;
   margin-bottom: 0;
   display: inline-block;
-  font-size: 60px;
+  font-size: 5.9vw;
   line-height: 1.1;
   font-weight: normal;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #0056b3;
 }
 
-@media (max-width:437px) {
-  .blog-title  {
-  font-size: 35px;
-  }
-  .blog-header {
-	}
 .blog-description {
-  font-size: 14px;
-  }
-}
-
-
-.blog-description {
-  font-size: 20px;
+  font-size: 2.9vw;
   color: #999;
 }
 .blog-logo {
