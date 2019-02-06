@@ -6,9 +6,9 @@ layout: default
     <h1 class="blog-post-title">{% if page.header %}{{ page.header }}{% else %}{{ page.title }}{% endif %}</h1>
     <p class="blog-post-meta">{{ page.date|date:"%d.%m.%Y" }}</p>
     {{ content }}
+	{% include share.html %}
     <hr>
 	{% include similar-posts.html %}
     	<div id="disqus_thread"></div>
-	{% include share.html %}
 	{% include comments.html %}
 </div>
