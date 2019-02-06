@@ -6,6 +6,7 @@ layout: default
     <h1 class="blog-post-title">{% if page.header %}{{ page.header }}{% else %}{{ page.title }}{% endif %}</h1>
     <p class="blog-post-meta">{{ page.date|date:"%d.%m.%Y" }}</p>
     {{ content }}
+	<br>
 	{% include share.html %}
     <hr>
 	{% include similar-posts.html %}
