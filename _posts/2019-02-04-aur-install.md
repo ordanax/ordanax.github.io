@@ -17,7 +17,7 @@ tags:
 - опрос
 ---
 <p><img alt="Какой AUR helper выбрать?" class="post-image rounded" src="https://ordanax.github.io/img/aur-install.png" />
-Если вы посмотрите таблицу <noindex><a href="https://vk.cc/88yr8q" target="_blank" rel="nofollow">https://vk.cc/88yr8q</a></noindex> из нее можно увидеть что yaourt и aurman помечан как более не поддерживаемые.
+Если вы посмотрите таблицу <noindex><a href="https://vk.cc/88yr8q" target="_blank" rel="nofollow">https://vk.cc/88yr8q</a></noindex> из нее можно увидеть что yaourt и aurman помечен, как более не поддерживаемые.
 Большинство пользователей склоняются к yay. 
 Чтобы установить yay вы можете вопрользоваться скриптом ниже. Достаточно вбить всего 1 троку. Синтаксис точно такй-же как и в pacmam.</p>
 
