@@ -24,5 +24,6 @@ exclude:
 
 soc:
   <li><a href="https://vk.com/arch4u"><i class="fab fa-vk"></i></a></li>
+  <li><a href="https://t.me/linux4u"><i class="fab fa-telegram-plane"></i></a></li>
   <li><a href="https://www.youtube.com/Arch4u"><i class="fab fa-youtube"></i></a></li>
   <li><a href="/feed.xml"><i class="fas fa-rss"></i></a></li>
