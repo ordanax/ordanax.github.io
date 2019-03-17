@@ -28,3 +28,9 @@ tags:
 wget git.io/arch1.sh &amp;&amp; sh arch1.sh
 </code>
 
+Если нужен скринт для установки с UEFI https://github.com/ordanax/arch_install
+
+Скачивание и установка одной командой:
+```bash
+wget git.io/arch_uefi.sh && arch_uefi.sh
+```
