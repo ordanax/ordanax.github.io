@@ -33,5 +33,5 @@ wget git.io/arch1.sh &amp;&amp; sh arch1.sh
 Скачивание и установка одной командой:
 
 <code>
-wget git.io/arch_uefi.sh && arch_uefi.sh
+wget git.io/arch_uefi.sh && sh arch_uefi.sh
 </code>
