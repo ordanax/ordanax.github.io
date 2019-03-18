@@ -11,8 +11,8 @@ tags:
 - scripts
 - install
 ---
-<p><img alt="Установка Archlinux 2019 за 15 минут" class="post-image rounded" src="https://ordanax.github.io/img/skript-ustanovki-archlinux.png" />
-Немного доработал свой скрипт по установке ArchLinux<br>
+<img alt="Установка Archlinux 2019 за 15 минут" class="post-image rounded" src="https://ordanax.github.io/img/skript-ustanovki-archlinux.png" />
+<p>Немного доработал свой скрипт по установке ArchLinux</p><br>
 <h2>Изменения</h2>
 <p>- Теперь можно вводить собственное имя хоста и юзера</p>
 <p>- Исправлен 3-й файл с установкой темой</p>
