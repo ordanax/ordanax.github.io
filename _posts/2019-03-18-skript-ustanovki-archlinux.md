@@ -1,20 +1,15 @@
 ---
 layout: post
-title: Какой AUR helper выбрать?
-description: Не знаете какой AUR helper выбрать? Давайте разберемся!
-date: 2019-02-04 00:34:09 +0500
-permalink: /aur-install
+title: Скрипт установки Archlinux
+description:Скрипт установки Archlinux
+date: 2019-03-18 16:17:09 +0500
+permalink: /skript-ustanovki-archlinux
 categories: 
 - install
 - scripts
-- video
 tags:
 - scripts
 - install
-- video
-- aur
-- yay
-- опрос
 ---
 <p><img alt="Какой AUR helper выбрать?" class="post-image rounded" src="https://ordanax.github.io/img/aur-install.png" />
 Если вы посмотрите таблицу <noindex><a href="https://vk.cc/88yr8q" target="_blank" rel="nofollow">https://vk.cc/88yr8q</a></noindex> из нее можно увидеть что yaourt и aurman помечен, как более не поддерживаемые.
