@@ -2,7 +2,7 @@
 layout: post
 title: Скрипт установки Archlinux
 description:Скрипт установки Archlinux
-date: 2019-03-018 16:17:09 +0500
+date: 2019-03-18 16:17:09 +0500
 permalink: /skript-ustanovki-archlinux
 categories: 
 - install
