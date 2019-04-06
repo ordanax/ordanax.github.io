@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Мастер класс по установке ArchLinux
-description:Мастер класс по установке Arch Linux
+description: Мастер класс по установке Arch Linux
 date: 2019-02-04 03:17:09 +0500
 permalink: /master-klass-po-ustanovke-arch-linux
 categories: 
