@@ -22,16 +22,16 @@ tags:
 
 На данный момент у меня 2 сrрипта: с UEFI и Legacy
 ## Скрипт с Llegacy 
-Ссылка https://github.com/ordanax/arch2018
+Ссылка [Скрипт с Llegacy](https://github.com/ordanax/arch2018 "Скрипт установки Arch linux с Llegacy")  
 Скачивается и запускается скрипт следующей командой:
 ```
 wget git.io/arch1.sh && sh arch1.sh
 ```
 ## Скрипт с UEFI
-Ссылка https://github.com/ordanax/arch
+Ссылка [Скрипт с UEFI](https://github.com/ordanax/arch "Скрипт установки Arch linux с UEFI")  
 Скачивается и запускается скрипт следующей командой:
 ```
 wget git.io/archuefi1.sh && sh archuefi1.sh
 ```
 
-P.S. Если, вы не хотите или не можете заточнить скрипт под себя или вам нужен скрипт установщик в возможностью выбора, тогда используйте скрипт от Юрия Порунцова https://github.com/poruncov/archlinux-script-install
+P.S. Если, вы не хотите или не можете заточнить скрипт под себя или вам нужен скрипт установщик в возможностью выбора, тогда используйте [скрипт от Юрия Порунцова](https://github.com/poruncov/archlinux-script-install "Скрипт установки Arch linux скрипт от Юрия Порунцова")   
