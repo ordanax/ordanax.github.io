@@ -12,17 +12,26 @@ tags:
 - scripts
 - install
 ---
-<p><img alt="Установка Archlinux 2019 за 15 минут" class="post-image rounded" src="https://ordanax.github.io/img/skript-ustanovki-archlinux.png" /></p>
-<p>Немного доработал свой скрипт по установке ArchLinux</p>
+![Установка Archlinux 2019 за 15 минут](https://ordanax.github.io/img/skript-ustanovki-archlinux.png)
+
+Немного доработал свой скрипт по установке ArchLinux
 Напоминаю, что цель скрипта - это БЫСТРАЯ установка. Подразумевается, что вы сами запилите скрипт под себя. При этом вам не нужно будет выбирать да/нет вы просто ставите все, что вам нужно со всеми программами и конфигами если потребуется.
 
-На данный момент у меня 2 сприпта: с UEFI и Legacy
+##Как пользоваться скриптом
+Подробное описание + видео смотрите [ тут](https://ordanax.github.io/ustanovka-archlinux-2019-za-15-minut "Как пользоваться скриптом") . 
 
-Скрипт с Llegacy 
-Ссылка 
+На данный момент у меня 2 сrрипта: с UEFI и Legacy
+##Скрипт с Llegacy 
+Ссылка https://github.com/ordanax/arch2018
+Скачивается и запускается скрипт следующей командой:
+```
+wget git.io/arch1.sh && sh arch1.sh
+```
+##Скрипт с UEFI
+Ссылка https://github.com/ordanax/arch
+Скачивается и запускается скрипт следующей командой:
+```
+wget git.io/archuefi1.sh && sh archuefi1.sh
+```
 
-<p>Скачивается и запускается скрипт следующей командой:</p>
-
-<code>
-wget git.io/arch1.sh &amp;&amp; sh arch1.sh
-</code>
+P.S. Если, вы не хотите или не можете заточнить скрипт под себя или вам нужен скрипт установщик в возможностью выбора, тогда используйте скрипт от Юрия Порунцова https://github.com/poruncov/archlinux-script-install
