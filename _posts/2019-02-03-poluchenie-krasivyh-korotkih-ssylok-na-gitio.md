@@ -30,12 +30,15 @@ tags:
 <br>3) Подготовленную команду вбивает в терминале и получаем короткую ссылку.
 
 
-<code>curl -i https://git.io -F "url=SSILKA_NA_SCRIPT" -F "code=SHORT_LINK.sh"</code>
+```
+curl -i https://git.io -F "url=SSILKA_NA_SCRIPT" -F "code=SHORT_LINK.sh"
+```
 
 
 <p>Вот пример подготовленной команды:</p>
 
-<code>curl -i https://git.io -F "url=https://raw.githubusercontent.com/ordanax/arch2018/master/arch1.sh" -F "code=arch1.sh"</code>
+```curl -i https://git.io -F "url=https://raw.githubusercontent.com/ordanax/arch2018/master/arch1.sh" -F "code=arch1.sh"
+```
 
 
 <p>И результат ее выполнения:</p>
