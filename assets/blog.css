@@ -13,7 +13,7 @@ h1, .h1 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: normal;
     color: #fff;
-    font-size: 24px;
+    font-size: 35px;
     font: bold;
 }
 
@@ -26,19 +26,19 @@ h6, .h6 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: normal;
     color: #fff;
-    font-size: 24px;
+    font-size: 30px;
     font: bold;
 }
 
 
 .blog-post h1 {
-    font-size: 24px;
+    font-size: 35px;
     margin-top: 25px;
     font: bold;
 }
 
 .blog-post h2 {
-    font-size: 24px;
+    font-size: 30px;
     margin-top: 25px;
     font: bold;
 }
