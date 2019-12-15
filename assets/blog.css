@@ -4,7 +4,8 @@
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #2a2d38;
+  color: #555;
+  background: #2a2d38
 }
 
 h1, .h1 {
