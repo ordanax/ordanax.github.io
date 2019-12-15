@@ -10,8 +10,6 @@ categories:
 tags:
 - scripts
 - install
-comments: true
-edit: true
 ---
 <p><img alt="Установка Archlinux 2019 за 15 минут" class="post-image rounded" src="https://ordanax.github.io/img/skript-ustanovki-archlinux.png" /></p>
 <p>Немного доработал свой скрипт по установке ArchLinux</p><br>
