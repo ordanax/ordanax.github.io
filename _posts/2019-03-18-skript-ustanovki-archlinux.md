@@ -12,7 +12,7 @@ tags:
 - scripts
 - install
 ---
-![Установка Archlinux 2019 за 15 минут](https://ordanax.github.io/img/skript-ustanovki-archlinux.png){:style="float: left;margin-right: 7px;margin-top: 7px;"} Немного доработал свой скрипт по установке ArchLinux
+![Установка Archlinux 2019 за 15 минут](https://ordanax.github.io/img/skript-ustanovki-archlinux.png){:style="float: left;"} Немного доработал свой скрипт по установке ArchLinux
 Напоминаю, что цель скрипта - это БЫСТРАЯ установка. Подразумевается, что вы сами запилите скрипт под себя. При этом вам не нужно будет выбирать да/нет вы просто ставите все, что вам нужно со всеми программами и конфигами если потребуется.
 
 ## Как пользоваться скриптом
