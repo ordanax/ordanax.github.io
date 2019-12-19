@@ -4,6 +4,7 @@ title: Обзор Linux Arch
 description: Обзор Linux Arch
 date: 2019-02-03 20:40:09 +0500
 permalink: /obzor-linux-arch
+edit: true
 categories: 
 - video
 tags:
