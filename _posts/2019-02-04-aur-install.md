@@ -4,6 +4,7 @@ title: Какой AUR helper выбрать?
 description: Не знаете какой AUR helper выбрать? Давайте разберемся!
 date: 2019-02-04 00:34:09 +0500
 permalink: /aur-install
+edit: true
 categories: 
 - install
 - scripts
