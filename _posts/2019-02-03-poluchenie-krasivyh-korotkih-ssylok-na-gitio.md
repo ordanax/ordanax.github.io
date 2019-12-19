@@ -4,6 +4,7 @@ title: Получение красивых коротких ссылок на gi
 description: Получение красивых коротких ссылок на git.io
 date: 2019-02-03 21:50:09 +0500
 permalink: /poluchenie-krasivyh-korotkih-ssylok-na-gitio
+edit: true
 categories: 
 - scripts
 - useful
