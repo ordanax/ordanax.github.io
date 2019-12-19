@@ -4,6 +4,7 @@ title: Cкачать Conky темы
 description: Cкачать Conky темы
 date: 2019-02-04 04:02:09 +0500
 permalink: /conky-config
+edit: true
 categories: 
 - configs
 tags:
