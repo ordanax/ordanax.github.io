@@ -4,6 +4,7 @@ title: Чек лист по установке Archlinux 2019
 description: Чек лист по установке Archlinux 2019
 date: 2019-02-03 20:17:09 +0500
 permalink: /chek-list-po-ustanovke-archlinux-2019
+edit: true
 categories: 
 - install
 - video
