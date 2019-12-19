@@ -4,6 +4,7 @@ layout: default
 
 <div class="blog-post">
     <h1 class="blog-post-title">{% if page.header %}{{ page.header }}{% else %}{{ page.title }}{% endif %}</h1>
+	{% include edit.html %}
     <p class="blog-post-meta">{{ page.date|date:"%d.%m.%Y" }}</p>
     {{ content }}
 	<br>
