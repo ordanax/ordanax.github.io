@@ -4,6 +4,7 @@ title: Установка Archlinux 2019 за 15 минут
 description: Установка Archlinux 2019 за 15 минут
 date: 2019-02-03 16:17:09 +0500
 permalink: /ustanovka-archlinux-2019-za-15-minut
+edit: true
 categories: 
 - install
 - scripts
