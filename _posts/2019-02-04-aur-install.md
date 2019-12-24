@@ -34,10 +34,16 @@ yay -S nazvanie_paketa
 yay nazvanie_paketa
 ```
 
-<p>Чтобы обновить всю систему включая AUR пакеты
+Чтобы обновить всю систему включая AUR пакеты
 
 ```bash
 yay -Syu
+```
+
+##Простой способ установить yay
+
+```bash
+wget git.io/yay-install.sh && sh yay-install.sh
 ```
 
 <h2>Результаты опроса</h2>
@@ -53,8 +59,3 @@ yay -Syu
 		</tr>
 	</table>
 </div>
-<br><b>Простой способ установить yay</b><br>
-
-```bash
-wget git.io/yay-install.sh && sh yay-install.sh
-```
