@@ -19,5 +19,5 @@ tags:
 
 В этом видео я показываю установку по чек листу. Напоминаю что последние и актуальные данные по установке именно в чек листе а не в видео. 
 <div class="embed-responsive embed-responsive-16by9">
-   <iframe frameborder="0" height="360" src="https://www.youtube.com/embed/PemucgRrdPk" width="640"></iframe>
+   <iframe frameborder="0" height="360" src="https://www.youtube.com/embed/PemucgRrdPk?rel=0" width="640"></iframe>
 </div>
