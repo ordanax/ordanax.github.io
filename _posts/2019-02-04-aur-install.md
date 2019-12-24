@@ -8,7 +8,6 @@ edit: true
 categories: 
 - install
 - scripts
-- video
 tags:
 - scripts
 - install
