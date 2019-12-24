@@ -40,7 +40,8 @@ yay nazvanie_paketa
 yay -Syu
 ```
 
-##Простой способ установить yay
+## Как установить AUR
+Простой способ установить yay
 
 ```bash
 wget git.io/yay-install.sh && sh yay-install.sh
