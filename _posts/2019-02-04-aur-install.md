@@ -35,7 +35,9 @@ yay nazvanie_paketa
 ```
 
 <p>Чтобы обновить всю систему включая AUR пакеты
-```bashyay -Syu
+
+```bash
+yay -Syu
 ```
 
 <h2>Результаты опроса</h2>
