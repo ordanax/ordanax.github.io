@@ -36,7 +36,7 @@ curl -i https://git.io -F "url=SSILKA_NA_SCRIPT" -F "code=SHORT_LINK.sh"
 ```
 
 
-<p>Вот пример подготовленной команды:</p>
+Вот пример подготовленной команды:
 
 ```sh
 curl -i https://git.io -F "url=https://raw.githubusercontent.com/ordanax/arch2018/master/arch1.sh" -F "соde=arch1.sh"
@@ -45,7 +45,8 @@ curl -i https://git.io -F "url=https://raw.githubusercontent.com/ordanax/arch201
 
 И результат ее выполнения:
 
-<code>git.io/arch1.sh</code>
+```shgit.io/arch1.sh
+```
 
 
 В этом нет ничего сложного, но об этой возможности мало кто знает, а использование таких ссылок решает многие пролемы. Я например использую подобные ссылки для своих скриптов, например в скрипте для установки Arch Linux.
