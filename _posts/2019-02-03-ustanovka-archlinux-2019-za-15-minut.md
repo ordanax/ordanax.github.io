@@ -18,7 +18,7 @@ tags:
 Я использую скрипт, который написал на основе своего чек листа. Время на установку нулевой системы уходит 15 минут. В основном время тратится на скачивание. Все остальное происходит моментально.</p>
 
 <div class="embed-responsive embed-responsive-16by9">
-    <iframe frameborder="0" height="360" src="https://www.youtube.com/embed/nvVF_qKDUeM" width="640"></iframe>
+    <iframe frameborder="0" height="360" src="https://www.youtube.com/embed/nvVF_qKDUeM?rel=0" width="640"></iframe>
 </div>
 
 <h2>Как использовать скрипт</h2>
