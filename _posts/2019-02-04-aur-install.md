@@ -22,15 +22,21 @@ tags:
 Большинство пользователей склоняются к yay. 
 Чтобы установить yay вы можете вопрользоваться скриптом ниже. Достаточно вбить всего 1 троку. Синтаксис точно такй-же как и в pacmam.</p>
 
-<p>Чтобы установить программу пишем
-<br><code>yay -S nazvanie_paketa</code></p>
+Чтобы установить программу пишем
 
-<p>Для поиска по AUR можно не писать -Ss
-<br><code>yay nazvanie_paketa</code></p>
+```bash
+yay -S nazvanie_paketa
+```
+
+Для поиска по AUR можно не писать -Ss
+
+```bash
+yay nazvanie_paketa
+```
 
 <p>Чтобы обновить всю систему включая AUR пакеты
-<br><code>yay -Syu</code>
-</p>
+```bashyay -Syu
+```
 
 <h2>Результаты опроса</h2>
 <div class="text-center">
