@@ -45,7 +45,8 @@ curl -i https://git.io -F "url=https://raw.githubusercontent.com/ordanax/arch201
 
 И результат ее выполнения:
 
-```shgit.io/arch1.sh
+```sh
+git.io/arch1.sh
 ```
 
 
