@@ -56,7 +56,7 @@ git.io/arch1.sh
 1) Ссылка уже была сокращена до этого  
 2) Короткая ссылка уже занята
 
-Решение это изменить либо название сокращаесого файла или название короткой ссылки.
+Решение это изменить либо название сокращаемого файла или название короткой ссылки.
 
 Если кому нужен наглядный пример, как это делается, то смотрите это видео:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vh5rbx3QuvQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
