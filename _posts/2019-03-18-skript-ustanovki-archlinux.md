@@ -11,8 +11,6 @@ categories:
 tags:
 - scripts
 - install
-gh-repo: ordanax/ordanax.github.io
-gh-badge: [star, fork, follow]
 ---
 ![Установка Archlinux 2019 за 15 минут](https://ordanax.github.io/img/skript-ustanovki-archlinux.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Немного доработал свой скрипт по установке ArchLinux
 Напоминаю, что цель скрипта - это БЫСТРАЯ установка. Подразумевается, что вы сами запилите скрипт под себя. При этом вам не нужно будет выбирать да/нет вы просто ставите все, что вам нужно со всеми программами и конфигами если потребуется.
