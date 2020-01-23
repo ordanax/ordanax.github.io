@@ -1,0 +1,27 @@
+---
+layout: post
+title: XFCE горячие клавиши
+description: Настройка горячих клавиш в XFCE как и в i3
+date: 2019-12-15 17:43:09 +0500
+permalink: /xfce-goryachie-klavishi
+categories: 
+- configs
+tags:
+- xfce
+edit: true
+---
+![Настройка горячих клавиш в XFCE как и в i3](../img/xfce-goryachie-klavishi.jpg){:style="float: left;margin-right: 25px;margin-top: 10px;"}
+После того как я вкусил все прелести i3wm мне захотелось также настроить и горячие клавиши в Xfce, но я столкунулся с тем, что не все можно настроить через стандартное приложение keyboard
+![Настройка горячих клавиш в XFCE как и в i3](../img/2020-01-24_14.png){:style="float: left;margin-right: 25px;margin-top: 10px;"}
+В частности через обычное приложение нельзя настроить так чтобы окно закрывалось на через комбинацию Alt+F4, а через Mod+q как это было у меня в i3/
+
+Я начал ковырять систему в поисках файла куда все это дело сохраняется и нашел настройки в файле: 
+
+```sh
+~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
+```
+Тут вы можете переиначить абсолютно все клавиши, которые вам нужны точно так же как и в i3wm
+
+## Как найти название клавиш
+Точно также как я и писал [в статье по i3wm](https://ordanax.github.io/i3wm)
+
