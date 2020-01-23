@@ -2,7 +2,7 @@
 layout: post
 title: XFCE горячие клавиши
 description: Настройка горячих клавиш в XFCE как и в i3
-date: 2019-12-15 17:43:09 +0500
+date: 2020-01-23 17:43:09 +0500
 permalink: /xfce-goryachie-klavishi
 categories: 
 - configs
