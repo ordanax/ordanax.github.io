@@ -23,7 +23,7 @@ tags:
 Скачивается и запускается скрипт следующей командой:  
 
 ```bash
-wget git.io/arch1.sh &amp;&amp; sh arch1.sh
+wget git.io/arch1.sh && sh arch1.sh
 ```
 
 Если нужен скринт для установки с UEFI https://github.com/ordanax/arch_install  
