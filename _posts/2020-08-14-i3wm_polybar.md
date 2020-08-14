@@ -13,8 +13,8 @@ tags:
 - checklists
 edit: true
 ---
-![Тайлинг i3wm](../img/i3wm_polybar.jpg){:style="float: left;margin-right: 25px;margin-top: 10px;"} В [прошлой статье](https://ordanax.github.io/i3wm) я рассказывал об минимальной установке и настройка i3wm с i3status
-В этой статье мы копнем немного глубже и установим и на строим i3wm c polybar. Так же установим необходимые скрипты. 
+![Тайлинг i3wm](../img/i3wm_polybar.jpg){:style="float: left;margin-right: 25px;margin-top: 10px;"} В [прошлой статье](https://ordanax.github.io/i3wm) я рассказывал об минимальной установке и настройка i3wm с i3status.
+В этой статье мы копнем немного глубже, установим и на строим i3wm c polybar. Так же установим необходимые скрипты. Заменим привычный pamac на упрощенный индикатор обновлений.
 
 
 # Установка и настройка i3wm + polybar
