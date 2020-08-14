@@ -61,7 +61,9 @@ $yay -S polybar ttf-weather-icons ttf-clear-sans tlp
 
 В своей настройке я использовал 3 скрипта:<br>
 1) Первый это скрипт погоды<br>
+![скрипт погоды](../img/wheather.png)<br>
 2) Второй это скрипт для отображения количества обновлений в системе вместо pamac. <br>
+![скрипт погоды](../img/update.png)<br>
 3) Третий для отображения заряда батареи<br>
 
 Эти скрипты и инструкцию к ним смотрите тут [https://github.com/x70b1/polybar-scripts.git](https://github.com/x70b1/polybar-scripts.git)<br>
