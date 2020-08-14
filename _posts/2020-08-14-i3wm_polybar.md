@@ -63,6 +63,6 @@ $yay -S polybar ttf-weather-icons ttf-clear-sans tlp
 2) Второй это скрипт для отображения количества обновлений в системе вместо pamac. <br>
 3) Третий для отображения заряда батареи<br>
 
-Эти скрипты и инструкцию к ним смотрите тут [https://github.com/x70b1/polybar-scripts.git](https://github.com/x70b1/polybar-scripts.git)
+Эти скрипты и инструкцию к ним смотрите тут [https://github.com/x70b1/polybar-scripts.git](https://github.com/x70b1/polybar-scripts.git)<br>
 Там большое кол-во скриптов, найдете все, что вам по душе.
 
