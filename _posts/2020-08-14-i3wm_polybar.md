@@ -22,7 +22,8 @@ edit: true
 ## Ссылки
 [Официальная документация по i3wm](https://i3wm.org/docs/userguide.html)<br>
 [i3wm в ArchWiki](https://wiki.archlinux.org/index.php/i3_%28%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9%29)<br>
-[Мой конфиг с пояснениями внутри](https://github.com/ordanax/dots/tree/master/i3wm)<br>
+[Wiki по Polybar](https://github.com/polybar/polybar/wiki)<br>
+[Мой конфиг с пояснениями внутри](https://github.com/ordanax/dots/tree/master/3wm_v_3)<br>
 
 
 **Нам понадобится:** <br>
