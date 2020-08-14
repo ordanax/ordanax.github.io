@@ -43,7 +43,7 @@ $yay -S polybar ttf-weather-icons ttf-clear-sans tlp
     7. **pcmanfm** — файловый менеджер <br>
     8. **gvfs** и **udiskie** — для авто монтирования внешних дисков <br>
     9. **xorg-xbacklight** — для управлением яркостью экрана <br>
-    10. **ristretto** и tumbler** — для просмотра фото <br>
+    10. **ristretto** и **tumbler** — для просмотра фото <br>
     11. **picom** — для прозрачности окон и для устранения тиринга (вместо compton)<br>
     12. **ttf-weather-icons** — Иконнки для скрипта погоды<br>
     13. **jq** — этот пакет также нужен для скрипта для отображения погоды<br>
