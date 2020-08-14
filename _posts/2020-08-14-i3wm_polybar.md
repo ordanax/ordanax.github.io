@@ -27,7 +27,7 @@ edit: true
 Ставим необходимые пакеты.
 
 ```
-#pacman -S i3-wm polybar dmenu pcmanfm ttf-font-awesome feh gvfs udiskie xorg-xbacklight ristretto tumbler picom jq
+#pacman -S i3-wm dmenu pcmanfm ttf-font-awesome feh gvfs udiskie xorg-xbacklight ristretto tumbler picom jq
 ```
 ```
 $yay -S polybar ttf-weather-icons ttf-clear-sans tlp
