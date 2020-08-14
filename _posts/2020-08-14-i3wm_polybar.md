@@ -24,14 +24,6 @@ edit: true
 [i3wm в ArchWiki](https://wiki.archlinux.org/index.php/i3_%28%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9%29)<br>
 [Мой конфиг с пояснениями внутри](https://github.com/ordanax/dots/tree/master/i3wm)<br>
 
-Ставим необходимые пакеты.
-
-```
-#pacman -S i3-wm dmenu pcmanfm ttf-font-awesome feh gvfs udiskie xorg-xbacklight ristretto tumbler picom jq
-```
-```
-$yay -S polybar ttf-weather-icons ttf-clear-sans tlp
-```
 
 **Нам понадобится:** <br>
     1. **i3wm** — оконный менеджер или его форк (ответвление) i3-gaps <br>
@@ -49,6 +41,15 @@ $yay -S polybar ttf-weather-icons ttf-clear-sans tlp
     13. **jq** — этот пакет также нужен для скрипта для отображения погоды<br>
     14. **tlp** — для скрипта отображения количества обновлении<br>
     15. **ttf-clear-sans** — хороший шрифт<br>
+    
+## Ставим необходимые пакеты.
+
+```
+#pacman -S i3-wm dmenu pcmanfm ttf-font-awesome feh gvfs udiskie xorg-xbacklight ristretto tumbler picom jq
+```
+```
+$yay -S polybar ttf-weather-icons ttf-clear-sans tlp
+```
 
 **Настройки тем делаем правкой файлов настройки GTK:**
 1. [~/.gtkrc-2.0](https://github.com/ordanax/dots/blob/master/3wm_v_3/gtkrc-2.0.tar.gz) и <br>
