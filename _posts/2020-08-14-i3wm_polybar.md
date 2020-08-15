@@ -42,11 +42,12 @@ edit: true
     13. **jq** — этот пакет также нужен для скрипта для отображения погоды<br>
     14. **tlp** — для скрипта отображения количества обновлении<br>
     15. **ttf-clear-sans** — хороший шрифт<br>
+    16. **pacman-contrib** — зависимость для скрипта по обновлениям
     
 ## Ставим необходимые пакеты.
 
 ```
-#pacman -S i3-wm dmenu pcmanfm ttf-font-awesome feh gvfs udiskie xorg-xbacklight ristretto tumbler picom jq
+#pacman -S i3-wm dmenu pcmanfm ttf-font-awesome feh gvfs udiskie xorg-xbacklight ristretto tumbler picom jq pacman-contrib
 ```
 ```
 $yay -S polybar ttf-weather-icons ttf-clear-sans tlp
