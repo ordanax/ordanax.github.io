@@ -72,3 +72,6 @@ $yay -S polybar ttf-weather-icons ttf-clear-sans tlp
 Эти скрипты и инструкцию к ним смотрите тут [https://github.com/x70b1/polybar-scripts.git](https://github.com/x70b1/polybar-scripts.git)<br>
 Там большое кол-во скриптов, найдете все, что вам по душе.
 
+## Видео демонстрация
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kQT11RANDG8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
