@@ -75,15 +75,19 @@ bindsym XF86AudioPrev exec playerctl previous
 ```
 ## Подключение скриптов
 
-В своей настройке я использовал 3 скрипта:<br>
-1) Первый это скрипт погоды<br>
+В своей настройке я использовал следующие скрипты:<br>
+1) Скрипт погоды<br>
 ![скрипт погоды](../img/wheather.png)<br>
-2) Второй это скрипт для отображения количества обновлений в системе вместо pamac. <br>
+2) Скрипт для отображения количества обновлений в системе вместо pamac. <br>
 ![скрипт погоды](../img/update.png)<br>
-3) Третий для отображения заряда батареи<br>
+3) Отображения заряда батареи<br>
+4) Отображение скорости интернета
+5) Отображение курса валют
 
 Эти скрипты и инструкцию к ним смотрите тут [https://github.com/x70b1/polybar-scripts.git](https://github.com/x70b1/polybar-scripts.git)<br>
 Там большое кол-во скриптов, найдете все, что вам по душе.
+Скрипт по скороси интернет [https://github.com/ShiroUsagi-san/speedtest-polybar-module](https://github.com/ShiroUsagi-san/speedtest-polybar-module)
+Скрипт корса валют в моем конфиге [https://github.com/ordanax/dots/blob/master/polybar/scripts/btc](https://github.com/ordanax/dots/blob/master/polybar/scripts/btc)
 
 ## Видео демонстрация
 <iframe width="560" height="315" src="https://www.youtube.com/embed/uh_WeYrjCOY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
