@@ -45,6 +45,7 @@ edit: true
     16. **tlp** — для скрипта отображения количества обновлении<br>
     17. **ttf-clear-sans** — хороший шрифт<br>
     18. **pacman-contrib** — зависимость для скрипта по обновлениям<br>
+    19. **playerctl** - для управления горячими клавишами аудиоплейера 
    
     
 ## Ставим необходимые пакеты.
@@ -53,7 +54,7 @@ edit: true
 #pacman -S i3-wm dmenu pcmanfm ttf-font-awesome feh gvfs udiskie xorg-xbacklight ristretto tumbler picom jq pacman-contrib sakura
 ```
 ```
-$yay -S polybar ttf-weather-icons ttf-clear-sans tlp
+$yay -S polybar ttf-weather-icons ttf-clear-sans tlp playerctl
 ```
 
 **Настройки тем делаем правкой файлов настройки GTK:**
@@ -71,6 +72,17 @@ $yay -S polybar ttf-weather-icons ttf-clear-sans tlp
 2) Второй это скрипт для отображения количества обновлений в системе вместо pamac. <br>
 ![скрипт погоды](../img/update.png)<br>
 3) Третий для отображения заряда батареи<br>
+
+## Горячие клавиши для аудио плейера
+Чтобы работли клавиши ⏮ ⏵ ⏭ нужно не забыть поставить пакет **playerctl** и добавить в конфиг следующий код:
+
+```
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+```
 
 Эти скрипты и инструкцию к ним смотрите тут [https://github.com/x70b1/polybar-scripts.git](https://github.com/x70b1/polybar-scripts.git)<br>
 Там большое кол-во скриптов, найдете все, что вам по душе.
