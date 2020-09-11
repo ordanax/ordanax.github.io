@@ -44,13 +44,14 @@ edit: true
     15. **tlp** — для скрипта отображения количества обновлении<br>
     16. **ttf-clear-sans** — хороший шрифт<br>
     17. **pacman-contrib** — зависимость для скрипта по обновлениям<br>
-    18. **playerctl** — для управления горячими клавишами аудиоплеера 
+    18. **playerctl** — для управления горячими клавишами аудиоплеера
+    19. **speedtest-cli** - для полибар скрипта, который отображает скорость интернета
    
     
 ## Ставим необходимые пакеты.
 
 ```
-#pacman -S i3-wm dmenu pcmanfm ttf-font-awesome feh gvfs udiskie xorg-xbacklight ristretto tumbler picom jq pacman-contrib sakura
+#pacman -S i3-wm dmenu pcmanfm ttf-font-awesome feh gvfs udiskie xorg-xbacklight ristretto tumbler picom jq pacman-contrib sakura speedtest-cli
 ```
 ```
 $yay -S polybar ttf-weather-icons ttf-clear-sans tlp playerctl
