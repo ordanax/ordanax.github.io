@@ -82,7 +82,7 @@ bindsym XF86AudioPrev exec playerctl previous
 2) Скрипт для отображения количества обновлений в системе вместо pamac. <br>
 ![скрипт погоды](../img/update.png)<br>
 3) Отображения заряда батареи<br>
-4) Отображение скорости интернета
+4) Отображение скорости интернета <br>
 5) Отображение курса валют
 
 Эти скрипты и инструкцию к ним смотрите тут [https://github.com/x70b1/polybar-scripts.git](https://github.com/x70b1/polybar-scripts.git)<br>
