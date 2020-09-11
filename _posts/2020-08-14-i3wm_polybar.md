@@ -85,10 +85,10 @@ bindsym XF86AudioPrev exec playerctl previous
 4) Отображение скорости интернета <br>
 5) Отображение курса валют
 
-Эти скрипты и инструкцию к ним смотрите тут [https://github.com/x70b1/polybar-scripts.git](https://github.com/x70b1/polybar-scripts.git)<br>
-Там большое кол-во скриптов, найдете все, что вам по душе.
-Скрипт по скороси интернет [https://github.com/ShiroUsagi-san/speedtest-polybar-module](https://github.com/ShiroUsagi-san/speedtest-polybar-module)
-Скрипт корса валют в моем конфиге [https://github.com/ordanax/dots/blob/master/polybar/scripts/btc](https://github.com/ordanax/dots/blob/master/polybar/scripts/btc)
+Эти скрипты и инструкцию к ним смотрите тут [https://github.com/x70b1/polybar-scripts.git](https://github.com/x70b1/polybar-scripts.git)   
+Там большое кол-во скриптов, найдете все, что вам по душе.   
+Скрипт по скороси интернет [https://github.com/ShiroUsagi-san/speedtest-polybar-module](https://github.com/ShiroUsagi-san/speedtest-polybar-module)   
+Скрипт корса валют в моем конфиге [https://github.com/ordanax/dots/blob/master/polybar/scripts/btc](https://github.com/ordanax/dots/blob/master/polybar/scripts/btc)   
 
 ## Видео демонстрация
 <iframe width="560" height="315" src="https://www.youtube.com/embed/uh_WeYrjCOY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
