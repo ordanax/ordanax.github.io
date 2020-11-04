@@ -58,7 +58,7 @@ edit: true
 $yay -S polybar ttf-weather-icons ttf-clear-sans tlp playerctl
 ```
 
-***Запуска автозагрузки Wi-fi апплета
+**Запуска автозагрузки Wi-fi апплета**
 ```
 systemctl enable lxdm NetworkManager
 
