@@ -46,16 +46,22 @@ edit: true
     17. **pacman-contrib** — зависимость для скрипта по обновлениям<br>
     18. **playerctl** — для управления горячими клавишами аудиоплеера<br>
     19. **speedtest-cli** - для полибар скрипта, который отображает скорость интернета<br>
+    20. **networkmanager** - для Wi-fi
    
     
 ## Ставим необходимые пакеты.
 
 ```
-#pacman -S i3-wm dmenu pcmanfm ttf-font-awesome feh gvfs udiskie xorg-xbacklight ristretto tumbler picom jq pacman-contrib sakura speedtest-cli
+#pacman -S i3-wm dmenu pcmanfm ttf-font-awesome feh gvfs udiskie xorg-xbacklight ristretto tumbler picom jq pacman-contrib sakura speedtest-cli networkmanager
 ```
 ```
 $yay -S polybar ttf-weather-icons ttf-clear-sans tlp playerctl
 ```
+
+***Запуска автозагрузки Wi-fi апплета
+```
+systemctl enable lxdm NetworkManager
+
 
 **Настройки тем делаем правкой файлов настройки GTK:**
 1. [~/.gtkrc-2.0](https://github.com/ordanax/dots/blob/master/3wm_v_3/gtkrc-2.0.tar.gz) и <br>
