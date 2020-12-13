@@ -58,10 +58,10 @@ edit: true
 $yay -S polybar ttf-weather-icons ttf-clear-sans tlp playerctl
 ```
 
-**Запуска автозагрузки Wi-fi апплета**
+**Запуск автозагрузки Wi-fi апплета**
 ```
 systemctl enable lxdm NetworkManager
-
+```
 
 **Настройки тем делаем правкой файлов настройки GTK:**
 1. [~/.gtkrc-2.0](https://github.com/ordanax/dots/blob/master/3wm_v_3/gtkrc-2.0.tar.gz) и <br>
