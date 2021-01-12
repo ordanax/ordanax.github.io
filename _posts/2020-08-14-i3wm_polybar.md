@@ -97,5 +97,7 @@ bindsym XF86AudioPrev exec playerctl previous
 Скрипт корса валют в моем конфиге [https://github.com/ordanax/dots/blob/master/polybar/scripts/btc](https://github.com/ordanax/dots/blob/master/polybar/scripts/btc)   
 
 ## Видео демонстрация
-<iframe width="560" height="315" src="https://www.youtube.com/embed/e1FteJleX_Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe frameborder="0" height="360" width="640" src="https://www.youtube.com/embed/e1FteJleX_Y?rel=0" ></iframe>
+</div><br>
 
