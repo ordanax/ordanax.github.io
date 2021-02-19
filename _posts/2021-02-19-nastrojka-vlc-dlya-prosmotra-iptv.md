@@ -8,6 +8,7 @@ categories:
 - program
 tags:
 - vlc
+- iptv
 edit: true
 ---
 ![Настройка VLC для просмотра IPTV](../img/iptv.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} VLC уникальный проигрыватель, в котором столько функций, что многие даже не догадываются о том, сколько их. 
