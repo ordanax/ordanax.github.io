@@ -26,6 +26,7 @@ edit: true
 [Мой конфиг с пояснениями внутри](https://github.com/ordanax/dots/tree/master/3wm_v_3)<br>
 
 
+
 **Нам понадобится:** <br>
     1. **i3wm** — оконный менеджер или его форк (ответвление) i3-gaps <br>
     2. **Polybar** — наша панелька<br>
@@ -94,7 +95,10 @@ bindsym XF86AudioPrev exec playerctl previous
 Эти скрипты и инструкцию к ним смотрите тут [https://github.com/x70b1/polybar-scripts.git](https://github.com/x70b1/polybar-scripts.git)   
 Там большое кол-во скриптов, найдете все, что вам по душе.   
 Скрипт по скороси интернет [https://github.com/ShiroUsagi-san/speedtest-polybar-module](https://github.com/ShiroUsagi-san/speedtest-polybar-module)   
-Скрипт корса валют в моем конфиге [https://github.com/ordanax/dots/blob/master/polybar/scripts/btc](https://github.com/ordanax/dots/blob/master/polybar/scripts/btc)   
+Скрипт корса валют в моем конфиге [https://github.com/ordanax/dots/blob/master/polybar/scripts/btc](https://github.com/ordanax/dots/blob/master/polybar/scripts/btc) 
+
+## Темы для Polybar
+[Темы для Polybar](https://github.com/adi1090x/polybar-themes)<br>
 
 ## Видео демонстрация
 <div class="embed-responsive embed-responsive-16by9">
