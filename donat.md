@@ -4,7 +4,10 @@ permalink: donat/
 layout: post
 ---
 # BTC
-bc1qs7m87zuykazshg7ps934twjcpzerz90tp208nj
+1EL5k8tLgTRbxoWHWREQXddhKJtovn1SWK
 
-# TRON network
-TVYAFv4zqxxAfWNroMGVyubH3SUW56qdsm
+# TON
+UQBmgIBVLHqL77HrUyidykREMdCg8TR7ts_qhByKMuCFOMcz
+
+# USDT TRC20
+TAy1odBvtS4D7bMTrxDi6DgJA4DDpKTT5F
