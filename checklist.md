@@ -1,6 +1,6 @@
 ---
 title: Чек лист по установке и настройке Arch Linux Xfce
-permalink: checklist.md
+permalink: checklist
 layout: post
 ---
 
