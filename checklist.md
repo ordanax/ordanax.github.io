@@ -3,15 +3,15 @@ title: Чек лист по установке и настройке Arch Linux 
 permalink: checklist
 layout: post
 ---
-# Чек лист по установке и настройке Arch Linux Xfce
-
 ## Вопросы, поддержка
 
 Если у вас возникли вопросы, вступите в группу по Arch Linux для получения бесплатной поддержки:
 - [Линукс Телеграм Чат](https://t.me/linux4at)
 
 ## Предложения и коррекция чек листа
-Заметили не точность в чек листе или у вас есть лучшее предложение? [Присылайте свой коммит в github](https://github.com/ordanax/ordanax.github.io/blob/master/checklist.md) 
+Если вы заметили не точность в чек листе или у вас есть лучшее предложение, то [присылайте свой коммит в github](https://github.com/ordanax/ordanax.github.io/blob/master/checklist.md) 
+
+---
 
 ## Удаленная установка по SSH
 
