@@ -24,7 +24,9 @@ layout: post
 3. Вбиваем в терминале команду sha256sum + название файла.
 
    Пример:
-   ```sha256sum archlinux-2024.09.01-x86_64.iso```
+   ```
+   sha256sum archlinux-2024.09.01-x86_64.iso
+   ```
 
    Контрольная сумма должна совпадать с той, что на сайте.
 
@@ -34,13 +36,17 @@ layout: post
 
 ## Записываем его на флешку
 
-```sudo dd if=X of=/dev/sdY```
+```
+sudo dd if=X of=/dev/sdY
+```
 
 Где X — это название ISO файла, Y — буква диска.
 
 Пример: 
 
-```sudo dd if=archlinux-2019.06.01-dual.iso of=/dev/sdb && sync```
+```
+sudo dd if=archlinux-2019.06.01-dual.iso of=/dev/sdb && sync
+```
 
 В Windows лучше записывать программой [Rufus](https://rufus.ie). Чтобы избежать ошибок при разметке диска, предварительно перезапишите его нулями, например, программой Disks, загрузившись с USB в любом дистрибутиве Linux.
 
@@ -54,26 +60,35 @@ layout: post
 ## Установка раскладки клавиатуры
 После загрузки настроим русский язык для удобства работы:
 
-```loadkeys ru```
+```
+loadkeys ru
+```
 
 Изменим консольный шрифт на тот, который поддерживает кириллицу:
 
-```setfont cyr-sun16```
+```
+setfont cyr-sun16
+```
 
 ## Соединение с Интернетом
 ### Подключаем проводной интернет
 
-```dhcpcd```
+```
+dhcpcd
+```
 
 Если не знаете название вашего устройства (device), то пишем:
 
-```ip link```
+```
+ip link
+```
 
 ### Подключение через Wi-Fi
 
-```iwctl```
-
-```station device connect SSID```
+```
+iwctl
+station device connect SSID
+```
 
 Где SSID = название вашей сети  
 Где device = wlp5s0 или wlan0 (у вас будет свое)  
@@ -83,17 +98,23 @@ layout: post
 
 ## Синхронизация системных часов
 
-```timedatectl set-ntp true```
+```
+timedatectl set-ntp true
+```
 
 ## Создание разделов
 ### Смотрим какие диски есть
 
-```fdisk -l```
+```
+fdisk -l
+```
 
 ### Разбиваем диски 
 (для ручной разметки используем fdisk, для псевдографической разбивки можно использовать команду cfdisk)
 
-```fdisk /dev/sda```
+```
+fdisk /dev/sda
+```
 
 Можно вызвать подсказки нажатием на клавишу “m”.
 
@@ -110,7 +131,9 @@ layout: post
 
 ### Создание разделов с UEFI
 
-```cfdisk /dev/sda```
+```
+cfdisk /dev/sda
+```
 
 - /dev/sda1 - 500M EFI - выставить флаг EFI командой t
 - /dev/sda2 - 30G root Linux File System
@@ -121,11 +144,15 @@ layout: post
 
 1. Создаем MBR таблицу (Для UEFI - GPT командой g):
 
-```o```
+```
+o
+```
 
 2. Создаем новый диск:
 
-```n```
+```
+n
+```
 
    Жмем enter.
 3. Выбираем primary (основной) или extended (расширенный).
@@ -145,11 +172,15 @@ layout: post
 
 Как все разметили, не забываем все записать командой:
 
-```w```
+```
+w
+```
 
 В итоге можете проверить, что у вас получилось командой:
 
-```fdisk -l```
+```
+fdisk -l
+```
 
 Должно получиться примерно так:  
 Legacy разметка: [http://i.imgur.com/pgej0Nt.png](http://i.imgur.com/pgej0Nt.png)  
@@ -165,87 +196,125 @@ mkfs.ext4  /dev/sda4 -L home
 
 #### Монтируем /
 
-```mount /dev/sda2 /mnt```
+```
+mount /dev/sda2 /mnt
+```
 
 # Перейдём в установленную систему
 
-```arch-chroot /mnt```
+```
+arch-chroot /mnt
+```
 
 ## Прописываем имя компьютера
 Вместо ArchLinux впишите свое название:
 
-```echo "ArchLinux" > /etc/hostname```
+```
+echo "ArchLinux" > /etc/hostname
+```
 
 ## Настроим часы
 - Для Москвы:
 
-  ```ln -sf /usr/share/zoneinfo/Europe/Moscow /etc/localtime```
+```
+ln -sf /usr/share/zoneinfo/Europe/Moscow /etc/localtime
+```
 
 - Для Екатеринбурга:
 
-  ```ln -sf /usr/share/zoneinfo/Asia/Yekaterinburg /etc/localtime```
+```
+ln -sf /usr/share/zoneinfo/Asia/Yekaterinburg /etc/localtime
+```
 
 ## Добавляем русскую локаль системы
 Добавим русскую локаль в систему:
 
-```echo -e "en_US.UTF-8 UTF-8\nru_RU.UTF-8 UTF-8" >> /etc/locale.gen```
+```
+echo -e "en_US.UTF-8 UTF-8\nru_RU.UTF-8 UTF-8" >> /etc/locale.gen
+```
 
 Обновим текущую локаль системы:
 
-```locale-gen```
+```
+locale-gen
+```
 
 Указываем язык системы:
 
-```echo 'LANG="ru_RU.UTF-8"' > /etc/locale.conf```
+```
+echo 'LANG="ru_RU.UTF-8"' > /etc/locale.conf
+```
 
 Указываем keymap для console и прописываем шрифт:
 
-```echo 'KEYMAP=ru' >> /etc/vconsole.conf```
-```echo 'FONT=cyr-sun16' >> /etc/vconsole.conf```
+```
+echo 'KEYMAP=ru' >> /etc/vconsole.conf
+echo 'FONT=cyr-sun16' >> /etc/vconsole.conf
+```
 
 ## Создадим загрузочный RAM диск
 
-```mkinitcpio -p linux```
+```
+mkinitcpio -p linux
+```
 
 ## Изменим пароль root
 
-```passwd```
+```
+passwd
+```
 
 # Установка загрузчика
 
 ## Обновляем базы данных пакетов:
 
-```pacman -Syy```
+```
+pacman -Syy
+```
 
 ## Устанавливаем загрузчик (для BIOS)
 
-```pacman -S grub```
-```grub-install /dev/sda```
+```
+pacman -S grub
+grub-install /dev/sda
+```
 
 ## Устанавливаем загрузчик (для UEFI)
 
-```pacman -S grub efibootmgr```
-```grub-install /dev/sda```
+```
+pacman -S grub efibootmgr
+grub-install /dev/sda
+```
 
 Если в системе будут несколько ОС, то устанавливаем:
 
-```pacman -S os-prober mtools fuse```
+```
+pacman -S os-prober mtools fuse
+```
 
 ## Обновляем grub.cfg
 
-```grub-mkconfig -o /boot/grub/grub.cfg```
+```
+grub-mkconfig -o /boot/grub/grub.cfg
+```
 
 ## Ставим программу для Wi-Fi
 
-```pacman -S dialog wpa_supplicant```
+```
+pacman -S dialog wpa_supplicant
+```
 
 ## Выходим
 
-```exit```
+```
+exit
+```
 
 # Перезагрузка
 
-```reboot```
+```
+reboot
+```
 
 # После установки
 
@@ -255,42 +324,58 @@ mkfs.ext4  /dev/sda4 -L home
 
 ## Подключаем Wi-Fi
 
-```wifi-menu```
+```
+wifi-menu
+```
 
 Или если у вас проводной интернет, то подключаем его:
 
-```dhcpcd```
+```
+dhcpcd
+```
 
 ## Добавляем пользователя
 Добавим нового пользователя. Вместо MYUSERNAME пишем имя пользователя без спец символов, только маленькие лат. буквы:
 
-```useradd -m -g users -G wheel -s /bin/bash MYUSERNAME```
+```
+useradd -m -g users -G wheel -s /bin/bash MYUSERNAME
+```
 
 ## Устанавливаем пароль пользователя
 Установим пароль для нового пользователя. Вместо MYUSERNAME пишем имя пользователя:
 
-```passwd MYUSERNAME```
+```
+passwd MYUSERNAME
+```
 
 ## Устанавливаем SUDO
 Заходим в файл sudoers:
 
-```nano /etc/sudoers```
+```
+nano /etc/sudoers
+```
 
 В файле /etc/sudoers находим строчку:
 
-```%wheel ALL=(ALL) ALL```
+```
+%wheel ALL=(ALL) ALL
+```
 
 и раскомментируем её, убрав символ #.
 
 Так было:
 
-```## Uncomment to allow members of group wheel to execute any command```
-```#%wheel ALL=(ALL) ALL```
+```
+## Uncomment to allow members of group wheel to execute any command
+#%wheel ALL=(ALL) ALL
+```
 
 Так должно быть:
 
-```## Uncomment to allow members of group wheel to execute any command```
-```%wheel ALL=(ALL) ALL```
+```
+## Uncomment to allow members of group wheel to execute any command
+%wheel ALL=(ALL) ALL
+```
 
 ## Сохраняем
 Ctrl+O (Enter)  
@@ -302,35 +387,51 @@ Ctrl+X
 ## Настройка pacman
 Настроим pacman (только для x86_64):
 
-```nano /etc/pacman.conf```
+```
+nano /etc/pacman.conf
+```
 
 Для работы 32-битных приложений в 64-битной системе необходимо раскомментировать репозиторий multilib:
 
-```[multilib]```
-```Include = /etc/pacman.d/mirrorlist```
+```
+[multilib]
+Include = /etc/pacman.d/mirrorlist
+```
 
 ## Сохраняем
-Ctrl+O (Enter)  
+```
+Ctrl+O
+```  
 Выходим  
+```
 Ctrl+X
+```
 
 ## Обновляем базы данных пакетов:
 
-```pacman -Syy```
+```
+pacman -Syy
+```
 
 # Ставим иксы и драйвера
 Установим Х (Иксы) и свободные драйвера + читаем зависимости при необходимости, ставим их тоже:
 
-```pacman -S xorg-server xorg-drivers```
+```
+pacman -S xorg-server xorg-drivers
+```
 
 # Ставим Xfce, LXDM и сеть 
 Ставим Xfce + менеджер входа lxdm (или sddm):
 
-```pacman -S xfce4 xfce4-goodies lxdm```
+```
+pacman -S xfce4 xfce4-goodies lxdm
+```
 
 Ставим шрифты, чтобы можно было читать, что написано. Иначе будут просто квадратики:
 
-```pacman -S ttf-liberation ttf-dejavu```
+```
+pacman -S ttf-liberation ttf-dejavu
+```
 
 Ставим менеджер сети:
 
@@ -339,7 +440,9 @@ Ctrl+X
 ## Подключаем автозагрузку менеджера входа и интернет
 (с соблюдением регистра для NetworkManager):
 
-```systemctl enable lxdm NetworkManager```
+```
+systemctl enable lxdm NetworkManager
+```
 
 # Перезагрузка
 Выбираем Xfce Session или просто “Сеанс”! Это важно, иначе не войдете!
@@ -354,19 +457,27 @@ Ctrl+X
 
 - Intel:
 
-  ```sudo pacman -S xf86-video-intel lib32-intel-dri```
+  ```
+  sudo pacman -S xf86-video-intel lib32-intel-dri
+  ```
 
 - Nvidia:
 
-  ```sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils```
+  ```
+  sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils
+  ```
 
 - AMD:
 
-  ```sudo pacman -S xf86-video-ati lib32-ati-dri```
+  ```
+  sudo pacman -S xf86-video-ati lib32-ati-dri
+  ```
 
 - Если вы устанавливаете систему на виртуальную машину:
 
-  ```sudo pacman -S xf86-video-vesa```
+  ```
+  sudo pacman -S xf86-video-vesa
+  ```
 
 ## Подключаем Wi-Fi
 1. Идём в меню - настройки - сетевые соединения. Сюда: [http://i.imgur.com/9fIT56r.png](http://i.imgur.com/9fIT56r.png)
@@ -378,65 +489,87 @@ yaourt и aurman более не обновляются разработчика
 
 ### Обновляем систему
 
-```sudo pacman -Syu```
+```
+sudo pacman -Syu
+```
 
 ### Создаём yay_install директорию и переходим в неё
 
-```mkdir -p /tmp/yay_install```
-```cd /tmp/yay_install```
+```
+mkdir -p /tmp/yay_install
+cd /tmp/yay_install
+```
 
 ### Установка "yay" из AUR
 
-```sudo pacman -S git```
-```git clone https://aur.archlinux.org/yay.git```
-```cd yay```
-```makepkg -sir --needed --noconfirm --skippgpcheck```
-```rm -rf yay_install```
+```
+sudo pacman -S git
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -sir --needed --noconfirm --skippgpcheck
+rm -rf yay_install
+```
 
 Если вы предпочитаете работать с графическим интерфейсом, а не с терминалом, то как альтернативу yay можно использовать pamac (установщик пакетов из AUR c GUI).
 
 ### Обновляем систему
 
-```sudo pacman -Syu```
+```
+sudo pacman -Syu
+```
 
 ### Создаём pamac-aur_install директорию и переходим в неё
 
-```mkdir -p /tmp/pamac-aur_install```
-```cd /tmp/pamac-aur_install```
+```
+mkdir -p /tmp/pamac-aur_install
+cd /tmp/pamac-aur_install
+```
 
 ### Установка "pamac-aur" из AUR
 
-```sudo pacman -S git```
-```git clone https://aur.archlinux.org/pamac-aur.git```
-```cd pamac-aur```
-```makepkg -si --needed --noconfirm --skippgpcheck```
-```rm -rf pamac-aur_install```
+```
+sudo pacman -S git
+git clone https://aur.archlinux.org/pamac-aur.git
+cd pamac-aur
+makepkg -si --needed --noconfirm --skippgpcheck
+rm -rf pamac-aur_install
+```
 
 ## Установка программ
 ### Установка пакетов, которые решают большинство проблем
 
-```sudo pacman -S f2fs-tools dosfstools ntfs-3g alsa-lib alsa-utils file-roller p7zip unrar gvfs aspell-ru pulseaudio```
+```
+sudo pacman -S f2fs-tools dosfstools ntfs-3g alsa-lib alsa-utils file-roller p7zip unrar gvfs aspell-ru pulseaudio
+```
 
 ### Установка программ
 
-```sudo pacman -S firefox doublecmd-gtk2 filezilla gimp gnome-calculator libreoffice libreoffice-fresh-ru kdenlive screenfetch vlc ufw qbittorrent obs-studio veracrypt freemind flameshot```
+```
+sudo pacman -S firefox doublecmd-gtk2 filezilla gimp gnome-calculator libreoffice libreoffice-fresh-ru kdenlive screenfetch vlc ufw qbittorrent obs-studio veracrypt freemind flameshot
+```
 
 Если нужно русифицировать Firefox, добавляем еще и firefox-i18n-ru. Если русификация не вступила в силу, тогда сбросьте настройки Firefox: [https://vk.cc/9n7uLx](https://vk.cc/9n7uLx).
 
 ### Установка AUR программ
 
-```yay -S sublime-text-dev cherrytree timeshift google-talkplugin hunspell-ru pamac-aur xflux xflux-gui-git osx-arc-shadow papirus-maia-icon-theme-git breeze-obsidian-cursor-theme flameshot-git megasync```
+```
+yay -S sublime-text-dev cherrytree timeshift google-talkplugin hunspell-ru pamac-aur xflux xflux-gui-git osx-arc-shadow papirus-maia-icon-theme-git breeze-obsidian-cursor-theme flameshot-git megasync
+```
 
 Рекомендуемые и используемые мной программы можете посмотреть здесь: [https://vk.cc/5XjUqt](https://vk.cc/5XjUqt).
 
 ## Установка тем
 ### Темы Gtk+ для Xfce
 
-```yay -S x-arc-shadow```
+```
+yay -S x-arc-shadow
+```
 
 или
 
-```yay -S vertex-themes```
+```
+yay -S vertex-themes
+```
 
 ### Темы иконок 
 - papirus-maia-icon-theme-git
@@ -447,23 +580,31 @@ yaourt и aurman более не обновляются разработчика
 
 ### Темы курсора 
 
-```sudo pacman -S capitaine-cursors```
-```yay -S xcursor-breeze-serie-obsidian```
-```yay -S breeze-obsidian-cursor-theme```
+```
+sudo pacman -S capitaine-cursors
+yay -S xcursor-breeze-serie-obsidian
+yay -S breeze-obsidian-cursor-theme
+```
 
 Теперь можно менять тему для курсора в настройках. Для этого открываем «Меню» -> «Настройки» -> «Мышь и тачпад».
 
 ## Ставим тему на LXDM
 
-```yay -S lxdm-themes```
+```
+yay -S lxdm-themes
+```
 
 ### Меняем тему в настройках 
 
-```sudo nano /etc/lxdm/lxdm.conf```
+```
+sudo nano /etc/lxdm/lxdm.conf
+```
 
 Находим строку с theme=Industrial и заменяем на название нашей темы:
 
-```theme=ArchlinuxTop```
+```
+theme=ArchlinuxTop
+```
 
 ## Настройки Xfce
 Смотрите видео по настройке Xfce: [https://vk.cc/7qwQ8L](https://vk.cc/7qwQ8L)  
@@ -476,42 +617,58 @@ yaourt и aurman более не обновляются разработчика
 
 Команда:
 
-```xfce4-terminal```
+```
+xfce4-terminal
+```
 
 Клавиши: Ctrl+Alt+T
 
 ### Настраиваем горячие клавиши на скриншот
 Назначьте команду:
 
-```xfce4-screenshooter -f```
+```
+xfce4-screenshooter -f
+```
 
 на клавишу Ctrl + Print Screen, которая будет делать скриншоты всего экрана.
 
 # Убираем меню GRUB для выбора системы
 Если у вас нет второй системы, как у меня, то вы можете ускорить загрузку системы и убрать это GRUB меню. Делается это следующим образом:
 
-```sudo nano /etc/default/grub``` 
+```
+sudo nano /etc/default/grub
+``` 
 
 Измените строку:
 
-```GRUB_TIMEOUT=5```
+```
+GRUB_TIMEOUT=5
+```
 
 на
 
-```GRUB_TIMEOUT=0```
+```
+GRUB_TIMEOUT=0
+```
 
 ## Обновляем grub.cfg
 
-```sudo grub-mkconfig -o /boot/grub/grub.cfg```
+```
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
 
 # Обновление системы
 Обновление всей системы (ядра, окружения рабочего стола, программ из pacman и из AUR) производится одной командой:
 
-```yay -Syu```
+```
+yay -Syu
+```
 
 ## Альтернативная команда для обновления и очистки системы
 
-```yay -Syu && sudo pacman -Scc && sudo pacman -Rsn $(pacman -Qdtq) && sudo rm -rf ~/.cache/thumbnails/*```
+```
+yay -Syu && sudo pacman -Scc && sudo pacman -Rsn $(pacman -Qdtq) && sudo rm -rf ~/.cache/thumbnails/*
+```
 
 ### Пояснения:
 - yay -Syu - обновляет ядро, программы в pacman и в AUR.
@@ -521,18 +678,24 @@ yaourt и aurman более не обновляются разработчика
 
 ## Обновление системы вместе с проверкой зеркал (должен стоять рефлектор)
 
-```sudo reflector --verbose -l 5 -p https --sort rate --save /etc/pacman.d/mirrorlist && sudo pacman -Syyu && yay -Syu --noconfirm && sudo pacman -Rsn $(pacman -Qdtq)```
+```
+sudo reflector --verbose -l 5 -p https --sort rate --save /etc/pacman.d/mirrorlist && sudo pacman -Syyu && yay -Syu --noconfirm && sudo pacman -Rsn $(pacman -Qdtq)
+```
 
 # Устанавливаем Conky
 
-```sudo pacman -S conky conky-manager```
+```
+sudo pacman -S conky conky-manager
+```
 
 Конфиги можно скачать в группе и добавить свои: [https://vk.cc/89e28X](https://vk.cc/89e28X).
 
 ## Ставим курсор по умолчанию
 Откройте файл:
 
-```sudo nano /usr/share/icons/default/index.theme```
+```
+sudo nano /usr/share/icons/default/index.theme
+```
 
 Меняем тему курсоров на нужную, например Breeze Obsidian.
 
