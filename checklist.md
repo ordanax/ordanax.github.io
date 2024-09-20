@@ -701,4 +701,4 @@ sudo nano /usr/share/icons/default/index.theme
 
 Меняем тему курсоров на нужную, например Breeze Obsidian.
 
-[Oxygen Neon] (https://www.gnome-look.org/p/999997/) 
+[Oxygen Neon](https://www.gnome-look.org/p/999997/) 
