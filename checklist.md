@@ -287,6 +287,7 @@ grub-install /dev/sda
 pacman -S grub efibootmgr
 grub-install /dev/sda
 ```
+Или альтернативный вариант использования Systemd-boot вместо grub [Systemd-boot на ArchWiki (Русский)](https://wiki.archlinux.org/title/Systemd-boot_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)) 
 
 Если в системе будут несколько ОС, то устанавливаем:
 
