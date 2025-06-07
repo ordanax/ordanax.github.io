@@ -1,54 +1,67 @@
 ---
 title: Конфиги
-permalink: configs/
+permalink: /configs/
 layout: default
 ---
 
 <div class="posts">
-	{% for post in site.categories.configs %}
-    <article class="post">
-
-      <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
-      <p>
-       <span class="blog-post-meta">{{ post.date|date:"%d.%m.%Y" }}</span>
+  {% for post in site.categories.configs %}
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+      <h3 class="post-title" itemprop="headline">
+        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      </h3>
+      
+      <p class="post-meta">
+        <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
+          {{ post.date | date: "%d.%m.%Y" }}
+        </time>
       </p>
 
-      <div class="entry">
-        {{ post.excerpt }}
+      <div class="post-excerpt" itemprop="description">
+        {{ post.excerpt | strip_html | truncatewords: 30 }}
       </div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Читать далее &raquo;</a>
+      <a href="{{ post.url | relative_url }}" class="read-more" aria-label="Читать статью '{{ post.title | escape }}'">
+        Читать далее &raquo;
+      </a>
     </article>
-    <hr>
+    <hr class="post-divider">
   {% endfor %}
 </div>
 
-<!-- paginate cat -->
+<!-- Pagination -->
 {% if paginator.total_pages > 1 %}
-<div class="pagination">
+<nav class="pagination" aria-label="Навигация по страницам">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Назад</a>
+    <a href="{{ paginator.previous_page_path | relative_url }}" class="pagination-prev" rel="prev">
+      &laquo; Назад
+    </a>
   {% else %}
-    <span>Назад</span>
+    <span class="pagination-prev disabled">&laquo; Назад</span>
   {% endif %}
 
-  {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-      <em>{{ page }}</em>
-    {% elsif page == 1 %}
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-    {% else %}
-      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-    {% endif %}
-  {% endfor %}
+  <span class="pagination-pages">
+    {% for page in (1..paginator.total_pages) %}
+      {% if page == paginator.page %}
+        <span class="pagination-current" aria-current="page">{{ page }}</span>
+      {% elsif page == 1 %}
+        <a href="{{ '/' | relative_url }}" class="pagination-link">
+          {{ page }}
+        </a>
+      {% else %}
+        <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}" class="pagination-link">
+          {{ page }}
+        </a>
+      {% endif %}
+    {% endfor %}
+  </span>
 
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Вперед &raquo;</a>
+    <a href="{{ paginator.next_page_path | relative_url }}" class="pagination-next" rel="next">
+      Вперед &raquo;
+    </a>
   {% else %}
-    <span>Вперед &raquo;</span>
+    <span class="pagination-next disabled">Вперед &raquo;</span>
   {% endif %}
-</div>
+</nav>
 {% endif %}
-
-<hr>
-{% include google-ads-footer.html %}
