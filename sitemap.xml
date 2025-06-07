@@ -5,23 +5,33 @@ search: exclude
 
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
+    <!-- Страницы -->
     {% for page in site.pages %}
-    <url>
-        <loc>{{page.url}}</loc>
-        <lastmod>{{site.time | date: '%Y-%m-%d' }}</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
+        {% unless page.url contains '/assets/' or page.url contains '/feed.xml' or page.url contains '/sitemap.xml' or page.search == "exclude" %}
+        <url>
+            <loc>{{ site.url | default: 'https://ordanax.github.io' }}{{ page.url | remove: 'index.html' }}</loc>
+            <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+            <changefreq>
+                {% if page.url == '/' %}weekly{% else %}monthly{% endif %}
+            </changefreq>
+            <priority>
+                {% if page.url == '/' %}1.0{% elsif page.url contains '/about/' or page.url contains '/archlinux/' %}0.9{% else %}0.6{% endif %}
+            </priority>
+        </url>
+        {% endunless %}
     {% endfor %}
 
+    <!-- Посты -->
     {% for post in site.posts %}
-    <url>
-        <loc>{{post.url}}</loc>
-        <lastmod>{{site.time | date: '%Y-%m-%d' }}</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
+        <url>
+            <loc>{{ site.url | default: 'https://ordanax.github.io' }}{{ post.url | remove: 'index.html' }}</loc>
+            <lastmod>
+                {% if post.last_modified_at %}{{ post.last_modified_at | date_to_xmlschema }}
+                {% else %}{{ post.date | date_to_xmlschema }}
+                {% endif %}
+            </lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
     {% endfor %}
-
 </urlset>
