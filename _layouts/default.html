@@ -16,6 +16,42 @@
 	</div>
 {% include code.html %}
 
+<script>
+    (function() {
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        if (navToggle && navMenu) {
+            // Обработка клика по бургеру
+            navToggle.addEventListener('click', function() {
+                this.classList.toggle('active');
+                navMenu.classList.toggle('active');
+                this.setAttribute('aria-label', 
+                    this.classList.contains('active') ? 'Закрыть меню' : 'Открыть меню'
+                );
+            });
+
+            // Закрытие меню при клике на ссылку (опционально)
+            const navLinks = navMenu.querySelectorAll('.nav-list__link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                    navToggle.setAttribute('aria-label', 'Открыть меню');
+                });
+            });
+
+            // Закрытие меню при нажатии Escape
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape') {
+                    navToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                    navToggle.setAttribute('aria-label', 'Открыть меню');
+                }
+            });
+        }
+    })();
+</script>
 </body>
 
 </html>        

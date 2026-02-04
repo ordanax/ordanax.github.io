@@ -313,4 +313,115 @@ nav.soc ul {
 	padding-left:0px;
 }
 
+/* ===== Стили для навигации (бутерброд) ===== */
+.site-nav {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+}
 
+/* Список меню - виден на десктопе, скрыт на мобильных */
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.nav-list__item {
+    margin-left: 1.5rem;
+}
+
+.nav-list__link {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+}
+
+.nav-list__link:hover {
+    color: #007acc; /* Цвет при наведении */
+}
+
+/* Кнопка-бургер - скрыта на десктопе */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Иконка бургера (три полоски) */
+.nav-toggle__icon {
+    position: relative;
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #333;
+    transition: background-color 0.3s ease;
+}
+.nav-toggle__icon::before,
+.nav-toggle__icon::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    transition: transform 0.3s ease;
+}
+.nav-toggle__icon::before {
+    top: -8px;
+}
+.nav-toggle__icon::after {
+    top: 8px;
+}
+
+/* Анимация бургера при открытии */
+.nav-toggle.active .nav-toggle__icon {
+    background-color: transparent;
+}
+.nav-toggle.active .nav-toggle__icon::before {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+.nav-toggle.active .nav-toggle__icon::after {
+    transform: rotate(-45deg) translate(7px, -8px);
+}
+
+/* ===== Мобильная версия ===== */
+@media (max-width: 767px) {
+    .nav-toggle {
+        display: block; /* Показываем кнопку на мобильных */
+    }
+
+    .nav-list {
+        /* Скрываем меню за правым краем экрана */
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: #f8f9fa;
+        flex-direction: column;
+        padding: 80px 20px 20px;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        overflow-y: auto;
+        margin: 0;
+    }
+
+    .nav-list.active {
+        /* Когда добавляем класс .active, меню выезжает */
+        right: 0;
+    }
+
+    .nav-list__item {
+        margin: 0 0 1rem 0;
+    }
+}
