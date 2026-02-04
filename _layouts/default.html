@@ -15,7 +15,37 @@
 		{% include footer.html %}
 	</div>
 {% include code.html %}
-
+<script>
+// Бургер-меню
+document.addEventListener('DOMContentLoaded', function() {
+    const toggle = document.getElementById('navToggle');
+    const menu = document.getElementById('navMenu');
+    
+    if (toggle && menu) {
+        toggle.addEventListener('click', function() {
+            // Переключаем видимость меню
+            menu.classList.toggle('active');
+            
+            // Меняем иконку на крестик
+            this.classList.toggle('active');
+            
+            // Меняем текст для доступности
+            const isOpen = menu.classList.contains('active');
+            this.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
+        });
+        
+        // Закрываем меню при клике на ссылку
+        const links = menu.querySelectorAll('.blog-nav-item');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.remove('active');
+                toggle.classList.remove('active');
+                toggle.setAttribute('aria-label', 'Открыть меню');
+            });
+        });
+    }
+});
+</script>
 </body>
 
 </html>        

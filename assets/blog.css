@@ -313,3 +313,61 @@ nav.soc ul {
 	padding-left:0px;
 }
 
+/* Стили для кнопки-бургера */
+.blog-nav-toggle {
+    display: none; /* Скрыта на десктопе */
+    background: transparent;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px 10px;
+    cursor: pointer;
+    float: right;
+    margin-top: -50px; /* Подстройте под вашу шапку */
+}
+
+.blog-nav-toggle-icon {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #333;
+    position: relative;
+}
+
+.blog-nav-toggle-icon::before,
+.blog-nav-toggle-icon::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    left: 0;
+}
+
+.blog-nav-toggle-icon::before { top: -6px; }
+.blog-nav-toggle-icon::after { top: 6px; }
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+    .blog-nav-toggle {
+        display: block; /* Показываем кнопку */
+        z-index: 1000;
+    }
+    
+    .blog-nav-menu {
+        display: none; /* Скрываем меню по умолчанию */
+        width: 100%;
+        text-align: center;
+        padding-top: 10px;
+        clear: both;
+    }
+    
+    .blog-nav-menu.active {
+        display: block; /* Показываем при активации */
+    }
+    
+    .blog-nav-item {
+        display: block;
+        padding: 10px;
+        border-top: 1px solid #eee;
+    }
+}
