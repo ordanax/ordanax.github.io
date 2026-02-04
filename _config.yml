@@ -16,6 +16,7 @@ markdown: kramdown
 gems:
 - jekyll-paginate
 - jekyll-sitemap
+- jekyll-feed
 paginate: 7
 exclude:
 - Gemfile
