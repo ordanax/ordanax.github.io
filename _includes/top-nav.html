@@ -1,7 +1,20 @@
-<nav class="navbar navbar-expand-lg blog-nav">
-	<a class="blog-nav-item" href="/">Главная</a>
-	<a class="blog-nav-item" href="/archlinux/">Об Arch Linux</a>
-	<a class="blog-nav-item" href="/checklist/">Чеклист</a>
-	<a class="blog-nav-item" href="/donat/">Поддержать</a>
-	<a class="blog-nav-item" href="/about/">О сайте</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light blog-nav">
+  <!-- Логотип или название сайта (опционально) -->
+  <a class="navbar-brand" href="/">{{ site.title }}</a>
+
+  <!-- Кнопка-бургер для мобильных (появляется на узких экранах) -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Основное меню (скрывается на мобильных в этот контейнер) -->
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link blog-nav-item" href="/">Главная</a>
+      <a class="nav-item nav-link blog-nav-item" href="/archlinux/">Об Arch Linux</a>
+      <a class="nav-item nav-link blog-nav-item" href="/checklist/">Чеклист</a>
+      <a class="nav-item nav-link blog-nav-item" href="/donat/">Поддержать</a>
+      <a class="nav-item nav-link blog-nav-item" href="/about/">О сайте</a>
+    </div>
+  </div>
 </nav>
