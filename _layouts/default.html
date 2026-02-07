@@ -7,8 +7,16 @@
 			{% include header.html %}
 			{% include top-nav.html %}
 		<div class="row">
-			<div class="col-md-9 blog-main">{{ content }}</div>
-			<div class="col-md-3 blog-sidebar">{% include sidebar.html %}</div>
+			<div class="col-12 blog-main">{{ content }}</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<div class="telegram-block-below">
+					<h4>Linux чат в Telegram</h4>
+					<p>Есть вопрос или проблема? Задай вопрос в нашем Телеграм Linux чате</p>
+					<noindex><a href="https://t.me/linux4at"><img src="{{ site.url }}/img/telegram.png" onclick="ym(52189879, 'reachGoal', 'TELEGRAM'); return true;" rel="nofollow" title="Присоедениться" alt="Линукс чат в телеграм"></a></noindex>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="blog-footer">
@@ -19,4 +27,4 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>
 
-</html>        
+</html>

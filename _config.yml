@@ -18,6 +18,9 @@ gems:
 - jekyll-sitemap
 - jekyll-feed
 paginate: 7
+# Комментарии через Utterances (хранятся в GitHub Issues)
+github_repo: ordanax/ordanax.github.io
+
 exclude:
 - Gemfile
 - Gemfile.lock
