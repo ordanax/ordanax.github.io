@@ -103,9 +103,64 @@ h6, .h6 {
   display: inline-block;
   padding: 10px;
   font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
 }
 .blog-nav-item:hover,
 .blog-nav-item:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Кнопка «бургер» для мобильных */
+.blog-nav-toggler {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  background: transparent;
+}
+.blog-nav-toggler:hover,
+.blog-nav-toggler:focus {
+  border-color: #fff;
+  outline: none;
+}
+.blog-nav-toggler-icon {
+  display: inline-block;
+  width: 1.25em;
+  height: 1.25em;
+  vertical-align: middle;
+  background: no-repeat center center;
+  background-size: 100% 100%;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* На мобильных: кнопка слева, меню раскрывается под ней */
+@media (max-width: 991.98px) {
+  .blog-nav {
+    flex-wrap: wrap;
+    padding: 0.5rem 0;
+  }
+  .blog-nav .navbar-collapse {
+    width: 100%;
+    margin-top: 0.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 0.5rem 0;
+  }
+  .blog-nav .blog-nav-item {
+    display: block;
+    padding: 10px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .blog-nav .blog-nav-item:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .blog-nav-toggler {
+    display: none;
+  }
 }
 
 /* Active state gets a caret at the bottom */
