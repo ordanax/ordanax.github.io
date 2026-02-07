@@ -1,0 +1,70 @@
+{% if site.github_repo %}
+<section class="comments-section" id="comments-section">
+  <h3>Комментарии</h3>
+  <div id="comments-captcha" class="comments-captcha">
+    <p>Защита от спама: ответьте на вопрос по Arch Linux.</p>
+    <p><strong>Какой пакетный менеджер в Arch Linux?</strong> (одно слово)</p>
+    <input type="text" id="comments-captcha-answer" placeholder="Ответ" autocomplete="off" maxlength="20" />
+    <button type="button" id="comments-captcha-submit">Показать комментарии</button>
+    <p id="comments-captcha-error" class="comments-captcha-error" style="display:none; color:#e74c3c;">Неверный ответ. Подсказка: название из трёх букв и суффикса.</p>
+  </div>
+  <div id="comments-utterances" class="comments-utterances" style="display:none;">
+    <p class="comments-note">Комментарии сохраняются в репозитории сайта на GitHub. После проверки ответа вы можете оставить комментарий ниже.</p>
+    <div id="utterances-root"></div>
+  </div>
+</section>
+<script>
+(function() {
+  var correctAnswer = 'pacman';
+  var captchaEl = document.getElementById('comments-captcha');
+  var answerEl = document.getElementById('comments-captcha-answer');
+  var submitBtn = document.getElementById('comments-captcha-submit');
+  var errorEl = document.getElementById('comments-captcha-error');
+  var utterancesWrap = document.getElementById('comments-utterances');
+  var storageKey = 'comments_captcha_passed';
+
+  function showUtterances() {
+    if (document.getElementById('utterances-script-loaded')) return;
+    captchaEl.style.display = 'none';
+    utterancesWrap.style.display = 'block';
+    var s = document.createElement('script');
+    s.id = 'utterances-script-loaded';
+    s.src = 'https://utteranc.es/client.js';
+    s.setAttribute('repo', '{{ site.github_repo }}');
+    s.setAttribute('issue-term', 'pathname');
+    s.setAttribute('theme', 'github-dark');
+    s.setAttribute('crossorigin', 'anonymous');
+    s.setAttribute('async', '');
+    document.getElementById('utterances-root').appendChild(s);
+    try { localStorage.setItem(storageKey, '1'); } catch (e) {}
+  }
+
+  if (typeof localStorage !== 'undefined' && localStorage.getItem(storageKey)) {
+    showUtterances();
+    return;
+  }
+
+  submitBtn.addEventListener('click', function() {
+    var val = (answerEl.value || '').trim().toLowerCase();
+    if (val === correctAnswer) {
+      errorEl.style.display = 'none';
+      showUtterances();
+    } else {
+      errorEl.style.display = 'block';
+    }
+  });
+  answerEl.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') submitBtn.click();
+  });
+})();
+</script>
+<style>
+.comments-section { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #444; }
+.comments-captcha { padding: 1rem 0; }
+.comments-captcha input { padding: 6px 10px; margin-right: 8px; color: #333; border-radius: 4px; }
+.comments-captcha button { padding: 6px 14px; background: #428bca; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
+.comments-captcha button:hover { background: #5eb0ff; }
+.comments-captcha-error { margin-top: 8px; }
+.comments-note { font-size: 0.9em; color: #999; margin-bottom: 1rem; }
+</style>
+{% endif %}
