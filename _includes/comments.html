@@ -1,70 +1,157 @@
+{% comment %}
+  Комментарии на GitHub Pages без сторонних сервисов:
+  каждый комментарий = issue в репозитории с телом "Page: URL\n\nИмя: ...\n\nКомментарий: ..."
+  Загрузка через GitHub API, отправка = ссылка на создание issue.
+{% endcomment %}
 {% if site.github_repo %}
-<section class="comments-section" id="comments-section">
+<section class="comments-section" id="comments-section" data-page-path="{{ page.url }}">
   <h3>Комментарии</h3>
-  <div id="comments-captcha" class="comments-captcha">
-    <p>Защита от спама: ответьте на вопрос по Arch Linux.</p>
-    <p><strong>Какой пакетный менеджер в Arch Linux?</strong> (одно слово)</p>
-    <input type="text" id="comments-captcha-answer" placeholder="Ответ" autocomplete="off" maxlength="20" />
-    <button type="button" id="comments-captcha-submit">Показать комментарии</button>
-    <p id="comments-captcha-error" class="comments-captcha-error" style="display:none; color:#e74c3c;">Неверный ответ. Подсказка: название из трёх букв и суффикса.</p>
-  </div>
-  <div id="comments-utterances" class="comments-utterances" style="display:none;">
-    <p class="comments-note">Комментарии сохраняются в репозитории сайта на GitHub. После проверки ответа вы можете оставить комментарий ниже.</p>
-    <div id="utterances-root"></div>
-  </div>
+
+  <div id="comments-list" class="comments-list">Загрузка…</div>
+
+  <form id="comment-form" class="comment-form">
+    <p><label for="comment-author">Ваше имя <span class="required">*</span></label></p>
+    <input type="text" id="comment-author" name="author" required placeholder="Как к вам обращаться" maxlength="100" />
+
+    <p><label for="comment-text">Комментарий <span class="required">*</span></label></p>
+    <textarea id="comment-text" name="text" required placeholder="Введите ваш комментарий" rows="4"></textarea>
+
+    <p class="comment-captcha">
+      <label>Защита от спама: какой пакетный менеджер в Arch Linux? (одно слово) <span class="required">*</span></label>
+      <input type="text" id="comment-captcha" placeholder="Ответ" autocomplete="off" maxlength="20" />
+    </p>
+
+    <button type="submit" id="comment-submit">Отправить комментарий</button>
+    <p id="comment-submit-error" class="comment-error" style="display:none;"></p>
+    <p class="comment-form-note">Откроется GitHub: создайте новый issue с вашим комментарием (кнопка «Submit new issue»). После отправки обновите эту страницу — комментарий появится ниже.</p>
+  </form>
 </section>
+
 <script>
 (function() {
+  var repo = '{{ site.github_repo }}';
+  var section = document.getElementById('comments-section');
+  var pagePath = (section && section.getAttribute('data-page-path')) || '';
+  var pagePathNorm = pagePath.replace(/\/$/, '') || '/';
   var correctAnswer = 'pacman';
-  var captchaEl = document.getElementById('comments-captcha');
-  var answerEl = document.getElementById('comments-captcha-answer');
-  var submitBtn = document.getElementById('comments-captcha-submit');
-  var errorEl = document.getElementById('comments-captcha-error');
-  var utterancesWrap = document.getElementById('comments-utterances');
-  var storageKey = 'comments_captcha_passed';
 
-  function showUtterances() {
-    if (document.getElementById('utterances-script-loaded')) return;
-    captchaEl.style.display = 'none';
-    utterancesWrap.style.display = 'block';
-    var s = document.createElement('script');
-    s.id = 'utterances-script-loaded';
-    s.src = 'https://utteranc.es/client.js';
-    s.setAttribute('repo', '{{ site.github_repo }}');
-    s.setAttribute('issue-term', 'pathname');
-    s.setAttribute('theme', 'github-dark');
-    s.setAttribute('crossorigin', 'anonymous');
-    s.setAttribute('async', '');
-    document.getElementById('utterances-root').appendChild(s);
-    try { localStorage.setItem(storageKey, '1'); } catch (e) {}
+  var commentsList = document.getElementById('comments-list');
+  var form = document.getElementById('comment-form');
+  var authorInput = document.getElementById('comment-author');
+  var textInput = document.getElementById('comment-text');
+  var captchaInput = document.getElementById('comment-captcha');
+  var submitError = document.getElementById('comment-submit-error');
+
+  function escapeHtml(s) {
+    if (!s) return '';
+    var div = document.createElement('div');
+    div.textContent = s;
+    return div.innerHTML;
   }
 
-  if (typeof localStorage !== 'undefined' && localStorage.getItem(storageKey)) {
-    showUtterances();
-    return;
+  function loadComments() {
+    var url = 'https://api.github.com/repos/' + repo + '/issues?state=all&per_page=100&sort=created';
+    fetch(url, { headers: { 'Accept': 'application/vnd.github.v3+json' } })
+      .then(function(r) {
+        if (!r.ok) throw new Error('API ' + r.status);
+        return r.json();
+      })
+      .then(function(issues) {
+        var prefix1 = 'Page: ' + pagePathNorm;
+        var prefix2 = 'Page: ' + pagePathNorm + '\n';
+        var prefix3 = 'Page: ' + pagePath + '\n';
+        var forThisPage = (issues || []).filter(function(issue) {
+          if (!issue.body || !issue.user) return false;
+          var b = issue.body.trim();
+          return b.indexOf(prefix1) === 0 || b.indexOf(prefix2) === 0 || b.indexOf(prefix3) === 0 ||
+                 (pagePath !== pagePathNorm && b.indexOf('Page: ' + pagePath) === 0);
+        });
+        forThisPage.sort(function(a, b) {
+          return new Date(a.created_at) - new Date(b.created_at);
+        });
+
+        if (forThisPage.length === 0) {
+          commentsList.innerHTML = '<p class="comments-empty">Пока нет комментариев. Будьте первым!</p>';
+          return;
+        }
+
+        var html = '<p class="comments-count">Комментариев: ' + forThisPage.length + '</p>';
+        forThisPage.forEach(function(issue) {
+          var body = issue.body || '';
+          var name = issue.user.login || 'Гость';
+          var commentText = body;
+          var m = body.match(/Имя:\s*([^\n]+)/);
+          if (m) name = m[1].trim();
+          var cm = body.indexOf('Комментарий:');
+          if (cm !== -1) {
+            commentText = body.slice(cm + 12).trim();
+          } else if (body.indexOf('Page:') === 0) {
+            var lines = body.split('\n').filter(function(l) {
+              return l.indexOf('Page:') !== 0 && l.indexOf('Имя:') !== 0 && l.trim() !== '';
+            });
+            commentText = lines.join('\n').trim() || body;
+          }
+          var date = new Date(issue.created_at);
+          var dateStr = date.toLocaleDateString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' });
+          html += '<div class="comment-item">';
+          html += '<strong class="comment-author">' + escapeHtml(name) + '</strong>';
+          html += ' <span class="comment-date">' + dateStr + '</span>';
+          html += '<div class="comment-body">' + escapeHtml(commentText).replace(/\n/g, '<br>') + '</div>';
+          html += '</div>';
+        });
+        commentsList.innerHTML = html;
+      })
+      .catch(function(err) {
+        commentsList.innerHTML = '<p class="comments-empty">Не удалось загрузить комментарии. Убедитесь, что в репозитории включены Issues (Settings → General → Issues).</p>';
+      });
   }
 
-  submitBtn.addEventListener('click', function() {
-    var val = (answerEl.value || '').trim().toLowerCase();
-    if (val === correctAnswer) {
-      errorEl.style.display = 'none';
-      showUtterances();
-    } else {
-      errorEl.style.display = 'block';
+  loadComments();
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    submitError.style.display = 'none';
+    var name = (authorInput.value || '').trim();
+    var text = (textInput.value || '').trim();
+    var captcha = (captchaInput.value || '').trim().toLowerCase();
+    if (!name || !text) {
+      submitError.textContent = 'Заполните имя и комментарий.';
+      submitError.style.display = 'block';
+      return;
     }
-  });
-  answerEl.addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') submitBtn.click();
+    if (captcha !== correctAnswer) {
+      submitError.textContent = 'Неверный ответ на вопрос (подсказка: пакетный менеджер Arch — одно слово).';
+      submitError.style.display = 'block';
+      return;
+    }
+    var pathForIssue = window.location.pathname.replace(/\/$/, '') || '/';
+    var body = 'Page: ' + pathForIssue + '\n\nИмя: ' + name + '\n\nКомментарий:\n' + text;
+    var title = 'Комментарий от ' + name.substring(0, 50);
+    var url = 'https://github.com/' + repo + '/issues/new?title=' + encodeURIComponent(title) + '&body=' + encodeURIComponent(body);
+    window.open(url, '_blank', 'noopener');
+    textInput.value = '';
+    captchaInput.value = '';
   });
 })();
 </script>
 <style>
 .comments-section { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #444; }
-.comments-captcha { padding: 1rem 0; }
-.comments-captcha input { padding: 6px 10px; margin-right: 8px; color: #333; border-radius: 4px; }
-.comments-captcha button { padding: 6px 14px; background: #428bca; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
-.comments-captcha button:hover { background: #5eb0ff; }
-.comments-captcha-error { margin-top: 8px; }
-.comments-note { font-size: 0.9em; color: #999; margin-bottom: 1rem; }
+.comments-section h3 { margin-bottom: 1rem; }
+.comments-list { margin-bottom: 2rem; min-height: 2em; }
+.comments-empty, .comments-count { color: #999; font-size: 0.95em; margin-bottom: 1rem; }
+.comment-item { margin-bottom: 1.2rem; padding: 12px; background: #212529; border-radius: 4px; }
+.comment-author { color: #428bca; }
+.comment-date { color: #999; font-size: 0.85em; margin-left: 8px; }
+.comment-body { margin-top: 8px; color: #ddd; line-height: 1.5; white-space: pre-wrap; }
+.comment-form label { display: block; margin-bottom: 4px; color: #ccc; }
+.comment-form .required { color: #e74c3c; }
+.comment-form input[type="text"], .comment-form textarea { width: 100%; max-width: 500px; padding: 8px 12px; color: #333; background: #fff; border: 1px solid #555; border-radius: 4px; font-family: inherit; box-sizing: border-box; }
+.comment-form textarea { resize: vertical; min-height: 80px; }
+.comment-captcha { margin-top: 12px; }
+.comment-captcha input { width: 180px; }
+.comment-form button[type="submit"] { display: block; margin-top: 12px; padding: 10px 20px; background: #428bca; color: #fff; border: none; border-radius: 4px; cursor: pointer; font-size: 1em; }
+.comment-form button[type="submit"]:hover { background: #5eb0ff; }
+.comment-error { color: #e74c3c; margin-top: 8px; }
+.comment-form-note { margin-top: 12px; font-size: 0.9em; color: #999; max-width: 500px; }
 </style>
 {% endif %}
