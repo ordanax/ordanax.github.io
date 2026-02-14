@@ -1,18 +1,18 @@
 ---
 layout: post
 title: Зависания при 100% CPU — пошаговая инструкция
-description: Мой опыт использования i3wm и его преимущества
-date: 2026-02-14
+description: Решение проблем с зависаниями системы при высокой нагрузке на процессор
+date: 2026-02-14 12:00:00 +0500
 permalink: /high-cpu-freeze-fix
 categories: 
-- wm
-- configs
-- i3wm
-- productivity
+  - linux
+  - performance
+  - troubleshooting
 tags:
-- cpu
-- freeze
-- fix
+  - cpu
+  - freeze
+  - fix
+  - optimization
 edit: true
 ---
 
