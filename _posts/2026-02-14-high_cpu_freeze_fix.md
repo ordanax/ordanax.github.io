@@ -15,12 +15,7 @@ tags:
   - optimization
 edit: true
 ---
-
-# Зависания при 100% CPU — пошаговая инструкция
-
-Формат: **Проблема** → **Решение** (что сделать по шагам).
-
----
+![Установка Archlinux 2019 за 15 минут](https://ordanax.github.io/img/skript-ustanovki-archlinux.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Зависания при 100% CPU — пошаговая инструкция. Решение проблем с зависаниями системы при высокой нагрузке на процессор.
 
 ## Шаг 1. Меньше использовать swap (снизить I/O при нехватке памяти)
 
@@ -28,10 +23,23 @@ edit: true
 
 **Решение:**
 
-1. Открой терминал.
-2. Скопируй конфиг в систему:
+1. Открой файл через nano или другой редактор  /etc/sysctl.d/.
+2. Скопируй конфиг:
    ```bash
-   sudo cp /home/ordanax/YandexDisk/AI_CURSOR/arch-freeze-fix/etc/sysctl.d/99-arch-freeze-mitigation.conf /etc/sysctl.d/
+# Снижение риска зависаний при 100% CPU (Arch Linux)
+# Копировать в /etc/sysctl.d/ и выполнить: sudo sysctl --system
+
+# Реже использовать swap — меньше I/O при нехватке памяти, меньше «подвисаний»
+vm.swappiness = 10
+
+# Меньше грязных страниц перед сбросом на диск — меньше резких всплесков I/O
+vm.dirty_ratio = 20
+vm.dirty_background_ratio = 5
+
+# Отключить autogroup: планировщик не будет отдавать все ядра одной группе (например одному make)
+# Может улучшить отзывчивость десктопа при тяжёлой фоновой задаче
+kernel.sched_autogroup_enabled = 0
+
    ```
 3. Примени настройки:
    ```bash
