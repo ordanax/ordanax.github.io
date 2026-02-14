@@ -2,8 +2,8 @@
 layout: post
 title: Зависания при 100% CPU — пошаговая инструкция
 description: Решение проблем с зависаниями системы при высокой нагрузке на процессор
-date: 2026-02-14 12:00:00 +0500
-permalink: /high-cpu-freeze-fix
+date: 2026-02-14 12:00:00 +0300
+permalink: /high_cpu_freeze_fix.
 categories: 
   - linux
   - performance
