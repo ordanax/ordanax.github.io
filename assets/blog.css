@@ -47,6 +47,36 @@ h6, .h6 {
     height: auto;
 }
 
+/* Автоматическое превью для первой картинки в посте */
+.blog-post img:first-of-type,
+.blog-main img:first-of-type {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* Обтекание текста - следующие элементы обтекают картинку */
+.blog-post p,
+.blog-main p {
+    overflow: hidden;
+}
+
+/* Очистка float перед заголовками */
+.blog-post h1,
+.blog-post h2,
+.blog-post h3,
+.blog-main h1,
+.blog-main h2,
+.blog-main h3 {
+    clear: both;
+}
+
 .blog-post-tags span {
     display: inline-block;
     height: 25px;
