@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Archinstall Config Generator v2</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #1a1a2e;
+            color: #eee;
+        }
+        h1 { color: #1793d1; }
+        .section {
+            background: #16213e;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #aaa;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            background: #0f3460;
+            border: 1px solid #e94560;
+            color: #fff;
+            border-radius: 4px;
+        }
+        button {
+            background: #e94560;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover { background: #c73659; }
+        .checkbox-group {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+        .checkbox-group input {
+            width: auto;
+            margin: 0;
+        }
+        .preset-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .preset-btn {
+            background: #0f3460;
+            padding: 10px 20px;
+            font-size: 14px;
+        }
+        .preset-btn:hover { background: #1793d1; }
+        #output {
+            background: #0a0a0a;
+            color: #0f0;
+            padding: 20px;
+            border-radius: 4px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            word-break: break-all;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        .hint {
+            font-size: 12px;
+            color: #888;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+        .download-btn {
+            display: block;
+            margin: 30px auto;
+            background: #1793d1;
+            font-size: 18px;
+            padding: 15px 50px;
+        }
+        .download-btn:hover {
+            background: #0f3460;
+        }
+        @media (max-width: 600px) {
+            .grid-2 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Archinstall Config Generator</h1>
+    
+    <div class="section">
+        <h3>Быстрые пресеты</h3>
+        <div class="preset-buttons">
+            <button class="preset-btn" onclick="loadPreset('minimal')">Минимал</button>
+            <button class="preset-btn" onclick="loadPreset('desktop')">Desktop (i3wm)</button>
+            <button class="preset-btn" onclick="loadPreset('encrypted')">Encrypted + i3wm + btrfs</button>
+            <button class="preset-btn" onclick="loadPreset('server')">Server</button>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Тип накопителя</h3>
+        <div class="preset-buttons" style="margin-bottom: 15px;">
+            <button class="preset-btn" id="btn_ssd" onclick="applyDiskType('ssd')" style="background: #0f3460;">SSD</button>
+            <button class="preset-btn" id="btn_hdd" onclick="applyDiskType('hdd')" style="background: #0f3460;">HDD</button>
+        </div>
+        <p class="hint" id="disk-hint" style="background: #0f3460; padding: 10px; border-left: 3px solid #1793d1;">
+            Выберите тип диска для автоматической настройки оптимальных параметров
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>Диск и разметка</h3>
+        <label>Режим разметки</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox" id="multi_disk" onchange="toggleMultiDisk()"> Разные диски для разделов (boot/root/home на разных дисках)</label>
+        </div>
+        <p class="hint" id="multi-disk-hint" style="display: none;">Режим для систем с несколькими дисками. Например: SSD для системы, HDD для данных.</p>
+        
+        <div id="single_disk_fields">
+            <label>Диск (например: /dev/sda или /dev/nvme0n1)</label>
+            <input type="text" id="disk" value="/dev/sda">
+        </div>
+        
+        <div id="multi_disk_fields" style="display: none;">
+            <div class="grid-2">
+                <div>
+                    <label>Диск для boot (EFI)</label>
+                    <input type="text" id="disk_boot" value="/dev/sda">
+                </div>
+                <div>
+                    <label>Диск для root (/)</label>
+                    <input type="text" id="disk_root" value="/dev/nvme0n1">
+                    <p class="hint">SSD для системы</p>
+                </div>
+                <div>
+                    <label>Диск для swap</label>
+                    <input type="text" id="disk_swap" value="/dev/nvme0n1">
+                </div>
+                <div id="disk_home_field" style="display: none;">
+                    <label>Диск для /home</label>
+                    <input type="text" id="disk_home" value="/dev/sdb">
+                    <p class="hint">HDD для данных или второй SSD</p>
+                </div>
+            </div>
+        </div>
+        
+        <label>Схема разметки</label>
+        <select id="layout" onchange="toggleLayout()">
+            <option value="simple">Всё в одном разделе (рекомендуется для новичков)</option>
+            <option value="home">С отдельным /home (для опытных)</option>
+        </select>
+        <p class="hint">Совет: Для большинства случаев используйте "Всё в одном". Отдельный /home усложняет переустановку без потери данных.</p>
+        
+        <label>Тип накопителя выбран: <span id="selected_disk_type" style="color: #1793d1; font-weight: bold;">Не выбран</span></label>
+        <p class="hint" style="margin-top: 8px; line-height: 1.6;">
+            <strong>SSD:</strong> swap отключён, ZRAM включён, Btrfs для TRIM<br>
+            <strong>HDD:</strong> swap 4ГБ, ZRAM отключён, Ext4 стабильнее
+        </p>
+        
+        <div class="checkbox-group">
+            <label><input type="checkbox" id="zram"> ZRAM (вместо swap для SSD)</label>
+            <label><input type="checkbox" id="encryption" checked> LUKS шифрование</label>
+            <label><input type="checkbox" id="btrfs" checked> Btrfs</label>
+            <label><input type="checkbox" id="swap" checked> Swap раздел</label>
+        </div>
+        
+        <div class="grid-2">
+            <div>
+                <label>Размер boot (МБ)</label>
+                <input type="number" id="boot_size" value="512">
+                <p class="hint">Рекомендуется: 512 МБ для EFI</p>
+            </div>
+            <div>
+                <label>Размер swap (ГБ)</label>
+                <input type="number" id="swap_size" value="4">
+                <p class="hint">Рекомендация: = RAM для гибернации, 0 = без swap (для SSD используйте 0 + zram)</p>
+            </div>
+            <div id="root_size_field">
+                <label>Размер root (ГБ, 0 = всё остальное)</label>
+                <input type="number" id="root_size" value="30">
+                <p class="hint">Минимум: 20 ГБ (для Desktop), 5 ГБ (минимал)</p>
+            </div>
+            <div id="home_size_field" style="display: none;">
+                <label>Размер /home (ГБ, 0 = всё остальное)</label>
+                <input type="number" id="home_size" value="0">
+                <p class="hint">0 = использует всё оставшееся место на диске</p>
+            </div>
+        </div>
+        
+        <button class="rec-btn" onclick="setRecommendedSizes()" style="margin-top: 10px;">Применить рекомендуемые размеры</button>
+    </div>
+
+    <div class="section">
+        <h3>Пользователь и система</h3>
+        <div class="grid-2">
+            <div>
+                <label>Имя пользователя</label>
+                <input type="text" id="username" value="user">
+            </div>
+            <div>
+                <label>Пароль пользователя</label>
+                <input type="text" id="password" value="password123">
+            </div>
+            <div>
+                <label>Пароль root</label>
+                <input type="text" id="root_password" value="root123">
+            </div>
+            <div id="luks_password_field">
+                <label>Пароль шифрования LUKS</label>
+                <input type="text" id="encryption_password" value="encrypt123">
+            </div>
+            <div>
+                <label>Имя хоста</label>
+                <input type="text" id="hostname" value="archlinux">
+            </div>
+            <div>
+                <label>Язык</label>
+                <select id="locale">
+                    <option value="ru_RU">Русский</option>
+                    <option value="en_US">English</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Профиль (DE/WM)</h3>
+        <select id="profile">
+            <option value="">Минимал (без DE)</option>
+            <option value="i3">i3-wm</option>
+            <option value="gnome">GNOME</option>
+            <option value="kde">KDE Plasma</option>
+            <option value="xfce">XFCE</option>
+            <option value="sway">Sway</option>
+        </select>
+        
+        <label>Логин-менеджер (Display Manager)</label>
+        <select id="greeter_select" onchange="updateGreeterRecommendation()">
+            <option value="sddm">SDDM (рекомендуется для KDE/Qt)</option>
+            <option value="gdm">GDM (для GNOME)</option>
+            <option value="lightdm">LightDM (лёгкий, универсальный)</option>
+            <option value="">Без логин-менеджера (автологин)</option>
+        </select>
+        <p class="hint" id="greeter-hint">SDDM лучше всего подходит для KDE Plasma и других Qt-based DE</p>
+        
+        <div class="checkbox-group">
+            <label><input type="checkbox" id="nvidia" checked> NVIDIA драйвер</label>
+            <label><input type="checkbox" id="pipewire" checked> PipeWire (аудио)</label>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Зеркала (Mirrors)</h3>
+        <label>Рекомендованные зеркала (проверены через reflector)</label>
+        <select id="mirror_select">
+            <option value="recommended" selected>✓ Рекомендованные (Berlin, Frankfurt, Taipei, Johannesburg, LA)</option>
+            <option value="berlin">Berlin (Germany)</option>
+            <option value="frankfurt">Frankfurt (Germany)</option>
+            <option value="taipei">Taipei (Taiwan)</option>
+            <option value="johannesburg">Johannesburg (South Africa)</option>
+            <option value="losangeles">Los Angeles (USA)</option>
+            <option value="worldwide">Worldwide (Rackspace) - fallback</option>
+            <option value="custom">Свои зеркала (введи ниже)</option>
+        </select>
+        <p class="hint" id="mirror-hint">Выбраны твои зеркала из /etc/pacman.d/mirrorlist</p>
+        
+        <div id="custom_mirror_field" style="display: none; margin-top: 10px;">
+            <label>Свои зеркала (по одному на строку)</label>
+            <textarea id="custom_mirrors" rows="3" placeholder="Server = https://..." style="width: 100%; background: #16213e; color: #eee; border: 1px solid #0f3460; padding: 10px; border-radius: 4px; font-family: monospace;"></textarea>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Дополнительно</h3>
+        <div class="checkbox-group">
+            <label><input type="checkbox" id="wifi" checked> WiFi поддержка (iwd)</label>
+            <label><input type="checkbox" id="bluetooth"> Bluetooth</label>
+            <label><input type="checkbox" id="aur" checked> AUR helper (yay)</label>
+            <label><input type="checkbox" id="zsh" checked> Zsh + oh-my-zsh</label>
+            <label><input type="checkbox" id="ssh"> SSH сервер</label>
+            <label><input type="checkbox" id="firewall" checked> Firewall (ufw)</label>
+        </div>
+        
+        <label>Дополнительные пакеты (через пробел)</label>
+        <input type="text" id="extra_packages" value="firefox neovim htop">
+    </div>
+
+    <button class="download-btn" onclick="downloadAllConfigs()">Скачать конфигурацию</button>
+    <p class="hint" style="text-align: center; margin-top: -20px; margin-bottom: 30px;">Будут скачаны 3 файла: JSON конфиги + install.sh скрипт</p>
+
+    <div class="section" style="margin-top: 20px;">
+        <h3>Результат (JSON)</h3>
+        <div id="output"></div>
+    </div>
+
+    <div class="section" style="margin-top: 20px;">
+        <h3>Использование</h3>
+        <p><strong>Рекомендация:</strong> Используй <a href="https://ventoy.net" target="_blank" style="color: #1793d1;">Ventoy</a> для создания загрузочной флешки — тогда можно записывать файлы на ту же флешку</p>
+        <p><strong>1.</strong> Скачай все 3 файла: user_configuration.json, user_credentials.json и install.sh</p>
+        <p><strong>2.</strong> Скопируй все файлы на флешку с Arch ISO</p>
+        <p><strong>3.</strong> Загрузись с Arch ISO, найди флешку и запусти:</p>
+        <code style="background: #0a0a0a; padding: 10px; display: block; border-radius: 4px; margin: 10px 0;">
+chmod +x install.sh && ./install.sh
+        </code>
+        <p style="color: #1793d1; margin-top: 10px;">Скрипт сам найдёт все файлы и запустит установку</p>
+    </div>
+
+    <script>
+        const presets = {
+            minimal: {
+                disk: '/dev/sda',
+                encryption: false,
+                btrfs: false,
+                swap: false,
+                swap_size: 0,
+                profile: '',
+                extra_packages: 'vim htop nano wget curl',
+            },
+            desktop: {
+                disk: '/dev/sda',
+                encryption: false,
+                btrfs: true,
+                swap: true,
+                swap_size: 4,
+                profile: 'i3',
+                extra_packages: 'firefox neovim alacritty dmenu picom iwd wireless_tools',
+            },
+            encrypted: {
+                disk: '/dev/sda',
+                encryption: true,
+                btrfs: true,
+                swap: true,
+                swap_size: 4,
+                profile: 'i3',
+                greeter: '',
+                extra_packages: 'firefox neovim alacritty dmenu picom keepassxc iwd wireless_tools',
+            },
+            server: {
+                disk: '/dev/sda',
+                encryption: false,
+                btrfs: false,
+                swap: true,
+                swap_size: 2,
+                profile: '',
+                ssh: true,
+                extra_packages: 'vim htop docker nginx'
+            }
+        };
+
+        function loadPreset(name) {
+            const p = presets[name];
+            document.getElementById('disk').value = p.disk;
+            document.getElementById('encryption').checked = p.encryption;
+            document.getElementById('btrfs').checked = p.btrfs;
+            document.getElementById('swap').checked = p.swap;
+            document.getElementById('swap_size').value = p.swap_size;
+            document.getElementById('profile').value = p.profile;
+            if (p.greeter !== undefined) {
+                document.getElementById('greeter_select').value = p.greeter;
+                updateGreeterRecommendation();
+            }
+            if (p.extra_packages) document.getElementById('extra_packages').value = p.extra_packages;
+            if (p.wifi !== undefined) document.getElementById('wifi').checked = p.wifi;
+            if (p.bluetooth !== undefined) document.getElementById('bluetooth').checked = p.bluetooth;
+        }
+
+        function setRecommendedSizes() {
+            const bootSizeEl = document.getElementById('boot_size');
+            if (bootSizeEl) bootSizeEl.value = 512;
+            
+            const hasDesktop = document.getElementById('profile').value !== '';
+            document.getElementById('root_size').value = hasDesktop ? 40 : 20;
+            
+            // Check if SSD mode (no swap partition, use zram instead)
+            const isSSD = !document.getElementById('swap').checked && document.getElementById('zram').checked;
+            
+            if (isSSD) {
+                document.getElementById('swap_size').value = 0;
+                alert('Применены рекомендации для SSD:\n- boot: 512 МБ\n- swap: 0 ГБ (используется ZRAM)\n- root: ' + (hasDesktop ? 40 : 20) + ' ГБ');
+            } else {
+                const ramGB = 8; // предполагаем средний объем RAM
+                document.getElementById('swap_size').value = ramGB;
+                alert('Применены рекомендации для HDD:\n- boot: 512 МБ\n- swap: ' + ramGB + ' ГБ (для гибернации)\n- root: ' + (hasDesktop ? 40 : 20) + ' ГБ');
+            }
+            
+            if (document.getElementById('layout').value === 'home') {
+                document.getElementById('home_size').value = 0;
+            }
+        }
+
+        function updateGreeterRecommendation() {
+            const profile = document.getElementById('profile').value;
+            const greeter = document.getElementById('greeter_select').value;
+            const hint = document.getElementById('greeter-hint');
+            
+            const recommendations = {
+                'sddm': 'SDDM лучше всего подходит для KDE Plasma и других Qt-based DE',
+                'gdm': 'GDM интегрируется идеально с GNOME, использует GTK',
+                'lightdm': 'LightDM лёгкий и универсальный, подходит для любого DE',
+                '': 'Без логин-менеджера — система загрузится сразу в tty или используйте автологин'
+            };
+            
+            // Auto-recommend based on DE
+            if (!greeter || greeter === 'sddm') {
+                if (profile === 'gnome') {
+                    hint.innerHTML = '<strong>Рекомендация:</strong> Для GNOME лучше использовать GDM';
+                    hint.style.color = '#e94560';
+                } else if (profile === 'kde') {
+                    hint.innerHTML = '<strong>✓ Отличный выбор:</strong> SDDM идеален для KDE Plasma';
+                    hint.style.color = '#0f0';
+                } else if (profile === 'xfce' || profile === 'i3') {
+                    hint.innerHTML = '<strong>Совет:</strong> Для ' + profile + ' можно использовать LightDM (легче) или SDDM';
+                    hint.style.color = '#1793d1';
+                } else {
+                    hint.innerHTML = recommendations[greeter];
+                    hint.style.color = '#888';
+                }
+            } else {
+                hint.innerHTML = recommendations[greeter];
+                hint.style.color = '#888';
+            }
+        }
+
+        function toggleMultiDisk() {
+            const multiDisk = document.getElementById('multi_disk').checked;
+            document.getElementById('single_disk_fields').style.display = multiDisk ? 'none' : 'block';
+            document.getElementById('multi_disk_fields').style.display = multiDisk ? 'block' : 'none';
+            document.getElementById('multi-disk-hint').style.display = multiDisk ? 'block' : 'none';
+        }
+
+        function toggleMirrorField() {
+            const mirrorSelect = document.getElementById('mirror_select').value;
+            const customField = document.getElementById('custom_mirror_field');
+            const hint = document.getElementById('mirror-hint');
+            
+            if (mirrorSelect === 'custom') {
+                customField.style.display = 'block';
+                hint.textContent = 'Введи свои зеркала в поле ниже';
+            } else if (mirrorSelect === 'recommended') {
+                customField.style.display = 'none';
+                hint.textContent = 'Выбраны твои зеркала из /etc/pacman.d/mirrorlist (Berlin, Frankfurt, Taipei, Johannesburg, LA)';
+            } else {
+                customField.style.display = 'none';
+                const names = {
+                    'berlin': 'Berlin (Germany)',
+                    'frankfurt': 'Frankfurt (Germany)', 
+                    'taipei': 'Taipei (Taiwan)',
+                    'johannesburg': 'Johannesburg (South Africa)',
+                    'losangeles': 'Los Angeles (USA)',
+                    'worldwide': 'Worldwide (Rackspace)'
+                };
+                hint.textContent = 'Выбрано зеркало: ' + names[mirrorSelect];
+            }
+        }
+
+        function toggleLayout() {
+            const layout = document.getElementById('layout').value;
+            const homeField = document.getElementById('home_size_field');
+            const diskHomeField = document.getElementById('disk_home_field');
+            homeField.style.display = layout === 'home' ? 'block' : 'none';
+            if (diskHomeField) diskHomeField.style.display = layout === 'home' ? 'block' : 'none';
+        }
+
+        let currentConfig = null;
+        let currentCreds = null;
+
+        function applyDiskType(type) {
+            const hint = document.getElementById('disk-hint');
+            const selectedSpan = document.getElementById('selected_disk_type');
+            const btnSSD = document.getElementById('btn_ssd');
+            const btnHDD = document.getElementById('btn_hdd');
+            
+            if (type === 'ssd') {
+                // Update UI
+                selectedSpan.textContent = 'SSD';
+                selectedSpan.style.color = '#1793d1';
+                btnSSD.style.background = '#1793d1';
+                btnHDD.style.background = '#0f3460';
+                
+                // SSD settings
+                document.getElementById('swap').checked = false;
+                document.getElementById('swap_size').value = 0;
+                document.getElementById('zram').checked = true;
+                document.getElementById('btrfs').checked = true;
+                
+                hint.innerHTML = '<strong>SSD режим активирован:</strong> Swap отключён, ZRAM включён, Btrfs для TRIM поддержки.';
+                hint.style.borderLeftColor = '#1793d1';
+            } else {
+                // Update UI
+                selectedSpan.textContent = 'HDD';
+                selectedSpan.style.color = '#e94560';
+                btnSSD.style.background = '#0f3460';
+                btnHDD.style.background = '#e94560';
+                
+                // HDD settings
+                document.getElementById('swap').checked = true;
+                document.getElementById('swap_size').value = 4;
+                document.getElementById('zram').checked = false;
+                document.getElementById('btrfs').checked = false;
+                
+                hint.innerHTML = '<strong>HDD режим активирован:</strong> Swap раздел 4 ГБ, ZRAM отключён. Ext4 стабильнее для HDD.';
+                hint.style.borderLeftColor = '#e94560';
+            }
+            generateConfigData();
+        }
+
+        function generateConfigData() {
+            console.log('[DEBUG] generateConfigData started');
+            
+            const multiDisk = document.getElementById('multi_disk');
+            console.log('[DEBUG] multi_disk element:', multiDisk);
+            const encryption = document.getElementById('encryption');
+            console.log('[DEBUG] encryption element:', encryption);
+            const btrfs = document.getElementById('btrfs');
+            console.log('[DEBUG] btrfs element:', btrfs);
+            const swap = document.getElementById('swap');
+            console.log('[DEBUG] swap element:', swap);
+            const swapSizeEl = document.getElementById('swap_size');
+            console.log('[DEBUG] swap_size element:', swapSizeEl);
+            const bootSizeEl = document.getElementById('boot_size');
+            console.log('[DEBUG] boot_size element:', bootSizeEl);
+            const rootSizeEl = document.getElementById('root_size');
+            console.log('[DEBUG] root_size element:', rootSizeEl);
+            const homeSizeEl = document.getElementById('home_size');
+            console.log('[DEBUG] home_size element:', homeSizeEl);
+            const layoutEl = document.getElementById('layout');
+            console.log('[DEBUG] layout element:', layoutEl);
+            const profileEl = document.getElementById('profile');
+            console.log('[DEBUG] profile element:', profileEl);
+            
+            if (!multiDisk) throw new Error('multi_disk element not found');
+            if (!encryption) throw new Error('encryption element not found');
+            if (!btrfs) throw new Error('btrfs element not found');
+            if (!swap) throw new Error('swap element not found');
+            if (!swapSizeEl) throw new Error('swap_size element not found');
+            if (!rootSizeEl) throw new Error('root_size element not found');
+            if (!homeSizeEl) throw new Error('home_size element not found');
+            if (!layoutEl) throw new Error('layout element not found');
+            if (!profileEl) throw new Error('profile element not found');
+            
+            const multiDiskValue = multiDisk.checked;
+            const encryptionValue = encryption.checked;
+            const btrfsValue = btrfs.checked;
+            const swapValue = swap.checked;
+            const swapSize = parseInt(swapSizeEl.value);
+            const bootSize = bootSizeEl ? parseInt(bootSizeEl.value) : 512;
+            const rootSize = parseInt(rootSizeEl.value);
+            const homeSize = parseInt(homeSizeEl.value);
+            const layout = layoutEl.value;
+            const profile = profileEl.value;
+            const fs = btrfsValue ? 'btrfs' : 'ext4';
+            
+            // Get mirror configuration
+            const mirrorSelect = document.getElementById('mirror_select');
+            const customMirrors = document.getElementById('custom_mirrors');
+            let mirrorUrls = [];
+            
+            if (mirrorSelect && mirrorSelect.value === 'custom' && customMirrors && customMirrors.value.trim()) {
+                // Parse custom mirrors from textarea
+                mirrorUrls = customMirrors.value.trim().split('\n').filter(line => line.trim());
+            } else {
+                // Use predefined mirrors
+                const mirrors = {
+                    'recommended': [
+                        'https://berlin.mirror.pkgbuild.com/$repo/os/$arch',
+                        'https://frankfurt.mirror.pkgbuild.com/$repo/os/$arch',
+                        'https://taipei.mirror.pkgbuild.com/$repo/os/$arch',
+                        'https://johannesburg.mirror.pkgbuild.com/$repo/os/$arch',
+                        'https://losangeles.mirror.pkgbuild.com/$repo/os/$arch'
+                    ],
+                    'berlin': ['https://berlin.mirror.pkgbuild.com/$repo/os/$arch'],
+                    'frankfurt': ['https://frankfurt.mirror.pkgbuild.com/$repo/os/$arch'],
+                    'taipei': ['https://taipei.mirror.pkgbuild.com/$repo/os/$arch'],
+                    'johannesburg': ['https://johannesburg.mirror.pkgbuild.com/$repo/os/$arch'],
+                    'losangeles': ['https://losangeles.mirror.pkgbuild.com/$repo/os/$arch'],
+                    'worldwide': ['https://mirror.rackspace.com/archlinux/$repo/os/$arch']
+                };
+                const selectedValue = mirrorSelect ? mirrorSelect.value : 'recommended';
+                mirrorUrls = mirrors[selectedValue] || mirrors['recommended'];
+            }
+            
+            console.log('[DEBUG] Selected mirrors:', mirrorUrls);
+            
+            // Disk layout - single disk mode
+            if (!multiDisk) {
+                const disk = document.getElementById('disk').value;
+                const partitions = [
+                    {
+                        type: 'boot',
+                        format: 'fat32',
+                        size: bootSize,
+                        mount: '/boot'
+                    }
+                ];
+                
+                if (swap && swapSize > 0) {
+                    partitions.push({
+                        type: 'swap',
+                        size: swapSize * 1024
+                    });
+                }
+                
+                const rootPartition = {
+                    type: 'root',
+                    format: fs,
+                    mount: '/'
+                };
+                if (rootSize > 0) {
+                    rootPartition.size = rootSize * 1024;
+                }
+                if (encryption) {
+                    rootPartition.encrypted = true;
+                    rootPartition.encryption_type = 'luks2';
+                }
+                partitions.push(rootPartition);
+                
+                if (layout === 'home') {
+                    const homePartition = {
+                        type: 'partition',
+                        format: fs,
+                        mount: '/home'
+                    };
+                    if (homeSize > 0) {
+                        homePartition.size = homeSize * 1024;
+                    }
+                    if (encryption) {
+                        homePartition.encrypted = true;
+                        homePartition.encryption_type = 'luks2';
+                    }
+                    partitions.push(homePartition);
+                }
+                
+                var deviceModifications = [{
+                    disk: disk,
+                    filesystem: fs,
+                    encryption: encryption,
+                    partitions: partitions
+                }];
+            } else {
+                // Multi-disk mode
+                const diskBoot = document.getElementById('disk_boot').value;
+                const diskRoot = document.getElementById('disk_root').value;
+                const diskSwap = document.getElementById('disk_swap').value;
+                const diskHome = document.getElementById('disk_home').value;
+                
+                var deviceModifications = [];
+                
+                // Boot disk
+                const bootPartitions = [{
+                    type: 'boot',
+                    format: 'fat32',
+                    size: bootSize,
+                    mount: '/boot'
+                }];
+                deviceModifications.push({
+                    disk: diskBoot,
+                    filesystem: 'fat32',
+                    encryption: false,
+                    partitions: bootPartitions
+                });
+                
+                // Root disk
+                const rootPartitions = [];
+                if (swap && swapSize > 0 && diskSwap === diskRoot) {
+                    rootPartitions.push({
+                        type: 'swap',
+                        size: swapSize * 1024
+                    });
+                }
+                const rootPart = {
+                    type: 'root',
+                    format: fs,
+                    mount: '/'
+                };
+                if (rootSize > 0) {
+                    rootPart.size = rootSize * 1024;
+                }
+                if (encryption) {
+                    rootPart.encrypted = true;
+                    rootPart.encryption_type = 'luks2';
+                }
+                rootPartitions.push(rootPart);
+                deviceModifications.push({
+                    disk: diskRoot,
+                    filesystem: fs,
+                    encryption: encryption,
+                    partitions: rootPartitions
+                });
+                
+                // Swap on separate disk
+                if (swap && swapSize > 0 && diskSwap !== diskRoot) {
+                    deviceModifications.push({
+                        disk: diskSwap,
+                        filesystem: 'swap',
+                        encryption: false,
+                        partitions: [{
+                            type: 'swap',
+                            size: swapSize * 1024
+                        }]
+                    });
+                }
+                
+                // Home on separate disk
+                if (layout === 'home' && diskHome !== diskRoot) {
+                    const homePartitions = [];
+                    const homePart = {
+                        type: 'partition',
+                        format: fs,
+                        mount: '/home'
+                    };
+                    if (homeSize > 0) {
+                        homePart.size = homeSize * 1024;
+                    }
+                    if (encryption) {
+                        homePart.encrypted = true;
+                        homePart.encryption_type = 'luks2';
+                    }
+                    homePartitions.push(homePart);
+                    deviceModifications.push({
+                        disk: diskHome,
+                        filesystem: fs,
+                        encryption: encryption,
+                        partitions: homePartitions
+                    });
+                } else if (layout === 'home' && diskHome === diskRoot) {
+                    // Home on same disk as root
+                    const homePart = {
+                        type: 'partition',
+                        format: fs,
+                        mount: '/home'
+                    };
+                    if (homeSize > 0) {
+                        homePart.size = homeSize * 1024;
+                    }
+                    if (encryption) {
+                        homePart.encrypted = true;
+                        homePart.encryption_type = 'luks2';
+                    }
+                    deviceModifications[1].partitions.push(homePart);
+                }
+            }
+
+            // Main config
+            const config = {
+                version: "2.6.0",
+                locale_config: {
+                    lang: document.getElementById('locale').value + '.UTF-8',
+                    kb_layout: document.getElementById('locale').value === 'ru_RU' ? 'ru' : 'us'
+                },
+                "archinstall-language": "English",
+                hostname: document.getElementById('hostname').value,
+                mirror_config: {
+                    mirror_regions: { "Selected": mirrorUrls }
+                },
+                network_config: {
+                    type: "nm"
+                },
+                disk_config: {
+                    config_type: "manual_partitioning",
+                    device_modifications: deviceModifications
+                },
+                bootloader: "systemd-bootctl",
+                ucode: "intel-ucode",
+                swap: swap && swapSize > 0,
+                timezone: "Europe/Moscow",
+                ntp: true,
+                additional_packages: document.getElementById('extra_packages').value.split(' ').filter(p => p),
+                profile_config: profile ? {
+                    profile: profile,
+                    gfx_driver: document.getElementById('nvidia').checked ? "Nvidia (open-source module)" : "All open-source",
+                    greeter: document.getElementById('greeter_select').value || null,
+                    packages: []
+                } : null,
+                audio_config: {
+                    audio: document.getElementById('pipewire').checked ? "pipewire" : "none"
+                },
+                services: []
+            };
+
+            // Additional services
+            if (document.getElementById('ssh').checked) {
+                config.services.push('sshd');
+            }
+            if (document.getElementById('firewall').checked) {
+                config.additional_packages.push('ufw');
+                config.services.push('ufw');
+            }
+            if (document.getElementById('wifi').checked) {
+                config.additional_packages.push('iwd', 'wireless_tools');
+            }
+            if (document.getElementById('bluetooth').checked) {
+                config.additional_packages.push('bluez', 'blueman');
+                config.services.push('bluetooth');
+            }
+            if (document.getElementById('zsh').checked) {
+                config.additional_packages.push('zsh');
+            }
+            if (document.getElementById('zram').checked) {
+                config.additional_packages.push('zram-generator');
+                config.services.push('systemd-zram-setup@zram0');
+            }
+
+            const creds = {
+                users: [
+                    {
+                        username: document.getElementById('username').value,
+                        enc_password: document.getElementById('password').value,
+                        sudo: true
+                    }
+                ],
+                root_enc_password: document.getElementById('root_password').value
+            };
+            if (encryption) {
+                creds.encryption_password = document.getElementById('encryption_password').value;
+            }
+
+            currentConfig = config;
+            currentCreds = creds;
+            
+            // Update output display
+            document.getElementById('output').textContent = "=== user_configuration.json ===\n" + 
+                JSON.stringify(config, null, 2) + 
+                "\n\n=== user_credentials.json ===\n" + 
+                JSON.stringify(creds, null, 2);
+                
+            return { config, creds };
+        }
+
+        function generateConfig() {
+            generateConfigData();
+        }
+
+        function downloadAllConfigs() {
+            console.log('[DEBUG] downloadAllConfigs started');
+            
+            try {
+                const data = generateConfigData();
+                console.log('[DEBUG] Config data generated:', data);
+                
+                // Create install.sh script
+                const installScript = `#!/bin/bash
+# Archinstall automated setup script
+# Generated by Archinstall Config Generator
+
+# Find JSON files in current directory
+CONFIG_FILE=$(ls -1 | grep -E '^user_configuration\\.json$' | head -1)
+CREDS_FILE=$(ls -1 | grep -E '^user_credentials\\.json$' | head -1)
+
+if [ -z "$CONFIG_FILE" ]; then
+    echo "Error: user_configuration.json not found in current directory"
+    echo "Please ensure both JSON files are in the same directory as this script"
+    exit 1
+fi
+
+if [ -z "$CREDS_FILE" ]; then
+    echo "Warning: user_credentials.json not found"
+    echo "Installation will proceed but will ask for passwords interactively"
+    echo ""
+    read -p "Continue without credentials file? (y/N): " confirm
+    if [[ ! $confirm =~ ^[Yy]$ ]]; then
+        exit 1
+    fi
+    archinstall --config "./$CONFIG_FILE"
+else
+    echo "Found configuration files:"
+    echo "  Config: $CONFIG_FILE"
+    echo "  Creds:  $CREDS_FILE"
+    echo ""
+    read -p "Start installation? (y/N): " confirm
+    if [[ $confirm =~ ^[Yy]$ ]]; then
+        archinstall --config "./$CONFIG_FILE" --creds "./$CREDS_FILE"
+    fi
+fi
+`;
+                
+                // Create a single combined file with both configs
+                const combinedContent = 
+                    "=== user_configuration.json ===\n" +
+                    JSON.stringify(data.config, null, 2) +
+                    "\n\n=== user_credentials.json ===\n" +
+                    JSON.stringify(data.creds, null, 2);
+                
+                console.log('[DEBUG] Combined content created, length:', combinedContent.length);
+                
+                // Download combined file first
+                const combinedBlob = new Blob([combinedContent], { type: 'text/plain' });
+                const combinedUrl = URL.createObjectURL(combinedBlob);
+                const combinedA = document.createElement('a');
+                combinedA.href = combinedUrl;
+                combinedA.download = 'archinstall_configs.txt';
+                document.body.appendChild(combinedA);
+                console.log('[DEBUG] Triggering download of archinstall_configs.txt');
+                combinedA.click();
+                document.body.removeChild(combinedA);
+                URL.revokeObjectURL(combinedUrl);
+                console.log('[DEBUG] archinstall_configs.txt download triggered');
+                
+                // Download user_configuration.json
+                setTimeout(() => {
+                    console.log('[DEBUG] Starting user_configuration.json download');
+                    const configBlob = new Blob([JSON.stringify(data.config, null, 2)], { type: 'application/json' });
+                    const configUrl = URL.createObjectURL(configBlob);
+                    const configA = document.createElement('a');
+                    configA.href = configUrl;
+                    configA.download = 'user_configuration.json';
+                    document.body.appendChild(configA);
+                    configA.click();
+                    document.body.removeChild(configA);
+                    URL.revokeObjectURL(configUrl);
+                    console.log('[DEBUG] user_configuration.json download triggered');
+                    
+                    // Download user_credentials.json
+                    setTimeout(() => {
+                        console.log('[DEBUG] Starting user_credentials.json download');
+                        const credsBlob = new Blob([JSON.stringify(data.creds, null, 2)], { type: 'application/json' });
+                        const credsUrl = URL.createObjectURL(credsBlob);
+                        const credsA = document.createElement('a');
+                        credsA.href = credsUrl;
+                        credsA.download = 'user_credentials.json';
+                        document.body.appendChild(credsA);
+                        credsA.click();
+                        document.body.removeChild(credsA);
+                        URL.revokeObjectURL(credsUrl);
+                        console.log('[DEBUG] user_credentials.json download triggered');
+                        
+                        // Download install.sh
+                        setTimeout(() => {
+                            console.log('[DEBUG] Starting install.sh download');
+                            const scriptBlob = new Blob([installScript], { type: 'application/x-sh' });
+                            const scriptUrl = URL.createObjectURL(scriptBlob);
+                            const scriptA = document.createElement('a');
+                            scriptA.href = scriptUrl;
+                            scriptA.download = 'install.sh';
+                            document.body.appendChild(scriptA);
+                            scriptA.click();
+                            document.body.removeChild(scriptA);
+                            URL.revokeObjectURL(scriptUrl);
+                            console.log('[DEBUG] install.sh download triggered');
+                            
+                            console.log('[DEBUG] All downloads completed');
+                            alert('Файлы скачаны!\\n\\n1. user_configuration.json\\n2. user_credentials.json\\n3. install.sh - запусти этот скрипт для установки\\n\\nИспользование на Arch ISO:\\\nchmod +x install.sh && ./install.sh');
+                        }, 300);
+                    }, 500);
+                }, 500);
+            } catch (error) {
+                console.error('[DEBUG] Error in downloadAllConfigs:', error);
+                alert('Ошибка при скачивании: ' + error.message);
+            }
+        }
+
+        function downloadConfig() {
+            generateConfigData();
+            const blob = new Blob([JSON.stringify(currentConfig, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'user_configuration.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        function downloadCreds() {
+            generateConfigData();
+            const blob = new Blob([JSON.stringify(currentCreds, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'user_credentials.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        // Toggle custom mirror field visibility
+        document.getElementById('mirror_select').addEventListener('change', toggleMirrorField);
+
+        // Toggle LUKS password field visibility
+        document.getElementById('encryption').addEventListener('change', function() {
+            const luksField = document.getElementById('luks_password_field');
+            luksField.style.display = this.checked ? 'block' : 'none';
+        });
+
+        // Generate on load
+        generateConfigData();
+    </script>
+</body>
+</html>
