@@ -3,7 +3,7 @@ title: Все об Arch Linux
 timezone: UTC
 collections:
   posts:
-    title: Posts
+    title: {{ site.title | xml_escape }}
     output: true
   uploads:
     title: Uploads
@@ -11,9 +11,9 @@ collections:
 description: Arch Linux будет тем, что вы из него сделаете!
 baseurl: ''
 url: https://ordanax.github.io
-permalink: "/:title"
+permalink: /:title
 markdown: kramdown
-gems:
+plugins:
 - jekyll-paginate
 - jekyll-sitemap
 - jekyll-feed
