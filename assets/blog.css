@@ -47,9 +47,11 @@ h6, .h6 {
     height: auto;
 }
 
-/* Автоматическое превью для первой картинки в посте */
-.blog-post img:first-of-type,
-.blog-main img:first-of-type {
+/* Автоматическое превью для первой картинки в посте (не в сайдбаре) */
+.blog-post > img:first-of-type,
+.blog-main > img:first-of-type,
+.blog-post p:first-of-type img:first-of-type,
+.blog-main p:first-of-type img:first-of-type {
     float: left;
     margin-right: 20px;
     margin-bottom: 15px;
@@ -61,9 +63,21 @@ h6, .h6 {
     box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
-/* Обтекание текста - следующие элементы обтекают картинку */
-.blog-post p,
-.blog-main p {
+/* Сброс стиля для картинок в сайдбаре */
+.sidebar-module img,
+.sidebar-module-inset img {
+    float: none !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Обтекание текста только для параграфов не в сайдбаре */
+.blog-post > p,
+.blog-main > p,
+.blog-post .entry p,
+.blog-main .entry p {
     overflow: hidden;
 }
 
