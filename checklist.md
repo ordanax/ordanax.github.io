@@ -14,7 +14,7 @@ layout: post
 
 ---
 
-> **Актуальность:** 2024-2025 г. | **Основан на:** [Arch Wiki Installation Guide](https://wiki.archlinux.org/title/Installation_guide)
+> **Актуальность:** 2026 г. | **Основан на:** [Arch Wiki Installation Guide](https://wiki.archlinux.org/title/Installation_guide)
 
 ---
 
@@ -480,4 +480,4 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 ---
 
-*Чек-лист актуализирован: 2024-2025 г. | Все изменения проверены по Arch Wiki*
+*Чек-лист актуализирован: 2026 г. | Все изменения проверены по Arch Wiki*
