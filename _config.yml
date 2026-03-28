@@ -3,7 +3,7 @@ title: Все об Arch Linux
 timezone: UTC
 collections:
   posts:
-    title: {{ site.title | xml_escape }}
+    title: Posts
     output: true
   uploads:
     title: Uploads
