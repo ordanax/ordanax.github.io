@@ -188,9 +188,9 @@
         
         <div class="checkbox-group">
             <label><input type="checkbox" id="zram"> ZRAM (вместо swap для SSD)</label>
-            <label><input type="checkbox" id="encryption" checked> LUKS шифрование</label>
+            <label><input type="checkbox" id="encryption"> LUKS шифрование</label>
             <label><input type="checkbox" id="btrfs" checked> Btrfs</label>
-            <label><input type="checkbox" id="swap" checked> Swap раздел</label>
+            <label><input type="checkbox" id="swap"> Swap раздел</label>
         </div>
         
         <div class="grid-2">
@@ -200,14 +200,14 @@
                 <p class="hint">Рекомендуется: 512 МБ для EFI</p>
             </div>
             <div>
-                <label>Размер swap (ГБ)</label>
-                <input type="number" id="swap_size" value="4">
-                <p class="hint">Рекомендация: = RAM для гибернации, 0 = без swap (для SSD используйте 0 + zram)</p>
+                <label>Размер swap (ГБ, 0 = без swap)</label>
+                <input type="number" id="swap_size" value="0">
+                <p class="hint">Для гибернации: 2×RAM. Для SSD лучше ZRAM вместо swap</p>
             </div>
-            <div id="root_size_field">
+            <div id="root_size_field" style="display: none;">
                 <label>Размер root (ГБ, 0 = всё остальное)</label>
-                <input type="number" id="root_size" value="30">
-                <p class="hint">Минимум: 20 ГБ (для Desktop), 5 ГБ (минимал)</p>
+                <input type="number" id="root_size" value="0">
+                <p class="hint">По умолчанию используется всё оставшееся место</p>
             </div>
             <div id="home_size_field" style="display: none;">
                 <label>Размер /home (ГБ, 0 = всё остальное)</label>
@@ -280,18 +280,17 @@
 
     <div class="section">
         <h3>Зеркала (Mirrors)</h3>
-        <label>Рекомендованные зеркала (проверены через reflector)</label>
+        <label>Рекомендованные зеркала</label>
         <select id="mirror_select">
-            <option value="recommended" selected>✓ Рекомендованные (Berlin, Frankfurt, Taipei, Johannesburg, LA)</option>
-            <option value="berlin">Berlin (Germany)</option>
-            <option value="frankfurt">Frankfurt (Germany)</option>
-            <option value="taipei">Taipei (Taiwan)</option>
-            <option value="johannesburg">Johannesburg (South Africa)</option>
-            <option value="losangeles">Los Angeles (USA)</option>
-            <option value="worldwide">Worldwide (Rackspace) - fallback</option>
+            <option value="recommended" selected>✓ Рекомендованные (Россия, Казахстан, Беларусь)</option>
+            <option value="russia">Россия (Yandex, Сколково)</option>
+            <option value="kazakhstan">Казахстан (Haulmont)</option>
+            <option value="belarus">Беларусь (BYNET)</option>
+            <option value="finland">Финляндия (Arch Linux Finland)</option>
+            <option value="netherlands">Нидерланды (WorldStream)</option>
             <option value="custom">Свои зеркала (введи ниже)</option>
         </select>
-        <p class="hint" id="mirror-hint">Выбраны твои зеркала из /etc/pacman.d/mirrorlist</p>
+        <p class="hint" id="mirror-hint">Выбраны российские зеркала с низким пингом</p>
         
         <div id="custom_mirror_field" style="display: none; margin-top: 10px;">
             <label>Свои зеркала (по одному на строку)</label>
@@ -302,12 +301,10 @@
     <div class="section">
         <h3>Дополнительно</h3>
         <div class="checkbox-group">
-            <label><input type="checkbox" id="wifi" checked> WiFi поддержка (iwd)</label>
-            <label><input type="checkbox" id="bluetooth"> Bluetooth</label>
             <label><input type="checkbox" id="aur" checked> AUR helper (yay)</label>
             <label><input type="checkbox" id="zsh" checked> Zsh + oh-my-zsh</label>
-            <label><input type="checkbox" id="ssh"> SSH сервер</label>
-            <label><input type="checkbox" id="firewall" checked> Firewall (ufw)</label>
+            <label><input type="checkbox" id="ssh"> SSH сервер (sshd)</label>
+            <label><input type="checkbox" id="bluetooth"> Bluetooth</label>
         </div>
         
         <label>Дополнительные пакеты (через пробел)</label>
@@ -352,17 +349,17 @@ chmod +x install.sh && ./install.sh
                 swap: true,
                 swap_size: 4,
                 profile: 'i3',
-                extra_packages: 'firefox neovim alacritty dmenu picom iwd wireless_tools',
+                extra_packages: 'firefox neovim alacritty dmenu picom',
             },
             encrypted: {
                 disk: '/dev/sda',
                 encryption: true,
                 btrfs: true,
                 swap: true,
-                swap_size: 4,
+                swap_size: 0,
                 profile: 'i3',
                 greeter: '',
-                extra_packages: 'firefox neovim alacritty dmenu picom keepassxc iwd wireless_tools',
+                extra_packages: 'firefox neovim alacritty dmenu picom keepassxc',
             },
             server: {
                 disk: '/dev/sda',
@@ -388,9 +385,14 @@ chmod +x install.sh && ./install.sh
                 document.getElementById('greeter_select').value = p.greeter;
                 updateGreeterRecommendation();
             }
-            if (p.extra_packages) document.getElementById('extra_packages').value = p.extra_packages;
-            if (p.wifi !== undefined) document.getElementById('wifi').checked = p.wifi;
-            if (p.bluetooth !== undefined) document.getElementById('bluetooth').checked = p.bluetooth;
+            if (p.extra_packages) {
+                document.getElementById('extra_packages').value = p.extra_packages;
+            } else if (document.getElementById('profile').value !== 'i3' && document.getElementById('profile').value !== 'sway') {
+                // Remove picom from extra_packages when switching from i3/sway to other DE
+                const currentExtras = document.getElementById('extra_packages').value;
+                document.getElementById('extra_packages').value = currentExtras.replace(/picom\s*/g, '').trim();
+            }
+            if (p.ssh !== undefined) document.getElementById('ssh').checked = p.ssh;
         }
 
         function setRecommendedSizes() {
@@ -398,18 +400,21 @@ chmod +x install.sh && ./install.sh
             if (bootSizeEl) bootSizeEl.value = 512;
             
             const hasDesktop = document.getElementById('profile').value !== '';
-            document.getElementById('root_size').value = hasDesktop ? 40 : 20;
+            document.getElementById('root_size').value = 0; // Всё оставшееся место
+            
+            // Определяем объем RAM для swap (для гибернации нужен 2xRAM)
+            const ramGB = 16; // Предполагаем 16GB RAM по умолчанию, можно изменить
             
             // Check if SSD mode (no swap partition, use zram instead)
             const isSSD = !document.getElementById('swap').checked && document.getElementById('zram').checked;
             
             if (isSSD) {
                 document.getElementById('swap_size').value = 0;
-                alert('Применены рекомендации для SSD:\n- boot: 512 МБ\n- swap: 0 ГБ (используется ZRAM)\n- root: ' + (hasDesktop ? 40 : 20) + ' ГБ');
+                alert('Применены рекомендации для SSD:\n- boot: 512 МБ\n- swap: 0 ГБ (используется ZRAM)\n- root: всё оставшееся место');
             } else {
-                const ramGB = 8; // предполагаем средний объем RAM
-                document.getElementById('swap_size').value = ramGB;
-                alert('Применены рекомендации для HDD:\n- boot: 512 МБ\n- swap: ' + ramGB + ' ГБ (для гибернации)\n- root: ' + (hasDesktop ? 40 : 20) + ' ГБ');
+                const hibernationSwap = ramGB * 2; // 2x RAM для гибернации
+                document.getElementById('swap_size').value = hibernationSwap;
+                alert('Применены рекомендации:\n- boot: 512 МБ\n- swap: ' + hibernationSwap + ' ГБ (2×RAM для гибернации)\n- root: всё оставшееся место');
             }
             
             if (document.getElementById('layout').value === 'home') {
@@ -467,16 +472,15 @@ chmod +x install.sh && ./install.sh
                 hint.textContent = 'Введи свои зеркала в поле ниже';
             } else if (mirrorSelect === 'recommended') {
                 customField.style.display = 'none';
-                hint.textContent = 'Выбраны твои зеркала из /etc/pacman.d/mirrorlist (Berlin, Frankfurt, Taipei, Johannesburg, LA)';
+                hint.textContent = 'Россия (Yandex, Сколково), Казахстан, Беларусь — стабильные зеркала';
             } else {
                 customField.style.display = 'none';
                 const names = {
-                    'berlin': 'Berlin (Germany)',
-                    'frankfurt': 'Frankfurt (Germany)', 
-                    'taipei': 'Taipei (Taiwan)',
-                    'johannesburg': 'Johannesburg (South Africa)',
-                    'losangeles': 'Los Angeles (USA)',
-                    'worldwide': 'Worldwide (Rackspace)'
+                    'russia': 'Россия (Yandex, Сколково)',
+                    'kazakhstan': 'Казахстан (Haulmont)',
+                    'belarus': 'Беларусь (BYNET)',
+                    'finland': 'Финляндия (Arch Linux Finland)',
+                    'netherlands': 'Нидерланды (WorldStream)'
                 };
                 hint.textContent = 'Выбрано зеркало: ' + names[mirrorSelect];
             }
@@ -512,7 +516,7 @@ chmod +x install.sh && ./install.sh
                 document.getElementById('zram').checked = true;
                 document.getElementById('btrfs').checked = true;
                 
-                hint.innerHTML = '<strong>SSD режим активирован:</strong> Swap отключён, ZRAM включён, Btrfs для TRIM поддержки.';
+                hint.innerHTML = '<strong>SSD режим активирован:</strong> Swap отключён, ZRAM включён, Btrfs для TRIM поддержки. Root использует всё оставшееся место.';
                 hint.style.borderLeftColor = '#1793d1';
             } else {
                 // Update UI
@@ -523,11 +527,11 @@ chmod +x install.sh && ./install.sh
                 
                 // HDD settings
                 document.getElementById('swap').checked = true;
-                document.getElementById('swap_size').value = 4;
+                document.getElementById('swap_size').value = 0; // Будет установлено в 2xRAM при нажатии кнопки
                 document.getElementById('zram').checked = false;
                 document.getElementById('btrfs').checked = false;
                 
-                hint.innerHTML = '<strong>HDD режим активирован:</strong> Swap раздел 4 ГБ, ZRAM отключён. Ext4 стабильнее для HDD.';
+                hint.innerHTML = '<strong>HDD режим активирован:</strong> Swap включён (установите 2×RAM для гибернации), ZRAM отключён. Ext4 стабильнее для HDD. Root использует всё оставшееся место.';
                 hint.style.borderLeftColor = '#e94560';
             }
             generateConfigData();
@@ -591,18 +595,20 @@ chmod +x install.sh && ./install.sh
                 // Use predefined mirrors
                 const mirrors = {
                     'recommended': [
-                        'https://berlin.mirror.pkgbuild.com/$repo/os/$arch',
-                        'https://frankfurt.mirror.pkgbuild.com/$repo/os/$arch',
-                        'https://taipei.mirror.pkgbuild.com/$repo/os/$arch',
-                        'https://johannesburg.mirror.pkgbuild.com/$repo/os/$arch',
-                        'https://losangeles.mirror.pkgbuild.com/$repo/os/$arch'
+                        'https://mirror.yandex.ru/archlinux/$repo/os/$arch',
+                        'https://mirror.surf/archlinux/$repo/os/$arch',
+                        'https://mirror.kazteleport.kz/archlinux/$repo/os/$arch',
+                        'https://mirror.bytemark.co.uk/archlinux/$repo/os/$arch',
+                        'https://archlinux.fra1.digitaloceanspaces.com/$repo/os/$arch'
                     ],
-                    'berlin': ['https://berlin.mirror.pkgbuild.com/$repo/os/$arch'],
-                    'frankfurt': ['https://frankfurt.mirror.pkgbuild.com/$repo/os/$arch'],
-                    'taipei': ['https://taipei.mirror.pkgbuild.com/$repo/os/$arch'],
-                    'johannesburg': ['https://johannesburg.mirror.pkgbuild.com/$repo/os/$arch'],
-                    'losangeles': ['https://losangeles.mirror.pkgbuild.com/$repo/os/$arch'],
-                    'worldwide': ['https://mirror.rackspace.com/archlinux/$repo/os/$arch']
+                    'russia': [
+                        'https://mirror.yandex.ru/archlinux/$repo/os/$arch',
+                        'https://mirror.surf/archlinux/$repo/os/$arch'
+                    ],
+                    'kazakhstan': ['https://mirror.kazteleport.kz/archlinux/$repo/os/$arch'],
+                    'belarus': ['https://ftp.byfly.by/pub/archlinux/$repo/os/$arch'],
+                    'finland': ['https://archlinux.fi/$repo/os/$arch'],
+                    'netherlands': ['https://mirror.worldstream.nl/archlinux/$repo/os/$arch']
                 };
                 const selectedValue = mirrorSelect ? mirrorSelect.value : 'recommended';
                 mirrorUrls = mirrors[selectedValue] || mirrors['recommended'];
@@ -810,13 +816,6 @@ chmod +x install.sh && ./install.sh
             if (document.getElementById('ssh').checked) {
                 config.services.push('sshd');
             }
-            if (document.getElementById('firewall').checked) {
-                config.additional_packages.push('ufw');
-                config.services.push('ufw');
-            }
-            if (document.getElementById('wifi').checked) {
-                config.additional_packages.push('iwd', 'wireless_tools');
-            }
             if (document.getElementById('bluetooth').checked) {
                 config.additional_packages.push('bluez', 'blueman');
                 config.services.push('bluetooth');
@@ -866,10 +865,20 @@ chmod +x install.sh && ./install.sh
                 const data = generateConfigData();
                 console.log('[DEBUG] Config data generated:', data);
                 
-                // Create install.sh script
+                // Create install.sh script with disk auto-detection
                 const installScript = `#!/bin/bash
 # Archinstall automated setup script
 # Generated by Archinstall Config Generator
+
+set -e
+
+echo "=== Archinstall Setup ==="
+echo ""
+
+# Auto-detect available disks using lsblk
+echo "Доступные диски:"
+lsblk -d -o NAME,SIZE,MODEL,TYPE | grep -E 'disk|nvme' || true
+echo ""
 
 # Find JSON files in current directory
 CONFIG_FILE=$(ls -1 | grep -E '^user_configuration\\.json$' | head -1)
@@ -881,6 +890,33 @@ if [ -z "$CONFIG_FILE" ]; then
     exit 1
 fi
 
+# Check disk in config and warn if it doesn't exist
+CONFIG_DISK=$(grep -o '"disk": "[^"]*"' "$CONFIG_FILE" | head -1 | cut -d'"' -f4)
+if [ -n "$CONFIG_DISK" ]; then
+    echo "Диск в конфиге: $CONFIG_DISK"
+    if [ ! -e "$CONFIG_DISK" ]; then
+        echo "ВНИМАНИЕ: Диск $CONFIG_DISK не найден!"
+        echo ""
+        echo "Доступные диски:"
+        lsblk -d -o NAME,SIZE,MODEL,TYPE -n | grep -E 'disk|nvme' | nl
+        echo ""
+        read -p "Введите номер диска для использования (или Enter для отмены): " disk_num
+        if [ -n "$disk_num" ]; then
+            SELECTED_DISK=$(lsblk -d -o NAME -n | grep -E 'disk|nvme' | sed -n "${disk_num}p" | tr -d ' ')
+            if [ -n "$SELECTED_DISK" ]; then
+                DISK_PATH="/dev/$SELECTED_DISK"
+                echo "Выбран диск: $DISK_PATH"
+                # Replace disk in config
+                sed -i "s|$CONFIG_DISK|$DISK_PATH|g" "$CONFIG_FILE"
+                echo "Конфиг обновлен с новым диском"
+            else
+                echo "Неверный выбор, используем $CONFIG_DISK"
+            fi
+        fi
+    fi
+fi
+
+echo ""
 if [ -z "$CREDS_FILE" ]; then
     echo "Warning: user_credentials.json not found"
     echo "Installation will proceed but will ask for passwords interactively"
@@ -1006,6 +1042,26 @@ fi
         document.getElementById('encryption').addEventListener('change', function() {
             const luksField = document.getElementById('luks_password_field');
             luksField.style.display = this.checked ? 'block' : 'none';
+        });
+
+        // Handle DE change - remove picom when switching from i3/sway to other DE
+        document.getElementById('profile').addEventListener('change', function() {
+            const profile = this.value;
+            const extraPackages = document.getElementById('extra_packages');
+            const currentExtras = extraPackages.value;
+            
+            // If switching TO i3 or sway, add picom if not present
+            if (profile === 'i3' || profile === 'sway') {
+                if (!currentExtras.includes('picom')) {
+                    extraPackages.value = currentExtras.trim() + ' picom';
+                }
+            } else if (profile !== '') {
+                // If switching to other DE (gnome, kde, xfce), remove picom
+                extraPackages.value = currentExtras.replace(/picom\s*/g, '').trim();
+            }
+            
+            // Also update greeter recommendation
+            updateGreeterRecommendation();
         });
 
         // Generate on load
