@@ -133,11 +133,7 @@ gnome-settings
 
 1. Установите gnome-shell-extensions:
 ```bash
-# Arch Linux
 sudo pacman -S gnome-shell-extensions
-
-# Ubuntu
-sudo apt install gnome-shell-extensions
 ```
 
 2. Перейдите на https://extensions.gnome.org
