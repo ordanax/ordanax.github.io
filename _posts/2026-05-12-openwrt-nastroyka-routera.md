@@ -3,7 +3,6 @@ layout: post
 title: OpenWrt настройка роутера — полное руководство
 description: Практический гайд по установке и настройке OpenWrt на роутер для максимальной производительности и функциональности
 date: 2026-05-12 10:00:00 +0300
-permalink: /openwrt-nastroyka-routera
 categories:
 - linux
 - networking
@@ -15,7 +14,6 @@ tags:
 - networking
 - linux
 - firmware
-edit: true
 ---
 
 ![OpenWrt](/img/openwrt.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} OpenWrt — мощная прошивка для маршрутизаторов с Linux ядром. Позволяет превратить обычный роутер в полноценное сетевое устройство с расширенными возможностями.
