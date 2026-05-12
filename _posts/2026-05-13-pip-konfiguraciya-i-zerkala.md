@@ -2,6 +2,18 @@
 layout: post
 title: Pip конфигурация и зеркала в Linux
 description: Практический гайд по настройке pip, установке зеркал и управлению пакетами Python
+date: 2026-05-12 06:00:00 +0300
+categories:
+- linux
+- python
+- development
+- package management
+tags:
+- pip
+- python
+- mirrors
+- configuration
+- package management
 ---
 
 ![Pip Configuration](../img/pip-config.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Pip — стандартный менеджер пакетов Python. Правильная конфигурация критически важна для скорости установки пакетов и безопасности.

@@ -2,6 +2,18 @@
 layout: post
 title: PostgreSQL настройка на Linux — полное руководство
 description: Практический гайд по установке, настройке и управлению PostgreSQL на Linux для начинающих
+date: 2026-05-12 08:00:00 +0300
+categories:
+- linux
+- database
+- postgresql
+- server
+tags:
+- postgresql
+- database
+- linux
+- server
+- configuration
 ---
 
 ![PostgreSQL](../img/postgresql.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} PostgreSQL — мощная объектно-реляционная СУБД с открытым исходным кодом. Этот гайд поможет установить и настроить PostgreSQL на Linux.

@@ -2,6 +2,18 @@
 layout: post
 title: Настройка mirrorlist в Arch Linux с помощью Reflector
 description: Практический гайд по настройке зеркал Arch Linux через Reflector для максимальной скорости обновлений
+date: 2026-05-12 04:00:00 +0300
+categories:
+- linux
+- arch linux
+- system
+- performance
+tags:
+- arch linux
+- mirrorlist
+- reflector
+- pacman
+- optimization
 ---
 
 ![Arch Linux Mirrors](../img/arch-mirrors.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Правильная настройка mirrorlist в Arch Linux критически важна для скорости обновлений системы. Reflector — инструмент для автоматического выбора самых быстрых зеркал.

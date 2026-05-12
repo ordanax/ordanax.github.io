@@ -2,6 +2,17 @@
 layout: post
 title: Figma на Linux — установка и настройка
 description: Практический гайд по установке и настройке Figma на Linux через официальные и альтернативные методы
+date: 2026-05-12 12:00:00 +0300
+categories:
+- linux
+- design
+- software
+tags:
+- figma
+- design
+- linux
+- installation
+- web
 ---
 
 ![Figma](../img/figma.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Figma — популярный инструмент для дизайна интерфейсов, работающий в браузере. На Linux есть несколько способов использовать Figma, включая официальное приложение и альтернативные решения.
