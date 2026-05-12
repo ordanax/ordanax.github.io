@@ -17,7 +17,7 @@ tags:
 - windows games
 ---
 
-![PortProton](../img/portproton.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} PortProton — мощный инструмент для запуска Windows игр и приложений на Linux через Wine и Proton. Это альтернатива Lutris и Bottles с расширенными возможностями.
+![PortProton](/img/portproton.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} PortProton — мощный инструмент для запуска Windows игр и приложений на Linux через Wine и Proton. Это альтернатива Lutris и Bottles с расширенными возможностями.
 
 ## Установка PortProton
 

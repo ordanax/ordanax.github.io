@@ -16,7 +16,7 @@ tags:
 - configuration
 ---
 
-![PostgreSQL](../img/postgresql.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} PostgreSQL — мощная объектно-реляционная СУБД с открытым исходным кодом. Этот гайд поможет установить и настроить PostgreSQL на Linux.
+![PostgreSQL](/img/postgresql.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} PostgreSQL — мощная объектно-реляционная СУБД с открытым исходным кодом. Этот гайд поможет установить и настроить PostgreSQL на Linux.
 
 ## Установка PostgreSQL
 

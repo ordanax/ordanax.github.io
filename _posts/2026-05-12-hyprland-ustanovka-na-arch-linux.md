@@ -16,7 +16,7 @@ tags:
 - setup guide
 ---
 
-![Hyprland](../img/hyprland.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Hyprland — один из самых популярных динамических тайлинговых оконных менеджеров на Wayland в 2026 году. Он сочетает в себе производительность i3wm, красоту Wayland и гибкость, которую ценят пользователи Arch Linux.
+![Hyprland](/img/hyprland.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Hyprland — один из самых популярных динамических тайлинговых оконных менеджеров на Wayland в 2026 году. Он сочетает в себе производительность i3wm, красоту Wayland и гибкость, которую ценят пользователи Arch Linux.
 
 ## Почему Hyprland?
 

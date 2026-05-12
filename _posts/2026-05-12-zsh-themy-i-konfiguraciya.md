@@ -16,7 +16,7 @@ tags:
 - configuration
 ---
 
-![Zsh Terminal](../img/zsh-terminal.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Zsh (Z Shell) — мощная командная оболочка, которая превосходит bash по функциональности и возможностям настройки. С правильной конфигурацией Zsh превращается из простого терминала в полноценную рабочую среду.
+![Zsh Terminal](/img/zsh-terminal.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Zsh (Z Shell) — мощная командная оболочка, которая превосходит bash по функциональности и возможностям настройки. С правильной конфигурацией Zsh превращается из простого терминала в полноценную рабочую среду.
 
 ## Почему Zsh?
 

@@ -15,7 +15,7 @@ tags:
 - gpu
 ---
 
-![Ghostty Terminal](../img/ghostty.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Ghostty — современный терминал с поддержкой GPU ускорения, написанный на Zig. Отличается высокой производительностью и гибкой конфигурацией.
+![Ghostty Terminal](/img/ghostty.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Ghostty — современный терминал с поддержкой GPU ускорения, написанный на Zig. Отличается высокой производительностью и гибкой конфигурацией.
 
 ## Установка Ghostty
 

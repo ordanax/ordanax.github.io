@@ -16,7 +16,7 @@ tags:
 - firmware
 ---
 
-![OpenWrt](../img/openwrt.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} OpenWrt — мощная прошивка для маршрутизаторов с Linux ядром. Позволяет превратить обычный роутер в полноценное сетевое устройство с расширенными возможностями.
+![OpenWrt](/img/openwrt.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} OpenWrt — мощная прошивка для маршрутизаторов с Linux ядром. Позволяет превратить обычный роутер в полноценное сетевое устройство с расширенными возможностями.
 
 ## Подготовка к установке
 

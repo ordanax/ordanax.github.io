@@ -17,7 +17,7 @@ tags:
 - gpu
 ---
 
-![NVIDIA Drivers](../img/nvidia-drivers.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} NVIDIA драйверы на Arch Linux — одна из самых частых тем для вопросов. Правильная установка критически важна для стабильной работы системы, особенно с Wayland и современными WM.
+![NVIDIA Drivers](/img/nvidia-drivers.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} NVIDIA драйверы на Arch Linux — одна из самых частых тем для вопросов. Правильная установка критически важна для стабильной работы системы, особенно с Wayland и современными WM.
 
 ## Определение видеокарты
 

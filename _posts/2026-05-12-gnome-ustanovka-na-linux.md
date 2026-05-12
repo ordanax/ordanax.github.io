@@ -16,7 +16,7 @@ tags:
 - configuration
 ---
 
-![Gnome](../img/gnome.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Gnome — популярная графическая среда для Linux с современным дизайном и удобным интерфейсом. Этот гайд поможет установить и настроить Gnome на различных дистрибутивах.
+![Gnome](/img/gnome.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Gnome — популярная графическая среда для Linux с современным дизайном и удобным интерфейсом. Этот гайд поможет установить и настроить Gnome на различных дистрибутивах.
 
 ## Установка Gnome на Arch Linux
 

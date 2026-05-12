@@ -16,7 +16,7 @@ tags:
 - package management
 ---
 
-![Pip Configuration](../img/pip-config.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Pip — стандартный менеджер пакетов Python. Правильная конфигурация критически важна для скорости установки пакетов и безопасности.
+![Pip Configuration](/img/pip-config.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Pip — стандартный менеджер пакетов Python. Правильная конфигурация критически важна для скорости установки пакетов и безопасности.
 
 ## Проверка текущей конфигурации
 

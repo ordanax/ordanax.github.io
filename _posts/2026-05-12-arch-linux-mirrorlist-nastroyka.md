@@ -16,7 +16,7 @@ tags:
 - optimization
 ---
 
-![Arch Linux Mirrors](../img/arch-mirrors.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Правильная настройка mirrorlist в Arch Linux критически важна для скорости обновлений системы. Reflector — инструмент для автоматического выбора самых быстрых зеркал.
+![Arch Linux Mirrors](/img/arch-mirrors.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Правильная настройка mirrorlist в Arch Linux критически важна для скорости обновлений системы. Reflector — инструмент для автоматического выбора самых быстрых зеркал.
 
 ## Установка Reflector
 
