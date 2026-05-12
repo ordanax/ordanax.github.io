@@ -4,12 +4,10 @@ permalink: donat/
 layout: post
 ---
 
-<div class="sidebar-module sidebar-module-inset">
-	<h4>Поддержать проект</h4>
+<div style="text-align: center; margin: 20px 0; padding: 15px;">
+	<p><strong>Поддержать проект</strong></p>
 	<p>Хотите поддержать создание контента? Любая сумма поможет в сборе на новый ПК для видео-гайдов</p>
-	<center>
-		<noindex><a href="https://pay.cloudtips.ru/p/11ed39f2" class="btn btn-primary" style="background-color: #0066cc; border-color: #0066cc;" rel="nofollow" title="Поддержать"><i class="fas fa-heart"></i> Поддержать</a></noindex>
-	</center>
+	<p><a href="https://pay.cloudtips.ru/p/11ed39f2" class="btn btn-primary" style="background-color: #0066cc; border-color: #0066cc;" rel="nofollow" title="Поддержать"><i class="fas fa-heart"></i> Поддержать</a></p>
 </div>
 
 <div style="text-align: center; margin: 20px 0; padding: 15px;">
