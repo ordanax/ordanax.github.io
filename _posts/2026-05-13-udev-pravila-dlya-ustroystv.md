@@ -2,18 +2,6 @@
 layout: post
 title: Udev правила для устройств в Linux — полное руководство
 description: Практический гайд по созданию udev правил для фиксации имён устройств, микрофонов и другого оборудования
-date: 2026-05-13 05:00:00 +0300
-categories:
-- linux
-- system
-- hardware
-- configuration
-tags:
-- udev
-- devices
-- rules
-- linux
-- hardware
 ---
 
 ![Udev Rules](../img/udev-rules.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Udev — система управления устройствами в Linux, которая позволяет создавать правила для автоматического определения и настройки устройств. Это критически важно для фиксации имён сетевых интерфейсов, микрофонов и других периферийных устройств.
