@@ -22,7 +22,7 @@ tags:
 
 Если есть возможность и желание — поддержите кто сколько может. Даже небольшая сумма очень поможет.
 
-👉 **Поддержать проект:** https://pay.cloudtips.ru/p/11ed39f2
+👉 **Поддержать проект:** [https://pay.cloudtips.ru/p/11ed39f2](https://pay.cloudtips.ru/p/11ed39f2)
 
 ## Что я делаю для сообщества
 
@@ -36,8 +36,8 @@ tags:
 
 ## Где найти меня
 
-- **Чат по Linux в Telegram:** 👉 https://t.me/linux4at
-- **Чат в MAX:** 👉 https://max.ru/join/b4GtiNvbjYqeboq-nddswKQJ-cvWiJGoaZdIoV1EUMk
+- **Чат по Linux в Telegram:** 👉 [https://t.me/linux4at](https://t.me/linux4at)
+- **Чат в MAX:** 👉 [https://max.ru/join/b4GtiNvbjYqeboq-nddswKQJ-cvWiJGoaZdIoV1EUMk](https://max.ru/join/b4GtiNvbjYqeboq-nddswKQJ-cvWiJGoaZdIoV1EUMk)
 
 ## Что вы получите взамен
 
