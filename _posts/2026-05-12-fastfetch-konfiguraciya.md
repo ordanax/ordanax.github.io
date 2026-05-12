@@ -3,6 +3,7 @@ layout: post
 title: Fastfetch конфигурация — красивый neofetch для Linux
 description: Практический гайд по установке и настройке Fastfetch — современного инструмента для отображения информации о системе
 date: 2026-05-12 11:00:00 +0300
+permalink: /fastfetch-konfiguraciya
 categories:
 - linux
 - terminal
@@ -13,6 +14,7 @@ tags:
 - terminal
 - linux
 - configuration
+edit: true
 ---
 
 ![Fastfetch](/img/fastfetch.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Fastfetch — современная альтернатива neofetch с поддержкой GPU ускорения и расширенными возможностями. Показывает информацию о системе в красивом формате.

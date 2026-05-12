@@ -3,6 +3,7 @@ layout: post
 title: Настройка Wi-Fi через wpa_supplicant в Arch Linux
 description: Практический гайд по настройке Wi-Fi через wpa_supplicant и dhcpcd на основе реального опыта решения проблем с сетевыми интерфейсами
 date: 2026-05-12 02:00:00 +0300
+permalink: /wifi-nastroyka-wpa-supplicant
 categories:
 - linux
 - arch linux
@@ -14,6 +15,7 @@ tags:
 - arch linux
 - network configuration
 - dhcpcd
+edit: true
 ---
 
 ![WiFi Setup](/img/wifi-setup.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Настройка Wi-Fi через командную строку — важный навык для любого пользователя Linux. В Arch Linux это делается через wpa_supplicant и dhcpcd. Этот гайд поможет настроить Wi-Fi без графического интерфейса.

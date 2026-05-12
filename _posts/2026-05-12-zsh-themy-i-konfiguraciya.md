@@ -3,6 +3,7 @@ layout: post
 title: Zsh темы и конфигурация — превращаем терминал в мощный инструмент
 description: Полный гайд по настройке Zsh с Oh My Zsh, популярными темами и плагинами для максимальной продуктивности
 date: 2026-05-12 01:00:00 +0300
+permalink: /zsh-themy-konfiguraciya
 categories:
 - linux
 - terminal
@@ -14,6 +15,7 @@ tags:
 - terminal
 - themes
 - configuration
+edit: true
 ---
 
 ![Zsh Terminal](/img/zsh-terminal.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Zsh (Z Shell) — мощная командная оболочка, которая превосходит bash по функциональности и возможностям настройки. С правильной конфигурацией Zsh превращается из простого терминала в полноценную рабочую среду.

@@ -3,6 +3,7 @@ layout: post
 title: Hyprland на Arch Linux — полный гайд по установке и настройке
 description: Hyprland — современный динамический тайлинговый WM на Wayland. Полный гайд по установке на Arch Linux с нуля
 date: 2026-05-12 00:00:00 +0300
+permalink: /hyprland-arch-linux
 categories:
 - linux
 - arch linux
@@ -14,6 +15,7 @@ tags:
 - arch linux
 - window manager
 - setup guide
+edit: true
 ---
 
 ![Hyprland](/img/hyprland.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Hyprland — один из самых популярных динамических тайлинговых оконных менеджеров на Wayland в 2026 году. Он сочетает в себе производительность i3wm, красоту Wayland и гибкость, которую ценят пользователи Arch Linux.
