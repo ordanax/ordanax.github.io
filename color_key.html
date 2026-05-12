@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Текст ↔ Цвета ↔ CSS-картина | v4 FINAL</title>
+    <style>
+        :root {
+            --bg: #0d0d0d;
+            --surface: #121212;
+            --border: #2a2a2a;
+            --text: #ccc;
+            --accent: #00ff9d;
+            --warning: #ffaa00;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Courier New', monospace;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .art-frame {
+            background: #f5f0e8;
+            border: 12px solid #d4c5a9;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), inset 0 0 0 2px #bfae8e;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            margin: 20px 0;
+        }
+
+        .art-frame .signature {
+            position: absolute;
+            bottom: 12px;
+            right: 20px;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-style: italic;
+            font-size: 0.7em;
+            color: #8b7d6b;
+            opacity: 0.7;
+            z-index: 20;
+            pointer-events: none;
+        }
+
+        .art-frame .element {
+            position: absolute;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 1.4em;
+            color: var(--accent);
+            letter-spacing: 3px;
+            margin-bottom: 6px;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 0.6em;
+            color: #555;
+            letter-spacing: 3px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .badge-row {
+            text-align: center;
+            margin-bottom: 25px;
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.6em;
+            letter-spacing: 2px;
+            border: 1px solid #1a3a1a;
+            background: #0a1a0a;
+            color: #00cc7d;
+        }
+
+        .section {
+            margin-bottom: 25px;
+            padding: 22px;
+            background: var(--surface);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .section-title {
+            font-size: 0.7em;
+            color: #888;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        label {
+            display: block;
+            font-size: 0.7em;
+            color: #777;
+            margin-bottom: 6px;
+            letter-spacing: 1px;
+        }
+
+        textarea {
+            width: 100%;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 6px;
+            padding: 12px;
+            color: #ddd;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85em;
+            resize: vertical;
+            min-height: 70px;
+            margin-bottom: 12px;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .btn-row {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 18px;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            letter-spacing: 1px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.75em;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .btn-encode {
+            background: var(--accent);
+            color: #0a0a0a;
+        }
+        .btn-encode:hover {
+            background: #00cc7d;
+        }
+
+        .btn-decode {
+            background: transparent;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+        }
+        .btn-decode:hover {
+            background: rgba(0, 255, 157, 0.08);
+        }
+
+        .btn-art {
+            background: #7c3aed;
+            color: #fff;
+        }
+        .btn-art:hover {
+            background: #6d28d9;
+        }
+
+        .btn-shuffle {
+            background: transparent;
+            border: 1px solid var(--warning);
+            color: var(--warning);
+        }
+        .btn-shuffle:hover {
+            background: rgba(255, 170, 0, 0.08);
+        }
+
+        .btn-copy {
+            background: transparent;
+            border: 1px solid #555;
+            color: #999;
+            font-size: 0.68em;
+            padding: 6px 12px;
+        }
+        .btn-copy:hover {
+            border-color: #999;
+            color: #fff;
+        }
+
+        .btn-save {
+            background: #1e40af;
+            border: 1px solid #3b82f6;
+            color: #93c5fd;
+            font-size: 0.68em;
+            padding: 6px 12px;
+        }
+        .btn-save:hover {
+            background: #1e3a8a;
+            color: #fff;
+        }
+
+        .palette {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin: 14px 0;
+        }
+
+        .swatch-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+        }
+
+        .swatch {
+            width: 40px;
+            height: 40px;
+            border-radius: 6px;
+            border: 1px solid #333;
+            cursor: pointer;
+            transition: transform 0.15s;
+        }
+        .swatch:hover {
+            transform: scale(1.2);
+            z-index: 10;
+            border-color: #fff;
+        }
+
+        .swatch-index {
+            font-size: 0.52em;
+            color: #555;
+        }
+
+        .code-list {
+            background: #1a1a1a;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 0.7em;
+            color: #aaa;
+            word-break: break-all;
+            max-height: 120px;
+            overflow-y: auto;
+            margin: 8px 0;
+            white-space: pre-wrap;
+        }
+
+        .status {
+            font-size: 0.65em;
+            min-height: 18px;
+            margin: 8px 0;
+            text-align: center;
+        }
+
+        .info {
+            font-size: 0.6em;
+            color: #555;
+            margin-top: 10px;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            .art-frame {
+                aspect-ratio: 1 / 1;
+            }
+            button {
+                padding: 8px 12px;
+                font-size: 0.7em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 ТЕКСТ ↔ ЦВЕТА ↔ CSS-КАРТИНА</h1>
+        <p class="subtitle">Кодирование • Автосортировка • Парсинг CSS • v4 FINAL</p>
+        <div class="badge-row">
+            <span class="badge">✅ АВТОСОРТИРОВКА</span>
+            <span class="badge">🖼️ CSS-ART</span>
+            <span class="badge">🔍 ПАРСИТ CSS</span>
+            <span class="badge">📴 ОФЛАЙН</span>
+        </div>
+
+        <!-- КОДИРОВАНИЕ -->
+        <div class="section">
+            <div class="section-title">🔒 ТЕКСТ → ЦВЕТА</div>
+            <label>Введите любой текст:</label>
+            <textarea id="encodeInput" placeholder="Например: Ячейка 731, код 90210"></textarea>
+            <div class="btn-row">
+                <button class="btn-encode" onclick="encodeText()">🔒 Закодировать</button>
+                <button class="btn-shuffle" onclick="shuffleColors()" id="btnShuffle" disabled>🔀 Перемешать</button>
+                <button class="btn-art" onclick="generateArt()" id="btnArt" disabled>🖼️ Создать CSS-картину</button>
+            </div>
+            <div class="palette" id="paletteOutput"></div>
+            <div class="code-list" id="hexListOutput"></div>
+            <div class="btn-row">
+                <button class="btn-copy" onclick="copyHexList()">📋 Копировать HEX</button>
+                <button class="btn-copy" onclick="copyArtCSS()" id="btnCopyArtCSS" disabled>📋 Копировать CSS картины</button>
+            </div>
+        </div>
+
+        <!-- CSS-КАРТИНА -->
+        <div class="section hidden" id="artSection">
+            <div class="section-title">🖼️ CSS-КАРТИНА (чистые HEX-цвета)</div>
+            <div class="art-frame" id="artCanvas">
+                <div class="signature">Karmic Vault • Digital Composition</div>
+            </div>
+            <div class="btn-row">
+                <button class="btn-save" onclick="saveArtAsHtml()">💾 Сохранить картину как HTML</button>
+            </div>
+        </div>
+
+        <!-- ДЕКОДИРОВАНИЕ -->
+        <div class="section">
+            <div class="section-title">🔓 ЦВЕТА / CSS → ТЕКСТ (автосортировка + парсинг CSS)</div>
+            <label>Вставьте HEX-коды или весь CSS-код картины:</label>
+            <textarea id="decodeInput" placeholder="Вставьте сюда что угодно — HEX-коды, CSS картины, HTML..."></textarea>
+            <div class="btn-row">
+                <button class="btn-decode" onclick="decodeColors()">🔓 Расшифровать</button>
+            </div>
+            <div class="status" id="sortStatus"></div>
+            <label>Результат:</label>
+            <textarea id="decodeOutput" placeholder="Здесь появится расшифрованный текст..." readonly></textarea>
+        </div>
+
+        <p class="info">
+            ⚙️ <b>Как работает:</b> Текст → UTF-8 байты → HEX → блоки по 6 символов → индекс-префикс (00,02,04...) → цвет → CSS-картина<br>
+            🔍 <b>Парсинг CSS:</b> вставьте весь код картины — скрипт сам найдёт все <code>title="#HEX"</code> и расшифрует<br>
+            🔀 <b>Порядок не важен:</b> индексы внутри цветов всё восстановят автоматически<br>
+            🖼️ <b>Картина:</b> только чистые HEX-цвета, без прозрачности — можно печатать и считывать пипеткой
+        </p>
+    </div>
+
+    <script>
+        let lastEncodedColors = [];
+
+        // ============ УТИЛИТЫ ============
+        function seededRandom(seed) {
+            let hash = 0;
+            for (let i = 0; i < seed.length; i++) {
+                hash = ((hash << 5) - hash) + seed.charCodeAt(i);
+                hash |= 0;
+            }
+            return function () {
+                hash = (hash * 1664525 + 1013904223) | 0;
+                return (hash >>> 0) / 4294967296;
+            };
+        }
+
+        // ============ КОДИРОВАНИЕ ============
+        function encodeText() {
+            const text = document.getElementById('encodeInput').value;
+            if (!text) { alert('Введите текст!'); return; }
+
+            const bytes = new TextEncoder().encode(text);
+            let hexString = '';
+            for (const b of bytes) hexString += b.toString(16).padStart(2, '0').toUpperCase();
+
+            const blocks = [];
+            for (let i = 0; i < hexString.length; i += 6) {
+                let block = hexString.substring(i, i + 6);
+                while (block.length < 6) block += '0';
+                blocks.push(block);
+            }
+
+            lastEncodedColors = blocks.map((block, i) => ({
+                index: i,
+                prefix: (i * 2).toString(16).padStart(2, '0').toUpperCase(),
+                hex: '#' + (i * 2).toString(16).padStart(2, '0').toUpperCase() + block,
+                data: block
+            }));
+
+            displayPalette(lastEncodedColors);
+            displayHexList(lastEncodedColors);
+            document.getElementById('btnShuffle').disabled = false;
+            document.getElementById('btnArt').disabled = false;
+            document.getElementById('btnCopyArtCSS').disabled = false;
+        }
+
+        function displayPalette(colors) {
+            document.getElementById('paletteOutput').innerHTML = colors.map(c => `
+                <div class="swatch-wrap">
+                    <div class="swatch" style="background:${c.hex}" title="${c.hex} (индекс ${c.index})"></div>
+                    <span class="swatch-index">${c.prefix}</span>
+                </div>`).join('');
+        }
+
+        function displayHexList(colors) {
+            const list = colors.map(c => c.hex).join('\n');
+            const container = document.getElementById('hexListOutput');
+            container.textContent = list;
+            container.dataset.hexList = list;
+        }
+
+        function copyHexList() {
+            const list = document.getElementById('hexListOutput').dataset.hexList;
+            if (!list) { alert('Сначала закодируйте текст!'); return; }
+            navigator.clipboard.writeText(list).then(() => alert('HEX-коды скопированы!'))
+                .catch(() => alert('Не удалось. Скопируйте вручную.'));
+        }
+
+        function copyArtCSS() {
+            const canvas = document.getElementById('artCanvas');
+            if (!canvas.querySelector('.element')) { alert('Сначала создайте CSS-картину!'); return; }
+            const artHTML = canvas.outerHTML;
+            const fullCode = `<!-- Karmic Vault CSS Art -->\n<!-- Скопируйте этот блок в свой HTML -->\n${artHTML}`;
+            navigator.clipboard.writeText(fullCode).then(() => alert('CSS картины скопирован!'))
+                .catch(() => alert('Не удалось скопировать.'));
+        }
+
+        // ============ ПЕРЕМЕШИВАНИЕ ============
+        function shuffleColors() {
+            if (!lastEncodedColors.length) return;
+            const shuffled = [...lastEncodedColors];
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            }
+            displayPalette(shuffled);
+            displayHexList(shuffled);
+            document.getElementById('decodeInput').value = shuffled.map(c => c.hex).join('\n');
+            document.getElementById('sortStatus').textContent = '🔀 Цвета перемешаны. Нажмите «Расшифровать» (автосортировка).';
+            document.getElementById('sortStatus').style.color = '#ffaa00';
+        }
+
+        // ============ CSS-КАРТИНА (ЧИСТЫЕ HEX) ============
+        function generateArt() {
+            if (!lastEncodedColors.length) { alert('Сначала закодируйте текст!'); return; }
+
+            const section = document.getElementById('artSection');
+            section.classList.remove('hidden');
+            const canvas = document.getElementById('artCanvas');
+            canvas.querySelectorAll('.element').forEach(el => el.remove());
+
+            const colors = [...lastEncodedColors];
+            const W = canvas.clientWidth || 800;
+            const H = canvas.clientHeight || 600;
+            const usedPositions = [];
+
+            function overlaps(x, y, w, h, margin = 30) {
+                return usedPositions.some(pos =>
+                    x < pos.x + pos.w + margin && x + w + margin > pos.x &&
+                    y < pos.y + pos.h + margin && y + h + margin > pos.y
+                );
+            }
+
+            for (let i = 0; i < colors.length; i++) {
+                const c = colors[i];
+                const pureHex = '#' + c.data;
+                const seed = c.data + c.prefix;
+                const rng = seededRandom(seed);
+                const type = i % 4;
+                const size = 40 + rng() * 90;
+
+                let x, y, w, h;
+                let attempts = 0;
+                do {
+                    x = rng() * (W - size - 20) + 10;
+                    y = rng() * (H - size - 20) + 10;
+                    w = size * (0.6 + rng() * 0.8);
+                    h = size * (0.6 + rng() * 0.8);
+                    attempts++;
+                } while (overlaps(x, y, w, h, 20) && attempts < 100);
+
+                usedPositions.push({ x, y, w, h: h || size });
+                const zIndex = Math.floor(rng() * 10) + 1;
+                const borderWidth = 1 + Math.floor(rng() * 4);
+                const useFill = rng() > 0.3;
+                const bg = useFill ? pureHex : 'transparent';
+                const border = useFill ? 'none' : `${borderWidth}px solid ${pureHex}`;
+
+                // ВАЖНО: оставляем title с ПОЛНЫМ HEX (включая индекс) — для расшифровки
+                const fullHex = c.hex;
+
+                let elHTML = '';
+                if (type === 0) {
+                    elHTML = `<div class="element" style="left:${x}px;top:${y}px;width:${size}px;height:${size}px;border-radius:50%;background:${bg};border:${border};z-index:${zIndex};" title="${fullHex}"></div>`;
+                } else if (type === 1) {
+                    const rot = Math.floor(rng() * 60 - 30);
+                    elHTML = `<div class="element" style="left:${x}px;top:${y}px;width:${w}px;height:${h}px;background:${bg};border:${border};transform:rotate(${rot}deg);z-index:${zIndex};" title="${fullHex}"></div>`;
+                } else if (type === 2) {
+                    elHTML = `<div class="element" style="left:${x}px;top:${y}px;width:${size}px;height:${size}px;background:${bg};border:${border};clip-path:polygon(50% 0%,0% 100%,100% 100%);z-index:${zIndex};" title="${fullHex}"></div>`;
+                } else {
+                    let lines = '';
+                    for (let j = 0; j < 3; j++) {
+                        const lx = x + rng() * w;
+                        const ly = y + rng() * h;
+                        const lw = 20 + rng() * 60;
+                        const lh = 2 + rng() * 5;
+                        lines += `<div style="position:absolute;left:${lx}px;top:${ly}px;width:${lw}px;height:${lh}px;background:${pureHex};transform:rotate(${Math.floor(rng()*180)}deg);z-index:${zIndex};" title="${fullHex}"></div>`;
+                    }
+                    elHTML = `<div class="element" style="position:absolute;left:0;top:0;width:100%;height:100%;z-index:${zIndex};">${lines}</div>`;
+                }
+                canvas.insertAdjacentHTML('beforeend', elHTML);
+            }
+            canvas.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        function saveArtAsHtml() {
+            const canvas = document.getElementById('artCanvas');
+            const artHTML = canvas.outerHTML;
+            const artStyles = `
+                body { margin:0;padding:20px;background:#f5f0e8;display:flex;justify-content:center;align-items:center;min-height:100vh; }
+                .art-frame { background:#f5f0e8;border:12px solid #d4c5a9;box-shadow:0 20px 60px rgba(0,0,0,0.6),inset 0 0 0 2px #bfae8e;position:relative;overflow:hidden;width:800px;height:600px;max-width:100vw;max-height:100vh; }
+                .art-frame .signature { position:absolute;bottom:12px;right:20px;font-family:Georgia,serif;font-style:italic;font-size:0.7em;color:#8b7d6b;opacity:0.7;z-index:20; }
+                .art-frame .element { position:absolute; }
+            `;
+            const fullHTML = `<!DOCTYPE html>\n<html lang="ru">\n<head><meta charset="UTF-8"><title>Karmic Canvas</title><style>${artStyles}</style></head>\n<body>${artHTML}</body></html>`;
+            const blob = new Blob([fullHTML], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'karmic_canvas.html';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        // ============ ДЕКОДИРОВАНИЕ (ПАРСИТ CSS, АВТОСОРТИРОВКА) ============
+        function decodeColors() {
+            const raw = document.getElementById('decodeInput').value.trim();
+            const statusEl = document.getElementById('sortStatus');
+            statusEl.textContent = '';
+
+            if (!raw) { alert('Вставьте HEX-коды, CSS или HTML!'); return; }
+
+            try {
+                // Ищем все HEX-коды через регулярку: title="#XXXXXXXX" или просто #XXXXXXXX
+                const hexMatches = [];
+                // Паттерн 1: title="#XXXXXXXX..." — из CSS-картины
+                const titlePattern = /title="(#[0-9A-Fa-f]{8,})"/g;
+                let match;
+                while ((match = titlePattern.exec(raw)) !== null) {
+                    hexMatches.push(match[1]);
+                }
+
+                if (hexMatches.length === 0) {
+                    // Паттерн 2: просто #XXXXXXXX в тексте
+                    const plainPattern = /#[0-9A-Fa-f]{8,}/g;
+                    while ((match = plainPattern.exec(raw)) !== null) {
+                        hexMatches.push(match[0]);
+                    }
+                }
+
+                if (hexMatches.length === 0) {
+                    alert('HEX-коды не найдены. Нужны коды длиной 8+ символов.\n\nЕсли вы вставили CSS картины — проверьте, что у элементов есть title="#...".');
+                    return;
+                }
+
+                // Убираем дубликаты (один и тот же цвет мог быть и в title, и в background)
+                const uniqueHex = [...new Set(hexMatches)];
+
+                // Извлекаем индекс и данные
+                const parsed = uniqueHex.map(hex => {
+                    const clean = hex.replace('#', '');
+                    const full = clean.length >= 8 ? clean.substring(clean.length - 8) : clean;
+                    if (full.length < 8) throw new Error(`Слишком короткий код: ${hex}`);
+                    return {
+                        index: parseInt(full.substring(0, 2), 16),
+                        prefix: full.substring(0, 2),
+                        data: full.substring(2, 8)
+                    };
+                });
+
+                // СОРТИРУЕМ ПО ИНДЕКСУ
+                parsed.sort((a, b) => a.index - b.index);
+
+                const expected = parsed.map((_, i) => i * 2);
+                const isStandard = parsed.every((p, i) => p.index === expected[i]);
+                statusEl.textContent = isStandard
+                    ? `✅ Найдено ${parsed.length} цветов, порядок восстановлен по индексам`
+                    : `⚠️ Найдено ${parsed.length} цветов, индексы нестандартные — отсортировано по возрастанию`;
+                statusEl.style.color = isStandard ? '#00cc7d' : '#ffaa00';
+
+                // Склеиваем данные в порядке индексов
+                let fullHex = parsed.map(p => p.data).join('');
+
+                // HEX → байты
+                const bytes = [];
+                for (let i = 0; i < fullHex.length; i += 2) {
+                    const bh = fullHex.substring(i, i + 2);
+                    if (bh.length === 2) bytes.push(parseInt(bh, 16));
+                }
+
+                // Убираем нули заполнения с конца
+                while (bytes.length && bytes[bytes.length - 1] === 0) bytes.pop();
+
+                // Байты → текст
+                const text = new TextDecoder().decode(new Uint8Array(bytes));
+                document.getElementById('decodeOutput').value = text;
+
+            } catch (e) {
+                statusEl.textContent = '❌ ' + e.message;
+                statusEl.style.color = '#ff4444';
+                document.getElementById('decodeOutput').value = '❌ Ошибка при расшифровке.';
+            }
+        }
+    </script>
+</body>
+</html>
