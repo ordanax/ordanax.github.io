@@ -24,3 +24,4 @@ github_repo: ordanax/ordanax.github.io
 exclude:
 - Gemfile
 - Gemfile.lock
+future: true
