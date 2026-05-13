@@ -2,26 +2,7 @@
 layout: default
 ---
 
-<!-- Author Info Section -->
-<div class="author-section" style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
-    <h3>Привет! 👋</h3>
-    <p>Я увлекаюсь Linux и делюсь здесь своими заметками и гайдами. Моя цель — помочь вам освоить Linux и сделать его использование более комфортным.</p>
-    <p><strong>Контакты:</strong> <a href="https://t.me/linux4at">@linux4at</a></p>
-</div>
-
-<!-- Popular Posts Section -->
-<h3>🔥 Популярные статьи</h3>
-<div class="popular-posts">
-    <ul>
-        <li><a href="/hyprland-arch-linux">Hyprland на Arch Linux — полный гайд по установке и настройке</a></li>
-        <li><a href="/zsh-themy-konfiguraciya">Zsh темы и конфигурация — превращаем терминал в мощный инструмент</a></li>
-        <li><a href="/nvidia-drayver-arch-linux">NVIDIA драйверы на Arch Linux — полное руководство по установке и настройке</a></li>
-    </ul>
-</div>
-<hr>
-
 <!-- This loops through the paginated posts -->
-<h3>📝 Последние статьи</h3>
 {% for post in paginator.posts %}
   <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
   <p>

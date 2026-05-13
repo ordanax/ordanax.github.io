@@ -1,24 +1,47 @@
 ---
 layout: default
-title: Тег
+title: Теги
 ---
 
 <div class="blog-post">
-    <h1 class="blog-post-title">Статьи с тегом: {{ page.tag }}</h1>
+    <h1 class="blog-post-title">Все теги</h1>
     <hr>
-    {% for post in site.tags[page.tag] %}
-        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-        <p>
-            <span class="blog-post-meta">{{ post.date|date:"%d.%m.%Y" }}</span>
-        </p>
-        <div class="entry">
-            {{ post.excerpt }}
-        </div>
-        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Читать далее &raquo;</a>
-        <br>
-        <hr>
-    {% endfor %}
-    {% if site.tags[page.tag] == empty %}
-        <p>Статей с этим тегом не найдено.</p>
-    {% endif %}
+    <div id="tag-list">
+        {% for tag in site.tags %}
+            <a href="#{{ tag[0] | slugify }}" class="badge badge-secondary">{{ tag[0] }}</a>
+        {% endfor %}
+    </div>
+    <hr>
+    <div id="tag-posts">
+        {% for tag in site.tags %}
+            <div id="{{ tag[0] | slugify }}" class="tag-section">
+                <h2>{{ tag[0] }}</h2>
+                {% for post in tag[1] %}
+                    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                    <p>
+                        <span class="blog-post-meta">{{ post.date|date:"%d.%m.%Y" }}</span>
+                    </p>
+                    <div class="entry">
+                        {{ post.excerpt }}
+                    </div>
+                    <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Читать далее &raquo;</a>
+                    <br>
+                    <hr>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
 </div>
+
+<script>
+    // Check if URL has hash for specific tag
+    window.onload = function() {
+        var hash = window.location.hash.substring(1);
+        if (hash) {
+            var element = document.getElementById(hash);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    };
+</script>

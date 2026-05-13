@@ -3,19 +3,13 @@ layout: default
 ---
 
 <div class="blog-post">
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/">Главная</a></li>
-            <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
-        </ol>
-    </nav>
     <h1 class="blog-post-title">{% if page.header %}{{ page.header }}{% else %}{{ page.title }}{% endif %}</h1>
 	{% include edit.html %}
     <p class="blog-post-meta">{{ page.date|date:"%d.%m.%Y" }} · {% assign words = content | number_of_words %}{% assign reading_time = words | divided_by: 200 %}{% if reading_time < 1 %}~1 минута{% else %}~{{ reading_time }} минут{% endif %} чтения</p>
     {% if page.tags %}
     <div class="post-tags">
         {% for tag in page.tags %}
-            <a href="/tag/{{ tag | slugify }}" class="badge badge-secondary">{{ tag }}</a>
+            <a href="/tag.html#{{ tag | slugify }}" class="badge badge-secondary">{{ tag }}</a>
         {% endfor %}
     </div>
     {% endif %}
