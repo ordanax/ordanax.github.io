@@ -2,19 +2,18 @@
  * Globals
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Spectral:wght@400;600;700&display=swap');
-
 body {
-  font-family: 'Inter', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #fff;
   background: #2a2d38
 }
 
 h1, .h1 {
-    font-family: 'Spectral', "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 600;
-    color: #0366d6;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    color: #fff;
     font-size: 35px;
+    font: bold;
 }
 
 h2, .h2,
@@ -22,10 +21,11 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-    font-family: 'Spectral', "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 600;
-    color: #0366d6;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    color: #fff;
     font-size: 30px;
+    font: bold;
 }
 
 
@@ -467,18 +467,23 @@ nav.soc ul {
   margin: 15px 0;
 }
 .post-tags .badge {
-  background: #0366d6;
+  background: #428bca;
   color: #fff;
   padding: 5px 10px;
   border-radius: 12px;
   margin-right: 8px;
   font-size: 12px;
   display: inline-block;
+  text-decoration: none;
+}
+.post-tags .badge:hover {
+  background: #5eb0ff;
+  text-decoration: none;
 }
 
 /* Author Section */
 .author-section {
-  border-left: 4px solid #0366d6;
+  border-left: 4px solid #428bca;
 }
 
 /* Popular Posts */
@@ -497,12 +502,4 @@ nav.soc ul {
 .popular-posts a:hover {
   color: #5eb0ff;
   text-decoration: underline;
-}
-
-/* Links accent color */
-a {
-  color: #0366d6;
-}
-a:hover {
-  color: #5eb0ff;
 }

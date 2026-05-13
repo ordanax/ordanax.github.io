@@ -15,7 +15,7 @@ layout: default
     {% if page.tags %}
     <div class="post-tags">
         {% for tag in page.tags %}
-            <span class="badge badge-secondary">{{ tag }}</span>
+            <a href="/tag/{{ tag | slugify }}" class="badge badge-secondary">{{ tag }}</a>
         {% endfor %}
     </div>
     {% endif %}
