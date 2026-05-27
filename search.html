@@ -3,72 +3,71 @@ layout: default
 title: Поиск
 description: Поиск по статьям и руководствам блога об Arch Linux.
 ---
-<style>
-.gsc-control-cse, .gsc-control-wrapper-cse {
-  background: transparent !important;
-  border: none !important;
-  padding: 0 !important;
-}
-.gsc-result, .gsc-webResult {
-  background: var(--bg-card) !important;
-  border: 1px solid var(--border) !important;
-  border-radius: var(--radius) !important;
-  padding: 16px 20px !important;
-  margin-bottom: 12px !important;
-}
-.gsc-result:hover, .gsc-webResult:hover {
-  border-color: var(--accent) !important;
-}
-.gs-title, .gs-title b {
-  color: var(--accent) !important;
-  text-decoration: none !important;
-  font-size: 1.1rem !important;
-  font-weight: 600 !important;
-}
-.gs-title:hover { color: var(--accent-hover) !important; }
-.gs-snippet {
-  color: var(--text-secondary) !important;
-  font-size: .9rem !important;
-  line-height: 1.6 !important;
-}
-.gs-visibleUrl, .gs-visibleUrl-long {
-  color: var(--text-muted) !important;
-  font-size: .8rem !important;
-}
-.gsc-cursor-page {
-  color: var(--text-secondary) !important;
-  padding: 6px 12px !important;
-  border-radius: var(--radius-sm) !important;
-  text-decoration: none !important;
-}
-.gsc-cursor-current-page {
-  color: var(--accent) !important;
-  background: var(--accent-dim) !important;
-  font-weight: 600 !important;
-}
-.gsc-cursor-page:hover {
-  background: var(--bg-hover) !important;
-}
-.gsc-table-result, .gsc-table-cell-result {
-  background: transparent !important;
-}
-.gcsc-branding { display: none !important; }
-.gsc-adBlock { display: none !important; }
-.gsc-control-cse div { color: var(--text-primary) !important; }
-input.gsc-search-button, input.gsc-search-button-v2 {
-  background: var(--accent) !important;
-  border-color: var(--accent) !important;
-}
-</style>
+
+<div class="blog-post">
+  <h1 class="blog-post-title">Поиск</h1>
+  <hr>
+  <p>Введите запрос для поиска по статьям:</p>
+  <input type="text" id="search-input" placeholder="Поиск…" style="width:100%;max-width:400px;padding:10px 14px;background:var(--bg-primary);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text-primary);font-size:1rem;outline:none;" oninput="searchPosts(this.value)">
+  <div id="search-results" style="margin-top:20px;"></div>
+</div>
+
 <script>
-  (function() {
-    var cx = 'partner-pub-8902808175823062:9580921872';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
+(function() {
+  var posts = [];
+  var input = document.getElementById('search-input');
+  var results = document.getElementById('search-results');
+
+  function loadPosts() {
+    var pages = [
+      {% for post in site.posts %}
+      {
+        title: {{ post.title | jsonify }},
+        url: {{ post.url | jsonify }},
+        excerpt: {{ post.excerpt | strip_html | truncatewords: 50 | jsonify }},
+        date: '{{ post.date | date: "%d.%m.%Y" }}',
+        tags: {{ post.tags | jsonify }}
+      },
+      {% endfor %}
+    ];
+    posts = pages;
+    var q = new URLSearchParams(window.location.search).get('q');
+    if (q) { input.value = q; searchPosts(q); }
+  }
+
+  function searchPosts(query) {
+    var q = query.trim().toLowerCase();
+    if (!q) { results.innerHTML = ''; return; }
+    var filtered = posts.filter(function(p) {
+      return p.title.toLowerCase().includes(q) ||
+             (p.excerpt && p.excerpt.toLowerCase().includes(q)) ||
+             (p.tags && p.tags.some(function(t) { return t.toLowerCase().includes(q); }));
+    });
+    if (filtered.length === 0) {
+      results.innerHTML = '<p style="color:var(--text-muted)">Ничего не найдено</p>';
+      return;
+    }
+    var html = '';
+    filtered.forEach(function(p) {
+      html += '<article class="post-card" style="margin-bottom:12px;">' +
+        '<h2 style="margin:0 0 6px;font-size:1.1rem;"><a href="' + p.url + '">' + escapeHtml(p.title) + '</a></h2>' +
+        '<div class="post-card-meta">' + p.date + '</div>' +
+        '<div class="post-card-excerpt">' + escapeHtml(p.excerpt) + '</div>' +
+        '<a href="' + p.url + '" class="read-more">Читать далее &raquo;</a>' +
+        '</article>';
+    });
+    results.innerHTML = html;
+    history.replaceState(null, '', '?q=' + encodeURIComponent(q));
+  }
+
+  function escapeHtml(s) {
+    if (!s) return '';
+    var d = document.createElement('div');
+    d.textContent = s;
+    return d.innerHTML;
+  }
+
+  if (document.readyState === 'complete') loadPosts();
+  else window.addEventListener('load', loadPosts);
+})();
 </script>
-<gcse:searchresults-only></gcse:searchresults-only>
