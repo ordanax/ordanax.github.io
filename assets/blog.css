@@ -108,7 +108,7 @@ h6 { font-size: .9rem; }
   margin: 0 -15px;
   background: var(--bg-secondary);
   border-bottom: 1px solid var(--border);
-  border-radius: 0 0 var(--radius) var(--radius);
+  border-radius: var(--radius);
 }
 .blog-nav-item {
   display: inline-block;
@@ -338,6 +338,9 @@ pre code {
 }
 
 /* Sidebar */
+.blog-sidebar {
+  padding-top: 20px;
+}
 .sidebar-module {
   padding: 15px;
   margin: 0 -15px 15px;
