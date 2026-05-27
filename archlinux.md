@@ -2,6 +2,7 @@
 title: Об Arch Linux
 permalink: archlinux/
 layout: post
+description: 10 причин почему Arch Linux — лучший дистрибутив. Полный контроль, rolling release, AUR, Pacman и активное сообщество.
 ---
 
 # 10 ПРИЧИН ПОЧЕМУ Я ВЫБРАЛ ARCH LINUX

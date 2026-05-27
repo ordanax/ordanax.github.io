@@ -2,6 +2,7 @@
 title: Поддержать
 permalink: donat/
 layout: post
+description: Поддержите проект по созданию контента об Arch Linux. Любая сумма помогает в развитии сайта и сборе на новый ПК для видео-гайдов.
 ---
 
 <div style="text-align: center; margin: 20px 0; padding: 15px;">

@@ -6,6 +6,10 @@ date: 2020-04-08 17:43:09 +0500
 permalink: /linux-telegram
 categories: 
 - useful
+tags:
+- telegram
+- chat
+- useful
 edit: true
 ---
 ![Linux чат в Telegram](../img/telegram_chat.png){:style="float: left;margin-right: 25px;margin-top: 10px;"}

@@ -1,0 +1,44 @@
+name: SEO Check
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  seo-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install html-proofer
+        run: gem install html-proofer
+
+      - name: Build Jekyll site
+        run: |
+          bundle exec jekyll build --strict_front_matter
+
+      - name: Check HTML with html-proofer
+        run: |
+          bundle exec htmlproofer ./_site \
+            --allow-hash-href \
+            --check-html \
+            --check-img-http \
+            --checks-to-ignore 'ScriptCheck' \
+            --url-ignore '/use.fontawesome.com/,/code.jquery.com/,/cdn.jsdelivr.net/'
+
+      - name: Run SEO checks
+        run: python3 .github/workflows/seo_check.py

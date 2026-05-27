@@ -2,6 +2,7 @@
 title: Чек-лист по установке и настройке Arch Linux Xfce
 permalink: checklist/
 layout: post
+description: Полный чек-лист по установке Arch Linux с Xfce — от загрузки ISO до настройки графического окружения, программ и безопасности.
 ---
 
 ## Вопросы, поддержка
