@@ -98,15 +98,17 @@ h6 { font-size: .9rem; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--bg-secondary);
-  border-bottom: 1px solid var(--border);
 }
 .blog-nav {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 4px;
-  padding: 8px 0;
+  padding: 8px 15px;
+  margin: 0 -15px;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  border-radius: 0 0 var(--radius) var(--radius);
 }
 .blog-nav-item {
   display: inline-block;
