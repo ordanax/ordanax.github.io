@@ -13,7 +13,7 @@ h1, .h1 {
     font-weight: normal;
     color: #fff;
     font-size: 35px;
-    font: bold;
+    font-weight: bold;
 }
 
 h2, .h2,
@@ -25,20 +25,20 @@ h6, .h6 {
     font-weight: normal;
     color: #fff;
     font-size: 30px;
-    font: bold;
+    font-weight: bold;
 }
 
 
 .blog-post h1 {
     font-size: 35px;
     margin-top: 25px;
-    font: bold;
+    font-weight: bold;
 }
 
 .blog-post h2 {
     font-size: 30px;
     margin-top: 25px;
-    font: bold;
+    font-weight: bold;
 }
 
 .blog-main img, .blog-post img {
@@ -264,8 +264,8 @@ h6, .h6 {
 
 @media (max-width:768px) {
   .blog-logo {
-  float: center; 
-  margin-right: 0px;
+  display: block;
+  margin: 0 auto;
 	}
   .blog-title {
   font-size: 55px;
