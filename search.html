@@ -3,6 +3,63 @@ layout: default
 title: Поиск
 description: Поиск по статьям и руководствам блога об Arch Linux.
 ---
+<style>
+.gsc-control-cse, .gsc-control-wrapper-cse {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+}
+.gsc-result, .gsc-webResult {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  padding: 16px 20px !important;
+  margin-bottom: 12px !important;
+}
+.gsc-result:hover, .gsc-webResult:hover {
+  border-color: var(--accent) !important;
+}
+.gs-title, .gs-title b {
+  color: var(--accent) !important;
+  text-decoration: none !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+}
+.gs-title:hover { color: var(--accent-hover) !important; }
+.gs-snippet {
+  color: var(--text-secondary) !important;
+  font-size: .9rem !important;
+  line-height: 1.6 !important;
+}
+.gs-visibleUrl, .gs-visibleUrl-long {
+  color: var(--text-muted) !important;
+  font-size: .8rem !important;
+}
+.gsc-cursor-page {
+  color: var(--text-secondary) !important;
+  padding: 6px 12px !important;
+  border-radius: var(--radius-sm) !important;
+  text-decoration: none !important;
+}
+.gsc-cursor-current-page {
+  color: var(--accent) !important;
+  background: var(--accent-dim) !important;
+  font-weight: 600 !important;
+}
+.gsc-cursor-page:hover {
+  background: var(--bg-hover) !important;
+}
+.gsc-table-result, .gsc-table-cell-result {
+  background: transparent !important;
+}
+.gcsc-branding { display: none !important; }
+.gsc-adBlock { display: none !important; }
+.gsc-control-cse div { color: var(--text-primary) !important; }
+input.gsc-search-button, input.gsc-search-button-v2 {
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+}
+</style>
 <script>
   (function() {
     var cx = 'partner-pub-8902808175823062:9580921872';
