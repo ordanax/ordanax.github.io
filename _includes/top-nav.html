@@ -1,11 +1,32 @@
-<nav class="navbar navbar-expand-lg blog-nav">
-	<button class="navbar-toggler blog-nav-toggler" type="button" data-toggle="collapse" data-target="#blogNavbar" aria-controls="blogNavbar" aria-expanded="false" aria-label="Открыть меню">
-		<span class="navbar-toggler-icon blog-nav-toggler-icon"></span>
-	</button>
-	<div class="collapse navbar-collapse" id="blogNavbar">
-		<a class="blog-nav-item" href="/">Главная</a>
-		<a class="blog-nav-item" href="/archlinux/">Об Arch Linux</a>
-		<a class="blog-nav-item" href="/checklist/">Чеклист</a>
-		<a class="blog-nav-item" href="/about/">О сайте</a>
-	</div>
+<nav class="blog-nav-wrapper">
+  <div class="container">
+    <div class="blog-nav">
+      <button class="blog-nav-toggler" type="button" data-toggle="collapse" data-target="#blogNavbar" aria-controls="blogNavbar" aria-expanded="false" aria-label="Открыть меню">
+        <span class="blog-nav-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse" id="blogNavbar">
+        <a class="blog-nav-item" href="/" {% if page.url == '/' %}aria-current="page"{% endif %}>Главная</a>
+        <a class="blog-nav-item" href="/archlinux/" {% if page.url contains '/archlinux/' %}aria-current="page"{% endif %}>Об Arch Linux</a>
+        <a class="blog-nav-item" href="/checklist/" {% if page.url contains '/checklist/' %}aria-current="page"{% endif %}>Чеклист</a>
+        <a class="blog-nav-item" href="/about/" {% if page.url contains '/about/' %}aria-current="page"{% endif %}>О сайте</a>
+      </div>
+      <div class="blog-nav-search">
+        <input type="text" id="nav-search" placeholder="Поиск…" onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='/search.html?q='+encodeURIComponent(this.value.trim())">
+      </div>
+    </div>
+  </div>
 </nav>
+
+<script>
+(function() {
+  var toggler = document.querySelector('.blog-nav-toggler');
+  var collapse = document.getElementById('blogNavbar');
+  if (toggler && collapse) {
+    toggler.addEventListener('click', function() {
+      collapse.classList.toggle('show');
+      var expanded = collapse.classList.contains('show');
+      toggler.setAttribute('aria-expanded', expanded);
+    });
+  }
+})();
+</script>

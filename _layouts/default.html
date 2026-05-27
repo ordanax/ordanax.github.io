@@ -4,8 +4,10 @@
 
 <body>
 	<div class="container">
-			{% include header.html %}
-			{% include top-nav.html %}
+		{% include header.html %}
+	</div>
+	{% include top-nav.html %}
+	<div class="container">
 		<div class="row">
 			<div class="col-md-9 blog-main">{{ content }}</div>
 			<div class="col-md-3 blog-sidebar">{% include sidebar.html %}</div>
@@ -14,9 +16,22 @@
 	<div class="blog-footer">
 		{% include footer.html %}
 	</div>
+	<button class="back-to-top" id="backToTop" aria-label="Наверх">&#8593;</button>
 {% include code.html %}
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+	<script>
+	(function() {
+		var btn = document.getElementById('backToTop');
+		if (!btn) return;
+		window.addEventListener('scroll', function() {
+			btn.classList.toggle('visible', window.scrollY > 400);
+		});
+		btn.addEventListener('click', function() {
+			window.scrollTo({ top: 0, behavior: 'smooth' });
+		});
+	})();
+	</script>
 </body>
 
 </html>
