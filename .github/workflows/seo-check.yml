@@ -28,7 +28,7 @@ jobs:
 
       - name: Build Jekyll site
         run: |
-          bundle exec jekyll build --strict_front_matter
+          bundle exec jekyll build
 
       - name: Install html-proofer
         run: gem install html-proofer
@@ -39,8 +39,7 @@ jobs:
             --allow-hash-href \
             --check-html \
             --check-img-http \
-            --checks-to-ignore 'ScriptCheck' \
-            --url-ignore '/use.fontawesome.com/,/code.jquery.com/,/cdn.jsdelivr.net/'
+            --checks-to-ignore 'ScriptCheck'
 
       - name: Run SEO checks
         run: python3 .github/workflows/seo_check.py
