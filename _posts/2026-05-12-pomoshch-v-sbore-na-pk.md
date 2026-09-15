@@ -39,7 +39,7 @@ tags:
 ## Где найти меня
 
 - **Чат по Linux в Telegram:** 👉 [https://t.me/linux4at](https://t.me/linux4at)
-- **Чат в MAX:** 👉 [https://max.ru/join/b4GtiNvbjYqeboq-nddswKQJ-cvWiJGoaZdIoV1EUMk](https://max.ru/join/b4GtiNvbjYqeboq-nddswKQJ-cvWiJGoaZdIoV1EUMk)
+- **Чат в MAX:** 👉 [https://max.ru/join/X9LNZmlPqmGHweB7EtIRwbdNwtwmhY4JnhX0jDKyaxs](https://max.ru/join/X9LNZmlPqmGHweB7EtIRwbdNwtwmhY4JnhX0jDKyaxs)
 
 ## Что вы получите взамен
 
