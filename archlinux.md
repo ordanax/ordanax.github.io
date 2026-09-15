@@ -5,7 +5,7 @@ layout: post
 description: 10 причин почему Arch Linux — лучший дистрибутив. Полный контроль, rolling release, AUR, Pacman и активное сообщество.
 ---
 
-# 10 ПРИЧИН ПОЧЕМУ Я ВЫБРАЛ ARCH LINUX
+## 10 ПРИЧИН ПОЧЕМУ Я ВЫБРАЛ ARCH LINUX
 
 ## 01. ARCH LINUX - ЭТО ПОЛНЫЙ КОНТРОЛЬ НАД СИСТЕМОЙ
 

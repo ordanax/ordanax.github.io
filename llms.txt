@@ -1,0 +1,44 @@
+# Все об Arch Linux
+
+Официальная документация и блог об Arch Linux: установка, настройка, конфиги, скрипты, чек-листы и руководства.
+
+## О блоге
+
+https://ordanax.github.io
+
+Блог «Все об Arch Linux» — практические руководства по установке и настройке Arch Linux: графические окружения (Xfce, Gnome, Hyprland, i3wm), терминалы (Ghostty, Fastfetch), сеть (OpenWrt, Wi-Fi, WPA Supplicant), сервисы (PostgreSQL, Samba), скрипты и чек-листы.
+
+Автор: Бойко Алексей.
+
+## Разделы
+
+- Главная: https://ordanax.github.io/
+- Установка Arch Linux: https://ordanax.github.io/install/
+- Конфиги: https://ordanax.github.io/configs/
+- Чеклисты: https://ordanax.github.io/checklists/
+- Скрипты: https://ordanax.github.io/scripts/
+- Видео: https://ordanax.github.io/video/
+- Полезное: https://ordanax.github.io/useful/
+- Новости: https://ordanax.github.io/news/
+- Об Arch Linux: https://ordanax.github.io/archlinux/
+- Чек-лист установки Xfce (актуализирован на 2026 год): https://ordanax.github.io/checklist/
+
+## Основные материалы
+
+- Чек-лист по установке и настройке Arch Linux с Xfce: https://ordanax.github.io/checklist/
+- Fastfetch конфигурация: https://ordanax.github.io/fastfetch-konfiguraciya/
+- Ghostty терминал: https://ordanax.github.io/ghostty-terminal-konfiguraciya/
+- Gnome установка: https://ordanax.github.io/gnome-ustanovka-linux/
+- Hyprland установка: https://ordanax.github.io/hyprland-ustanovka-na-arch-linux/
+- OpenWrt настройка роутера: https://ordanax.github.io/openwrt-nastroyka-routera/
+- PostgreSQL настройка: https://ordanax.github.io/postgresql-nastroyka-na-linux/
+- Samba (общий доступ): https://ordanax.github.io/setup-samba/
+
+## Формат
+
+Все статьи — пошаговые руководства с командами для терминала, проверенные на актуальных версиях Arch Linux. Контент свободен для цитирования при указании источника.
+
+## Контакты
+
+- Чат в Telegram: https://t.me/linux4at
+- Чат в Max: https://max.ru/join/X9LNZmlPqmGHweB7EtIRwbdNwtwmhY4JnhX0jDKyaxs

@@ -1,5 +1,5 @@
 <div class="blog-header">
-	<a href="/"><img class="blog-logo" src="{{ site.url }}/img/archlinux-logo.png" alt="logo"></a>
-	<span class="blog-title">{{ site.title }}</span>
+	<a href="/"><img class="blog-logo" src="{{ site.url }}/img/archlinux-logo.png" alt="Все об Arch Linux — логотип"></a>
+	{% if page.url == '/' %}<h1 class="blog-title">{{ site.title }}</h1>{% else %}<span class="blog-title">{{ site.title }}</span>{% endif %}
 	<p class="lead blog-description">{{ site.description }}</p>
 </div>

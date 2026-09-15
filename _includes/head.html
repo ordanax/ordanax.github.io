@@ -13,9 +13,43 @@
 	<meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
 	<meta property="og:url" content="{{ site.url }}{{ page.url }}">
 	<meta property="og:site_name" content="{{ site.title }}">
+	<meta property="og:locale" content="ru_RU">
+	<meta property="og:image" content="{{ site.url }}/img/archlinux-logo.png">
+	<meta name="twitter:card" content="summary">
 
 	<link rel="canonical" href="{{ site.url }}{{ page.url }}">
 	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml">
+
+	{% if page.noindex or page.url contains '/page' %}
+	<meta name="robots" content="noindex, follow">
+	{% endif %}
+
+	{% if page.layout == 'post' %}
+	<script type="application/ld+json">
+	{
+	  "@context": "https://schema.org",
+	  "@type": "BlogPosting",
+	  "headline": {{ page.title | jsonify }},
+	  "description": {{ page.description | jsonify }},
+	  "url": "{{ site.url }}{{ page.url }}",
+	  "datePublished": "{{ page.date | date_to_xmlschema }}",
+	  "author": { "@type": "Person", "name": "Бойко Алексей" },
+	  "publisher": { "@type": "Organization", "name": "{{ site.title }}", "logo": { "@type": "ImageObject", "url": "{{ site.url }}/img/archlinux-logo.png" } },
+	  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ site.url }}{{ page.url }}" }
+	}
+	</script>
+	{% else %}
+	<script type="application/ld+json">
+	{
+	  "@context": "https://schema.org",
+	  "@type": "WebSite",
+	  "name": "{{ site.title }}",
+	  "url": "{{ site.url }}",
+	  "description": "{{ site.description }}",
+	  "publisher": { "@type": "Person", "name": "Бойко Алексей" }
+	}
+	</script>
+	{% endif %}
 
 	{% if seo %}
 	<script type="application/ld+json">{{ seo | jsonify }}</script>

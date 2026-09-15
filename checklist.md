@@ -15,7 +15,7 @@ description: Полный чек-лист по установке Arch Linux с 
 
 ---
 
-> **Актуальность:** 2026 г. | **Основан на:** [Arch Wiki Installation Guide](https://wiki.archlinux.org/title/Installation_guide)
+> **Актуализирован на 2026 год** (проверено 16.09.2026) | **Основан на:** [Arch Wiki Installation Guide](https://wiki.archlinux.org/title/Installation_guide)
 
 ---
 
@@ -34,12 +34,22 @@ description: Полный чек-лист по установке Arch Linux с 
    В Windows можно использовать [Rufus](https://rufus.ie) или [Ventoy](https://www.ventoy.net).
 
 ### Загрузка с флешки
-- **UEFI:** Если ошибка "Security Boot Fail" — отключить Secure Boot в BIOS (установить пароль супервизора, затем отключить Secure Boot)
+- **UEFI:** Официальные ISO Arch Linux начиная с 2025 года загружаются с включённым Secure Boot, но во время установки GRUB/ядра он может мешать. Если появилась ошибка "Security Boot Fail" — отключить Secure Boot в BIOS (иногда для этого нужно сначала установить пароль супервизора)
 - **BIOS:** Убедиться, что загрузка с USB включена в Boot Menu
 
 ---
 
 ## Установка системы
+
+### 0. Быстрая установка через archinstall (для новичков)
+
+Официальный ISO включает скрипт-установщик `archinstall`. После загрузки с флешки просто запустите:
+
+```bash
+archinstall
+```
+
+Он проведёт через разметку диска, выбор графического окружения (включая Xfce), создание пользователя и установку загрузчика. Ниже — ручной способ для полного контроля.
 
 ### 1. Начальная настройка консоли
 ```bash
@@ -269,7 +279,8 @@ nmtui
 
 ### 2. Создание пользователя
 ```bash
-useradd -m -g users -G wheel,power,storage,audio,video -s /bin/bash username
+# Группа users более не нужна (deprecated), достаточно дополнительных групп:
+useradd -m -G wheel,power,storage,audio,video -s /bin/bash username
 passwd username
 ```
 
@@ -359,6 +370,8 @@ cd ~
 rm -rf /tmp/yay
 ```
 
+> **Альтернатива:** [paru](https://github.com/Morganamilo/paru) — AUR-хелпер с тем же синтаксисом (`paru -Syu`). Установка аналогична: `git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si`.
+
 ---
 
 ## Рекомендуемые программы
@@ -384,10 +397,12 @@ sudo pacman -S libreoffice-fresh libreoffice-fresh-ru \
 
 ### Инструменты
 ```bash
-sudo pacman -S htop btop neofetch \
+sudo pacman -S htop btop fastfetch \
     qbittorrent veracrypt \
     flameshot obs-studio
 ```
+
+> **Neofetch устарел** — используйте **fastfetch** (установлен выше). Подробная настройка: [Fastfetch конфигурация](/fastfetch-konfiguraciya).
 
 ### Разработка
 ```bash
@@ -481,4 +496,4 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 ---
 
-*Чек-лист актуализирован: 2026 г. | Все изменения проверены по Arch Wiki*
+*Чек-лист актуализирован на 2026 год (16.09.2026). Все изменения проверены по Arch Wiki.*
