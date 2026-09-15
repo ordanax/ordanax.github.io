@@ -301,5 +301,3 @@ fastfetch --test
 ---
 
 **Автор:** [ordanax.github.io](https://ordanax.github.io/)  
-**Telegram:** [@linux4at](https://t.me/linux4at)  
-**MAX:** [Присоединиться](https://max.ru/join/b4GtiNvbjYqeboq-nddswKQJ-cvWiJGoaZdIoV1EUMk)

@@ -15,3 +15,13 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/52189879" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+
+<script>
+// Единый сбор целей: все клики по a[data-goal] → Metrika reachGoal
+document.addEventListener('click', function (e) {
+	var el = e.target && e.target.closest ? e.target.closest('[data-goal]') : null;
+	if (el && typeof ym !== 'undefined') {
+		ym(52189879, 'reachGoal', el.getAttribute('data-goal'));
+	}
+});
+</script>

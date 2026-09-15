@@ -13,9 +13,11 @@ layout: default
         {% endfor %}
     </div>
     {% endif %}
+	{% include cta-chat.html compact=true %}
     {{ content }}
 	<br>
     <hr>
+	{% include cta-chat.html %}
 	{% include similar-posts.html %}
 	{% include comments.html %}
 </div>
