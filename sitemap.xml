@@ -7,7 +7,7 @@ search: exclude
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <!-- Страницы -->
     {% for page in site.pages %}
-        {% unless page.url contains '/assets/' or page.url contains '/feed.xml' or page.url contains '/sitemap.xml' or page.search == "exclude" %}
+        {% unless page.url contains '/assets/' or page.url contains '/feed.xml' or page.url contains '/sitemap.xml' or page.url contains '/page' or page.search == "exclude" or page.sitemap == false %}
         <url>
             <loc>{{ site.url | default: 'https://ordanax.github.io' }}{{ page.url | remove: 'index.html' }}</loc>
             <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
@@ -23,6 +23,7 @@ search: exclude
 
     <!-- Посты -->
     {% for post in site.posts %}
+        {% unless post.search == "exclude" %}
         <url>
             <loc>{{ site.url | default: 'https://ordanax.github.io' }}{{ post.url | remove: 'index.html' }}</loc>
             <lastmod>
@@ -33,5 +34,6 @@ search: exclude
             <changefreq>monthly</changefreq>
             <priority>0.8</priority>
         </url>
+        {% endunless %}
     {% endfor %}
 </urlset>
