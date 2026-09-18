@@ -112,5 +112,4 @@ sudo make install
 
 ## Полезные ресурсы
 
-- [ArchWiki: Klavaro](https://wiki.archlinux.org/title/Klavaro), страница тренажёра в официальной вики
 - [Мой форк klavaro-custom](https://github.com/ordanax/klavaro-custom), исходники, README, история коммитов

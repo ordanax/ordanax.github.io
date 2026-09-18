@@ -22,7 +22,7 @@ description: Поиск по статьям и руководствам блог
 
   function loadPosts() {
     var pages = [
-      {% for post in site.posts %}
+      {% for post in site.posts %}{% if post.title %}
       {
         title: {{ post.title | jsonify }},
         url: {{ post.url | jsonify }},
@@ -30,7 +30,7 @@ description: Поиск по статьям и руководствам блог
         date: '{{ post.date | date: "%d.%m.%Y" }}',
         tags: {{ post.tags | jsonify }}
       },
-      {% endfor %}
+      {% endif %}{% endfor %}
     ];
     posts = pages;
     var q = new URLSearchParams(window.location.search).get('q');
@@ -38,12 +38,12 @@ description: Поиск по статьям и руководствам блог
   }
 
   function searchPosts(query) {
-    var q = query.trim().toLowerCase();
+    var q = (query || '').trim().toLowerCase();
     if (!q) { results.innerHTML = ''; return; }
     var filtered = posts.filter(function(p) {
-      return p.title.toLowerCase().includes(q) ||
+      return (p.title && p.title.toLowerCase().includes(q)) ||
              (p.excerpt && p.excerpt.toLowerCase().includes(q)) ||
-             (p.tags && p.tags.some(function(t) { return t.toLowerCase().includes(q); }));
+             (p.tags && p.tags.some(function(t) { return t && t.toLowerCase().includes(q); }));
     });
     if (filtered.length === 0) {
       results.innerHTML = '<p style="color:var(--text-muted)">Ничего не найдено</p>';
@@ -68,6 +68,8 @@ description: Поиск по статьям и руководствам блог
     d.textContent = s;
     return d.innerHTML;
   }
+
+  window.searchPosts = searchPosts;
 
   if (document.readyState === 'complete') loadPosts();
   else window.addEventListener('load', loadPosts);

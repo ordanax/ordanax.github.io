@@ -8,7 +8,7 @@ https://ordanax.github.io
 
 Блог «Все об Arch Linux» — практические руководства по установке и настройке Arch Linux: графические окружения (Xfce, Gnome, Hyprland, i3wm), терминалы (Ghostty, Fastfetch), сеть (OpenWrt, Wi-Fi, WPA Supplicant), сервисы (PostgreSQL, Samba), скрипты и чек-листы.
 
-Автор: Бойко Алексей.
+Автор: root.
 
 ## Разделы
 

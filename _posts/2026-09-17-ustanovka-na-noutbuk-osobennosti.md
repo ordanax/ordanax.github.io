@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Установка Arch на ноутбук: Wi-Fi, тачпад и питание
-description: Как установить Arch Linux на ноутбук: подключение Wi-Fi через iwctl до установки, настройка тачпада через libinput и энергосбережение
+title: "Установка Arch на ноутбук: Wi-Fi, тачпад и питание"
+description: "Как установить Arch Linux на ноутбук: подключение Wi-Fi через iwctl до установки, настройка тачпада через libinput и энергосбережение"
 date: 2026-09-17 00:00:00 +0300
 permalink: /ustanovka-na-noutbuk-osobennosti
 categories:

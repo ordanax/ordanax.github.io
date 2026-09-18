@@ -33,7 +33,7 @@
 	  "description": {{ page.description | jsonify }},
 	  "url": "{{ site.url }}{{ page.url }}",
 	  "datePublished": "{{ page.date | date_to_xmlschema }}",
-	  "author": { "@type": "Person", "name": "Бойко Алексей" },
+	  "author": { "@type": "Person", "name": "root" },
 	  "publisher": { "@type": "Organization", "name": "{{ site.title }}", "logo": { "@type": "ImageObject", "url": "{{ site.url }}/img/archlinux-logo.png" } },
 	  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ site.url }}{{ page.url }}" }
 	}
@@ -46,7 +46,7 @@
 	  "name": "{{ site.title }}",
 	  "url": "{{ site.url }}",
 	  "description": "{{ site.description }}",
-	  "publisher": { "@type": "Person", "name": "Бойко Алексей" }
+	  "publisher": { "@type": "Person", "name": "root" }
 	}
 	</script>
 	{% endif %}
