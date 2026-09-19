@@ -2,7 +2,7 @@
 layout: post
 title: "Полная остановка при загрузке: диагностика по таймингам"
 description: "Система зависает при загрузке? Определи этап: прошивка, GRUB, ядро или systemd. Диагностика по таймингам systemd-analyze и журналу journalctl -b -1."
-date: 2026-09-22 00:00:00 +0300
+date: 2026-09-19 00:00:00 +0300
 permalink: /ostanovka-zagruzki-diagnostika-taymingov
 categories:
   - linux

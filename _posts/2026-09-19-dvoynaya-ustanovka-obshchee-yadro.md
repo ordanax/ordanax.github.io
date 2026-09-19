@@ -2,7 +2,7 @@
 layout: post
 title: "Двойная установка: общее ядро или раздельное?"
 description: "Два Arch на одном диске: общее ядро или раздельное? Разбор общего ESP, os-prober и цепочки загрузки. Рекомендации по гибридным схемам."
-date: 2026-09-22 00:00:00 +0300
+date: 2026-09-19 00:00:00 +0300
 permalink: /dvoynaya-ustanovka-obshchee-yadro
 categories:
   - linux

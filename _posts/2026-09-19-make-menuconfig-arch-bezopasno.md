@@ -2,7 +2,7 @@
 layout: post
 title: "make menuconfig на Arch: как настроить ядро безопасно"
 description: "make menuconfig на Arch: безопасная настройка ядра, сохранение конфига и сборка через makepkg -e без полной пересборки с нуля."
-date: 2026-09-22 00:00:00 +0300
+date: 2026-09-19 00:00:00 +0300
 permalink: /make-menuconfig-arch-bezopasno
 categories:
   - linux

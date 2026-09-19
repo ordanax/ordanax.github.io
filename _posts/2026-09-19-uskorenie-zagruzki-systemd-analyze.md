@@ -2,7 +2,7 @@
 layout: post
 title: "Ускорение загрузки: профиль systemd-analyze"
 description: "systemd-analyze показывает, что тормозит загрузку Arch Linux: time, blame, critical-chain и plot. Разбор узких мест и способы ускорить старт системы."
-date: 2026-09-22 00:00:00 +0300
+date: 2026-09-19 00:00:00 +0300
 permalink: /uskorenie-zagruzki-systemd-analyze
 categories:
   - linux

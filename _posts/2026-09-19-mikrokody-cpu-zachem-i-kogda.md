@@ -2,7 +2,7 @@
 layout: post
 title: "Микропатчи CPU и обновления: зачем и когда"
 description: "Микрокод процессора исправляет ошибки и уязвимости CPU. Установка intel-ucode или amd-ucode в Arch Linux, проверка загрузки и обновление через pacman."
-date: 2026-09-22 00:00:00 +0300
+date: 2026-09-19 00:00:00 +0300
 permalink: /mikrokody-cpu-zachem-i-kogda
 categories:
   - linux

@@ -2,7 +2,7 @@
 layout: post
 title: "Микрокод и kernel cmdline: сценарии для кривого железа"
 description: "Микрокод CPU и параметры ядра в связке лечат зависания, проблемы со сном и GPU на кривом железе. Сценарии и проверка на один запуск."
-date: 2026-09-22 00:00:00 +0300
+date: 2026-09-19 00:00:00 +0300
 permalink: /dinamicheskiy-mikrokod-kernel-cmdline
 categories:
   - linux
