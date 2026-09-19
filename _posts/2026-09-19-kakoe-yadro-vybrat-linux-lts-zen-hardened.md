@@ -2,7 +2,7 @@
 layout: post
 title: "Какое ядро выбрать: linux, linux-lts, linux-zen, hardened"
 description: "Разбираем ядра Arch Linux: linux, linux-lts, linux-zen, linux-hardened. Сценарии использования, установка нескольких ядер и выбор загрузки по умолчанию."
-date: 2026-09-21 00:00:00 +0300
+date: 2026-09-19 00:00:00 +0300
 permalink: /kakoe-yadro-vybrat-linux-lts-zen-hardened
 categories:
   - linux

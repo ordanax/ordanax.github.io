@@ -2,7 +2,7 @@
 layout: post
 title: "normal.mod not found: причины и лечение"
 description: "Ошибка normal.mod not found при загрузке Arch Linux: почему GRUB не находит модуль и как переустановить загрузчик с live-USB."
-date: 2026-09-20 00:00:00 +0300
+date: 2026-09-19 00:00:00 +0300
 permalink: /normal-mod-not-found-chto-delat
 categories:
   - linux

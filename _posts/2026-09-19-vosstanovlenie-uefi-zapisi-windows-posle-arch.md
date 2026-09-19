@@ -2,7 +2,7 @@
 layout: post
 title: "Восстановление UEFI-записи Windows после Arch"
 description: "Windows пропала из меню загрузки после установки Arch? Восстанови UEFI-запись через bcdboot и bootrec из среды восстановления или efibootmgr из Linux."
-date: 2026-09-20 00:00:00 +0300
+date: 2026-09-19 00:00:00 +0300
 permalink: /vosstanovlenie-uefi-zapisi-windows-posle-arch
 categories:
   - linux

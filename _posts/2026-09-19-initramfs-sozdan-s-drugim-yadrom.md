@@ -2,7 +2,7 @@
 layout: post
 title: "initramfs создан с другим ядром: что значит предупреждение"
 description: "Предупреждение «initramfs создан с другим ядром»: почему появляется, как проверить uname -r и /usr/lib/modules, как починить через mkinitcpio -P."
-date: 2026-09-21 00:00:00 +0300
+date: 2026-09-19 00:00:00 +0300
 permalink: /initramfs-sozdan-s-drugim-yadrom
 categories:
   - linux

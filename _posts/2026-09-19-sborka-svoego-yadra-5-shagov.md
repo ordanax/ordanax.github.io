@@ -2,7 +2,7 @@
 layout: post
 title: "Сборка своего ядра 2026: 5 шагов от конфига до загрузки"
 description: "Собери своё ядро Arch Linux за 5 шагов: asp export, localmodconfig, menuconfig, makepkg и загрузка. Практическое руководство 2026 года."
-date: 2026-09-21 00:00:00 +0300
+date: 2026-09-19 00:00:00 +0300
 permalink: /sborka-svoego-yadra-5-shagov
 categories:
   - linux

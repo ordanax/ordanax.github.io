@@ -2,7 +2,7 @@
 layout: post
 title: "Пропал пункт загрузки: «No bootable device»"
 description: "«No bootable device» при загрузке Arch: диагностика NVRAM и efibootmgr, восстановление записи загрузчика в UEFI и порядка BootOrder."
-date: 2026-09-20 00:00:00 +0300
+date: 2026-09-19 00:00:00 +0300
 permalink: /propal-punkt-zagruzki-no-bootable-device
 categories:
   - linux

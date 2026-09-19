@@ -2,7 +2,7 @@
 layout: post
 title: "Таймаут и скрытые пункты меню GRUB"
 description: "Настройка таймаута меню GRUB: GRUB_TIMEOUT, скрытие пунктов, recordfail, выбор ядра по умолчанию через grub-set-default и grub-reboot."
-date: 2026-09-21 00:00:00 +0300
+date: 2026-09-19 00:00:00 +0300
 permalink: /tajmaut-skrytye-punkty-menyu-grub
 categories:
   - linux

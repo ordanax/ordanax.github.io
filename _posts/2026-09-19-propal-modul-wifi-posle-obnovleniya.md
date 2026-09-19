@@ -2,7 +2,7 @@
 layout: post
 title: "Пропал Wi-Fi после обновления ядра: пересборка модуля DKMS"
 description: "Wi-Fi пропал после обновления ядра? Проверь dkms status, пересобери модуль и обнови linux-firmware. Пошаговое восстановление сети в Arch Linux."
-date: 2026-09-21 00:00:00 +0300
+date: 2026-09-19 00:00:00 +0300
 permalink: /propal-modul-wifi-posle-obnovleniya
 categories:
   - linux

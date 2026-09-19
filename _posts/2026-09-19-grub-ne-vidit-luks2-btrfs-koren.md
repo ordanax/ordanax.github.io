@@ -2,7 +2,7 @@
 layout: post
 title: "GRUB не видит LUKS2-/btrfs-корень: принудительная настройка"
 description: "GRUB не находит LUKS2-корень или btrfs-подтом: включи GRUB_ENABLE_CRYPTODISK, добавь модули luks2, lvm, btrfs и перегенерируй grub.cfg."
-date: 2026-09-20 00:00:00 +0300
+date: 2026-09-19 00:00:00 +0300
 permalink: /grub-ne-vidit-luks2-btrfs-koren
 categories:
   - linux

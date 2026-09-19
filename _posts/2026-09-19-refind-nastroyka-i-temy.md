@@ -2,7 +2,7 @@
 layout: post
 title: "rEFInd как альтернатива GRUB: настройка и темы"
 description: "rEFInd: графический UEFI-загрузчик с автообнаружением ядер. Установка через refind-install, настройка refind.conf, темы и иконки."
-date: 2026-09-20 00:00:00 +0300
+date: 2026-09-19 00:00:00 +0300
 permalink: /refind-nastroyka-i-temy
 categories:
   - linux

@@ -2,7 +2,7 @@
 layout: post
 title: "Смена загрузчика: с GRUB на systemd-boot и обратно"
 description: "Переход с GRUB на systemd-boot и обратно: bootctl install, loader.conf, grub-install, grub-mkconfig. Пошагово, с подводными камнями."
-date: 2026-09-20 00:00:00 +0300
+date: 2026-09-19 00:00:00 +0300
 permalink: /smena-zagruzchika-s-grub-na-systemd-boot
 categories:
   - linux

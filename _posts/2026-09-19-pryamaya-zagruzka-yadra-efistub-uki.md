@@ -2,7 +2,7 @@
 layout: post
 title: "Прямая загрузка ядра без загрузчика: EFISTUB и UKI"
 description: "Загрузка Arch Linux без GRUB и systemd-boot: EFISTUB через efibootmgr и сборка Unified Kernel Image через mkinitcpio. Пошагово, с командами."
-date: 2026-09-20 00:00:00 +0300
+date: 2026-09-19 00:00:00 +0300
 permalink: /pryamaya-zagruzka-yadra-efistub-uki
 categories:
   - linux

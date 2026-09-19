@@ -2,7 +2,7 @@
 layout: post
 title: "Как откатить обновление GRUB, если сломался загрузчик"
 description: "Как откатить GRUB через pacman -U: старая версия из кэша pacman или архива, переустановка загрузчика и восстановление загрузки Arch Linux."
-date: 2026-09-21 00:00:00 +0300
+date: 2026-09-19 00:00:00 +0300
 permalink: /otkat-obnovleniya-grub
 categories:
   - linux

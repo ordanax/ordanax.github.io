@@ -2,7 +2,7 @@
 layout: post
 title: "Модули загружаются не в том порядке: как это исправить"
 description: "Модули ядра грузятся не в том порядке? Как работает загрузка модулей и как задать порядок через /etc/modules-load.d и /etc/modprobe.d: softdep, blacklist."
-date: 2026-09-21 00:00:00 +0300
+date: 2026-09-19 00:00:00 +0300
 permalink: /moduli-zagruzhaetsya-nepravilnyi-poryadok
 categories:
   - linux

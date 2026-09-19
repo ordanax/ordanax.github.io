@@ -2,7 +2,7 @@
 layout: post
 title: "linux-firmware: что обновляется и зачем"
 description: "linux-firmware — набор прошивок для GPU, Wi-Fi и Bluetooth. Разбираем, что в нём обновляется, как проверить версию и откатить при регрессии."
-date: 2026-09-21 00:00:00 +0300
+date: 2026-09-19 00:00:00 +0300
 permalink: /linux-firmware-chto-obnovlyaetsya
 categories:
   - linux

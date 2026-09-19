@@ -2,7 +2,7 @@
 layout: post
 title: "EFI-раздел переполнен: чистка и рост"
 description: "EFI-раздел переполнен: grub-install падает с No space left on device. Чисти старые ядра и дубли, увеличивай ESP и настраивай профилактику."
-date: 2026-09-21 00:00:00 +0300
+date: 2026-09-19 00:00:00 +0300
 permalink: /esf-razdel-perepolnen-chistka
 categories:
   - linux

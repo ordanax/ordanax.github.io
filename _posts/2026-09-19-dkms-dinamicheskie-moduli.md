@@ -2,7 +2,7 @@
 layout: post
 title: "DKMS: динамические модули ядра (nvidia, v4l2loopback)"
 description: "DKMS пересобирает модули ядра при каждом обновлении: nvidia-dkms, v4l2loopback-dkms. Установка, dkms status, автосборка и разбор ошибок."
-date: 2026-09-21 00:00:00 +0300
+date: 2026-09-19 00:00:00 +0300
 permalink: /dkms-dinamicheskie-moduli
 categories:
   - linux

@@ -2,7 +2,7 @@
 layout: post
 title: "Гибридная запись GRUB для MBR+GPT: BIOS и UEFI"
 description: "Один диск с GPT грузится и на старых BIOS-машинах, и на новых UEFI: установи GRUB дважды — i386-pc и x86_64-efi. Пошаговая инструкция."
-date: 2026-09-20 00:00:00 +0300
+date: 2026-09-19 00:00:00 +0300
 permalink: /gibridnaya-zapis-grub-mbr-gpt
 categories:
   - linux

@@ -2,7 +2,7 @@
 layout: post
 title: "Кастомные аргументы ядра в GRUB: полная настройка"
 description: "Как добавить кастомные аргументы ядра в GRUB: GRUB_CMDLINE_LINUX_DEFAULT, quiet, splash, mitigations=off. Настройка /etc/default/grub и grub-mkconfig."
-date: 2026-09-20 00:00:00 +0300
+date: 2026-09-19 00:00:00 +0300
 permalink: /kastomnye-argumenty-yadra-v-grub
 categories:
   - linux

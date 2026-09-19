@@ -2,7 +2,7 @@
 layout: post
 title: "Порядок загрузки в NVRAM: efibootmgr подробно"
 description: "Записи загрузки в NVRAM: как посмотреть, создать, удалить и изменить порядок через efibootmgr. Команды с реальными флагами и разбор типичных проблем."
-date: 2026-09-20 00:00:00 +0300
+date: 2026-09-19 00:00:00 +0300
 permalink: /poryadok-zagruzki-nvram-efibootmgr
 categories:
   - linux

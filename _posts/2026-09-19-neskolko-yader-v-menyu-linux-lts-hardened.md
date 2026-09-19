@@ -2,7 +2,7 @@
 layout: post
 title: "Несколько ядер в меню: linux, linux-lts, linux-hardened"
 description: "linux, linux-lts, linux-hardened и linux-zen: чем отличаются, как установить несколько ядер и выбрать нужное в меню GRUB. Сценарии для каждой задачи."
-date: 2026-09-20 00:00:00 +0300
+date: 2026-09-19 00:00:00 +0300
 permalink: /neskolko-yader-v-menyu-linux-lts-hardened
 categories:
   - linux

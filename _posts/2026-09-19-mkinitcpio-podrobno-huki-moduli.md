@@ -2,7 +2,7 @@
 layout: post
 title: "mkinitcpio подробно: хуки, модули и конфиг"
 description: "Разбираем /etc/mkinitcpio.conf: MODULES, HOOKS, BINARIES, FILES. Что делает каждый хук, почему важен порядок и как пересобрать initramfs."
-date: 2026-09-21 00:00:00 +0300
+date: 2026-09-19 00:00:00 +0300
 permalink: /mkinitcpio-podrobno-huki-moduli
 categories:
   - linux

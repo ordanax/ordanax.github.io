@@ -2,7 +2,7 @@
 layout: post
 title: "Secure Boot + GRUB: подпись загрузчика"
 description: "Secure Boot блокирует GRUB без подписи. Разбор цепочки shim → GRUB, подпись ключами sbctl и MOK через MokManager. Пошагово для Arch Linux."
-date: 2026-09-20 00:00:00 +0300
+date: 2026-09-19 00:00:00 +0300
 permalink: /secure-boot-grub-podpis-zagruzchika
 categories:
   - linux

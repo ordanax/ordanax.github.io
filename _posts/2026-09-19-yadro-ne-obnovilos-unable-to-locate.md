@@ -2,7 +2,7 @@
 layout: post
 title: "Ядро не обновилось: unable to locate package"
 description: "Ядро не обновилось или pacman пишет unable to locate package? Разбор причин и правильные команды: pacman -Syu, pacman -S linux, grub-mkconfig."
-date: 2026-09-21 00:00:00 +0300
+date: 2026-09-19 00:00:00 +0300
 permalink: /yadro-ne-obnovilos-unable-to-locate
 categories:
   - linux

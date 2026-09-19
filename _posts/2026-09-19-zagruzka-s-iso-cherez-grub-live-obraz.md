@@ -2,7 +2,7 @@
 layout: post
 title: "Загрузка с ISO через GRUB: live-образ в меню"
 description: "Добавь live-ISO в меню GRUB: loopback для Arch Linux, memdisk для маленьких образов, проверка целостности и удаление пункта после использования."
-date: 2026-09-20 00:00:00 +0300
+date: 2026-09-19 00:00:00 +0300
 permalink: /zagruzka-s-iso-cherez-grub-live-obraz
 categories:
   - linux

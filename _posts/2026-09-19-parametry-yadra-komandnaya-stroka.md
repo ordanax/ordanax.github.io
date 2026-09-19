@@ -2,7 +2,7 @@
 layout: post
 title: "Параметры ядра в командной строке: полный справочник"
 description: "quiet, mem_sleep_default, mitigations и другие параметры ядра: где прописать, как проверить на один запуск и что они делают."
-date: 2026-09-21 00:00:00 +0300
+date: 2026-09-19 00:00:00 +0300
 permalink: /parametry-yadra-komandnaya-stroka
 categories:
   - linux
