@@ -8,6 +8,7 @@ categories:
   - linux
   - arch linux
   - configs
+  - packages
 tags:
   - pacman
   - database
@@ -16,6 +17,8 @@ tags:
   - recovery
 edit: true
 ---
+
+
 
 Сразу к делу: базы pacman лежат в каталоге `/var/lib/pacman`. Внутри два подкаталога: `local` с информацией об установленных пакетах и `sync` с индексами репозиториев (`core.db`, `extra.db`, `multilib.db`). Sync-базы пересоздаются за минуту: удали файлы из `sync/` и выполни `pacman -Syy`. Local-база официально не пересоздаётся, её восстанавливают из резервной копии или переустановкой пакетов.
 

@@ -8,6 +8,7 @@ categories:
   - linux
   - arch linux
   - recovery
+  - update-recovery
 tags:
   - downgrade
   - pacman
@@ -17,6 +18,8 @@ tags:
   - recovery
 edit: true
 ---
+
+
 
 Сломалось после обновления? Не паникуй: почти любая поломка в Arch Linux лечится откатом. Сначала оцени масштаб: один пакет или много. Один пакет откатывается командой `pacman -U` из кэша `/var/cache/pacman/pkg`, несколько пакетов возвращаются к нужному моменту по логу `/var/log/pacman.log`, а если система не грузится, поможет chroot с live-USB или снапшот btrfs. Ниже единый алгоритм на все случаи.
 

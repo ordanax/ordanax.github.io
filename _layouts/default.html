@@ -9,7 +9,8 @@
 	{% include top-nav.html %}
 	<div class="container">
 		<div class="row">
-			<div class="col-md-9 blog-main">{{ content }}</div>
+			<div class="col-md-2 blog-sidebar-left">{% include left-sidebar.html %}</div>
+			<div class="col-md-7 blog-main">{{ content }}</div>
 			<div class="col-md-3 blog-sidebar">{% include sidebar.html %}</div>
 		</div>
 	</div>
@@ -17,7 +18,7 @@
 		{% include footer.html %}
 	</div>
 	<div class="mobile-chat-bar">
-		<a class="btn btn-chat btn-chat-tg" href="https://t.me/linux4at" target="_blank" rel="nofollow noopener" data-goal="telegram" title="Чат в Telegram"><i class="fab fa-telegram" aria-hidden="true"></i> Telegram</a>
+		<a class="btn btn-chat btn-chat-tg" href="/telegram.html" target="_blank" rel="nofollow noopener" data-goal="telegram" title="Чат в Telegram"><i class="fab fa-telegram" aria-hidden="true"></i> Telegram</a>
 		<a class="btn btn-chat btn-chat-max" href="https://max.ru/join/X9LNZmlPqmGHweB7EtIRwbdNwtwmhY4JnhX0jDKyaxs" target="_blank" rel="nofollow noopener" data-goal="max" title="Чат в Max"><i class="fas fa-comments" aria-hidden="true"></i> Max</a>
 	</div>
 	<button class="back-to-top" id="backToTop" aria-label="Наверх">&#8593;</button>

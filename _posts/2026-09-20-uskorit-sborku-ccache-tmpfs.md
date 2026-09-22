@@ -8,6 +8,7 @@ categories:
   - linux
   - arch linux
   - configs
+  - packages
 tags:
   - makepkg
   - ccache
@@ -16,6 +17,8 @@ tags:
   - performance
 edit: true
 ---
+
+
 
 Сборку пакетов в Arch ускоряют три настройки: параллельность через MAKEFLAGS, кэш компиляции ccache и перенос каталога сборки в tmpfs через BUILDDIR. Пропиши в /etc/makepkg.conf строку MAKEFLAGS="-j$(nproc)", установи ccache и добавь его в ту же строку, а для тяжёлых пакетов задай BUILDDIR=/tmp/makepkg. Вместе эти приёмы заметно сокращают время пересборки AUR-пакетов.
 

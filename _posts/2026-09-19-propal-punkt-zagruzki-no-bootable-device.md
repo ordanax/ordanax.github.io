@@ -8,6 +8,7 @@ categories:
   - linux
   - arch linux
   - configs
+  - kernel-boot
 tags:
   - uefi
   - efibootmgr
@@ -17,7 +18,9 @@ tags:
 edit: true
 ---
 
-Сразу к делу: «No bootable device» (или «Reboot and Select proper Boot device») появляется, когда прошивка UEFI не нашла ни одной рабочей записи загрузки в NVRAM. Лечится это так: проверь порядок загрузки в BIOS, загрузись с live-USB, посмотри записи через `efibootmgr` и, если записи Arch нет, создай её заново одной командой. Ниже — пошаговый разбор с реальными командами.
+
+
+Ошибка «No bootable device» (или «Reboot and Select proper Boot device») появляется, когда прошивка UEFI не нашла ни одной рабочей записи загрузки в NVRAM. Лечится это так: проверь порядок загрузки в BIOS, загрузись с live-USB, посмотри записи через `efibootmgr` и, если записи Arch нет, создай её заново одной командой. Ниже — пошаговый разбор с реальными командами.
 
 ## Что значит «No bootable device»
 

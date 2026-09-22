@@ -7,6 +7,7 @@ permalink: /dva-arch-na-odnom-diske
 categories:
 - linux
 - arch linux
+- setup
 tags:
 - dual-boot
 - grub
@@ -15,6 +16,7 @@ tags:
 - arch linux
 edit: true
 ---
+
 
 Да, на один диск можно поставить сколько угодно Arch Linux. Ограничений нет — ни со стороны UEFI, ни Pacman, ни ядра. Нужны только отдельные корневые разделы для каждой системы, общая EFI-раздел для загрузки и аккуратная настройка GRUB.
 

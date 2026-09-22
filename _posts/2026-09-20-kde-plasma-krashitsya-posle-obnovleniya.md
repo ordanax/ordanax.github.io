@@ -9,6 +9,7 @@ categories:
   - arch linux
   - kde
   - configs
+  - update-recovery
 tags:
   - kde
   - plasma
@@ -18,7 +19,9 @@ tags:
 edit: true
 ---
 
-Сразу к делу. Если после `pacman -Syu` оболочка KDE Plasma падает в цикле, панель пропадает, а сессия не восстанавливается, сначала перезапусти `plasmashell`. Не помогло, сбрось конфигурацию в `~/.config/plasma-org.kde.plasma.desktop-appletsrc`. Затем проверь вход под новым пользователем, откати `plasma-workspace` из кеша pacman и почини KWallet. Ниже каждый шаг с реальными командами.
+
+
+Если после `pacman -Syu` оболочка KDE Plasma падает в цикле, панель пропадает, а сессия не восстанавливается, сначала перезапусти `plasmashell`. Не помогло, сбрось конфигурацию в `~/.config/plasma-org.kde.plasma.desktop-appletsrc`. Затем проверь вход под новым пользователем, откати `plasma-workspace` из кеша pacman и почини KWallet. Ниже каждый шаг с реальными командами.
 
 ## Почему Plasma ломается именно после обновления?
 

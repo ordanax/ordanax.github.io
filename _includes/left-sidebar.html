@@ -1,0 +1,8 @@
+<aside class="sidebar-module sidebar-module-inset blog-sidebar-left-module">
+  <h4>Топ-10 статей</h4>
+  <ol class="right-menu left-menu">
+    {% for post in site.posts limit:10 %}
+      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ol>
+</aside>

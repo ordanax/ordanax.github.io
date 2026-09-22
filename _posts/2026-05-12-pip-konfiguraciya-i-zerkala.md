@@ -9,6 +9,7 @@ categories:
 - python
 - development
 - package management
+- packages
 tags:
 - pip
 - python
@@ -17,6 +18,7 @@ tags:
 - package management
 edit: true
 ---
+
 
 ![Pip Configuration](/img/pip-config.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Pip — стандартный менеджер пакетов Python. Правильная конфигурация критически важна для скорости установки пакетов и безопасности.
 

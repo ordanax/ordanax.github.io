@@ -1,0 +1,47 @@
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Назад</a>
+  {% else %}
+    <span>&laquo; Назад</span>
+  {% endif %}
+
+  {% assign last_page = paginator.total_pages %}
+  {% assign last_minus = last_page | minus: 1 %}
+  {% assign home = '/' | prepend: site.baseurl %}
+  {% assign left = paginator.page | minus: 2 %}
+  {% assign right = paginator.page | plus: 2 %}
+  {% if left < 1 %}{% assign left = 1 %}{% endif %}
+  {% if right > last_page %}{% assign right = last_page %}{% endif %}
+
+  {% if left > 2 %}
+  <a href="{{ home }}">1</a>
+  <span class="pagination-ellipsis">&hellip;</span>
+  {% elsif left > 1 %}
+  <a href="{{ home }}">1</a>
+  {% endif %}
+
+  {% for page in (left..right) %}
+    {% if page == paginator.page %}
+      <span class="pagination-current">{{ page }}</span>
+    {% elsif page == 1 %}
+      <a href="{{ home }}">{{ page }}</a>
+    {% else %}
+      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+    {% endif %}
+  {% endfor %}
+
+  {% if right < last_minus %}
+  <span class="pagination-ellipsis">&hellip;</span>
+  <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', last_page }}">{{ last_page }}</a>
+  {% elsif right < last_page %}
+  <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', last_page }}">{{ last_page }}</a>
+  {% endif %}
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Вперед &raquo;</a>
+  {% else %}
+    <span>Вперед &raquo;</span>
+  {% endif %}
+</div>
+{% endif %}

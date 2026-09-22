@@ -7,6 +7,7 @@ permalink: /uefi-bez-usb-s-optiki
 categories:
   - linux
   - arch linux
+  - setup
 tags:
   - uefi
   - installation
@@ -16,6 +17,8 @@ tags:
   - archiso
 edit: true
 ---
+
+
 
 UEFI-загрузка Arch Linux без USB-флешки вполне реальна: ISO-образ Arch — гибридный (isohybrid), он поддерживает загрузку через UEFI с CD/DVD, SD-карты и даже с жёсткого диска. У тебя есть оптический привод — запиши на DVD. Есть кардридер — используй SD-карту. А если и флешки, и привода нет — подними загрузчик с диска через GRUB или стартань по сети через PXE.
 

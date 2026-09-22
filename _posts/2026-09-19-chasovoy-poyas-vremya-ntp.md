@@ -8,6 +8,7 @@ categories:
 - linux
 - arch linux
 - configs
+- tips
 tags:
 - timedatectl
 - ntp
@@ -16,6 +17,7 @@ tags:
 - timezone
 edit: true
 ---
+
 
 Часовой пояс в Arch Linux выставляется одной командой: `timedatectl set-timezone Europe/Moscow`. Автосинхронизация времени через NTP включается так: `timedatectl set-ntp true`. После этих двух команд время будет точным и правильным. Дальше разберём каждую опцию.
 

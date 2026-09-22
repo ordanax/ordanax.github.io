@@ -8,6 +8,7 @@ categories:
   - linux
   - arch linux
   - dualboot
+  - kernel-boot
 tags:
   - uefi
   - windows
@@ -17,6 +18,8 @@ tags:
   - recovery
 edit: true
 ---
+
+
 
 Windows пропала из меню загрузки после установки Arch — это не потерянная система, а сломанная UEFI-запись. Восстановить её можно двумя способами: из среды восстановления Windows командами `bootrec` и `bcdboot`, либо из Linux через `efibootmgr`. Оба варианта разобраны ниже по шагам.
 

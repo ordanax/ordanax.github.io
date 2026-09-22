@@ -9,6 +9,7 @@ categories:
   - arch linux
   - aur
   - pkgbuild
+  - packages
 tags:
   - makepkg
   - pkgbuild
@@ -17,6 +18,8 @@ tags:
   - build
 edit: true
 ---
+
+
 
 Divide and conquer при отладке сборки работает так: не чини PKGBUILD целиком, а сначала локализуй стадию, на которой падает makepkg (fetch, prepare, build, check, package), потом изолируй её флагами и запусти вручную, чтобы увидеть первую ошибку. Только после этого правь PKGBUILD и проверяй результат итерациями. Так одна ошибка превращается в понятную задачу, а не в бесконечный перебор догадок.
 

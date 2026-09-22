@@ -8,6 +8,7 @@ categories:
   - linux
   - arch linux
   - configs
+  - kernel-boot
 tags:
   - refind
   - uefi
@@ -16,6 +17,8 @@ tags:
   - grub-alternative
 edit: true
 ---
+
+
 
 Сразу к делу: rEFInd, графический загрузчик UEFI, сам находит ядра и initramfs на всех разделах и показывает их в виде меню с иконками. Установка занимает две команды (`pacman -S refind` и `refind-install`), настройка сводится к правке одного файла `refind.conf`, а темы подключаются одной строкой `include`. В отличие от GRUB, конфиг не нужно перегенерировать после каждого обновления ядра: rEFInd сканирует разделы и подхватывает новый `vmlinuz-linux` автоматически.
 

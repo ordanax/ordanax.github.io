@@ -6,10 +6,12 @@ date: 2020-01-23 17:43:09 +0500
 permalink: /xfce-goryachie-klavishi
 categories: 
 - configs
+- desktop
 tags:
 - xfce
 edit: true
 ---
+
 ![Настройка горячих клавиш в XFCE как и в i3](../img/xfce-goryachie-klavishi.jpg){:style="float: left;margin-right: 25px;margin-top: 10px;"}
 После того, как я вкусил все прелести i3wm мне захотелось также настроить и горячие клавиши в Xfce, но я столкунулся с тем, что не все можно настроить через стандартное приложение keyboard. В частности через обычное приложение нельзя настроить так, чтобы окно закрывалось не через комбинацию Alt+F4, а через Mod+q, как это было у меня в i3.
 

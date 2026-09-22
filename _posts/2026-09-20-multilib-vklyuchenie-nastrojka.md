@@ -8,6 +8,7 @@ categories:
   - linux
   - arch linux
   - configs
+  - packages
 tags:
   - multilib
   - lib32
@@ -17,6 +18,8 @@ tags:
   - 32-bit
 edit: true
 ---
+
+
 
 Multilib это репозиторий Arch Linux с 32-битными библиотеками, пакеты в нём идут с префиксом `lib32`. Включаешь его, когда нужны 32-битные приложения: игры из Steam, Wine, старые программы. Для этого раскомментируй секцию `[multilib]` в `/etc/pacman.conf`, выполни `pacman -Syu` и ставь пакеты вида `lib32-*`. Вся настройка занимает пару минут.
 

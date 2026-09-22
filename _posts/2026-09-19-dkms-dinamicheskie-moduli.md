@@ -8,6 +8,7 @@ categories:
   - linux
   - arch linux
   - configs
+  - kernel-boot
 tags:
   - dkms
   - kernel
@@ -16,6 +17,8 @@ tags:
   - v4l2loopback
 edit: true
 ---
+
+
 
 DKMS (Dynamic Kernel Module Support) — это механизм, который автоматически пересобирает модули ядра при каждом его обновлении. Поставил `nvidia-dkms` или `v4l2loopback-dkms` один раз — и после каждого обновления ядра модуль компилируется заново сам, без ручных действий. Ниже — как это работает, что ставить и что делать, когда сборка падает.
 

@@ -8,6 +8,7 @@ categories:
 - linux
 - arch linux
 - boot
+- setup
 tags:
 - efi
 - dualboot
@@ -17,6 +18,7 @@ tags:
 - mount
 edit: true
 ---
+
 
 При дуалбуте Arch Linux и Windows используется один общий EFI System Partition — раздел FAT32, который Windows создала при установке (обычно 100–512 МБ на начале диска). Его монтируют в `/efi` или `/boot` перед установкой Arch, а загрузчик пишет свои файлы рядом с Windows Boot Manager. Главное — не форматировать этот раздел и не трогать папку `EFI/Microsoft`.
 

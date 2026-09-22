@@ -7,6 +7,7 @@ permalink: /ne-gruzitsya-posle-ustanovki-chernyi-ekran
 categories:
 - linux
 - arch linux
+- update-recovery
 tags:
 - troubleshooting
 - boot
@@ -15,6 +16,7 @@ tags:
 - arch-linux
 edit: true
 ---
+
 
 Установка Arch Linux прошла успешно, но после перезагрузки вместо рабочего стола — чёрный экран, emergency shell или зависание на "triggering uevents". Три симптома, три разных корня, но один алгоритм диагностики: fstab, загрузчик, ядро/initramfs, видеодрайвер. Разбираю каждый случай с командами.
 

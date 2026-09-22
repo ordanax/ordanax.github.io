@@ -8,6 +8,7 @@ categories:
 - linux
 - arch linux
 - boot
+- setup
 tags:
 - external-ssd
 - usb-boot
@@ -17,6 +18,7 @@ tags:
 - trim
 edit: true
 ---
+
 
 Да, Arch отлично живёт на внешнем SSD. Установка почти не отличается от обычной: та же разметка, тот же pacstrap, тот же chroot. Единственное серьёзное отличие — загрузчик. Если в BIOS нет опции загрузки с USB, ставь его в fallback-путь: `grub-install --target=x86_64-efi --efi-directory=/boot --removable` создаёт `EFI/BOOT/bootx64.efi`, который грузится почти с любой UEFI-прошивки. Такой диск грузится на любом компьютере.
 

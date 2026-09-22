@@ -1,3 +1,3 @@
-{% include tg_widget.html %}
+{% unless page.url == '/telegram.html' %}{% include tg_widget.html %}{% endunless %}
 {% include max_widget.html %}
 {% include right-menu.html %}

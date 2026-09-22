@@ -8,6 +8,7 @@ categories:
   - linux
   - arch linux
   - aur
+  - packages
 tags:
   - pkgbuild
   - namcap
@@ -16,6 +17,8 @@ tags:
   - makepkg
 edit: true
 ---
+
+
 
 Стиль PKGBUILD описан в трёх официальных источниках: страница [PKGBUILD на ArchWiki](https://wiki.archlinux.org/title/PKGBUILD), гайд Arch package guidelines и утилита namcap. Порядок полей фиксированный, функции оформляются с отступами в четыре пробела и комментариями `## begin`/`## end`, а перед публикацией в AUR пакет прогоняется через namcap. Ниже — полный разбор этих правил и чек-лист перед сдачей пакета.
 

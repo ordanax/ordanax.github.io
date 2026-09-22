@@ -8,6 +8,7 @@ categories:
   - linux
   - arch linux
   - configs
+  - kernel-boot
 tags:
   - grub
   - bootloader
@@ -17,7 +18,9 @@ tags:
 edit: true
 ---
 
-Сразу к делу: ошибка `error: file '/boot/grub/x86_64-efi/normal.mod' not found` (на BIOS-системах путь будет `/boot/grub/i386-pc/normal.mod`) значит, что GRUB загрузил свой core-образ, но не смог найти модуль `normal.mod`, который отвечает за чтение `grub.cfg` и показ меню. Лечится переустановкой пакета `grub` и повторным запуском `grub-install` из `arch-chroot`: загрузись с live-USB, и через десять минут система снова стартует.
+
+
+Ошибка `error: file '/boot/grub/x86_64-efi/normal.mod' not found` (на BIOS-системах путь будет `/boot/grub/i386-pc/normal.mod`) значит, что GRUB загрузил свой core-образ, но не смог найти модуль `normal.mod`, который отвечает за чтение `grub.cfg` и показ меню. Лечится переустановкой пакета `grub` и повторным запуском `grub-install` из `arch-chroot`: загрузись с live-USB, и через десять минут система снова стартует.
 
 ## Что такое normal.mod и зачем он GRUB?
 

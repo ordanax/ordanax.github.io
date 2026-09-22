@@ -8,6 +8,7 @@ categories:
 - linux
 - arch linux
 - boot
+- kernel-boot
 tags:
 - grub
 - os-prober
@@ -17,6 +18,7 @@ tags:
 - uefi
 edit: true
 ---
+
 
 Windows пропал из меню GRUB не потому, что система сломалась. С 2022 года GRUB по умолчанию не сканирует другие операционные системы: os-prober отключён, и пункт Windows Boot Manager просто не генерируется. Лечится это тремя командами: поставить os-prober, включить его в `/etc/default/grub` и пересобрать конфиг. Ниже разберу весь путь — от простого случая до восстановления загрузчика из live-USB.
 

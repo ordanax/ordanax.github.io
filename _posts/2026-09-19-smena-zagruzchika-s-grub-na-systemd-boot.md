@@ -8,6 +8,7 @@ categories:
   - linux
   - arch linux
   - configs
+  - kernel-boot
 tags:
   - grub
   - systemd-boot
@@ -16,6 +17,8 @@ tags:
   - bootctl
 edit: true
 ---
+
+
 
 Сменить загрузчик с GRUB на systemd-boot в Arch Linux можно за десять минут: удали пакет grub, выполни `bootctl install`, создай два конфиг-файла — и система загружается через новый загрузчик. Обратный переход тоже простой: поставь grub, прогони `grub-install` и `grub-mkconfig`. Ниже — пошаговые инструкции в обе стороны и подводные камни, из-за которых переход чаще всего ломается.
 

@@ -8,6 +8,7 @@ categories:
 - linux
 - arch linux
 - guides
+- tips
 tags:
 - journalctl
 - systemd
@@ -16,6 +17,7 @@ tags:
 - first-boot
 edit: true
 ---
+
 
 `journalctl -b` — команда, которая показывает все сообщения текущей загрузки и помогает за пару минут понять, что пошло не так после установки Arch Linux. Запустил, нашёл ошибки, погуглил — и починил.
 

@@ -8,6 +8,7 @@ categories:
 - linux
 - arch linux
 - configs
+- kernel-boot
 tags:
 - grub
 - password
@@ -16,6 +17,7 @@ tags:
 - grub-mkpasswd-pbkdf2
 edit: true
 ---
+
 
 Пароль на GRUB ставится в три шага: генерируешь PBKDF2-хеш командой `grub-mkpasswd-pbkdf2`, прописываешь его в `/etc/grub.d/00_header` (или `40_custom`) через `set superusers` и `password_pbkdf2`, а затем пересобираешь конфиг: `grub-mkconfig -o /boot/grub/grub.cfg`. После этого загрузчик попросит логин и пароль, прежде чем загрузить систему или открыть редактирование пунктов меню. Вся настройка занимает минут пять и не требует дополнительных пакетов — всё уже есть в `grub`.
 

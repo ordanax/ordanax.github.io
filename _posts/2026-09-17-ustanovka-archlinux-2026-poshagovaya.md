@@ -8,6 +8,7 @@ categories:
 - linux
 - arch linux
 - guides
+- setup
 tags:
 - installation
 - pacstrap
@@ -17,6 +18,7 @@ tags:
 - genfstab
 edit: true
 ---
+
 
 Установка Arch Linux 2026 это загрузка ISO-образа, разметка диска через fdisk, установка базовых пакетов через pacstrap и настройка системы через arch-chroot. Весь процесс занимает 30–40 минут при стабильном интернете и сводится к выполнению одной команды за другим.
 

@@ -8,6 +8,7 @@ categories:
   - linux
   - arch linux
   - configs
+  - kernel-boot
 tags:
   - grub
   - archiso
@@ -17,6 +18,8 @@ tags:
   - chroot
 edit: true
 ---
+
+
 
 Ошибка установки GRUB с упоминанием `airootfs` — распространённая проблема при инсталляции Arch Linux из live-окружения (archiso). Утилита `grub-install` пытается обратиться к корневой файловой системе live-среды вместо целевого диска и падает с ошибкой `failed to get canonical path of airootfs`. Причина — некорректный вход в chroot или невыполненные bind-монтирования каталогов `/dev`, `/proc`, `/sys`, `/run` перед запуском загрузчика.
 

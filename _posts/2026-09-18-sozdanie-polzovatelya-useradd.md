@@ -8,6 +8,7 @@ categories:
 - linux
 - arch linux
 - configs
+- setup
 tags:
 - useradd
 - adduser
@@ -17,6 +18,7 @@ tags:
 - user-management
 edit: true
 ---
+
 
 Создать пользователя в Arch Linux в 2026 году — это одна команда `useradd -m -G wheel -s /bin/bash имя`, потом `passwd имя` и настройка sudo через `visudo`. Группа `users` для этого не нужна — это устаревшая практика, в современном Arch каждый пользователь получает собственную группу с тем же именем. Дальше разберём всё по шагам.
 

@@ -32,38 +32,5 @@ description: Конфигурационные файлы для Arch Linux — �
 </div>
 
 <!-- Pagination -->
-{% if paginator.total_pages > 1 %}
-<nav class="pagination" aria-label="Навигация по страницам">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | relative_url }}" class="pagination-prev" rel="prev">
-      &laquo; Назад
-    </a>
-  {% else %}
-    <span class="pagination-prev disabled">&laquo; Назад</span>
-  {% endif %}
 
-  <span class="pagination-pages">
-    {% for page in (1..paginator.total_pages) %}
-      {% if page == paginator.page %}
-        <span class="pagination-current" aria-current="page">{{ page }}</span>
-      {% elsif page == 1 %}
-        <a href="{{ '/' | relative_url }}" class="pagination-link">
-          {{ page }}
-        </a>
-      {% else %}
-        <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}" class="pagination-link">
-          {{ page }}
-        </a>
-      {% endif %}
-    {% endfor %}
-  </span>
-
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | relative_url }}" class="pagination-next" rel="next">
-      Вперед &raquo;
-    </a>
-  {% else %}
-    <span class="pagination-next disabled">Вперед &raquo;</span>
-  {% endif %}
-</nav>
-{% endif %}
+{% include pagination.html %}

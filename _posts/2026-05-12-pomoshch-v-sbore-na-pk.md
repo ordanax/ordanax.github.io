@@ -14,6 +14,7 @@ tags:
 - pc build
 ---
 
+
 ![PC Build](../img/pc-build.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Хочу поделиться с вами своей идеей и попросить о поддержке. Это не просто просьба о деньгах — это предложение стать частью создания нового контента, который поможет многим.
 
 **Что будет дальше:** Новый ПК → Arch Linux → подробное видео-гайд по сборке и настройке → помощь сотням пользователей. Вы можете стать частью этого проекта.
@@ -38,7 +39,7 @@ tags:
 
 ## Где найти меня
 
-- **Чат по Linux в Telegram:** 👉 [https://t.me/linux4at](https://t.me/linux4at)
+- **Чат по Linux в Telegram:** 👉 [https://ordanax.github.io/telegram.html](https://ordanax.github.io/telegram.html)
 - **Чат в MAX:** 👉 [https://max.ru/join/X9LNZmlPqmGHweB7EtIRwbdNwtwmhY4JnhX0jDKyaxs](https://max.ru/join/X9LNZmlPqmGHweB7EtIRwbdNwtwmhY4JnhX0jDKyaxs)
 
 ## Что вы получите взамен

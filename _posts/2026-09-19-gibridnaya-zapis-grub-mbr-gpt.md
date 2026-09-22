@@ -8,6 +8,7 @@ categories:
   - linux
   - arch linux
   - configs
+  - kernel-boot
 tags:
   - grub
   - uefi
@@ -17,6 +18,8 @@ tags:
   - hybrid
 edit: true
 ---
+
+
 
 Гибридная запись GRUB — это установка загрузчика на один диск дважды: для BIOS (цель `i386-pc`) и для UEFI (цель `x86_64-efi`). После этого диск с GPT-разметкой загружается и на старых машинах с Legacy BIOS, и на современных с UEFI. Для этого нужны два служебных раздела: EFI System Partition с файловой системой FAT32 и BIOS Boot Partition размером 1–8 МБ с флагом `bios_grub`.
 

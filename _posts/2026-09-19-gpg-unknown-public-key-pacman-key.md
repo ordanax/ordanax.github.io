@@ -8,6 +8,7 @@ categories:
   - linux
   - arch linux
   - pacman
+  - packages
 tags:
   - gpg
   - pacman-key
@@ -17,7 +18,9 @@ tags:
 edit: true
 ---
 
-Сразу к делу: ошибка `signature from "Unknown User" is unknown trust` при установке пакета значит, что pacman не доверяет ключу, которым подписан пакет. Лечится по порядку: сначала обнови пакет `archlinux-keyring` через `pacman -Syu`, затем выполни `pacman-key --refresh-keys`, а если связка ключей повреждена, сбрось её через `pacman-key --init` и `pacman-key --populate archlinux`. В большинстве случаев хватает первого шага.
+
+
+Ошибка `signature from "Unknown User" is unknown trust` при установке пакета значит, что pacman не доверяет ключу, которым подписан пакет. Лечится по порядку: сначала обнови пакет `archlinux-keyring` через `pacman -Syu`, затем выполни `pacman-key --refresh-keys`, а если связка ключей повреждена, сбрось её через `pacman-key --init` и `pacman-key --populate archlinux`. В большинстве случаев хватает первого шага.
 
 ## Почему pacman проверяет подписи пакетов?
 

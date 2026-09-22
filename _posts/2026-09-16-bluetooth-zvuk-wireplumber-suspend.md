@@ -8,6 +8,7 @@ categories:
 - linux
 - arch linux
 - configs
+- hardware
 tags:
 - bluetooth
 - pipewire
@@ -17,6 +18,7 @@ tags:
 - troubleshooting
 edit: true
 ---
+
 
 Bluetooth-звук пропадает после блокировки экрана или ухода в сон: WirePlumber переводит bluetooth-узел в suspend-профиль и не возвращает его обратно. Лечится это отключением suspend для bluetooth-устройств в конфиге WirePlumber и перезапуском звуковых сервисов. BlueZ autoconnect тут ни при чём.
 

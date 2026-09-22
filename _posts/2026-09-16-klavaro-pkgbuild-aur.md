@@ -7,6 +7,7 @@ permalink: /klavaro-pkgbuild-aur
 categories:
   - linux
   - arch linux
+  - packages
 tags:
   - pkgbuild
   - makepkg
@@ -16,6 +17,8 @@ tags:
   - autotools
 edit: true
 ---
+
+
 
 Чтобы автоматически собрать форк Klavaro в устанавливаемый пакет Arch Linux, нужен PKGBUILD и команда `makepkg -si`. Скрипт сам скачает исходники, скомпилирует и упакует в `.pkg.tar.zst`, который ставится через `pacman -U`. Никакой публикации в AUR, никакого хостинга, всё локально.
 

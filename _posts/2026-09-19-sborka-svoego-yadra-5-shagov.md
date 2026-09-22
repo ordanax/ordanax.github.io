@@ -8,6 +8,7 @@ categories:
   - linux
   - arch linux
   - kernel
+  - kernel-boot
 tags:
   - kernel
   - makepkg
@@ -16,6 +17,8 @@ tags:
   - build
 edit: true
 ---
+
+
 
 Собрать своё ядро в Arch Linux в 2026 году — это пять шагов: получить исходники через `asp export linux`, взять за основу конфиг работающего ядра, ужать его командой `make localmodconfig`, донастроить в `make menuconfig`, собрать пакет через `makepkg` и установить его командой `pacman -U`. На выходе получишь пакет `linux-custom`, который легко удалить или откатить, а штатное ядро останется в меню загрузчика как запасной вариант.
 

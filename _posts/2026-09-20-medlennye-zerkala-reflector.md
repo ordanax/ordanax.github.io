@@ -8,6 +8,7 @@ categories:
   - linux
   - arch linux
   - configs
+  - packages
 tags:
   - mirrors
   - reflector
@@ -16,6 +17,8 @@ tags:
   - rankmirrors
 edit: true
 ---
+
+
 
 Медленные зеркала лечатся за десять минут: поставь первым в `/etc/pacman.d/mirrorlist` зеркало `geo.mirror.pkgbuild.com`, добавь пару запасных строк и обнови базы командой `pacman -Syy`. Хочешь автоматики — `reflector` сам найдёт самые быстрые зеркала и запишет их в список. Ниже разберу, как pacman выбирает сервер, почему загрузка ползёт на 50 КБ/с и как проверить зеркало перед большим обновлением.
 

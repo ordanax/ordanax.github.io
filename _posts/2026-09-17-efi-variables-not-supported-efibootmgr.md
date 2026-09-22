@@ -8,6 +8,7 @@ categories:
 - linux
 - arch linux
 - boot
+- kernel-boot
 tags:
 - efibootmgr
 - uefi
@@ -17,6 +18,7 @@ tags:
 - troubleshooting
 edit: true
 ---
+
 
 Ошибка `efibootmgr: EFI variables are not supported on this system` появляется, когда ядру недоступен интерфейс efivarfs — либо модуль не загружен, либо система стартовала в режиме BIOS/CSM, либо прошивка просто кривая. В большинстве случаев проблема решается за пять минут: загрузкой в UEFI-режим или ручным монтированием efivarfs.
 

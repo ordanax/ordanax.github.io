@@ -7,10 +7,12 @@ permalink: /conky-config
 edit: true
 categories: 
 - configs
+- desktop
 tags:
 - config
 - conky
 ---
+
 <p><img alt="Cкачать Conky темы" class="post-image rounded" src="https://ordanax.github.io/img/conky-config.png" />Conky — это системный монитор с открытым исходным кодом. Может отображать практически любую нужную информацию: от даты и времени до температуры процессора. Есть множество готовых тем для Conky. Можно скачать готовые. Можно создать свою тему полностью с нуля. Можно взять готовую и настроить ее под свои нужды.</p>
 
 В нашей группе ВК https://vk.com/arch4u есть целая [ветка в обсуждениях](https://vk.cc/89e28X), где пользователи выкладывают свои настройки для Conky.

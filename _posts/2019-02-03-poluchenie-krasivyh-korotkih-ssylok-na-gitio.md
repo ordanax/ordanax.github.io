@@ -8,12 +8,14 @@ edit: true
 categories: 
 - scripts
 - useful
+- apps
 tags:
 - archlinux
 - git
 - github
 
 ---
+
 ![Получение красивых коротких ссылок на git.io](../img/poluchenie-krasivyh-korotkih-ssylok-na-gitio.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} На гитхабе можно получить короткие ссылки при помощи git.io, НО! Сокращая таким образом, мы получаем ссылку наподобие git.io/djAVq, что очень неудобно, особенно если нужна постоянно легко запоминающаяся ссылка.
 
 В этой статье я расскажу, как получить ссылку, где вместо кракозябер будет то, что вы сами напишите при генерации ссылки.

@@ -7,6 +7,7 @@ permalink: /pacman-chastichnoe-obnovlenie
 categories:
 - linux
 - arch linux
+- packages
 tags:
 - pacman
 - partial-update
@@ -16,6 +17,7 @@ tags:
 - cache
 edit: true
 ---
+
 
 Частичное обновление pacman это когда ты обновляешь базу пакетов (`pacman -Sy`), а потом ставишь один пакет, не обновляя всю систему. На Arch такой подход ведёт к сломанной системе: библиотеки в репозитории уже новые, а на диске старые, и свежий пакет просто не заведётся. Правило одно: только `pacman -Syu`, целиком, без исключений.
 

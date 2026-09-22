@@ -8,6 +8,7 @@ categories:
 - linux
 - arch linux
 - configs
+- kernel-boot
 tags:
 - uki
 - simpledrm
@@ -16,6 +17,7 @@ tags:
 - early-kms
 edit: true
 ---
+
 
 Раннее разрешение экрана (меню загрузчика, текст ядра, промпт LUKS) задаёт прошивка UEFI через GOP (Graphics Output Protocol). Если монитор не успевает отдать EDID по HDMI до старта прошивки, прошивка выставляет 1024x768, и драйвер simpledrm наследует этот режим. Надёжных рычагов управления GOP из самой операционной системы нет.
 

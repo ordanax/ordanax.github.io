@@ -8,6 +8,7 @@ categories:
   - linux
   - performance
   - troubleshooting
+  - tips
 tags:
   - cpu
   - freeze
@@ -15,6 +16,8 @@ tags:
   - optimization
 edit: true
 ---
+
+
 ![Установка Archlinux 2019 за 15 минут](https://ordanax.github.io/img/skript-ustanovki-archlinux.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Зависания при 100% CPU — пошаговая инструкция. Решение проблем с зависаниями системы при высокой нагрузке на процессор.
 
 ## Шаг 1. Меньше использовать swap (снизить I/O при нехватке памяти)

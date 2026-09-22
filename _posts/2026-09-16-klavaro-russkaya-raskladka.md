@@ -8,6 +8,7 @@ categories:
 - linux
 - arch linux
 - productivity
+- desktop
 tags:
 - touch typing
 - russian keyboard
@@ -17,6 +18,7 @@ tags:
 - localectl
 edit: true
 ---
+
 
 Для слепой печати на русском не нужна специальная клавиатура. Нужна правильная раскладка: русские буквы должны лежать там, где их ждут пальцы. Наклейки и подсветка тут только мешают.
 

@@ -8,6 +8,7 @@ categories:
 - linux
 - design
 - software
+- apps
 tags:
 - figma
 - design
@@ -16,6 +17,7 @@ tags:
 - web
 edit: true
 ---
+
 
 ![Figma](/img/figma.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Figma — популярный инструмент для дизайна интерфейсов, работающий в браузере. На Linux есть несколько способов использовать Figma, включая официальное приложение и альтернативные решения.
 

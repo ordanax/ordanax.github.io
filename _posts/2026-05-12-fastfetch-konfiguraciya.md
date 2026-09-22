@@ -8,6 +8,7 @@ categories:
 - linux
 - terminal
 - configuration
+- desktop
 tags:
 - fastfetch
 - neofetch
@@ -16,6 +17,7 @@ tags:
 - configuration
 edit: true
 ---
+
 
 ![Fastfetch](/img/fastfetch.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Fastfetch — современная альтернатива neofetch с поддержкой GPU ускорения и расширенными возможностями. Показывает информацию о системе в красивом формате.
 

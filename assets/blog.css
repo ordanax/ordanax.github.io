@@ -72,13 +72,23 @@ h6 { font-size: .9rem; }
   max-width: 75%;
   padding: 0 15px;
 }
+.col-md-2 {
+  flex: 0 0 16.666%;
+  max-width: 16.666%;
+  padding: 0 15px;
+}
+.col-md-7 {
+  flex: 0 0 58.333%;
+  max-width: 58.333%;
+  padding: 0 15px;
+}
 .col-md-3 {
   flex: 0 0 25%;
   max-width: 25%;
   padding: 0 15px;
 }
 @media (max-width: 768px) {
-  .col-md-9, .col-md-3 {
+  .col-md-9, .col-md-3, .col-md-2, .col-md-7 {
     flex: 0 0 100%;
     max-width: 100%;
   }
@@ -445,6 +455,16 @@ pre code {
 .blog-sidebar {
   padding-top: 20px;
 }
+.blog-sidebar-left {
+  padding-top: 20px;
+}
+.blog-sidebar-left .sidebar-module-inset {
+  position: sticky;
+  top: 20px;
+}
+.left-menu {
+  padding-left: 20px;
+}
 .sidebar-module {
   padding: 15px;
   margin: 0 0 15px;
@@ -477,6 +497,7 @@ pre code {
 
 @media (max-width: 768px) {
   .sidebar-module { margin: 0 0 15px; }
+  .blog-sidebar-left { display: none; }
 }
 
 /* Tags */
@@ -510,6 +531,10 @@ pre code {
   background: var(--accent-dim);
   color: var(--accent);
   font-weight: 600;
+}
+.pagination-ellipsis {
+  cursor: default;
+  color: var(--text-secondary);
 }
 
 /* Back to top */
@@ -676,6 +701,22 @@ nav.soc li { display: inline-block; margin: 0 8px; }
 }
 .bluecolor { color: var(--accent); }
 h1.blog-post-title { margin-top: 0; }
+
+/* ===== Страница-прокладка Telegram ===== */
+.telegram-page {
+  max-width: 520px;
+  margin: 24px auto;
+  padding: 28px 30px;
+  background: linear-gradient(135deg, rgba(91,155,213,.12), var(--bg-card));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-align: center;
+}
+.telegram-page h1 { margin: 0 0 8px; font-size: 1.5rem; }
+.telegram-page p { margin: 0 0 18px; color: var(--text-secondary); font-size: .95rem; }
+.telegram-page-buttons { display: flex; flex-direction: column; gap: 10px; margin-bottom: 12px; }
+.telegram-page-buttons .btn-chat { justify-content: center; }
+.telegram-page-hint { margin: 14px 0 0; font-size: .85rem; color: var(--text-secondary); }
 
 /* ===== CTA-чаты ===== */
 .cta-chat {

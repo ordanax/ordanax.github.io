@@ -8,6 +8,7 @@ categories:
   - linux
   - arch linux
   - pacman
+  - packages
 tags:
   - pactree
   - dependencies
@@ -15,6 +16,8 @@ tags:
   - troubleshooting
 edit: true
 ---
+
+
 
 `pactree` — утилита из пакета `pacman-contrib`, которая строит дерево зависимостей любого пакета в Arch Linux. Запусти `pactree firefox` — и увидишь весь список пакетов, которые тянет за собой Firefox, а `pactree -r firefox` покажет обратное дерево: кто зависит от Firefox. Это главный инструмент, когда нужно понять, почему в системе появился тот или иной пакет.
 

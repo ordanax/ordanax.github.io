@@ -8,6 +8,7 @@ categories:
 - linux
 - arch linux
 - configs
+- kernel-boot
 tags:
 - grub
 - kernel
@@ -16,6 +17,7 @@ tags:
 - troubleshooting
 edit: true
 ---
+
 
 Ядра пропали из меню GRUB после обновления — виноват не сам загрузчик, а grub.cfg, который перестал соответствовать содержимому /boot: записи ссылаются на файлы, которых там нет. Чинится одной командой — grub-mkconfig -o /boot/grub/grub.cfg, а если и она не помогла — переустановкой ядра или самого GRUB.
 

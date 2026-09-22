@@ -7,6 +7,7 @@ permalink: /metodika-resheniya-problem-arch
 categories:
 - linux
 - arch linux
+- tips
 tags:
 - troubleshooting
 - journalctl
@@ -15,6 +16,7 @@ tags:
 - sysadmin
 edit: true
 ---
+
 
 Пять шагов: собираю данные из `journalctl`, строю гипотезу с дискриминационной проверкой, ищу корневую причину, применяю минимальный фикс и закрепляю результат в журнале решений. Система отработана на десятках реальных случаев, и ниже разбираю каждый шаг с конкретными примерами.
 

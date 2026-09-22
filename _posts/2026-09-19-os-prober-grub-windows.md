@@ -8,6 +8,7 @@ categories:
 - linux
 - arch linux
 - configs
+- kernel-boot
 tags:
 - os-prober
 - grub
@@ -16,6 +17,7 @@ tags:
 - bootloader
 edit: true
 ---
+
 
 Чтобы GRUB показывал Windows (или любую другую ОС) в меню загрузки, нужно три действия: поставить `os-prober`, добавить в `/etc/default/grub` строку `GRUB_DISABLE_OS_PROBER=false` и пересобрать конфиг. С 2023 года `os-prober` по умолчанию отключён — это главная причина, почему Windows «пропадает» из меню.
 

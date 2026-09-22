@@ -9,6 +9,7 @@ categories:
 - database
 - postgresql
 - server
+- apps
 tags:
 - postgresql
 - database
@@ -17,6 +18,7 @@ tags:
 - configuration
 edit: true
 ---
+
 
 ![PostgreSQL](/img/postgresql.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} PostgreSQL — мощная объектно-реляционная СУБД с открытым исходным кодом. Этот гайд поможет установить и настроить PostgreSQL на Linux.
 

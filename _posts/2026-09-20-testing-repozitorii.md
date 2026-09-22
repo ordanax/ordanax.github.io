@@ -8,6 +8,7 @@ categories:
   - linux
   - arch linux
   - pacman
+  - packages
 tags:
   - testing
   - pacman
@@ -16,6 +17,8 @@ tags:
   - system-maintenance
 edit: true
 ---
+
+
 
 Тестовые репозитории Arch работают как полигон для новых версий пакетов: testing, core-testing и extra-testing получают свежие сборки раньше стабильных core и extra. Включать их стоит только тем, кто готов ловить баги, разбираться в зависимостях и сообщать о проблемах мейнтейнерам. Новичкам и рабочим машинам testing противопоказан.
 

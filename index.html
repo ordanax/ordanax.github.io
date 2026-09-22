@@ -10,7 +10,7 @@ description: Блог об Arch Linux — установка, настройка
 		<p>Задай вопрос в чате — поможем с установкой, конфигами и скриптами.</p>
 	</div>
 	<div class="hero-chat-buttons">
-		<a class="btn btn-chat btn-chat-tg" href="https://t.me/linux4at" target="_blank" rel="nofollow noopener" data-goal="telegram" title="Открыть чат в Telegram"><i class="fab fa-telegram" aria-hidden="true"></i> Чат в Telegram</a>
+		<a class="btn btn-chat btn-chat-tg" href="/telegram.html" target="_blank" rel="nofollow noopener" data-goal="telegram" title="Открыть чат в Telegram"><i class="fab fa-telegram" aria-hidden="true"></i> Чат в Telegram</a>
 		<a class="btn btn-chat btn-chat-max" href="https://max.ru/join/X9LNZmlPqmGHweB7EtIRwbdNwtwmhY4JnhX0jDKyaxs" target="_blank" rel="nofollow noopener" data-goal="max" title="Открыть чат в Max"><i class="fas fa-comments" aria-hidden="true"></i> Чат в Max</a>
 	</div>
 </div>
@@ -33,28 +33,4 @@ description: Блог об Arch Linux — установка, настройка
 </article>
 {% endfor %}
 
-{% if paginator.total_pages > 1 %}
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Назад</a>
-  {% else %}
-    <span>&laquo; Назад</span>
-  {% endif %}
-
-  {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-      <span class="pagination-current">{{ page }}</span>
-    {% elsif page == 1 %}
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-    {% else %}
-      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-    {% endif %}
-  {% endfor %}
-
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Вперед &raquo;</a>
-  {% else %}
-    <span>Вперед &raquo;</span>
-  {% endif %}
-</div>
-{% endif %}
+{% include pagination.html %}

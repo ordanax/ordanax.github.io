@@ -8,6 +8,7 @@ categories:
 - linux
 - arch linux
 - configs
+- kernel-boot
 tags:
 - systemd-boot
 - grub
@@ -16,6 +17,7 @@ tags:
 - uki
 edit: true
 ---
+
 
 Для Arch на UEFI-системе с ESP в `/boot` или `/efi` бери **systemd-boot**: он уже входит в пакет `systemd`, ставится одной командой и находит ядра по простым текстовым файлам. GRUB оставь для сложных сценариев — dualboot с Windows, шифрование, кастомизация меню. Второе ядро `linux-lts` в systemd-boot добавляется одним файлом `/boot/loader/entries/arch-lts.conf`, и через минуту в меню два Arch.
 

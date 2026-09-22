@@ -8,6 +8,7 @@ categories:
 - linux
 - arch linux
 - configs
+- kernel-boot
 tags:
 - grub
 - theme
@@ -16,6 +17,7 @@ tags:
 - background
 edit: true
 ---
+
 
 Тема GRUB ставится в три шага: кладёшь папку темы в /boot/grub/themes, прописываешь путь к theme.txt в переменной GRUB_THEME в /etc/default/grub и пересобираешь конфиг командой grub-mkconfig -o /boot/grub/grub.cfg. После перезагрузки вместо чёрного экрана с белым списком пунктов увидишь меню с картинкой. Пять минут работы — и загрузчик перестаёт пугать.
 
@@ -57,7 +59,7 @@ sudo ./install.sh -b -t tela
 
 ### Вручную
 
-Скачал тему архивом — распакуй в /boot/grub/themes/. Должна получиться структура /boot/grub/themes/<имя>/theme.txt. Если GRUB ещё не настроен — например, ты только что поставил систему по [пошаговой инструкции](https://ordanax.github.io/ustanovka-archlinux-2026-poshagovaya), — сначала убедись, что загрузчик работает.
+Скачал тему архивом — распакуй в /boot/grub/themes/. Должна получиться структура /boot/grub/themes/`<имя>`/theme.txt. Если GRUB ещё не настроен — например, ты только что поставил систему по [пошаговой инструкции](https://ordanax.github.io/ustanovka-archlinux-2026-poshagovaya), — сначала убедись, что загрузчик работает.
 
 Открой /etc/default/grub и добавь:
 

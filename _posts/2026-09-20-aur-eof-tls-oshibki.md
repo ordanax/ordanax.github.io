@@ -9,6 +9,7 @@ categories:
   - arch linux
   - network
   - aur
+  - packages
 tags:
   - aur
   - tls
@@ -18,6 +19,8 @@ tags:
   - dns
 edit: true
 ---
+
+
 
 Если AUR отдаёт `EOF` или `error: failed retrieving file ... from aur.archlinux.org`, а вместе с ними TLS-ошибки вроде `tls: handshake failure`, первым делом проверь четыре вещи: дату и время системы, DNS, MTU и версию openssl. Чаще всего причина в одной из них, и лечится она за пару минут. Отдельный случай: EOF из-за приоритета IPv6 в Go-резолвере, ему посвящена отдельная статья, ссылку дам ниже.
 

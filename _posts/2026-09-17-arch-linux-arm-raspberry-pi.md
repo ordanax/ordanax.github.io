@@ -8,6 +8,7 @@ categories:
 - linux
 - arch linux
 - arm
+- setup
 tags:
 - arch-linux-arm
 - raspberry-pi
@@ -16,6 +17,7 @@ tags:
 - embedded
 edit: true
 ---
+
 
 Arch Linux ARM на Raspberry Pi ставится через скачивание tarball-архива с [сайта проекта](https://archlinuxarm.org), ручную разметку SD-карты через fdisk, распаковку корневой файловой системы bsdtar и настройку после первого входа. Весь процесс занимает минут 20, если карта под рукой, а железо — Raspberry Pi 4 или 5.
 

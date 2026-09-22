@@ -8,6 +8,7 @@ categories:
   - linux
   - arch linux
   - configs
+  - kernel-boot
 tags:
   - grub
   - iso
@@ -17,6 +18,8 @@ tags:
   - live-usb
 edit: true
 ---
+
+
 
 Да, GRUB умеет загружать live-ISO прямо из своего меню. Для больших образов вроде Arch Linux используется модуль loopback, который монтирует ISO как файловую систему, а для маленьких утилит вроде memtest86+ подходит memdisk из пакета syslinux. Пункт меню добавляется в файл /etc/grub.d/40_custom, после чего конфиг перегенерируется командой grub-mkconfig. Чаще всего такой пункт нужен, чтобы загрузить live-систему для установки или ремонта, например когда GRUB упал в rescue, об этом случае читай статью «[grub rescue: что делать](https://ordanax.github.io/grub-rescue-chto-delat)». Тебе понадобятся сам ISO, права root и пара минут на правку одного файла.
 

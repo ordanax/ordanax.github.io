@@ -8,6 +8,7 @@ categories:
 - linux
 - arch linux
 - configs
+- kernel-boot
 tags:
 - grub
 - bootloader
@@ -17,6 +18,7 @@ tags:
 - arch linux
 edit: true
 ---
+
 
 GRUB чинится из live-окружения: загружаешься с установочного ISO, монтируешь разделы, заходишь в систему через arch-chroot и запускаешь две команды — grub-install и grub-mkconfig. Весь ремонт занимает минут десять, и переустанавливать Arch ради сломанного загрузчика не нужно.
 

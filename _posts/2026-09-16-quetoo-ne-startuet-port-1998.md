@@ -8,6 +8,7 @@ categories:
 - linux
 - arch linux
 - network
+- apps
 tags:
 - quetoo
 - gaming
@@ -16,6 +17,7 @@ tags:
 - ports
 edit: true
 ---
+
 
 Quetoo не стартует, серверы не видны, список обновляется по кругу с надписью «Refreshing servers»? Причина проста: зависший процесс quetoo держит TCP-порт 1998, и новый экземпляр не может его занять. Решение: убить старый процесс и запустить игру заново.
 

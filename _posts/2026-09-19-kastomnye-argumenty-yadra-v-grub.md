@@ -8,6 +8,7 @@ categories:
   - linux
   - arch linux
   - configs
+  - kernel-boot
 tags:
   - grub
   - kernel
@@ -16,6 +17,8 @@ tags:
   - config
 edit: true
 ---
+
+
 
 Кастомные аргументы ядра в GRUB добавляются в одну строку. Открой `/etc/default/grub`, допиши нужные параметры в `GRUB_CMDLINE_LINUX_DEFAULT` или `GRUB_CMDLINE_LINUX`, сохрани файл и выполни `sudo grub-mkconfig -o /boot/grub/grub.cfg`. После перезагрузки ядро получит новые аргументы, а проверить их можно командой `cat /proc/cmdline`. Больше ничего делать не нужно.
 

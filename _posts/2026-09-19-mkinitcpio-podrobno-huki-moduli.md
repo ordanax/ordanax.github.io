@@ -8,6 +8,7 @@ categories:
   - linux
   - arch linux
   - configs
+  - kernel-boot
 tags:
   - mkinitcpio
   - initramfs
@@ -16,6 +17,8 @@ tags:
   - boot
 edit: true
 ---
+
+
 
 Сразу к делу: mkinitcpio — это сборщик initramfs в Arch Linux. Вся настройка живёт в одном файле — `/etc/mkinitcpio.conf`: секция `MODULES` задаёт модули для ранней загрузки, `BINARIES` и `FILES` добавляют бинарники и прошивки, а `HOOKS` — упорядоченный список скриптов, которые готовят систему к монтированию корня. После любой правки конфиг пересобирается командой `mkinitcpio -P`.
 

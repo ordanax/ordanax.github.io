@@ -8,6 +8,7 @@ categories:
   - linux
   - arch linux
   - configs
+  - kernel-boot
 tags:
   - grub
   - timeout
@@ -17,7 +18,9 @@ tags:
 edit: true
 ---
 
-Сразу к делу: таймаут меню GRUB и скрытие пунктов настраиваются в файле `/etc/default/grub` переменными `GRUB_TIMEOUT`, `GRUB_TIMEOUT_STYLE` и `GRUB_DISABLE_RECORDFAIL`. После любой правки перегенерируй конфиг командой `grub-mkconfig -o /boot/grub/grub.cfg`, иначе изменения не подхватятся. Ниже — каждая переменная по отдельности и пара приёмов для систем с несколькими ядрами.
+
+
+Коротко: таймаут меню GRUB и скрытие пунктов настраиваются в файле `/etc/default/grub` переменными `GRUB_TIMEOUT`, `GRUB_TIMEOUT_STYLE` и `GRUB_DISABLE_RECORDFAIL`. После любой правки перегенерируй конфиг командой `grub-mkconfig -o /boot/grub/grub.cfg`, иначе изменения не подхватятся. Ниже — каждая переменная по отдельности и пара приёмов для систем с несколькими ядрами.
 
 ## Как работает таймаут меню GRUB?
 

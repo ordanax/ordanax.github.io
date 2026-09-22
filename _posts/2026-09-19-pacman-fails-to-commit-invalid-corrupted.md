@@ -8,6 +8,7 @@ categories:
   - linux
   - arch linux
   - pacman
+  - packages
 tags:
   - pacman
   - mirror
@@ -16,6 +17,8 @@ tags:
   - packages
 edit: true
 ---
+
+
 
 Ошибка `error: failed to commit transaction (invalid or corrupted package (PGP signature))` появляется, когда pacman не может проверить или распаковать скачанный пакет. Причина почти всегда одна из трёх: битый файл в кэше `/var/cache/pacman/pkg`, зеркало отдаёт повреждённые файлы или на диске кончилось место. Лечится это за несколько шагов: удали повреждённый пакет из кэша, обнови базы командой `pacman -Syy` и повтори `pacman -Syu`. Если ошибка осталась, смени зеркало и проверь диск.
 

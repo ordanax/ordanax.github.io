@@ -9,6 +9,7 @@ categories:
 - arch linux
 - network
 - wifi
+- hardware
 tags:
 - wpa_supplicant
 - wifi
@@ -17,6 +18,7 @@ tags:
 - dhcpcd
 edit: true
 ---
+
 
 ![WiFi Setup](/img/wifi-setup.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Настройка Wi-Fi через командную строку — важный навык для любого пользователя Linux. В Arch Linux это делается через wpa_supplicant и dhcpcd. Этот гайд поможет настроить Wi-Fi без графического интерфейса.
 

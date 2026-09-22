@@ -8,6 +8,7 @@ categories:
   - linux
   - arch linux
   - configs
+  - kernel-boot
 tags:
   - initramfs
   - mkinitcpio
@@ -16,6 +17,8 @@ tags:
   - fallback
 edit: true
 ---
+
+
 
 Предупреждение «Initramfs was created with a different kernel version than the currently running one» появляется, когда mkinitcpio собирает initramfs для ядра, которое не совпадает с загруженным. Чаще всего это значит: ядро обновилось, а initramfs остался от старой версии, либо /boot не был смонтирован во время обновления. Лечится одной командой: `mkinitcpio -P`.
 

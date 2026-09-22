@@ -8,6 +8,7 @@ categories:
 - linux
 - arch linux
 - productivity
+- desktop
 tags:
 - klavaro
 - touch typing
@@ -16,6 +17,7 @@ tags:
 - productivity
 edit: true
 ---
+
 
 Klavaro ставится одной командой `sudo pacman -S klavaro` и работает сразу: откройте приложение, выберите раскладку (русскую или английскую), курс (Basic, Adaptability, Speed) и начинайте печатать. Тренажёр входит в официальные репозитории Arch, настройка занимает меньше минуты.
 

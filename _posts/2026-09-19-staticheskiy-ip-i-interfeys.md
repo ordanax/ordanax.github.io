@@ -8,6 +8,7 @@ categories:
 - linux
 - arch linux
 - network
+- hardware
 tags:
 - systemd-networkd
 - static-ip
@@ -16,6 +17,7 @@ tags:
 - arch-linux
 edit: true
 ---
+
 
 Чтобы определить имя сетевого интерфейса в Arch Linux, выполни `ip link` или `ip -br addr` — в выводе увидишь имена вроде `enp1s0`, `enp3s0` или `wlp2s0`. После этого статический IP прописывается одной конфигурацией в `/etc/systemd/network/`: указываешь адрес, шлюз и DNS — и всё. Весь процесс занимает пару минут.
 

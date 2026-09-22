@@ -8,6 +8,7 @@ categories:
 - linux
 - arch linux
 - security
+- kernel-boot
 tags:
 - secure-boot
 - sbctl
@@ -16,6 +17,7 @@ tags:
 - bootloader
 edit: true
 ---
+
 
 Secure Boot на Arch Linux включается через утилиту `sbctl`: ставишь пакет, создаёшь ключи, подписываешь ядро и загрузчик, записываешь ключи в прошивку и активируешь Secure Boot в BIOS. Занимает минут десять, если прошивка не кривая.
 

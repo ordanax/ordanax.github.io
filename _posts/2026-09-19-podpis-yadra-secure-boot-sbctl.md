@@ -9,6 +9,7 @@ categories:
   - arch linux
   - security
   - boot
+  - kernel-boot
 tags:
   - secure-boot
   - sbctl
@@ -19,7 +20,9 @@ tags:
 edit: true
 ---
 
-Сразу к делу: подписать ядро для Secure Boot на Arch Linux проще всего через `sbctl`. Ставишь пакет, создаёшь ключи, вносишь их в прошивку и подписываешь ядро с initramfs — три команды, и Secure Boot пропускает систему. Если Secure Boot включён, а ядро не подписано, загрузка падает с ошибкой `Verification failed: (0x1A) Security Violation`. Ниже полный разбор: почему так происходит, как подписать ядро через sbctl и как сделать то же самое вручную через sbsigntools.
+
+
+Если коротко: подписать ядро для Secure Boot на Arch Linux проще всего через `sbctl`. Ставишь пакет, создаёшь ключи, вносишь их в прошивку и подписываешь ядро с initramfs — три команды, и Secure Boot пропускает систему. Если Secure Boot включён, а ядро не подписано, загрузка падает с ошибкой `Verification failed: (0x1A) Security Violation`. Ниже полный разбор: почему так происходит, как подписать ядро через sbctl и как сделать то же самое вручную через sbsigntools.
 
 ## Почему Secure Boot не даёт загрузить ядро без подписи?
 

@@ -9,6 +9,7 @@ categories:
 - arch linux
 - network
 - configs
+- packages
 tags:
 - yay
 - aur
@@ -18,6 +19,7 @@ tags:
 - troubleshoot
 edit: true
 ---
+
 
 yay падает с `EOF` при обновлении AUR, а `curl` и браузер спокойно работают? Причина в приоритете IPv6. Go-резолвер yay по умолчанию пробует IPv6 первым. Когда маршрута нет, yay не может достучаться до репозитория и падает, не переключаясь на IPv4. Одна строка в `/etc/gai.conf` решает за минуту.
 

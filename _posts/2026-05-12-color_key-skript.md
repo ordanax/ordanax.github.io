@@ -7,6 +7,7 @@ categories:
 - programming
 - javascript
 - steganography
+- tips
 tags:
 - color encoding
 - text to image
@@ -14,6 +15,7 @@ tags:
 - steganography
 - javascript
 ---
+
 
 ![Color Key](../img/color_key.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Color Key — это уникальный инструмент для стеганографии, который позволяет кодировать любой текст в CSS-картины через HEX-цвета. Скрипт преобразует текст в последовательность цветов, которые можно сохранить как CSS-код и затем расшифровать обратно в исходный текст.
 

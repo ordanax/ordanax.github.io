@@ -7,6 +7,7 @@ permalink: /wine-powershell-windows-skripty
 categories:
 - linux
 - arch linux
+- apps
 tags:
 - wine
 - powershell
@@ -14,6 +15,7 @@ tags:
 - windows
 edit: true
 ---
+
 
 Windows-скрипты на Arch запускаются, и виртуалка для этого не нужна. Ставим wine и wine-mono одной командой, `sudo pacman -S wine wine-mono`, и запускаем нужную утилиту прямо из терминала. У меня так работает рекламный инструмент Direct Commander, который без Windows-окружения не живёт.
 

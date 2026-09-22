@@ -8,6 +8,7 @@ categories:
   - linux
   - arch linux
   - configs
+  - kernel-boot
 tags:
   - kernel
   - kernel-parameters
@@ -16,6 +17,8 @@ tags:
   - boot
 edit: true
 ---
+
+
 
 Параметры ядра передаются загрузчику в командной строке и меняют поведение системы ещё до старта пользовательского окружения. В Arch Linux их прописывают в `/etc/default/grub` в строке `GRUB_CMDLINE_LINUX_DEFAULT`, после чего перегенерируют `grub.cfg`. Самые полезные на практике: `quiet` (тихая загрузка), `mem_sleep_default=deep` (лечит разрядку батареи в спящем режиме на ноутбуках) и `mitigations=off` (отключает спекулятивные защиты CPU ради скорости на старых процессорах).
 
