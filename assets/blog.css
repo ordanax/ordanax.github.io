@@ -464,15 +464,12 @@ pre code {
 }
 
 /* Sidebar */
-.blog-sidebar {
-  padding-top: 20px;
-}
+.blog-sidebar,
 .blog-sidebar-left {
   padding-top: 20px;
-}
-.blog-sidebar-left .sidebar-module-inset {
+  align-self: flex-start;
   position: sticky;
-  top: 20px;
+  top: 76px;
 }
 .left-menu {
   padding-left: 20px;
@@ -510,6 +507,10 @@ pre code {
 @media (max-width: 768px) {
   .sidebar-module { margin: 0 0 15px; }
   .blog-sidebar-left { display: none; }
+  .blog-sidebar,
+  .blog-sidebar-left {
+    position: static;
+  }
 }
 
 /* Tags */
