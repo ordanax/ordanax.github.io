@@ -2,7 +2,7 @@
 layout: post
 title: "NVIDIA: второй монитор чёрный, не работает HDMI"
 description: "Что делать, если NVIDIA не видит второй монитор: link training, DisplayPort и HDMI, eDP ноутбука, DRM-параметры и ручной режим."
-date: 2026-09-27 00:00:00 +0300
+date: 2026-09-25 12:00:00 +0300
 permalink: /nvidia-displayport-hdmi-ne-rabotaet
 categories:
   - linux

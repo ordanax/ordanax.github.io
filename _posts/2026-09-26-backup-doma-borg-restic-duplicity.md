@@ -2,7 +2,7 @@
 layout: post
 title: "Бэкап дома: borg, restic или duplicity — что выбрать"
 description: "Сравнение borg, restic и duplicity для копирования /home: дедупликация, шифрование, облачные бэкенды, команды, схема с systemd-таймером и рекомендации."
-date: 2026-09-26 00:00:00 +0300
+date: 2026-09-25 00:00:00 +0300
 permalink: /backup-doma-borg-restic-duplicity
 categories:
   - linux

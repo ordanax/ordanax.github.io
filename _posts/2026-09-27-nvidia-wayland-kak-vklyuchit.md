@@ -2,7 +2,7 @@
 layout: post
 title: "NVIDIA и Wayland: как включить и что работает"
 description: "Как включить Wayland с NVIDIA в Arch, зачем нужны GBM, modeset=1 и fbdev=1, и что делать с артефактами, захватом экрана и VRR."
-date: 2026-09-27 00:00:00 +0300
+date: 2026-09-25 12:00:00 +0300
 permalink: /nvidia-wayland-kak-vklyuchit
 categories:
   - linux

@@ -2,7 +2,7 @@
 layout: post
 title: "NVIDIA: чёрный экран после обновления и nomodeset"
 description: "Что делает nomodeset, как загрузить Arch с ним и когда переключаться с nvidia на nvidia-open."
-date: 2026-09-27 00:00:00 +0300
+date: 2026-09-25 12:00:00 +0300
 permalink: /nvidia-chernyj-ekran-nomodeset
 categories:
   - linux

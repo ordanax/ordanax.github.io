@@ -2,7 +2,7 @@
 layout: post
 title: "Timeshift для новичков: снапшоты без командной строки"
 description: "Timeshift — снапшоты для новичков: установка, первый запуск, расписание в crontab, откат из работающей системы и live-USB. Работает на btrfs и ext4."
-date: 2026-09-26 00:00:00 +0300
+date: 2026-09-25 00:00:00 +0300
 permalink: /timeshift-prostoj-sposob-dlya-novichkov
 categories:
   - linux

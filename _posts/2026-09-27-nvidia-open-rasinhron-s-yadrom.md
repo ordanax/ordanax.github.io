@@ -2,7 +2,7 @@
 layout: post
 title: "nvidia-open: переходить на открытый модуль или нет?"
 description: "Чем nvidia-open отличается от проприетарного nvidia, что значит снятие поддержки Pascal в NVIDIA 590 и когда переход безопасен."
-date: 2026-09-27 00:00:00 +0300
+date: 2026-09-25 12:00:00 +0300
 permalink: /nvidia-open-rasinhron-s-yadrom
 categories:
   - linux

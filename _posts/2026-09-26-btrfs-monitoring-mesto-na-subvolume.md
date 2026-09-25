@@ -2,7 +2,7 @@
 layout: post
 title: "Btrfs-мониторинг: когда заканчивается место на сабволюме"
 description: "Почему df на btrfs врёт, как увидеть реальную картину через btrfs filesystem, кто съедает место — снапшоты, кэш, журналы — и что делать при ENOSPC."
-date: 2026-09-26 00:00:00 +0300
+date: 2026-09-25 00:00:00 +0300
 permalink: /btrfs-monitoring-mesto-na-subvolume
 categories:
   - linux

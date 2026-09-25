@@ -2,7 +2,7 @@
 layout: post
 title: "Автоснапшоты перед обновлением через ALPM-хуки"
 description: "Настраиваешь автоматические снапшоты перед обновлением Arch Linux: разбираешь ALPM-хуки, snap-pac, собственный 00-snapshot.hook и откат через grub-btrfs."
-date: 2026-09-26 00:00:00 +0300
+date: 2026-09-25 00:00:00 +0300
 permalink: /avtosnapshoty-pered-obnovleniem-pacman-hook
 categories:
   - linux
