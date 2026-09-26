@@ -13,10 +13,9 @@ noindex: true
 > страницы не существует: её нет в sitemap, в поиске по сайту и в индексе поисковиков.
 > `search: exclude`/`sitemap: false`/`noindex: true` — страховка на случай локальной сборки с `--drafts`.
 
-**СТАТУС (обновлено 27.09.2026):** 173 тем из 645 отмечены «✅» — статьи написаны и опубликованы
-(темы 1–151 партий статей + 2.11: 152,155,156,160 + 2.12: 153,158,159,161 + 2.13: 162-165 + 2.14: 166-169 + 2.15: 172,173,176,177 + из хвоста: 175, 622).
-Остальные 472 тем — в очереди.
-**Источники:** 75 тредов bbs.archlinux.org / Unix StackExchange / r/archlinux (2024–2026),
+**СТАТУС (обновлено 28.09.2026):** 178 тем из 645 отмечены «✅» — статьи написаны и опубликованы
+(темы 1–151 партий статей + 2.11-2.15: NVIDIA+snapshot+восстановление + 2.16: 178,179,181,183,184 + из хвоста: 175, 622).
+Остальные 467 тем — в очереди.
 тренды экосистемы 2025–2026, `TROUBLESHOOTER.md` (15 кейсов), карта текущего покрытия блога,
 кастомная сборка `klavaro-custom` (`/mnt/hdd/YandexDisk/AI/Klavaro`), экспорт чата
 «🔥Linux помощь 🔥» (432 444 сообщения, 2019–2026, Telegram).
@@ -261,13 +260,13 @@ noindex: true
 175. ✅ **В | Установка драйверов NVIDIA с нуля** — пакеты, nvidia-settings, проверка `nvidia-smi`.
 176. ✅ **С | NVIDIA + Wayland: как включить и что работает** — GBM, EGL, KDE/GNOME, проблемы.
 177. ✅ **С | NVIDIA: DisplayPort/HDMI не работает, второй монитор чёрный** — мультимонитор, link training, eDP.
-178. **С | Гибридная графика: prime-run, screen tearing, выбор GPU для Steam** — `DRI_PRIME`, переключение.
-179. **С | Legacy NVIDIA 340/390 на новом ядре** — старые карты, nouveau.
+178. ✅ **С | Гибридная графика: prime-run, screen tearing, выбор GPU для Steam** — `DRI_PRIME`, переключение.
+179. ✅ **С | Legacy NVIDIA 340/390 на новом ядре** — старые карты, nouveau.
 180. **С | «No video output after update»: что за `nomodeset` и как откатить** — пошагово (из чата).
-181. **С | Ошибки Xorg с NVIDIA: смотрим `/var/log/Xorg.0.log`** — EGL_EXT_platform, GLX.
+181. ✅ **С | Ошибки Xorg с NVIDIA: смотрим `/var/log/Xorg.0.log`** — EGL_EXT_platform, GLX.
 182. **С | NVIDIA + bumblebee: устаревший, но живой** — bbswitch, primus.
-183. **С | Драйвер NVIDIA и перегрев/шумы вентиляторов** — Coolbits, fans, power limit.
-184. **С | NVIDIA + PipeWire: HDMI-звук через драйвер** — модуль hdmi, sink.
+183. ✅ **С | Драйвер NVIDIA и перегрев/шумы вентиляторов** — Coolbits, fans, power limit.
+184. ✅ **С | NVIDIA + PipeWire: HDMI-звук через драйвер** — модуль hdmi, sink.
 185. **С | Как полностью удалить драйвер NVIDIA** — чистка, лом, откат к nouveau.
 186. **С | NVIDIA + CUDA: машинное обучение на Arch** — toolkit, драйвер, verifier.
 187. **Н | VDPAU/VAAPI: аппаратное видео с NVIDIA** — браузер, mpv, VLC.
