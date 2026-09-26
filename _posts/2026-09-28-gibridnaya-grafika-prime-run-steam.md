@@ -2,7 +2,7 @@
 layout: post
 title: "Гибридная графика: prime-run и выбор GPU"
 description: "prime-run, DRI_PRIME и ручной выбор GPU: как запускать игры на NVIDIA в ноутбуке Intel/AMD, почему в Steam рвутся кадры и как проверить, кто рендерит."
-date: 2026-09-28 00:00:00 +0300
+date: 2026-09-26 00:00:00 +0300
 permalink: /gibridnaya-grafika-prime-run-steam
 categories:
   - linux

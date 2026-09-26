@@ -2,7 +2,7 @@
 layout: post
 title: "NVIDIA и PipeWire: HDMI-звук через видеокарту"
 description: "Почему у видеокарты NVIDIA пропал звук в PipeWire, как найти HDMI-sink, задать профиль output:hdmi-stereo и вернуть звук после сна."
-date: 2026-09-28 00:00:00 +0300
+date: 2026-09-26 00:00:00 +0300
 permalink: /nvidia-pipewire-hdmi-zvuk
 categories:
   - linux

@@ -2,7 +2,7 @@
 layout: post
 title: "nvidia-smi not found: полная диагностика по слоям"
 description: "Почему nvidia-smi не найдена или падает: проверка утилиты, библиотеки NVML и модуля ядра, роль DKMS и лечение рассинхрона версий."
-date: 2026-09-29 00:00:00 +0300
+date: 2026-09-26 12:00:00 +0300
 permalink: /nvidia-smi-not-found-diagnostika
 categories:
   - linux

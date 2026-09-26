@@ -2,7 +2,7 @@
 layout: post
 title: "Драйвер 570+ и мониторы 240 Гц: режимы, EDID, modeline"
 description: "Почему монитор 240 Гц упирается в 60 или 120 Гц: полоса кабеля и порта, EDID, ручные режимы через cvt и xrandr, MetaModes и VRR в 20-nvidia.conf."
-date: 2026-09-29 00:00:00 +0300
+date: 2026-09-26 12:00:00 +0300
 permalink: /nvidia-570-monitory-240hz
 categories:
   - linux

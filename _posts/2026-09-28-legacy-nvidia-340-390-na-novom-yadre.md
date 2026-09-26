@@ -2,7 +2,7 @@
 layout: post
 title: "Legacy NVIDIA 340/390 на новом ядре: три пути"
 description: "Почему драйверы NVIDIA 340xx и 390xx не собираются на новом ядре, что умеет nouveau и какой путь реален в 2026: LTS-ядро, DKMS-патчи или замена карты."
-date: 2026-09-28 00:00:00 +0300
+date: 2026-09-26 00:00:00 +0300
 permalink: /legacy-nvidia-340-390-na-novom-yadre
 categories:
   - linux

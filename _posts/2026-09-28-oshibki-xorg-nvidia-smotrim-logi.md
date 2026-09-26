@@ -2,7 +2,7 @@
 layout: post
 title: "Ошибки Xorg с NVIDIA: где искать лог"
 description: "Куда Xorg пишет лог, как читать строки (EE) и (WW) и что означают Failed to initialize GLX, No devices detected и Failed to load module nvidia."
-date: 2026-09-28 00:00:00 +0300
+date: 2026-09-26 00:00:00 +0300
 permalink: /oshibki-xorg-nvidia-smotrim-logi
 categories:
   - linux

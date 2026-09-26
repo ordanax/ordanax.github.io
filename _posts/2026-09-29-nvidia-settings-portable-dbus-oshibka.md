@@ -2,7 +2,7 @@
 layout: post
 title: "Не открывается nvidia-settings: разбор ошибок и dbus"
 description: "Почему nvidia-settings падает с ERROR: NVIDIA driver is not loaded и Failed to initialize NvAPI: X-сессия, session dbus, версии библиотек и portable-сборки."
-date: 2026-09-29 00:00:00 +0300
+date: 2026-09-26 12:00:00 +0300
 permalink: /nvidia-settings-portable-dbus-oshibka
 categories:
   - linux

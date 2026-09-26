@@ -2,7 +2,7 @@
 layout: post
 title: "NVIDIA: перегрев, вентиляторы и Coolbits"
 description: "Почему NVIDIA греется в простое, как ограничить лимит мощности, включить Coolbits и управлять вентиляторами вручную или скриптом по температуре."
-date: 2026-09-28 00:00:00 +0300
+date: 2026-09-26 00:00:00 +0300
 permalink: /nvidia-peregrev-ventilyatory-coolbits
 categories:
   - linux

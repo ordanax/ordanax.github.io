@@ -2,7 +2,7 @@
 layout: post
 title: "NVIDIA и CUDA: машинное обучение на Arch Linux"
 description: "Как поднять CUDA на Arch для PyTorch, TensorFlow и локальных LLM: пакеты, проверка nvcc и nvidia-smi, cuDNN, версии и типичные ошибки."
-date: 2026-09-29 00:00:00 +0300
+date: 2026-09-26 12:00:00 +0300
 permalink: /nvidia-cuda-mashinnoe-obuchenie
 categories:
   - linux

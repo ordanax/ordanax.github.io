@@ -2,7 +2,7 @@
 layout: post
 title: "Как полностью удалить драйвер NVIDIA на Arch Linux"
 description: "Пошаговое удаление драйвера NVIDIA в Arch: пакеты, модули ядра, initramfs, blacklist nouveau, конфиг Xorg и проверка отката на nouveau."
-date: 2026-09-29 00:00:00 +0300
+date: 2026-09-26 12:00:00 +0300
 permalink: /polnoe-udalenie-drajvera-nvidia
 categories:
   - linux
