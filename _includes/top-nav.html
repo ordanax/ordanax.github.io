@@ -7,6 +7,8 @@
       <div class="navbar-collapse" id="blogNavbar">
         <a class="blog-nav-item" href="/" {% if page.url == '/' %}aria-current="page"{% endif %}>Главная</a>
         <a class="blog-nav-item" href="/archlinux/" {% if page.url contains '/archlinux/' %}aria-current="page"{% endif %}>Об Arch Linux</a>
+        <a class="blog-nav-item" href="/news/" {% if page.url contains '/news/' %}aria-current="page"{% endif %}>Новости</a>
+        <a class="blog-nav-item" href="/categories.html" {% if page.url contains '/categories.html' %}aria-current="page"{% endif %}>Рубрики</a>
         <a class="blog-nav-item" href="/checklist/" {% if page.url contains '/checklist/' %}aria-current="page"{% endif %}>Чеклист</a>
         <a class="blog-nav-item" href="/about/" {% if page.url contains '/about/' %}aria-current="page"{% endif %}>О сайте</a>
       </div>

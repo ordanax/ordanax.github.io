@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Обзор Linux Arch
-description: Обзор Linux Arch
+description: "Я на Arch Linux уже более 2-х лет и считаю, что это лучший дистрибутив. В этом видео я рассказываю свои первые впечатления от Arch Linux. Сейчас я бы…"
 date: 2019-02-03 20:40:09 +0500
 permalink: /obzor-linux-arch
 image: /img/obzor-linux-arch.png
@@ -13,7 +13,7 @@ tags:
 - video
 ---
 
-<p><img alt="Обзор Linux Arch" class="post-image rounded" src="/img/obzor-linux-arch.png" /><p>Я на Arch Linux уже более 2-х лет и считаю, что это лучший дистрибутив. В этом видео я рассказываю свои первые впечатления от Arch Linux. Сейчас я бы, конечно, большего всего нарассказал, но для первого впечатления вполне. <noindex><a href="https://vk.com/arch4u?w=wall-129498031_4 " target="_blank" rel="nofollow" title="Arch Linux">Первый пост</a></noindex>, который вы можете видеть на видео, датирован 28 сен 2016. Это и дата рождения группы по Arch Linux <noindex><a href="https://vk.com/arch4u" target="_blank" rel="nofollow" title="Arch Linux">https://vk.com/arch4u</a></noindex>, и эту же дату можно считать дату, когда я перешел на Arch Linux. 
+<p><img loading="lazy" decoding="async" width="300" height="200" alt="Обзор Linux Arch" class="post-image rounded" src="/img/obzor-linux-arch.png" /><p>Я на Arch Linux уже более 2-х лет и считаю, что это лучший дистрибутив. В этом видео я рассказываю свои первые впечатления от Arch Linux. Сейчас я бы, конечно, большего всего нарассказал, но для первого впечатления вполне. <noindex><a href="https://vk.com/arch4u?w=wall-129498031_4 " target="_blank" rel="nofollow" title="Arch Linux">Первый пост</a></noindex>, который вы можете видеть на видео, датирован 28 сен 2016. Это и дата рождения группы по Arch Linux <noindex><a href="https://vk.com/arch4u" target="_blank" rel="nofollow" title="Arch Linux">https://vk.com/arch4u</a></noindex>, и эту же дату можно считать дату, когда я перешел на Arch Linux. 
 
 	
 Мой переход на Arch Linux был спонтанным. У меня стоял Debian, и я делал какие-то очередные эксперименты с системой и убил ее. В то время я был наслышан об Arch Linux и решил, что раз уж я убил Debian, то пора переходить на новый уровень и ставить Arch Linux. На этом мои поиски лучшей системы были окончены.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Автоматическая настройка Samba в Arch Linux
-description: Скрипт для быстрой настройки сетевого обмена файлами между Linux и Windows через Samba
+description: "Настройка сетевого обмена файлами между Linux и Windows — задача, с которой сталкивается каждый пользователь, имеющий несколько устройств в домашней сети…"
 categories:
 - scripts
 - useful

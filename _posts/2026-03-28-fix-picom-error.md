@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Исправление ошибки picom при перезагрузке Arch Linux
-description: Решение проблемы с устаревшими опциями GLX в compositor picom
+description: "После обновления пакетов Arch Linux при перезагрузке компьютера может появиться ошибка запуска compositor **picom**. В этой статье расскажу, как исправить…"
 categories:
 - configs
 - desktop

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Gnome установка на Linux — полное руководство
-description: Практический гайд по установке и настройке Gnome на Arch Linux, Ubuntu и других дистрибутивах
+description: "Gnome — популярная графическая среда для Linux с современным дизайном и удобным интерфейсом. Этот гайд поможет установить и настроить Gnome на различных…"
 date: 2026-05-12 13:00:00 +0300
 permalink: /gnome-ustanovka-linux
 categories:

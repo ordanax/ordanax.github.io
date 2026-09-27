@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Установка и настройка i3wm c polybar
-description: Ман по установке и настройке i3wm с polybar
+description: "В я рассказывал о минимальной установке и настройке i3wm с i3status. В этой статье мы копнем немного глубже, установим и настроим i3wm с polybar. Также…"
 date: 2020-08-14 17:43:09 +0500
 permalink: /i3wm_polybar
 categories: 

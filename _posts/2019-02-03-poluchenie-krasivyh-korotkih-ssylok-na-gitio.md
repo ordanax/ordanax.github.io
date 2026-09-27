@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Получение красивых коротких ссылок на git.io
-description: Получение красивых коротких ссылок на git.io
+description: "На гитхабе можно получить короткие ссылки при помощи git.io, НО! Сокращая таким образом, мы получаем ссылку наподобие git.io/djAVq, что очень неудобно…"
 date: 2019-02-03 21:50:09 +0500
 permalink: /poluchenie-krasivyh-korotkih-ssylok-na-gitio
 edit: true

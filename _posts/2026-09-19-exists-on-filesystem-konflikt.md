@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "\"exists in filesystem\": причины и когда --overwrite нужен"
-description: "Ошибка \"exists in filesystem\" при обновлении Arch Linux: что она значит, как найти виновника через pacman -Qo и когда --overwrite безопасен."
+description: "Ошибка `error: failed to commit transaction (conflicting files)` с сообщением ` exists in filesystem` появляется, когда pacman при установке или обновлении…"exists in filesystem\" при обновлении Arch Linux: что она значит, как найти виновника через pacman -Qo и когда --overwrite безопасен."
 date: 2026-09-19 00:00:00 +0300
 permalink: /exists-on-filesystem-konflikt
 categories:

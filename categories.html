@@ -1,0 +1,32 @@
+---
+layout: default
+title: Рубрики
+description: Все рубрики блога о Arch Linux и Linux: электроника, драйверы, системное администрирование, прикладные заметки. Список статей по каждой рубрике.
+---
+
+<div class="blog-post">
+    <h1 class="blog-post-title">Рубрики</h1>
+    <p class="blog-post-meta">Все рубрики и полный список статей по каждой из них.</p>
+    <hr>
+    <div id="cat-list">
+        {% assign cats = site.categories | sort %}
+        {% for cat in cats %}
+        <a href="#{{ cat[0] | slugify }}" class="badge badge-secondary">{{ cat[0] }} ({{ cat[1].size }})</a>
+        {% endfor %}
+    </div>
+    <hr>
+    {% for cat in site.categories %}
+    <div id="{{ cat[0] | slugify }}" class="tag-section" data-cat="{{ cat[0] }}">
+        <h2>{{ cat[0] }} <small>({{ cat[1].size }})</small></h2>
+        <ul>
+            {% assign items = cat[1] | sort: "title" %}
+            {% for post in items %}
+            <li>
+                <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                <time class="blog-post-meta" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d.%m.%Y" }}</time>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endfor %}
+</div>

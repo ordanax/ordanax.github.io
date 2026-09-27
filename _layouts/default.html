@@ -3,10 +3,12 @@
 {% include head.html %}
 
 <body>
+	<a class="skip-link" href="#main">К содержимому</a>
 	<div class="container">
 		{% include header.html %}
 	</div>
 	{% include top-nav.html %}
+	<main id="main">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-2 blog-sidebar-left">{% include left-sidebar.html %}</div>
@@ -14,6 +16,7 @@
 			<div class="col-md-3 blog-sidebar">{% include sidebar.html %}</div>
 		</div>
 	</div>
+	</main>
 	<div class="blog-footer">
 		{% include footer.html %}
 	</div>

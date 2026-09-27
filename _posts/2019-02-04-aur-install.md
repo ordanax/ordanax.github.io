@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Какой AUR helper выбрать?
-description: Не знаете какой AUR helper выбрать? Давайте разберемся!
+description: "Если вы посмотрите таблицу из нее можно увидеть, что yaourt и aurman помечены как более не поддерживаемые."
 date: 2019-02-04 00:34:09 +0500
 permalink: /aur-install
 image: /img/aur-install.png
@@ -18,7 +18,7 @@ tags:
 - yay
 ---
 
-<p><img alt="Какой AUR helper выбрать?" class="post-image rounded" src="/img/aur-install.png" />
+<p><img loading="lazy" decoding="async" width="300" height="200" alt="Какой AUR helper выбрать?" class="post-image rounded" src="/img/aur-install.png" />
 Если вы посмотрите таблицу <noindex><a href="https://vk.cc/88yr8q" target="_blank" rel="nofollow">https://vk.cc/88yr8q</a></noindex>, из нее можно увидеть, что yaourt и aurman помечены как более не поддерживаемые.
 Большинство пользователей склоняются к yay.
 Чтобы установить yay, вы можете воспользоваться скриптом ниже. Достаточно вбить всего 1 строку. Синтаксис точно такой же, как и в pacman.</p>

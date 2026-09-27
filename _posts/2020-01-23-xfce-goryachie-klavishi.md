@@ -1,7 +1,7 @@
 ---
 layout: post
 title: XFCE горячие клавиши
-description: Настройка горячих клавиш в XFCE как и в i3
+description: "После того, как я вкусил все прелести i3wm мне захотелось также настроить и горячие клавиши в Xfce, но я столкунулся с тем, что не все можно настроить через…"
 date: 2020-01-23 17:43:09 +0500
 permalink: /xfce-goryachie-klavishi
 categories: 

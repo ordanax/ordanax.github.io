@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Установка Archlinux 2019 за 15 минут
-description: Установка Archlinux 2019 за 15 минут
+description: "В этом видео я показываю быстрое разворачивание системы на своей машине."
 date: 2019-02-03 16:17:09 +0500
 permalink: /ustanovka-archlinux-2019-za-15-minut
 edit: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Iptv checker - для проверки iptv плейлистов 
-description: Как пользоваться консольным iptv checker для проверки iptv плейлистов 
+description: "В этой статье я расскажу, как пользоваться консольным iptv checker для проверки iptv плейлистов. Тут мы не будем рассматривать, где брать бесплатные iptv…"
 date: 2021-02-20 01:00:09 +0300
 permalink: /iptv-checker
 categories: 

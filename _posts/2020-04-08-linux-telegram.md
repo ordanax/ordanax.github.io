@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Linux в Telegram
-description: Linux чат в Telegram
+description: "Вчера обновил наш Линукс чат в Telegram. Он был приватный, сейчас же я его сделал в открытом доступе. Любой из вас может присоединиться к чату. Он доступен…"
 date: 2020-04-08 17:43:09 +0500
 permalink: /linux-telegram
 categories: 

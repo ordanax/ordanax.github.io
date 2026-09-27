@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Chaotic-AUR: доверяем ли мы ему"
-description: "Chaotic-AUR — репозиторий с готовыми бинарниками из AUR. Риски, подключение, кому он подходит."
+description: "Короткий ответ: Chaotic-AUR можно использовать, но только с пониманием, что ты доверяешь третьей стороне. Это не официальный репозиторий Arch, а сообщество…"
 date: 2026-09-20 00:00:00 +0300
 permalink: /chaotic-aur-doveryaem-li-emu
 categories:

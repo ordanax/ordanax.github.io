@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Скрипт установки Archlinux
-description: Скрипт установки Archlinux
+description: "Немного доработал свой скрипт по установке ArchLinux Напоминаю, что цель скрипта - это БЫСТРАЯ установка. Подразумевается, что вы сами запилите скрипт под…"
 date: 2019-03-18 16:17:09 +0500
 permalink: /skript-ustanovki-archlinux
 edit: true

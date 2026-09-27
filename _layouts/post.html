@@ -5,7 +5,7 @@ layout: default
 <div class="blog-post">
     <h1 class="blog-post-title">{% if page.header %}{{ page.header }}{% else %}{{ page.title }}{% endif %}</h1>
 	{% include edit.html %}
-    <p class="blog-post-meta">{{ page.date|date:"%d.%m.%Y" }} · {% assign words = content | number_of_words %}{% assign reading_time = words | divided_by: 200 %}{% if reading_time < 1 %}~1 минута{% else %}~{{ reading_time }} минут{% endif %} чтения</p>
+    <p class="blog-post-meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date|date:"%d.%m.%Y" }}</time> · {% assign words = content | number_of_words %}{% assign reading_time = words | divided_by: 200 %}{% if reading_time < 1 %}~1 минута{% else %}~{{ reading_time }} минут{% endif %} чтения</p>
     {% if page.tags %}
     <div class="post-tags">
         {% for tag in page.tags %}
