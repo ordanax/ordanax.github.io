@@ -2,7 +2,7 @@
 layout: post
 title: "NVIDIA: чёрный экран после обновления и nomodeset"
 description: "Если после обновления ядра или драйвера экран остаётся чёрным, добавь `nomodeset` в параметры загрузки: временный режим нередко возвращает доступ к консоли…"
-date: 2026-09-25 12:00:00 +0300
+date: 2026-09-27 12:00:00 +0300
 permalink: /nvidia-chernyj-ekran-nomodeset
 categories:
   - linux
