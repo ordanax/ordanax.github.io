@@ -15,26 +15,12 @@
 	<meta property="og:site_name" content="{{ site.title }}">
 	<meta property="og:locale" content="ru_RU">
 	{% assign logo_img = "/img/archlinux-logo.png" %}
-	{% assign og_img = logo_img %}
-	{% if page.layout == "post" and page.content contains "<img" %}
-	{% assign img_parts = page.content | split: "<img" %}
-	{% if img_parts.size > 1 %}
-	{% assign src_bits = img_parts[1] | split: "src=\"" %}
-	{% if src_bits.size > 1 %}
-	{% assign og_img = src_bits[1] | split: "\"" | first %}
-	{% assign og_img = og_img | replace: "https://ordanax.github.io", "" | replace: "http://ordanax.github.io", "" %}
-	{% if og_img == "" or og_img == nil %}
-	{% assign og_img = logo_img %}
-	{% endif %}
-	{% endif %}
-	{% endif %}
-	{% endif %}
-	<meta property="og:image" content="{{ site.url }}{{ og_img | default: logo_img }}">
+	<meta property="og:image" content="{{ site.url }}{{ page.image | default: logo_img }}">
 	<meta property="og:image:alt" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
 	<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-	<meta name="twitter:image" content="{{ site.url }}{{ og_img | default: logo_img }}">
+	<meta name="twitter:image" content="{{ site.url }}{{ page.image | default: logo_img }}">
 	{% if page.layout == 'post' %}
 	<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
 	<meta property="article:section" content="{{ page.categories | first | default: site.title }}">
@@ -62,7 +48,7 @@
 	  "datePublished": "{{ page.date | date_to_xmlschema }}",
 	  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
 	  "inLanguage": "ru",
-	  "image": "{{ site.url }}{{ og_img | default: logo_img }}",
+	  "image": "{{ site.url }}{{ page.image | default: logo_img }}",
 	  "articleSection": {{ page.categories | first | default: site.title | jsonify }},
 	  "keywords": {{ page.tags | jsonify }},
 	  "wordCount": {{ page.content | number_of_words }},
