@@ -16,13 +16,16 @@
 	<meta property="og:locale" content="ru_RU">
 	{% assign logo_img = "/img/archlinux-logo.png" %}
 	{% assign og_img = logo_img %}
-	{% if page.layout == "post" and page.content contains "<img src=" %}
-	{% assign img_parts = page.content | split: "<img src=" %}
+	{% if page.layout == "post" and page.content contains "<img" %}
+	{% assign img_parts = page.content | split: "<img" %}
 	{% if img_parts.size > 1 %}
-	{% assign og_img = img_parts[1] | split: "\"" | first | split: "<" | first %}
-	{% assign og_img = og_img | replace: "https://ordanax.github.io", "" %}
+	{% assign src_bits = img_parts[1] | split: "src=\"" %}
+	{% if src_bits.size > 1 %}
+	{% assign og_img = src_bits[1] | split: "\"" | first %}
+	{% assign og_img = og_img | replace: "https://ordanax.github.io", "" | replace: "http://ordanax.github.io", "" %}
 	{% if og_img == "" or og_img == nil %}
 	{% assign og_img = logo_img %}
+	{% endif %}
 	{% endif %}
 	{% endif %}
 	{% endif %}
