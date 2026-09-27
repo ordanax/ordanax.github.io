@@ -146,7 +146,7 @@ pacman доустановит то, что не успел. Если обнов�
 pacman -Qkk
 ```
 
-Команда проверит файлы установленных пакетов и покажет повреждённые. Подробный разбор есть в статье «[Проверка целостности пакетов: pacman -Qkk](https://ordanax.github.io/proverka-celostnosti-pacman-qkk)».
+Команда проверит файлы установленных пакетов и покажет повреждённые. Подробный разбор есть в статье «[Проверка целостности пакетов: pacman -Qkk](/proverka-celostnosti-pacman-qkk)».
 
 Если после повторного `pacman -Syu` система не загружается или программы падают, загружайся с live-USB и чини систему из chroot. Но в большинстве случаев повторное обновление решает проблему.
 
@@ -176,7 +176,7 @@ pgrep -a pacman-key
 
 ### Ускорь зеркала
 
-Настрой зеркала через reflector или вручную. Быстрые зеркала убирают главную причину «зависаний». Подробности в статье «[Медленные зеркала: настройка reflector](https://ordanax.github.io/medlennye-zerkala-reflector)». После настройки проверь, что в начале списка стоят действительно быстрые серверы, иначе pacman снова упрётся в медленный.
+Настрой зеркала через reflector или вручную. Быстрые зеркала убирают главную причину «зависаний». Подробности в статье «[Медленные зеркала: настройка reflector](/medlennye-zerkala-reflector)». После настройки проверь, что в начале списка стоят действительно быстрые серверы, иначе pacman снова упрётся в медленный.
 
 ### Обновляйся в tmux
 
@@ -229,9 +229,9 @@ pacman будет качать несколько пакетов одновре�
 
 - [Pacman, ArchWiki](https://wiki.archlinux.org/title/Pacman): основная документация по менеджеру пакетов.
 - [Pacman/Tips and tricks, ArchWiki](https://wiki.archlinux.org/title/Pacman/Tips_and_tricks): полезные приёмы, включая параллельную загрузку.
-- [Обновление с отловом ошибок -Syu](https://ordanax.github.io/obnovlenie-s-otlovom-oshibok-syuw): как читать ошибки обновления.
-- [pacman от А до Я: команды](https://ordanax.github.io/pacman-ot-a-do-ya-komandy): справочник по командам pacman.
-- [pacman: прокси и переменные окружения](https://ordanax.github.io/pacman-proksi-peremennye-okruzheniya): если обновление не качает из-за сети.
+- [Обновление с отловом ошибок -Syu](/obnovlenie-s-otlovom-oshibok-syuw): как читать ошибки обновления.
+- [pacman от А до Я: команды](/pacman-ot-a-do-ya-komandy): справочник по командам pacman.
+- [pacman: прокси и переменные окружения](/pacman-proksi-peremennye-okruzheniya): если обновление не качает из-за сети.
 
 ## Заключение
 

@@ -28,7 +28,7 @@ edit: true
 
 Если Arch стоял на отдельном диске — проще. Отключи его, загрузись в Windows, и в «Управлении дисками» (`diskmgmt.msc`) удали ненужные разделы. Но правило то же: сначала убедись, что Windows-раздел активен.
 
-Главное: не трогай EFI-раздел (ESP) целиком. На нём лежит Windows Boot Manager, и если его стереть, ни одна ОС не загрузится. Подробнее — в статье про [один EFI-раздел в дуалбуте](https://ordanax.github.io/odin-efi-razdel-dualboot).
+Главное: не трогай EFI-раздел (ESP) целиком. На нём лежит Windows Boot Manager, и если его стереть, ни одна ОС не загрузится. Подробнее — в статье про [один EFI-раздел в дуалбуте](/odin-efi-razdel-dualboot).
 
 ## Как восстановить загрузчик Windows
 
@@ -114,7 +114,7 @@ efibootmgr
 sudo efibootmgr -b XXXX -B
 ```
 
-Подробнее — в статье про [EFI variables not supported](https://ordanax.github.io/efi-variables-not-supported-efibootmgr).
+Подробнее — в статье про [EFI variables not supported](/efi-variables-not-supported-efibootmgr).
 
 ## А что если Windows вообще не грузится
 
@@ -170,6 +170,6 @@ bcdboot C:\Windows /s S: /f UEFI
 
 - [ArchWiki: Dual boot with Windows](https://wiki.archlinux.org/title/Dual_boot_with_Windows): официальная документация по сосуществованию Arch и Windows
 - [ArchWiki: GRUB](https://wiki.archlinux.org/title/GRUB): настройка и восстановление загрузчика
-- [Дуалбут: Windows пропал из GRUB](https://ordanax.github.io/dualboot-windows-propala-iz-grub): как вернуть Windows в меню, если она просто пропала
-- [Разметка диска: GPT и MBR](https://ordanax.github.io/razmetka-diska-gpt-mbr): как понять, какие разделы занимает Arch, и что можно удалить
-- [Клонирование Arch на похожее железо](https://ordanax.github.io/klonirovanie-arch-na-podobnoe-zhelezo): если перед удалением нужно оставить резервную копию
+- [Дуалбут: Windows пропал из GRUB](/dualboot-windows-propala-iz-grub): как вернуть Windows в меню, если она просто пропала
+- [Разметка диска: GPT и MBR](/razmetka-diska-gpt-mbr): как понять, какие разделы занимает Arch, и что можно удалить
+- [Клонирование Arch на похожее железо](/klonirovanie-arch-na-podobnoe-zhelezo): если перед удалением нужно оставить резервную копию

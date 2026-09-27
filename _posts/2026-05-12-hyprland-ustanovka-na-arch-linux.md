@@ -255,4 +255,4 @@ sudo pacman -S wl-clipboard
 
 ---
 
-**Автор:** [ordanax.github.io](https://ordanax.github.io/)  
+**Автор:** [ordanax.github.io](/)  

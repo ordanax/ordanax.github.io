@@ -133,7 +133,7 @@ ls /var/cache/pacman/pkg/linux-firmware*
 sudo pacman -U /var/cache/pacman/pkg/linux-firmware-<версия>.pkg.tar.zst
 ```
 
-Кэша нет — качай нужную версию с archive.archlinux.org. Общая схема отката пакета разобрана в статье «[Откат обновления GRUB](https://ordanax.github.io/otkat-obnovleniya-grub)» — она применима к любому пакету, не только к загрузчику.
+Кэша нет — качай нужную версию с archive.archlinux.org. Общая схема отката пакета разобрана в статье «[Откат обновления GRUB](/otkat-obnovleniya-grub)» — она применима к любому пакету, не только к загрузчику.
 
 Если регрессия повторяется при каждом обновлении, можно временно закрепить старую версию через `IgnorePkg` в `/etc/pacman.conf`:
 
@@ -176,7 +176,7 @@ NoUpgrade = usr/lib/firmware/iwlwifi-*.ucode
 
 ### После обновления linux-firmware пропал Wi-Fi — что делать?
 
-Сначала проверь, видит ли система адаптер: `ip link`. Если адаптер на месте, но не подключается — откати пакет. Если адаптера нет вообще — возможно, проблема не в прошивке, а в модуле. Похожая ситуация разобрана в статье «[Пропал модуль Wi-Fi после обновления](https://ordanax.github.io/propal-modul-wifi-posle-obnovleniya)».
+Сначала проверь, видит ли система адаптер: `ip link`. Если адаптер на месте, но не подключается — откати пакет. Если адаптера нет вообще — возможно, проблема не в прошивке, а в модуле. Похожая ситуация разобрана в статье «[Пропал модуль Wi-Fi после обновления](/propal-modul-wifi-posle-obnovleniya)».
 
 ### Нужно ли перезагружаться после обновления linux-firmware?
 
@@ -198,8 +198,8 @@ NoUpgrade = usr/lib/firmware/iwlwifi-*.ucode
 
 - [Linux firmware — ArchWiki](https://wiki.archlinux.org/title/Linux_firmware) — основная страница о пакете и его подпакетах.
 - [AMDGPU — ArchWiki](https://wiki.archlinux.org/title/AMDGPU) — про драйвер и прошивки видеокарт AMD.
-- [Методика решения проблем в Arch Linux](https://ordanax.github.io/metodika-resheniya-problem-arch) — общий порядок диагностики.
-- [NVIDIA драйвер на Arch Linux](https://ordanax.github.io/nvidia-drayver-na-arch-linux) — если у тебя видеокарта NVIDIA.
+- [Методика решения проблем в Arch Linux](/metodika-resheniya-problem-arch) — общий порядок диагностики.
+- [NVIDIA драйвер на Arch Linux](/nvidia-drayver-arch-linux) — если у тебя видеокарта NVIDIA.
 
 ## Заключение
 

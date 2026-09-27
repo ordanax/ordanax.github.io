@@ -132,7 +132,7 @@ sudo timedatectl set-local-rtc 1
 
 Решение рабочее, но не идеальное: systemd может вести себя непредсказуемо при смене поясов и переходе на летнее время. Вернуть обратно: `sudo timedatectl set-local-rtc 0`.
 
-Про проблемы с GRUB после установки Windows читай в статье [«Dualboot: Windows пропала из меню GRUB»](https://ordanax.github.io/dualboot-windows-propala-iz-grub).
+Про проблемы с GRUB после установки Windows читай в статье [«Dualboot: Windows пропала из меню GRUB»](/dualboot-windows-propala-iz-grub).
 
 ## Что делать, если время сбивается
 
@@ -161,7 +161,7 @@ journalctl -u systemd-timesyncd -f
 - **Dualboot с Windows** — конфликт UTC/localtime (описано выше).
 - **Нет интернета** — systemd-timesyncd не может достучаться до сервера.
 - **Виртуальная машина** — время гостя «плывёт» из-за нагрузки на хост. В KVM помогает модуль `ptp_kvm`, в VirtualBox — «Гостевые дополнения».
-- **Села батарейка CMOS** — время сбивается после выключения питания. Замена CR2032 решает навсегда. Что ещё проверить после установки — в [«Первый час после установки Arch»](https://ordanax.github.io/pervyi-chas-posle-ustanovki-arch).
+- **Села батарейка CMOS** — время сбивается после выключения питания. Замена CR2032 решает навсегда. Что ещё проверить после установки — в [«Первый час после установки Arch»](/pervyi-chas-posle-ustanovki-arch).
 
 ## Частые вопросы
 
@@ -185,9 +185,9 @@ journalctl -u systemd-timesyncd -f
 
 - [Systemd-timesyncd — ArchWiki](https://wiki.archlinux.org/title/Systemd-timesyncd) — документация по SNTP-клиенту.
 - [System time — ArchWiki](https://wiki.archlinux.org/title/System_time) — часы, RTC, dualboot, синхронизация.
-- [fstab: поля на практике](https://ordanax.github.io/fstab-polya-na-praktike) — разбор полей fstab.
-- [journalctl: первая загрузка](https://ordanax.github.io/chitat-journalctl-b-pervaya-zagruzka) — как читать логи systemd.
-- [Установка Arch Linux 2026: пошагово](https://ordanax.github.io/ustanovka-archlinux-2026-poshagovaya) — пошаговая установка Arch.
+- [fstab: поля на практике](/fstab-polya-na-praktike) — разбор полей fstab.
+- [journalctl: первая загрузка](/chitat-journalctl-b-pervaya-zagruzka) — как читать логи systemd.
+- [Установка Arch Linux 2026: пошагово](/ustanovka-archlinux-2026-poshagovaya) — пошаговая установка Arch.
 
 ## Заключение
 

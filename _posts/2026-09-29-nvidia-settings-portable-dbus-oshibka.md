@@ -23,7 +23,7 @@ edit: true
 
 Два эти приложения используют драйвер по-разному. `nvidia-smi` — консольная утилита: ей достаточно устройств `/dev/nvidia*` и библиотек, которые ставит пакет `nvidia-utils`, а X-сервер и dbus не нужны вообще. `nvidia-settings` — приложение GTK3, которому дополнительно нужны X-дисплей, шина сессии и набор библиотек вроде `libnvidia-cfg.so` и `libnvidia-gtk3.so`.
 
-В `extra` пакет `nvidia-settings` зависит от `jansson`, `gtk3`, `libxv`, `libvdpau`, `libxnvctrl` и `nvidia-utils`. Зависимость на `nvidia-utils` — это и гарантия совпадения версий, и главный источник проблем: если `nvidia-utils` обновился, а модуль ядра остался старым (или наоборот), приложение падает с ошибкой, хотя `nvidia-smi` может ещё работать со старым модулем. Про то, как драйвер соотносится с остальным стеком и почему версии разъезжаются, я писал в статье про [CUDA на Arch](https://ordanax.github.io/nvidia-cuda-mashinnoe-obuchenie), а подбор версии драйвера под ядро разобран в [этой](https://ordanax.github.io/nvidia-drayver-na-arch-linux).
+В `extra` пакет `nvidia-settings` зависит от `jansson`, `gtk3`, `libxv`, `libvdpau`, `libxnvctrl` и `nvidia-utils`. Зависимость на `nvidia-utils` — это и гарантия совпадения версий, и главный источник проблем: если `nvidia-utils` обновился, а модуль ядра остался старым (или наоборот), приложение падает с ошибкой, хотя `nvidia-smi` может ещё работать со старым модулем. Про то, как драйвер соотносится с остальным стеком и почему версии разъезжаются, я писал в статье про [CUDA на Arch](/nvidia-cuda-mashinnoe-obuchenie), а подбор версии драйвера под ядро разобран в [этой](/nvidia-drayver-arch-linux).
 
 ## Какие ошибки на терминале означают что именно сломано?
 
@@ -61,7 +61,7 @@ ldconfig -p | grep -E 'libnvidia-cfg|libnvidia-gtk3|libxnvctrl'
 nvidia-settings -q CurrentMetaMode
 ```
 
-Он печатает режим, разрешение и частоту refresh без единого окна — удобно, когда GUI под Wayland открывается криво. Если модуль ядра трогали, а библиотеки под него не пересобрали, не забудь про `sudo mkinitcpio -P` и перезагрузку: [логи Xorg в таких случаях тоже полезно почитать](https://ordanax.github.io/oshibki-xorg-nvidia-smotrim-logi).
+Он печатает режим, разрешение и частоту refresh без единого окна — удобно, когда GUI под Wayland открывается криво. Если модуль ядра трогали, а библиотеки под него не пересобрали, не забудь про `sudo mkinitcpio -P` и перезагрузку: [логи Xorg в таких случаях тоже полезно почитать](/oshibki-xorg-nvidia-smotrim-logi).
 
 ## Что делать с portable-сборкой?
 

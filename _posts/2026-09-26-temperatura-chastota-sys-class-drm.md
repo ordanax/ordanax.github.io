@@ -29,7 +29,7 @@ ls /sys/class/drm/
 ls -l /sys/class/drm/card0/device/
 ```
 
-У amdgpu температуры и энергия лежат в hwmon, частота ядра и памяти — в списках `pp_dpm_sclk` и `pp_dpm_mclk`, где текущая строка помечена звёздочкой, а загрузка и видеопамять — в `gpu_busy_percent` и `mem_info_vram_used`. У i915 скуднее: `hwmon/hwmon*/temp1_input` есть, а частоты ядра лежат не в `device/`, а уровнем выше — `gt_cur_freq_mhz` и `gt_max_freq_mhz`. Проприетарный NVIDIA телеметрию в sysfs не отдаёт вообще, только через `nvidia-smi`, поэтому про вентиляторы и лимиты — отдельная история про [coolbits и перегрев](https://ordanax.github.io/nvidia-peregrev-ventilyatory-coolbits).
+У amdgpu температуры и энергия лежат в hwmon, частота ядра и памяти — в списках `pp_dpm_sclk` и `pp_dpm_mclk`, где текущая строка помечена звёздочкой, а загрузка и видеопамять — в `gpu_busy_percent` и `mem_info_vram_used`. У i915 скуднее: `hwmon/hwmon*/temp1_input` есть, а частоты ядра лежат не в `device/`, а уровнем выше — `gt_cur_freq_mhz` и `gt_max_freq_mhz`. Проприетарный NVIDIA телеметрию в sysfs не отдаёт вообще, только через `nvidia-smi`, поэтому про вентиляторы и лимиты — отдельная история про [coolbits и перегрев](/nvidia-peregrev-ventilyatory-coolbits).
 
 ## Как прочитать температуру и частоты?
 
@@ -74,7 +74,7 @@ sensors
 
 Учти, что `sensors` печатает температуру в градусах, а `sensors -u` — в микро градусах, то есть в тысячу раз больше, чем цифра в `temp1_input`. Полезная привычка: сначала посмотреть сырые файлы и только потом искать причину, если значение кажется странным.
 
-Для игр удобнее оверлей: как настроить MangoHud поверх Vulkan, разбирал в статье про [слой и MangoHud](https://ordanax.github.io/vulkan-sloi-lakt-mangohud). А для терминала есть `radeontop` (запусти с `radeontop -d 1`, покажет частоту, температуру и занятость VRAM) и `nvtop` для карт NVIDIA.
+Для игр удобнее оверлей: как настроить MangoHud поверх Vulkan, разбирал в статье про [слой и MangoHud](/vulkan-sloi-lakt-mangohud). А для терминала есть `radeontop` (запусти с `radeontop -d 1`, покажет частоту, температуру и занятость VRAM) и `nvtop` для карт NVIDIA.
 
 ## Почему часть файлов пропадает?
 
@@ -97,7 +97,7 @@ echo low  | sudo tee /sys/class/drm/card0/device/power_dpm_force_performance_lev
 echo auto | sudo tee /sys/class/drm/card0/device/power_dpm_force_performance_level
 ```
 
-Допустимые значения — строки `auto`, `low`, `high` и `manual`. `low` прижимает карту к самым низким частотам: шум вентиляторов и нагрев падают, но падают и кадры. Если после такой настройки в играх появились подёргивания, сначала верни `auto` — про [низкую частоту кадров на Ryzen iGPU](https://ordanax.github.io/nizkaya-chastota-kadrov-ryzen-igpu) я писал отдельно.
+Допустимые значения — строки `auto`, `low`, `high` и `manual`. `low` прижимает карту к самым низким частотам: шум вентиляторов и нагрев падают, но падают и кадры. Если после такой настройки в играх появились подёргивания, сначала верни `auto` — про [низкую частоту кадров на Ryzen iGPU](/nizkaya-chastota-kadrov-ryzen-igpu) я писал отдельно.
 
 Более тонкий вариант для игровых сценариев — профиль мощности, где `2` обычно отвечает за 3D_FULL_SCREEN:
 

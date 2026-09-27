@@ -14,11 +14,11 @@ tags:
 - install
 ---
 
-![Установка Archlinux 2019 за 15 минут](https://ordanax.github.io/img/skript-ustanovki-archlinux.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Немного доработал свой скрипт по установке ArchLinux
+![Установка Archlinux 2019 за 15 минут](/img/skript-ustanovki-archlinux.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Немного доработал свой скрипт по установке ArchLinux
 Напоминаю, что цель скрипта - это БЫСТРАЯ установка. Подразумевается, что вы сами запилите скрипт под себя. При этом вам не нужно будет выбирать да/нет вы просто ставите все, что вам нужно со всеми программами и конфигами если потребуется.
 
 ## Как пользоваться скриптом
-Подробное описание + видео смотрите [ тут](https://ordanax.github.io/ustanovka-archlinux-2019-za-15-minut "Как пользоваться скриптом") . 
+Подробное описание + видео смотрите [ тут](/ustanovka-archlinux-2019-za-15-minut) . 
 
 На данный момент у меня 2 сrрипта: с UEFI и Legacy
 ## Скрипт с Llegacy 

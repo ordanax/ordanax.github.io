@@ -21,7 +21,7 @@ edit: true
 
 Тема GRUB ставится в три шага: кладёшь папку темы в /boot/grub/themes, прописываешь путь к theme.txt в переменной GRUB_THEME в /etc/default/grub и пересобираешь конфиг командой grub-mkconfig -o /boot/grub/grub.cfg. После перезагрузки вместо чёрного экрана с белым списком пунктов увидишь меню с картинкой. Пять минут работы — и загрузчик перестаёт пугать.
 
-Если ты только что поставил Arch, загляни в статью про [первый час после установки](https://ordanax.github.io/pervyi-chas-posle-ustanovki-arch). Здесь разберём косметику: как сделать загрузчик красивым.
+Если ты только что поставил Arch, загляни в статью про [первый час после установки](/pervyi-chas-posle-ustanovki-arch). Здесь разберём косметику: как сделать загрузчик красивым.
 
 ## Какие темы есть для GRUB
 
@@ -59,7 +59,7 @@ sudo ./install.sh -b -t tela
 
 ### Вручную
 
-Скачал тему архивом — распакуй в /boot/grub/themes/. Должна получиться структура /boot/grub/themes/`<имя>`/theme.txt. Если GRUB ещё не настроен — например, ты только что поставил систему по [пошаговой инструкции](https://ordanax.github.io/ustanovka-archlinux-2026-poshagovaya), — сначала убедись, что загрузчик работает.
+Скачал тему архивом — распакуй в /boot/grub/themes/. Должна получиться структура /boot/grub/themes/`<имя>`/theme.txt. Если GRUB ещё не настроен — например, ты только что поставил систему по [пошаговой инструкции](/ustanovka-archlinux-2026-poshagovaya), — сначала убедись, что загрузчик работает.
 
 Открой /etc/default/grub и добавь:
 
@@ -124,7 +124,7 @@ GRUB_TERMINAL_OUTPUT="gfxterm"
 
 Тема влияет только на меню. Чтобы после выбора пункта не было скачка разрешения, нужен GRUB_GFXPAYLOAD_LINUX=keep — тогда ядро и initrd получат то же разрешение, что и GRUB.
 
-Если после обновления ядра пункты меню пропали — это отдельная история, чинится той же командой grub-mkconfig. Подробности в статье [GRUB не видит ядра после обновления](https://ordanax.github.io/grub-ne-vidit-yadra-posle-obnovleniya).
+Если после обновления ядра пункты меню пропали — это отдельная история, чинится той же командой grub-mkconfig. Подробности в статье [GRUB не видит ядра после обновления](/grub-ne-vidit-yadra-posle-obnovleniya).
 
 ## Как увеличить разрешение в GRUB
 
@@ -157,7 +157,7 @@ GRUB не может читать зашифрованный раздел до �
 
 Красивый GRUB — это пять минут и три строки в конфиге: папка темы в /boot/grub/themes, переменная GRUB_THEME, пересборка grub-mkconfig. Если что-то пошло не так, почти всегда виноват путь или забытая пересборка конфига.
 
-А если в меню пропала Windows при dual boot — смотри [os-prober: как GRUB увидит Windows](https://ordanax.github.io/os-prober-grub-windows) и [Windows пропала из GRUB](https://ordanax.github.io/dualboot-windows-propala-iz-grub).
+А если в меню пропала Windows при dual boot — смотри [os-prober: как GRUB увидит Windows](/os-prober-grub-windows) и [Windows пропала из GRUB](/dualboot-windows-propala-iz-grub).
 
 ## Полезные ресурсы
 

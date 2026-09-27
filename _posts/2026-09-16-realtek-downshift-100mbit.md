@@ -134,6 +134,6 @@ Downshift на Realtek r8169 почти всегда физика: кабель,
 
 - [NetworkManager (ArchWiki)](https://wiki.archlinux.org/title/NetworkManager) — настройка и управление сетью
 - [Network configuration (ArchWiki)](https://wiki.archlinux.org/title/Network_configuration) — общая настройка сети в Arch Linux
-- [Wi-Fi через wpa_supplicant](https://ordanax.github.io/wifi-nastroyka-wpa-supplicant) — настройка беспроводной сети вручную
-- [Драйвер NVIDIA в Arch Linux](https://ordanax.github.io/nvidia-drayver-arch-linux) — установка проприетарных драйверов
-- [Зависания при высокой нагрузке CPU](https://ordanax.github.io/high_cpu_freeze_fix) — исправление фризов
+- [Wi-Fi через wpa_supplicant](/wifi-nastroyka-wpa-supplicant) — настройка беспроводной сети вручную
+- [Драйвер NVIDIA в Arch Linux](/nvidia-drayver-arch-linux) — установка проприетарных драйверов
+- [Зависания при высокой нагрузке CPU](/high_cpu_freeze_fix) — исправление фризов

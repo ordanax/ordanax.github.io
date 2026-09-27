@@ -132,7 +132,7 @@ namcap morse-1.0-1-any.pkg.tar.zst
 sudo pacman -U morse-1.0-1-any.pkg.tar.zst
 ```
 
-Так ставятся любые собранные пакеты. Подробнее про установку из AUR и связанные с ней проверки читай в статье «[Установка пакетов из AUR](https://ordanax.github.io/aur-install)».
+Так ставятся любые собранные пакеты. Подробнее про установку из AUR и связанные с ней проверки читай в статье «[Установка пакетов из AUR](/aur-install)».
 
 ## Как правильно установить файлы в /usr
 
@@ -143,7 +143,7 @@ sudo pacman -U morse-1.0-1-any.pkg.tar.zst
 make
 ```
 
-Без --prefix configure по умолчанию соберёт в /usr/local, и файлы разъедутся по системе. Подробный разбор сборки из исходников есть в статье «[Сборка из исходников: configure и make](https://ordanax.github.io/sborka-iz-iskhodnikov-configure-make)».
+Без --prefix configure по умолчанию соберёт в /usr/local, и файлы разъедутся по системе. Подробный разбор сборки из исходников есть в статье «[Сборка из исходников: configure и make](/sborka-iz-iskhodnikov-configure-make)».
 
 В package() для configure-проектов стандартный шаблон такой:
 
@@ -168,7 +168,7 @@ install -Dm644 "$srcdir/morse.1" "$pkgdir/usr/share/man/man1/morse.1"
 
 ## Как добавить пакет в свой репозиторий
 
-Собранные пакеты можно складывать в локальный репозиторий и ставить на нескольких машинах без повторной сборки. Для этого нужны каталог с архивами и база, которую создаёт repo-add. Пошаговая инструкция есть в статье «[Свой репозиторий: repo-add](https://ordanax.github.io/svoj-repozitorij-repo-add)». После создания базы подключи её в /etc/pacman.conf строкой Server = file:///путь/к/каталогу, и пакеты из неё станут доступны через pacman -S.
+Собранные пакеты можно складывать в локальный репозиторий и ставить на нескольких машинах без повторной сборки. Для этого нужны каталог с архивами и база, которую создаёт repo-add. Пошаговая инструкция есть в статье «[Свой репозиторий: repo-add](/svoj-repozitorij-repo-add)». После создания базы подключи её в /etc/pacman.conf строкой Server = file:///путь/к/каталогу, и пакеты из неё станут доступны через pacman -S.
 
 ## Как обновлять версию пакета
 
@@ -204,7 +204,7 @@ Makefile описывает сборку одной программы. PKGBUILD
 
 - [PKGBUILD: ArchWiki](https://wiki.archlinux.org/title/PKGBUILD) это справочник по всем переменным и функциям.
 - [Creating packages: ArchWiki](https://wiki.archlinux.org/title/Creating_packages) это официальное руководство по созданию пакетов.
-- [makepkg: всё, что нужно знать](https://ordanax.github.io/makepkg-vse-chto-nuzhno-znat) это разбор флагов и тонкостей сборки.
+- [makepkg: всё, что нужно знать](/makepkg-vse-chto-nuzhno-znat) это разбор флагов и тонкостей сборки.
 
 ## Заключение
 

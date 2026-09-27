@@ -33,7 +33,7 @@ error: failed to commit transaction (conflicting files)
 package: /usr/bin/foo exists in filesystem
 ```
 
-Тут два разных случая. Первый: файл принадлежит другому пакету из базы. Второй: файл лежит на диске, но не принадлежит ни одному пакету, так называемый `exists on filesystem`. Это разные ситуации, и лечатся они по-разному. Про второй случай есть отдельная статья «[Файл существует в файловой системе](https://ordanax.github.io/exists-on-filesystem-konflikt)».
+Тут два разных случая. Первый: файл принадлежит другому пакету из базы. Второй: файл лежит на диске, но не принадлежит ни одному пакету, так называемый `exists on filesystem`. Это разные ситуации, и лечатся они по-разному. Про второй случай есть отдельная статья «[Файл существует в файловой системе](/exists-on-filesystem-konflikt)».
 
 Раньше конфликты обходили флагом `--force`, но в pacman 6 его убрали. Остался только `--overwrite`, и он требует явного указания путей. Это сделано специально: случайная перезапись чужих файлов ломает систему, и pacman теперь заставляет тебя думать.
 
@@ -107,7 +107,7 @@ grep -E '^(conflicts|provides|replaces)' PKGBUILD
 conflicts=('official-package')
 ```
 
-Тогда pacman при установке предложит удалить официальный пакет, и конфликт файлов не возникнет. Это правильный путь для своей сборки. Подробно про написание PKGBUILD читай в статье «[Свой PKGBUILD: полный гайд](https://ordanax.github.io/svoj-pkgbuild-polnyj-gajd)».
+Тогда pacman при установке предложит удалить официальный пакет, и конфликт файлов не возникнет. Это правильный путь для своей сборки. Подробно про написание PKGBUILD читай в статье «[Свой PKGBUILD: полный гайд](/svoj-pkgbuild-polnyj-gajd)».
 
 ### Выбери альтернативный вариант пакета
 
@@ -147,7 +147,7 @@ grep -E '^(conflicts|provides|replaces)' PKGBUILD
 pacman -Qi old-package
 ```
 
-Вывод покажет, какие пакеты требуют его. Если зависимые пакеты есть, убедись, что новый пакет закрывает их через `provides`. Иначе после замены получишь сломанные зависимости. Про это читай статью «[Зависимости AUR ломаются после обновления](https://ordanax.github.io/aur-zavisimosti-lomayutsya-posle-obnovleniya)».
+Вывод покажет, какие пакеты требуют его. Если зависимые пакеты есть, убедись, что новый пакет закрывает их через `provides`. Иначе после замены получишь сломанные зависимости. Про это читай статью «[Зависимости AUR ломаются после обновления](/aur-zavisimosti-lomayutsya-posle-obnovleniya)».
 
 Затем установи новый пакет с `--overwrite` только на те пути, которые реально заменяешь:
 
@@ -195,8 +195,8 @@ pacman -Qk
 
 - [PKGBUILD (ArchWiki)](https://wiki.archlinux.org/title/PKGBUILD): документация по полям conflicts, provides и replaces.
 - [Pacman (ArchWiki)](https://wiki.archlinux.org/title/Pacman): полный список флагов, включая --overwrite.
-- [Pacman от А до Я: команды](https://ordanax.github.io/pacman-ot-a-do-ya-komandy): шпаргалка по командам pacman.
-- [Установка пакетов из AUR](https://ordanax.github.io/aur-install): как правильно ставить пакеты из AUR.
+- [Pacman от А до Я: команды](/pacman-ot-a-do-ya-komandy): шпаргалка по командам pacman.
+- [Установка пакетов из AUR](/aur-install): как правильно ставить пакеты из AUR.
 
 ## Заключение
 

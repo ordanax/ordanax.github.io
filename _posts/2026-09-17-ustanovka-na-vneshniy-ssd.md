@@ -57,7 +57,7 @@ mount /dev/sdb2 /mnt
 mount --mkdir /dev/sdb1 /mnt/boot
 ```
 
-Дальше — обычная установка: pacstrap, fstab, locale. Если забыл последовательность — вот [чек-лист установки](https://ordanax.github.io/chek-list-po-ustanovke-archlinux-2019) и [установка за 15 минут](https://ordanax.github.io/ustanovka-archlinux-2019-za-15-minut). Загрузиться с установочной флешки можно через [Ventoy](https://ordanax.github.io/ventoy) — просто кидаешь ISO на раздел и грузишься.
+Дальше — обычная установка: pacstrap, fstab, locale. Если забыл последовательность — вот [чек-лист установки](/chek-list-po-ustanovke-archlinux-2019) и [установка за 15 минут](/ustanovka-archlinux-2019-za-15-minut). Загрузиться с установочной флешки можно через [Ventoy](/ventoy) — просто кидаешь ISO на раздел и грузишься.
 
 ## Как поставить загрузчик, чтобы грузился с любой машины
 
@@ -86,7 +86,7 @@ bootctl install
 
 Загрузочные записи UEFI живут в NVRAM — энергонезависимой памяти прошивки. Это не файл на диске, а данные внутри материнской платы. Запись, созданная на одном компьютере, физически не существует на другом. Поэтому обычный `grub-install` без `--removable` даёт диск, который грузится только на той машине, где его ставили.
 
-Плюс NVRAM — хрупкая штука: обновление прошивки, сброс BIOS, кривой efibootmgr — и запись пропала. Про ошибки вида «EFI variables are not supported» я писал в [отдельной статье](https://ordanax.github.io/efi-variables-not-supported-efibootmgr). Fallback-путь от этого не зависит: файл лежит на диске, прошивка находит его по стандарту.
+Плюс NVRAM — хрупкая штука: обновление прошивки, сброс BIOS, кривой efibootmgr — и запись пропала. Про ошибки вида «EFI variables are not supported» я писал в [отдельной статье](/efi-variables-not-supported-efibootmgr). Fallback-путь от этого не зависит: файл лежит на диске, прошивка находит его по стандарту.
 
 ## Как ухаживать за SSD: TRIM и опции монтирования
 

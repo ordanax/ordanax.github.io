@@ -284,4 +284,4 @@ sudo -u postgres psql -c "SELECT pg_size_pretty(pg_database_size('mydb'));"
 
 ---
 
-**Автор:** [ordanax.github.io](https://ordanax.github.io/)  
+**Автор:** [ordanax.github.io](/)  

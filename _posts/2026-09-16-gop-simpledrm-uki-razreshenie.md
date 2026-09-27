@@ -122,5 +122,5 @@ lsinitcpio -l /tmp/x.cpio | grep ter-
 
 - [mkinitcpio — ArchWiki](https://wiki.archlinux.org/title/mkinitcpio) — генерация initrd и настройка хуков
 - [Unified Kernel Image (UKI) — ArchWiki](https://wiki.archlinux.org/title/Unified_kernel_image) — сборка UKI и структура EFI-образа
-- [Чек-лист по установке Arch Linux](https://ordanax.github.io/chek-list-po-ustanovke-archlinux-2019) — если только начинаешь путь с Arch
-- [Драйвер NVIDIA в Arch Linux](https://ordanax.github.io/nvidia-drayver-arch-linux) — настройка KMS-драйвера после загрузки ядра
+- [Чек-лист по установке Arch Linux](/chek-list-po-ustanovke-archlinux-2019) — если только начинаешь путь с Arch
+- [Драйвер NVIDIA в Arch Linux](/nvidia-drayver-arch-linux) — настройка KMS-драйвера после загрузки ядра

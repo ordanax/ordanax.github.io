@@ -78,7 +78,7 @@ sudo blkid            # компактный вывод, нужен root
 
 Скопируй UUID и вставь в fstab: `UUID=0a3407de-014b-458b-b5c1-848e92a327a3`.
 
-Имена блочных устройств (`sda`, `nvme0n1`) непостоянны — при подключении второго диска `sda` может стать `sdb`. Подробнее об этом — в статье про [udev-правила](https://ordanax.github.io/udev-pravila-ustroystv).
+Имена блочных устройств (`sda`, `nvme0n1`) непостоянны — при подключении второго диска `sda` может стать `sdb`. Подробнее об этом — в статье про [udev-правила](/udev-pravila-ustroystv).
 
 ## Какие опции монтирования нужны на практике
 
@@ -130,7 +130,7 @@ sudo mount -a
 sudo mount -o remount,rw /
 ```
 
-`remount` перечитывает опции для уже смонтированной системы. Полезно, когда добавил `noatime` и хочешь применить к корню прямо сейчас. Ошибки загрузки смотри в [journalctl — первая загрузка](https://ordanax.github.io/chitat-journalctl-b-pervaya-zagruzka).
+`remount` перечитывает опции для уже смонтированной системы. Полезно, когда добавил `noatime` и хочешь применить к корню прямо сейчас. Ошибки загрузки смотри в [journalctl — первая загрузка](/chitat-journalctl-b-pervaya-zagruzka).
 
 ## Частые вопросы
 
@@ -140,11 +140,11 @@ sudo mount -o remount,rw /
 
 ### Можно ли использовать /dev/sda в fstab?
 
-Можно, но не стоит. Имена блочных устройств меняются. Используй UUID — это постоянный идентификатор. При [переносе Arch на другой диск](https://ordanax.github.io/perenos-arch-na-drugoi-disk) с UUID править fstab не придётся.
+Можно, но не стоит. Имена блочных устройств меняются. Используй UUID — это постоянный идентификатор. При [переносе Arch на другой диск](/perenos-arch-na-drugoi-disk) с UUID править fstab не придётся.
 
 ### Зачем nofail для внешних дисков?
 
-Без `nofail` systemd ждёт 90 секунд. С `nofail` и `x-systemd.device-timeout=5` загрузка не задержится. Если USB-диски вообще не монтируются — смотри [статью про флешки](https://ordanax.github.io/usb-fleshka-ne-montiruetsya).
+Без `nofail` systemd ждёт 90 секунд. С `nofail` и `x-systemd.device-timeout=5` загрузка не задержится. Если USB-диски вообще не монтируются — смотри [статью про флешки](/usb-fleshka-ne-montiruetsya).
 
 ### Чем noatime отличается от relatime?
 
@@ -159,13 +159,13 @@ sudo mount /dev/sda2 /mnt
 sudo nano /mnt/etc/fstab
 ```
 
-Проверь через `findmnt --verify --root /mnt` и перезагрузись. Если [чёрный экран после установки](https://ordanax.github.io/ne-gruzitsya-posle-ustanovki-chernyi-ekran) — это частый симптом битого fstab.
+Проверь через `findmnt --verify --root /mnt` и перезагрузись. Если [чёрный экран после установки](/ne-gruzitsya-posle-ustanovki-chernyi-ekran) — это частый симптом битого fstab.
 
 ## Полезные ресурсы
 
 - [fstab — ArchWiki](https://wiki.archlinux.org/title/Fstab) — полная документация по файлу.
 - [Persistent block device naming — ArchWiki](https://wiki.archlinux.org/title/Persistent_block_device_naming) — зачем UUID, PARTUUID и как работает постоянная идентификация.
-- [Статический IP и интерфейс](https://ordanax.github.io/staticheskiy-ip-i-interfeys) — настройка сети после установки, часто идёт в паре с правкой fstab.
+- [Статический IP и интерфейс](/staticheskiy-ip-i-interfeys) — настройка сети после установки, часто идёт в паре с правкой fstab.
 
 ## Заключение
 

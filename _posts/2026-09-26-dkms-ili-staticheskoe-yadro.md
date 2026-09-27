@@ -56,7 +56,7 @@ ls /usr/lib/modules/$(uname -r)/updates/ 2>/dev/null
 # пусто — модуля под новое ядро просто нет
 ```
 
-Симптомы узнаваемые: `nvidia-smi` отвечает «command not found» или «NVRM: driver/library version mismatch», графика проваливается в modesetting, картинка чёрная. Разбор именно этих симптомов — в материале про [nvidia-smi not found: диагностика](https://ordanax.github.io/nvidia-smi-not-found-diagnostika).
+Симптомы узнаваемые: `nvidia-smi` отвечает «command not found» или «NVRM: driver/library version mismatch», графика проваливается в modesetting, картинка чёрная. Разбор именно этих симптомов — в материале про [nvidia-smi not found: диагностика](/nvidia-smi-not-found-diagnostika).
 
 Копировать старый модуль в новый каталог бесполезно: у него другой `vermagic` и другая сигнатура конфигурации ядра, modprobe его всё равно отвергнет. Никакое «пересобрать конфиг старого ядра» тут не помогает — модуль привязан к бинарям, а не к настройкам.
 
@@ -67,7 +67,7 @@ sudo pacman -S nvidia
 sudo mkinitcpio -P
 ```
 
-Примерно так и живёт большинство на статическом модуле: апдейт ядра, потом ручная переустановка драйвера, потом пересборка initramfs. Если после апдейта ядра отваливается не только видеокарта, а система целиком, начни с разбора [зависания после обновления ядра](https://ordanax.github.io/zavisanie-posle-obnovleniya-yadra). Базовая установка драйвера — в статье про [драйвер NVIDIA на Arch Linux](https://ordanax.github.io/nvidia-drayver-na-arch-linux).
+Примерно так и живёт большинство на статическом модуле: апдейт ядра, потом ручная переустановка драйвера, потом пересборка initramfs. Если после апдейта ядра отваливается не только видеокарта, а система целиком, начни с разбора [зависания после обновления ядра](/zavisanie-posle-obnovleniya-yadra). Базовая установка драйвера — в статье про [драйвер NVIDIA на Arch Linux](/nvidia-drayver-arch-linux).
 
 ## Почему dkms подходит для любого ядра?
 
@@ -160,7 +160,7 @@ sudo mkinitcpio -P
 
 ### Как задать параметры модуля при dkms?
 
-Одинаково для обоих способов — через `/etc/modprobe.d/nvidia.conf`, а не через dkms.conf. Строка `options nvidia NVreg_EnableGpuFirmware=0` читается ядром при загрузке независимо от того, кто собирал модуль. Если нужен параметр, которого нет в строке `options`, придётся пересобирать с опциями в PKGBUILD — и вот тут dkms заметно удобнее статического пакета. Как такие параметры влияют на нагрев, разбирает материал про [перегрев и вентиляторы Coolbits](https://ordanax.github.io/nvidia-peregrev-ventilyatory-coolbits).
+Одинаково для обоих способов — через `/etc/modprobe.d/nvidia.conf`, а не через dkms.conf. Строка `options nvidia NVreg_EnableGpuFirmware=0` читается ядром при загрузке независимо от того, кто собирал модуль. Если нужен параметр, которого нет в строке `options`, придётся пересобирать с опциями в PKGBUILD — и вот тут dkms заметно удобнее статического пакета. Как такие параметры влияют на нагрев, разбирает материал про [перегрев и вентиляторы Coolbits](/nvidia-peregrev-ventilyatory-coolbits).
 
 ### Нужно ли класть модуль в initramfs?
 

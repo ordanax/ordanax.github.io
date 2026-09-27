@@ -65,7 +65,7 @@ curl -s -o /dev/null -w "%{speed_download}" --max-time 10 \
   "https://speed.cloudflare.com/__down?bytes=80000000"
 ```
 
-Нормальная скорость? Сеть в порядке. Проблема в самом приложении: Go-резолвер `yay` ставит IPv6 выше IPv4, а IPv6-маршрута нет → EOF без фолбэка. Сайты через `curl` работают, потому что он пробует оба стека. Подробнее — разбор [yay и EOF на фоне IPv6](https://ordanax.github.io/yay-eof-ipv6-gai-conf).
+Нормальная скорость? Сеть в порядке. Проблема в самом приложении: Go-резолвер `yay` ставит IPv6 выше IPv4, а IPv6-маршрута нет → EOF без фолбэка. Сайты через `curl` работают, потому что он пробует оба стека. Подробнее — разбор [yay и EOF на фоне IPv6](/yay-eof-ipv6-gai-conf).
 
 **Пример 2.** Проводное подключение «плавает», сайты открываются медленно. Curl к speed.cloudflare.com тоже не выдаёт максимум. Причина не в браузере и не в DNS — проблема на физическом уровне.
 
@@ -75,7 +75,7 @@ curl -s -o /dev/null -w "%{speed_download}" --max-time 10 \
 
 Самая частая ошибка: лечить симптом, не докопавшись до корня. Вот три реальных кейса.
 
-**Realtek дауншифт до 100 Мбит.** Команда `journalctl -b -1 | grep downshift` выдаёт `Link is Up - 100Mbps/Full (downshifted)`. Ядро пишет `check cabling!`. Кабель Cat5 с деградировавшими парами. Гигабиту нужны все 4 пары, при плохом контакте PHY дауншифтится до 100M на двух парах. Замена патч-корда за пять минут решает то, что выглядело программной проблемой. Разбор — [Realtek и downshift](https://ordanax.github.io/realtek-downshift-100mbit).
+**Realtek дауншифт до 100 Мбит.** Команда `journalctl -b -1 | grep downshift` выдаёт `Link is Up - 100Mbps/Full (downshifted)`. Ядро пишет `check cabling!`. Кабель Cat5 с деградировавшими парами. Гигабиту нужны все 4 пары, при плохом контакте PHY дауншифтится до 100M на двух парах. Замена патч-корда за пять минут решает то, что выглядело программной проблемой. Разбор — [Realtek и downshift](/realtek-downshift-100mbit).
 
 **Yay и IPv6.** `yay -Syu` падает с EOF. Причина не в pacman и не в зеркалах. Go-резолвер в `yay` при отсутствии явного приоритета в `/etc/gai.conf` ставит IPv6 выше IPv4. Маршрута IPv6 нет, коннект таймаутится без фолбэка. Одна строка:
 
@@ -89,7 +89,7 @@ echo 'precedence ::ffff:0:0/96  100' | sudo tee -a /etc/gai.conf
 systemctl --user restart wireplumber pipewire pipewire-pulse
 ```
 
-Подробнее — [Bluetooth и WirePlumber](https://ordanax.github.io/bluetooth-zvuk-wireplumber-suspend).
+Подробнее — [Bluetooth и WirePlumber](/bluetooth-zvuk-wireplumber-suspend).
 
 Во всех трёх случаях симптом выглядел как программная проблема. Корневая причина оказалась на другом уровне: физика кабеля, логика резолвера, политика suspend в PipeWire. О работе PipeWire — [ArchWiki: PipeWire](https://wiki.archlinux.org/title/PipeWire).
 

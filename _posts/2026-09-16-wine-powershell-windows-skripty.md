@@ -117,9 +117,9 @@ Categories=Utility;
 
 Wine на Arch решает задачу, которую иначе решать нечем. Одна команда установки, и Windows-скрипты работают рядом с Linux-программами. У меня Direct Commander живёт так уже давно, и я про него забыл, пока не сел писать эту статью.
 
-Если тема Windows-совместимости интересна, глянь статью про [PortProton](https://ordanax.github.io/portproton-igry-linux), там тот же Wine, но для игр. А если захочешь автоматизировать установку таких инструментов, тебе в [AUR](https://ordanax.github.io/aur-install), про него тоже есть статья.
+Если тема Windows-совместимости интересна, глянь статью про [PortProton](/portproton-igry-linux), там тот же Wine, но для игр. А если захочешь автоматизировать установку таких инструментов, тебе в [AUR](/aur-install), про него тоже есть статья.
 
 ## Полезные ресурсы
 
 - [ArchWiki: Wine](https://wiki.archlinux.org/title/Wine), официальная документация по установке и настройке
-- [GitHub: где искать исходники и релизы Windows-утилит](https://ordanax.github.io/github)
+- [GitHub: где искать исходники и релизы Windows-утилит](/github)

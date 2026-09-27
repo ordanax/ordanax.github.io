@@ -75,8 +75,8 @@ GRUB_CMDLINE_LINUX_DEFAULT="root=/dev/mapper/arch-root rw rootflags=subvol=@ roo
 
 Разбор параметров:
 
-- `root=/dev/mapper/arch-root`: путь к логическому тому. `arch-root` значит группа томов `arch`, том `root`. Если имена другие, подставь свои. Раскладка из гайда [установка Arch с LVM](https://ordanax.github.io/ustanovka-arch-s-lvm) использует именно такие имена.
-- `rootflags=subvol=@`: имя подтома, на который смонтирован корень. Посмотри строку для `/` в `/etc/fstab`, там будет `subvol=...`. Типовая раскладка подтомов описана в [установке Arch на btrfs со снимками](https://ordanax.github.io/ustanovka-arch-btrfs-snapshoty).
+- `root=/dev/mapper/arch-root`: путь к логическому тому. `arch-root` значит группа томов `arch`, том `root`. Если имена другие, подставь свои. Раскладка из гайда [установка Arch с LVM](/ustanovka-arch-s-lvm) использует именно такие имена.
+- `rootflags=subvol=@`: имя подтома, на который смонтирован корень. Посмотри строку для `/` в `/etc/fstab`, там будет `subvol=...`. Типовая раскладка подтомов описана в [установке Arch на btrfs со снимками](/ustanovka-arch-btrfs-snapshoty).
 - `rootfstype=btrfs`: страховка, чтобы ядро не гадало по содержимому диска.
 
 Вместо `/dev/mapper/arch-root` можно указать `root=UUID=<uuid логического тома>`. UUID показывает `lsblk -f` в строке тома. Такой вариант переживает переименование группы томов.
@@ -196,7 +196,7 @@ grub-install --version
 cryptsetup luksConvertKey --pbkdf pbkdf2 /dev/nvme0n1p2
 ```
 
-Команда спросит текущий пароль и перепишет ключ. Про управление ключами и keyfile подробнее в статье [смена паролей LUKS2 и keyfile](https://ordanax.github.io/luks2-keyfile-smena-parolei).
+Команда спросит текущий пароль и перепишет ключ. Про управление ключами и keyfile подробнее в статье [смена паролей LUKS2 и keyfile](/luks2-keyfile-smena-parolei).
 
 ## Частые вопросы
 
@@ -210,7 +210,7 @@ cryptsetup luksConvertKey --pbkdf pbkdf2 /dev/nvme0n1p2
 
 ### Можно ли загружаться без GRUB, если корень зашифрован?
 
-Да. systemd-boot умеет разблокировать LUKS2 через sd-encrypt, а ядро можно грузить напрямую через EFISTUB или UKI. Переход описан в статье [смена загрузчика с GRUB на systemd-boot](https://ordanax.github.io/smena-zagruzchika-s-grub-na-systemd-boot), а прямая загрузка ядра в [загрузке ядра через EFISTUB и UKI](https://ordanax.github.io/pryamaya-zagruzka-yadra-efistub-uki).
+Да. systemd-boot умеет разблокировать LUKS2 через sd-encrypt, а ядро можно грузить напрямую через EFISTUB или UKI. Переход описан в статье [смена загрузчика с GRUB на systemd-boot](/smena-zagruzchika-s-grub-na-systemd-boot), а прямая загрузка ядра в [загрузке ядра через EFISTUB и UKI](/pryamaya-zagruzka-yadra-efistub-uki).
 
 ### Нужен ли отдельный /boot при зашифрованном корне?
 

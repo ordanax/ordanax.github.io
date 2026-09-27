@@ -33,7 +33,7 @@ GRUB чинится из live-окружения: загружаешься с у
 - ты перенёс систему на новый диск или SSD;
 - Windows перезаписала загрузчик при установке.
 
-Если видишь приглашение `grub rescue>`, сначала попробуй починить загрузку прямо из него — об этом отдельная статья [«GRUB rescue: что делать»](https://ordanax.github.io/grub-rescue-chto-delat). Не вышло — переустанавливай по инструкции ниже. А если система вообще не показывает ни одного меню и уходит в чёрный экран, разберись сначала с причинами: [«Не грузится после установки: чёрный экран»](https://ordanax.github.io/ne-gruzitsya-posle-ustanovki-chernyi-ekran).
+Если видишь приглашение `grub rescue>`, сначала попробуй починить загрузку прямо из него — об этом отдельная статья [«GRUB rescue: что делать»](/grub-rescue-chto-delat). Не вышло — переустанавливай по инструкции ниже. А если система вообще не показывает ни одного меню и уходит в чёрный экран, разберись сначала с причинами: [«Не грузится после установки: чёрный экран»](/ne-gruzitsya-posle-ustanovki-chernyi-ekran).
 
 ## Как зайти в систему из live-окружения, если GRUB сломан
 
@@ -69,7 +69,7 @@ mount /dev/sda1 /mnt/boot
 arch-chroot /mnt
 ```
 
-После этой команды ты внутри своей системы: пакетный менеджер, конфиги, всё на месте. Дальше работаем как обычно, только от root. Последовательность монтирования такая же, как при установке, только без форматирования. Свежий порядок действий — в [«Установка Arch Linux 2026: пошагово»](https://ordanax.github.io/ustanovka-archlinux-2026-poshagovaya).
+После этой команды ты внутри своей системы: пакетный менеджер, конфиги, всё на месте. Дальше работаем как обычно, только от root. Последовательность монтирования такая же, как при установке, только без форматирования. Свежий порядок действий — в [«Установка Arch Linux 2026: пошагово»](/ustanovka-archlinux-2026-poshagovaya).
 
 ## Как переустановить GRUB на UEFI
 
@@ -107,7 +107,7 @@ efibootmgr
 efibootmgr -b 0001 -B
 ```
 
-Где `0001` — номер записи из вывода efibootmgr. Если efibootmgr ругается на переменные — почитай [«efi variables not supported: efibootmgr»](https://ordanax.github.io/efi-variables-not-supported-efibootmgr).
+Где `0001` — номер записи из вывода efibootmgr. Если efibootmgr ругается на переменные — почитай [«efi variables not supported: efibootmgr»](/efi-variables-not-supported-efibootmgr).
 
 ## Как переустановить GRUB на BIOS/MBR
 
@@ -133,7 +133,7 @@ grub-mkconfig пересобирает grub.cfg из скриптов `/etc/grub
 GRUB_DISABLE_OS_PROBER=false
 ```
 
-После этого снова `grub-mkconfig -o /boot/grub/grub.cfg`. Нюансы поиска Windows описаны в [«os-prober и GRUB: Windows»](https://ordanax.github.io/os-prober-grub-windows).
+После этого снова `grub-mkconfig -o /boot/grub/grub.cfg`. Нюансы поиска Windows описаны в [«os-prober и GRUB: Windows»](/os-prober-grub-windows).
 
 ## Частые вопросы
 
@@ -160,4 +160,4 @@ GRUB_DISABLE_OS_PROBER=false
 ## Полезные ресурсы
 
 - [ArchWiki: GRUB](https://wiki.archlinux.org/title/GRUB) — полная документация по установке и настройке
-- [Dualboot: Windows пропала из GRUB](https://ordanax.github.io/dualboot-windows-propala-iz-grub) — если Windows исчезла из меню
+- [Dualboot: Windows пропала из GRUB](/dualboot-windows-propala-iz-grub) — если Windows исчезла из меню

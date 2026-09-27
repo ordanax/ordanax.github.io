@@ -64,7 +64,7 @@ pacman -S sudo
 visudo
 ```
 
-В файле `/etc/sudoers` раскомментируй строку `%wheel ALL=(ALL:ALL) ALL`. Подробный разбор с группами и нюансами — в статье про [создание пользователя](https://ordanax.github.io/sozdanie-polzovatelya-useradd).
+В файле `/etc/sudoers` раскомментируй строку `%wheel ALL=(ALL:ALL) ALL`. Подробный разбор с группами и нюансами — в статье про [создание пользователя](/sozdanie-polzovatelya-useradd).
 
 ## Как обновить систему безопасно
 
@@ -97,10 +97,10 @@ pacman -S nano htop fastfetch ghostty
 
 - `nano` — простой редактор для правки конфигов (vim — если ты уже с ним дружишь);
 - `htop` — мониторинг процессов и нагрузки;
-- `fastfetch` — красивая сводка о системе при входе, настройка описана в статье про [fastfetch](https://ordanax.github.io/fastfetch-konfiguraciya);
-- `ghostty` — быстрый GPU-терминал, [конфигурация Ghostty](https://ordanax.github.io/ghostty-terminal-konfiguraciya) — отдельная тема.
+- `fastfetch` — красивая сводка о системе при входе, настройка описана в статье про [fastfetch](/fastfetch-konfiguraciya);
+- `ghostty` — быстрый GPU-терминал, [конфигурация Ghostty](/ghostty-terminal-konfiguraciya) — отдельная тема.
 
-Зеркала для pacman уже настроены при установке. Если хочешь ускорить загрузку пакетов — статья про [настройку mirrorlist](https://ordanax.github.io/arch-linux-mirrorlist-nastroyka) поможет выбрать самые быстрые.
+Зеркала для pacman уже настроены при установке. Если хочешь ускорить загрузку пакетов — статья про [настройку mirrorlist](/arch-linux-mirrorlist-nastroyka) поможет выбрать самые быстрые.
 
 ## Как проверить время и синхронизацию
 

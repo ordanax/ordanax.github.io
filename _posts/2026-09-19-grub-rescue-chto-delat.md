@@ -32,7 +32,7 @@ edit: true
 - Замена диска без переустановки GRUB.
 - Удаление каталога `/boot`.
 - Изменение UUID корневого раздела без обновления `grub.cfg`.
-- Ошибка при настройке dualboot — подробнее разобрано в статье «[Windows пропала из меню GRUB](https://ordanax.github.io/dualboot-windows-propala-iz-grub)».
+- Ошибка при настройке dualboot — подробнее разобрано в статье «[Windows пропала из меню GRUB](/dualboot-windows-propala-iz-grub)».
 
 ## Как загрузиться с live-USB и попасть в chroot
 
@@ -104,7 +104,7 @@ umount -R /mnt
 reboot
 ```
 
-Перед перезагрузкой проверь `/etc/fstab` — UUID в нём должны совпадать с реальными (команда `lsblk -f` покажет текущие UUID). Если ты перемещал разделы, несовпадение UUID — частая причина повторного падения в rescue. Подробный разбор — в статье «[Переустановка GRUB после поломки](https://ordanax.github.io/pereustanovka-grub-posle-polomki)».
+Перед перезагрузкой проверь `/etc/fstab` — UUID в нём должны совпадать с реальными (команда `lsblk -f` покажет текущие UUID). Если ты перемещал разделы, несовпадение UUID — частая причина повторного падения в rescue. Подробный разбор — в статье «[Переустановка GRUB после поломки](/pereustanovka-grub-posle-polomki)».
 
 ## Можно ли поднять систему прямо из rescue
 
@@ -172,13 +172,13 @@ cat /etc/fstab
 
 По умолчанию `grub-mkconfig` генерирует конфиг с UUID — это надёжнее, чем имена устройств (`/dev/sda1` может стать `/dev/sdb1` при подключении нового диска).
 
-Общая методика диагностики подобных проблем — в статье «[Методика решения проблем в Arch Linux](https://ordanax.github.io/metodika-resheniya-problem-arch)».
+Общая методика диагностики подобных проблем — в статье «[Методика решения проблем в Arch Linux](/metodika-resheniya-problem-arch)».
 
 ## Частые вопросы
 
 ### grub rescue> появился после обновления ядра — что случилось?
 
-Скорее всего, обновление ядра прошло некорректно и `grub.cfg` не был перегенерирован. Загрузись с live-USB и выполни `grub-mkconfig`. Если ядро не видно — смотри «[GRUB не видит ядра после обновления](https://ordanax.github.io/grub-ne-vidit-yadra-posle-obnovleniya)».
+Скорее всего, обновление ядра прошло некорректно и `grub.cfg` не был перегенерирован. Загрузись с live-USB и выполни `grub-mkconfig`. Если ядро не видно — смотри «[GRUB не видит ядра после обновления](/grub-ne-vidit-yadra-posle-obnovleniya)».
 
 ### Стоит ли прописывать set root и set prefix в rescue?
 

@@ -51,7 +51,7 @@ sudo pacman -Sw base base-devel linux linux-firmware \
   dosfstools git
 ```
 
-Добавь `intel-ucode` или `amd-ucode` под процессор. Для Wi-Fi сразу после установки поставь `wpa_supplicant` и `iwd`, а базовый чек-лист после загрузки — в статье про [первый час после установки Arch](https://ordanax.github.io/pervyi-chas-posle-ustanovki-arch).
+Добавь `intel-ucode` или `amd-ucode` под процессор. Для Wi-Fi сразу после установки поставь `wpa_supplicant` и `iwd`, а базовый чек-лист после загрузки — в статье про [первый час после установки Arch](/pervyi-chas-posle-ustanovki-arch).
 
 ### Перенос на флешку
 
@@ -117,7 +117,7 @@ pacman -Sy archlinux-keyring
 
 На практике самый надёжный способ — раздать интернет с телефона через USB-модем или Wi-Fi hotspot. Даже медленное соединение справится с базовой установкой за 10–15 минут. Если совсем никакой сети — создай live-ISO с полным кэшем пакетов на флешке, как описано выше.
 
-Настройка зеркал пригодится, когда сеть появится. Про [настройку mirrorlist](https://ordanax.github.io/arch-linux-mirrorlist-nastroyka) есть отдельная статья, полную последовательность установки смотри в [пошаговом руководстве по Arch Linux 2026](https://ordanax.github.io/ustanovka-archlinux-2026-poshagovaya), а для понимания обновлений — статья про [частичное обновление pacman](https://ordanax.github.io/pacman-chastichnoe-obnovlenie).
+Настройка зеркал пригодится, когда сеть появится. Про [настройку mirrorlist](/arch-linux-mirrorlist-nastroyka) есть отдельная статья, полную последовательность установки смотри в [пошаговом руководстве по Arch Linux 2026](/ustanovka-archlinux-2026-poshagovaya), а для понимания обновлений — статья про [частичное обновление pacman](/pacman-chastichnoe-obnovlenie).
 
 ## Частые вопросы
 
@@ -140,4 +140,4 @@ Pacman сверит версии пакетов с текущей БД. Если
 ## Полезные ресурсы
 
 - [ArchWiki: Pacman](https://wiki.archlinux.org/title/Pacman): полное описание команд и опций пакетного менеджера
-- [Установка на внешний SSD](https://ordanax.github.io/ustanovka-na-vneshniy-ssd): если носитель для офлайн-кэша — внешний диск
+- [Установка на внешний SSD](/ustanovka-na-vneshniy-ssd): если носитель для офлайн-кэша — внешний диск

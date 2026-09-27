@@ -36,7 +36,7 @@ Btrfs-снапшоты — это мгновенные копии системы
 
 ## Как разметить диск под btrfs с подтомами
 
-Разметка как при обычной установке: GPT, ESP на 1 ГБ, корневой раздел. Подробно про выбор схемы — в статье [«Разметка диска с нуля: GPT vs MBR»](https://ordanax.github.io/razmetka-diska-gpt-mbr). Дальше вместо ext4 создаём btrfs:
+Разметка как при обычной установке: GPT, ESP на 1 ГБ, корневой раздел. Подробно про выбор схемы — в статье [«Разметка диска с нуля: GPT vs MBR»](/razmetka-diska-gpt-mbr). Дальше вместо ext4 создаём btrfs:
 
 ```bash
 mkfs.fat -F 32 /dev/sda1
@@ -77,7 +77,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 
 `genfstab` сам подхватит опции `subvol=@` и `compress=zstd` из текущих монтирований. Проверь `/mnt/etc/fstab` — каждая строка btrfs должна содержать `subvol=/@` или `subvol=/@home`. Если где-то `subvolid` вместо пути — замени на путь: при откате ID подтома меняется, а путь остаётся.
 
-Для одного btrfs-раздела хуки в mkinitcpio не нужны — `btrfs` хук только для пулов из нескольких устройств, а GRUB сам передаст ядру `rootflags=subvol=@`. Для надёжности можно добавить `btrfs` в `MODULES` в `mkinitcpio.conf` — ArchWiki рекомендует, хотя на практике это не обязательно. Дальше chroot, загрузчик, locale — всё как в [пошаговом руководстве по установке Arch 2026](https://ordanax.github.io/ustanovka-archlinux-2026-poshagovaya).
+Для одного btrfs-раздела хуки в mkinitcpio не нужны — `btrfs` хук только для пулов из нескольких устройств, а GRUB сам передаст ядру `rootflags=subvol=@`. Для надёжности можно добавить `btrfs` в `MODULES` в `mkinitcpio.conf` — ArchWiki рекомендует, хотя на практике это не обязательно. Дальше chroot, загрузчик, locale — всё как в [пошаговом руководстве по установке Arch 2026](/ustanovka-archlinux-2026-poshagovaya).
 
 ## Как поставить snapper и настроить снапшоты
 
@@ -145,7 +145,7 @@ btrfs subvolume snapshot /mnt/@snapshots/N/snapshot /mnt/@
 
 **Что делать, если корневой раздел заполнился?**
 
-Сначала почисти снапшоты: `sudo snapper -c root list` и `sudo snapper -c root delete N`. Потом pacman-кэш. Про переполнение корня — в статье [«Корневой раздел заполняется»](https://ordanax.github.io/kornevoy-razdel-zapolnyaetsya).
+Сначала почисти снапшоты: `sudo snapper -c root list` и `sudo snapper -c root delete N`. Потом pacman-кэш. Про переполнение корня — в статье [«Корневой раздел заполняется»](/kornevoy-razdel-zapolnyaetsya).
 
 ## Заключение
 
@@ -155,4 +155,4 @@ Btrfs-снапшоты с самого начала — это дешёвая с
 
 - [Btrfs — ArchWiki](https://wiki.archlinux.org/title/Btrfs) — подтома, сжатие, снапшоты, известные проблемы
 - [Snapper — ArchWiki](https://wiki.archlinux.org/title/Snapper) — конфигурации, расписания, восстановление
-- [Установка Arch с LVM](https://ordanax.github.io/ustanovka-arch-s-lvm) — сравнение: LVM-снапшоты против Btrfs
+- [Установка Arch с LVM](/ustanovka-arch-s-lvm) — сравнение: LVM-снапшоты против Btrfs

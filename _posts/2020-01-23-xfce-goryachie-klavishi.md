@@ -28,7 +28,7 @@ edit: true
 
 
 ## Как найти название клавиш
-Точно также как я и писал [в статье по i3wm](https://ordanax.github.io/i3wm)
+Точно также как я и писал [в статье по i3wm](/i3wm)
 
 ## Мой конфиг 
 То, что у меня получилось в итоге [ТЫК](https://github.com/ordanax/dots/blob/master/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml)

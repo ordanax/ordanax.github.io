@@ -78,7 +78,7 @@ bootctl install
 grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB
 ```
 
-Сравни с [установкой за 15 минут](https://ordanax.github.io/ustanovka-archlinux-2019-za-15-minut) — там монтирование ESP — один из первых шагов.
+Сравни с [установкой за 15 минут](/ustanovka-archlinux-2019-za-15-minut) — там монтирование ESP — один из первых шагов.
 
 ## Как не сломать загрузку Windows
 
@@ -88,9 +88,9 @@ grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB
 
 **Не удаляй `EFI/Microsoft`.** Там лежит `bootmgfw.efi` — единственный файл, который Windows использует для старта.
 
-**Не трогай NVRAM-записи.** Команда `efibootmgr` покажет записи `Windows Boot Manager`. Не удаляй их без понимания последствий. Если Windows пропала из меню — смотри [восстановление GRUB](https://ordanax.github.io/dualboot-windows-propala-iz-grub).
+**Не трогай NVRAM-записи.** Команда `efibootmgr` покажет записи `Windows Boot Manager`. Не удаляй их без понимания последствий. Если Windows пропала из меню — смотри [восстановление GRUB](/dualboot-windows-propala-iz-grub).
 
-А вот fallback-путь `EFI/BOOT/bootx64.efi` — аварийный выход. Если Arch перезаписал его (GRUB с `--removable`), Windows доступна напрямую через `EFI/Microsoft/Boot/bootmgfw.efi`. Проблемы с UEFI-переменными (прошивка не видит записи) — отдельная тема, описанная в [статье про efibootmgr](https://ordanax.github.io/efi-variables-not-supported-efibootmgr).
+А вот fallback-путь `EFI/BOOT/bootx64.efi` — аварийный выход. Если Arch перезаписал его (GRUB с `--removable`), Windows доступна напрямую через `EFI/Microsoft/Boot/bootmgfw.efi`. Проблемы с UEFI-переменными (прошивка не видит записи) — отдельная тема, описанная в [статье про efibootmgr](/efi-variables-not-supported-efibootmgr).
 
 ## Что делать, если ESP слишком маленький
 
@@ -130,4 +130,4 @@ systemd-boot проще: он сам находит все EFI-приложен�
 
 - [EFI system partition](https://wiki.archlinux.org/title/EFI_system_partition) на ArchWiki: размеры, точки монтирования, расширение ESP
 - [Unified Extensible Firmware Interface](https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface) на ArchWiki: UEFI-переменные и efibootmgr
-- [Чек-лист установки Arch Linux](https://ordanax.github.io/chek-list-po-ustanovke-archlinux-2019) — полный список действий при установке
+- [Чек-лист установки Arch Linux](/chek-list-po-ustanovke-archlinux-2019) — полный список действий при установке

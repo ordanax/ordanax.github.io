@@ -242,4 +242,4 @@ SUBSYSTEM=="usb", ATTR{idVendor}=="1234", ATTR{idProduct}=="5678", OPTIONS+="ign
 
 ---
 
-**Автор:** [ordanax.github.io](https://ordanax.github.io/)  
+**Автор:** [ordanax.github.io](/)  

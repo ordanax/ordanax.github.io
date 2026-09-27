@@ -317,4 +317,4 @@ sudo dhcpcd wlan0
 
 ---
 
-**Автор:** [ordanax.github.io](https://ordanax.github.io/)  
+**Автор:** [ordanax.github.io](/)  

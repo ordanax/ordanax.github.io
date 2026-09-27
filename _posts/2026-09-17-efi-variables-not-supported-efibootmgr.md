@@ -166,7 +166,7 @@ ls /boot/EFI/arch/
 ls /boot/EFI/BOOT/
 ```
 
-Если загрузчик пропал из меню прошивки, поможет статья [не грузится после установки: чёрный экран](https://ordanax.github.io/ne-gruzitsya-posle-ustanovki-chernyi-ekran).
+Если загрузчик пропал из меню прошивки, поможет статья [не грузится после установки: чёрный экран](/ne-gruzitsya-posle-ustanovki-chernyi-ekran).
 
 ## Частые вопросы
 
@@ -182,7 +182,7 @@ efivarfs /sys/firmware/efi/efivars efivarfs nosuid,nodev,noexec,ro 0 0
 
 ### Можно ли использовать efibootmgr на системе с BIOS/CSM?
 
-Нет. efibootmgr работает только с UEFI. Если материнская плата не поддерживает UEFI, загрузчик ставится через MBR (GRUB в legacy-режиме). Подробнее — в [чек-листе по установке Arch](https://ordanax.github.io/chek-list-po-ustanovke-archlinux-2019).
+Нет. efibootmgr работает только с UEFI. Если материнская плата не поддерживает UEFI, загрузчик ставится через MBR (GRUB в legacy-режиме). Подробнее — в [чек-листе по установке Arch](/chek-list-po-ustanovke-archlinux-2019).
 
 ### Что безопаснее: отключить Secure Boot или подписать загрузчик?
 
@@ -194,7 +194,7 @@ efivarfs /sys/firmware/efi/efivars efivarfs nosuid,nodev,noexec,ro 0 0
 
 ## Заключение
 
-Ошибка `EFI variables are not supported` почти всегда означает одно из двух: система загружена в Legacy-режиме или efivarfs не смонтирован. Проверь наличие `/sys/firmware/efi`, смонтируй efivarfs, убедись, что Secure Boot не блокирует загрузчик. Если прошивка кривая — `grub-install --removable` решит проблему без записи в NVRAM. Пошаговую установку с нуля смотри в [руководстве по установке Arch](https://ordanax.github.io/ustanovka-archlinux-2026-poshagovaya) и [быстрой установке за 15 минут](https://ordanax.github.io/ustanovka-archlinux-2019-za-15-minut).
+Ошибка `EFI variables are not supported` почти всегда означает одно из двух: система загружена в Legacy-режиме или efivarfs не смонтирован. Проверь наличие `/sys/firmware/efi`, смонтируй efivarfs, убедись, что Secure Boot не блокирует загрузчик. Если прошивка кривая — `grub-install --removable` решит проблему без записи в NVRAM. Пошаговую установку с нуля смотри в [руководстве по установке Arch](/ustanovka-archlinux-2026-poshagovaya) и [быстрой установке за 15 минут](/ustanovka-archlinux-2019-za-15-minut).
 
 ## Полезные ресурсы
 

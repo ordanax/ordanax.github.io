@@ -178,7 +178,7 @@ sudo pacman -S linux-firmware
 ls /usr/lib/firmware/rtlwifi/ | grep 8852
 ```
 
-Если файла нет — обнови `linux-firmware` и перезагрузись. Обрати внимание: прошивки выходят отдельно от ядра, и свежая версия пакета часто чинит карты, которые «внезапно» перестали работать после очередного `pacman -Syu`. Про то, что именно обновляется в этом пакете, — отдельная статья: [linux-firmware: что обновляется](https://ordanax.github.io/linux-firmware-chto-obnovlyaetsya).
+Если файла нет — обнови `linux-firmware` и перезагрузись. Обрати внимание: прошивки выходят отдельно от ядра, и свежая версия пакета часто чинит карты, которые «внезапно» перестали работать после очередного `pacman -Syu`. Про то, что именно обновляется в этом пакете, — отдельная статья: [linux-firmware: что обновляется](/linux-firmware-chto-obnovlyaetsya).
 
 ## Как быстро вернуть интернет без пересборки
 
@@ -190,7 +190,7 @@ ls /usr/lib/firmware/rtlwifi/ | grep 8852
 sudo pacman -S linux-lts linux-lts-headers
 ```
 
-После установки оно появится в меню GRUB, и при следующей проблеме с новым ядром у тебя будет рабочая загрузка. Про то, как держать несколько ядер в меню GRUB, — в статье [Несколько ядер в меню: linux, linux-lts, linux-hardened](https://ordanax.github.io/neskolko-yader-v-menyu-linux-lts-hardened).
+После установки оно появится в меню GRUB, и при следующей проблеме с новым ядром у тебя будет рабочая загрузка. Про то, как держать несколько ядер в меню GRUB, — в статье [Несколько ядер в меню: linux, linux-lts, linux-hardened](/neskolko-yader-v-menyu-linux-lts-hardened).
 
 ## Как предотвратить пропажу Wi-Fi в будущем
 
@@ -224,7 +224,7 @@ LTS-ядро рядом с обычным — страховка на случа
 
 ### Разберись, как работает DKMS
 
-Понимание механизма убирает половину страха. Про то, как DKMS собирает и подключает модули, — в статье [DKMS: динамические модули ядра](https://ordanax.github.io/dkms-dinamicheskie-moduli).
+Понимание механизма убирает половину страха. Про то, как DKMS собирает и подключает модули, — в статье [DKMS: динамические модули ядра](/dkms-dinamicheskie-moduli).
 
 Эти привычки — проверка `dkms status`, слежка за выводом pacman, установленные заголовки и запасное ядро — закрывают проблему навсегда. Wi-Fi после обновления ядра перестанет пропадать.
 
@@ -254,8 +254,8 @@ LTS-ядро рядом с обычным — страховка на случа
 
 - [DKMS — ArchWiki](https://wiki.archlinux.org/title/Dynamic_Kernel_Module_Support) — официальная документация по DKMS.
 - [Network configuration/Wireless — ArchWiki](https://wiki.archlinux.org/title/Network_configuration/Wireless) — настройка беспроводных сетей.
-- [Методика решения проблем в Arch Linux](https://ordanax.github.io/metodika-resheniya-problem-arch) — общий подход к диагностике.
-- [Настройка Wi-Fi через wpa_supplicant](https://ordanax.github.io/wifi-nastroyka-wpa-supplicant) — если после починки модуля сеть не поднимается.
+- [Методика решения проблем в Arch Linux](/metodika-resheniya-problem-arch) — общий подход к диагностике.
+- [Настройка Wi-Fi через wpa_supplicant](/wifi-nastroyka-wpa-supplicant) — если после починки модуля сеть не поднимается.
 
 ## Заключение
 

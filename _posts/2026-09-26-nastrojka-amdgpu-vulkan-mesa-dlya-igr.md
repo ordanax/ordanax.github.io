@@ -25,7 +25,7 @@ edit: true
 Работа игры на AMD опирается на четыре слоя, и ломается обычно один из двух последних.
 
 - **Ядро amdgpu** — модуль ядра: он поднимает GPU, управляет питанием и переключает карту между режимами.
-- **Firmware** — микропрограмма самой видеокарты. Поставляется в пакете `linux-firmware-amdgpu`, который тянет `linux-firmware`. Без неё карта остаётся чёрной. Если после обновления ядра видеокарта пропала из системы, начни с разбора [поломок amdgpu после обновления Linux и firmware](https://ordanax.github.io/amdgpu-polomki-posle-linux-firmware).
+- **Firmware** — микропрограмма самой видеокарты. Поставляется в пакете `linux-firmware-amdgpu`, который тянет `linux-firmware`. Без неё карта остаётся чёрной. Если после обновления ядра видеокарта пропала из системы, начни с разбора [поломок amdgpu после обновления Linux и firmware](/amdgpu-polomki-posle-linux-firmware).
 - **Mesa** — набор userspace-библиотек: драйвер `radeonsi` для OpenGL и `RADV` для Vulkan. Проекты в Steam, DXVK и Proton работают через Vulkan, поэтому именно RADV решает скорость.
 - **Загрузчик Vulkan** — `vulkan-icd-loader` читает каталог `/usr/share/vulkan/icd.d/` и выбирает, какую реализацию Vulkan грузить.
 
@@ -118,7 +118,7 @@ RADV_PERFTEST=aco vblank_mode=0 game
 - `RADV_TEX_ANISO=16` — максимальная анизотропная фильтрация, заметно видно в открытых мирах на низком качестве текстур.
 - `DXVK_HUD=1` — оверлей с fps и таймингами, работает в играх, которые идут через DXVK.
 
-Взаимодействие с FreeSync стоит проверить отдельно: при включённом vblank_mode=0 адаптивная синхронизация может работать не так, как ожидаешь, — [разбор настройки FreeSync на AMD](https://ordanax.github.io/freesync-na-amd-kak-vklyuchit) поможет свести это к нормальному виду.
+Взаимодействие с FreeSync стоит проверить отдельно: при включённом vblank_mode=0 адаптивная синхронизация может работать не так, как ожидаешь, — [разбор настройки FreeSync на AMD](/freesync-na-amd-kak-vklyuchit) поможет свести это к нормальному виду.
 
 ## Как прописать переменные в Steam?
 
@@ -128,7 +128,7 @@ RADV_PERFTEST=aco vblank_mode=0 game
 DXVK_HUD=1 vblank_mode=0 RADV_PERFTEST=aco MESA_VK_WSI_PRESENT_MODE=fifo %command%
 ```
 
-Для Windows-игр через Proton добавляется префикс: переменные читаются и DXVK, и нативный Vulkan-слой Proton. Если ты гоняешь игры через префикс, а не через Steam-библиотеку, настройку переменных проще делать через окружение лаунчера — [гайд по PortProton](https://ordanax.github.io/portproton-igry-na-linux) показывает такой путь.
+Для Windows-игр через Proton добавляется префикс: переменные читаются и DXVK, и нативный Vulkan-слой Proton. Если ты гоняешь игры через префикс, а не через Steam-библиотеку, настройку переменных проще делать через окружение лаунчера — [гайд по PortProton](/portproton-igry-linux) показывает такой путь.
 
 Отдельно про оверлеи: `mangohud` рисует счётчики поверх любой Vulkan-игры, ставится одной командой и запускается так же через `%command%`.
 
@@ -188,7 +188,7 @@ rm -rf ~/.cache/mesa_shader_cache
 
 - [ArchWiki: Mesa](https://wiki.archlinux.org/title/Mesa) — версии, флаги сборки, откат пакетов.
 - [ArchWiki: Vulkan](https://wiki.archlinux.org/title/Vulkan) — загрузчики, ICD, порядок выбора драйвера.
-- [Radeon, APU или дискретная карта: модуль amdgpu](https://ordanax.github.io/amd-apu-radeon-ili-amdgpu) — если видеокарта не появилась в Vulkan вообще.
+- [Radeon, APU или дискретная карта: модуль amdgpu](/amd-apu-radeon-ili-amdgpu) — если видеокарта не появилась в Vulkan вообще.
 
 ## Заключение
 

@@ -35,7 +35,7 @@ GRUB не сканирует диск при каждой загрузке — �
 
 ### os-prober отключён
 
-Пропали не только ядра Arch, но и Windows? Тогда дело в os-prober. Начиная с GRUB 2.06 он отключён по умолчанию: в /etc/default/grub стоит GRUB_DISABLE_OS_PROBER=true. Ставишь пакет os-prober, меняешь значение на false, пересобираешь конфиг — и чужие системы возвращаются в меню. Разбор — в статье [«Windows пропала из GRUB»](https://ordanax.github.io/dualboot-windows-propala-iz-grub).
+Пропали не только ядра Arch, но и Windows? Тогда дело в os-prober. Начиная с GRUB 2.06 он отключён по умолчанию: в /etc/default/grub стоит GRUB_DISABLE_OS_PROBER=true. Ставишь пакет os-prober, меняешь значение на false, пересобираешь конфиг — и чужие системы возвращаются в меню. Разбор — в статье [«Windows пропала из GRUB»](/dualboot-windows-propala-iz-grub).
 
 ### ESP переполнен
 
@@ -93,16 +93,16 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 ### Переустанови GRUB
 
-Если конфиг генерируется, а загрузчик всё равно не видит ядра — сломан сам GRUB: битые модули, кривая запись в NVRAM, повреждённый grubx64.efi. Нужна полная переустановка через grub-install и grub-mkconfig. Пошаговый ремонт из live-окружения — в статье [«Переустановка GRUB после поломки»](https://ordanax.github.io/pereustanovka-grub-posle-polomki).
+Если конфиг генерируется, а загрузчик всё равно не видит ядра — сломан сам GRUB: битые модули, кривая запись в NVRAM, повреждённый grubx64.efi. Нужна полная переустановка через grub-install и grub-mkconfig. Пошаговый ремонт из live-окружения — в статье [«Переустановка GRUB после поломки»](/pereustanovka-grub-posle-polomki).
 
 ## Как избежать проблемы в будущем
 
 Пара привычек, и меню больше не будет пустеть:
 
 - После каждого обновления ядра запускай grub-mkconfig -o /boot/grub/grub.cfg. Можно повесить это на хук pacman.
-- Не делай частичных обновлений — pacman -Syu целиком. Почему это опасно — в статье [«Частичное обновление Arch»](https://ordanax.github.io/pacman-chastichnoe-obnovlenie).
+- Не делай частичных обновлений — pacman -Syu целиком. Почему это опасно — в статье [«Частичное обновление Arch»](/pacman-chastichnoe-obnovlenie).
 - Следи за местом на ESP: старые ядра чисти через paccache -rk1.
-- Если GRUB надоел — присмотрись к systemd-boot: он сам обновляет записи при установке ядра. Сравнение — в статье [«systemd-boot против GRUB»](https://ordanax.github.io/systemd-boot-vs-grub-vtoroe-yadro).
+- Если GRUB надоел — присмотрись к systemd-boot: он сам обновляет записи при установке ядра. Сравнение — в статье [«systemd-boot против GRUB»](/systemd-boot-vs-grub-vtoroe-yadro).
 
 ## Частые вопросы
 
@@ -128,8 +128,8 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 ## Полезные ресурсы
 
-- [«Первый час после установки Arch»](https://ordanax.github.io/pervyi-chas-posle-ustanovki-arch) — что настроить сразу
-- [«Не грузится после установки: чёрный экран»](https://ordanax.github.io/ne-gruzitsya-posle-ustanovki-chernyi-ekran) — если система не стартует
+- [«Первый час после установки Arch»](/pervyi-chas-posle-ustanovki-arch) — что настроить сразу
+- [«Не грузится после установки: чёрный экран»](/ne-gruzitsya-posle-ustanovki-chernyi-ekran) — если система не стартует
 - [GRUB — ArchWiki](https://wiki.archlinux.org/title/GRUB) — официальная документация
 
 ## Заключение

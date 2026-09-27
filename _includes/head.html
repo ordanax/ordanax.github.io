@@ -14,13 +14,36 @@
 	<meta property="og:url" content="{{ site.url }}{{ page.url }}">
 	<meta property="og:site_name" content="{{ site.title }}">
 	<meta property="og:locale" content="ru_RU">
-	<meta property="og:image" content="{{ site.url }}/img/archlinux-logo.png">
-	<meta name="twitter:card" content="summary">
+	{% if page.layout == 'post' and page.content contains '<img src=' %}
+	{% assign img_parts = page.content | split '<img src="' %}
+	{% if img_parts.size > 1 %}
+	{% assign og_img = img_parts[1] | split '"' | first %}
+	{% assign og_img = og_img | replace 'https://ordanax.github.io', '' %}
+	{% if og_img == '' or og_img == nil %}
+	{% assign og_img = '/img/archlinux-logo.png' %}
+	{% endif %}
+	{% endif %}
+	{% else %}
+	{% assign og_img = '/img/archlinux-logo.png' %}
+	{% endif %}
+	<meta property="og:image" content="{{ site.url }}{{ og_img | default: '/img/archlinux-logo.png' }}">
+	<meta property="og:image:alt" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+	<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+	<meta name="twitter:image" content="{{ site.url }}{{ og_img | default: '/img/archlinux-logo.png' }}">
+	{% if page.layout == 'post' %}
+	<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+	<meta property="article:section" content="{{ page.categories | first | default: site.title }}">
+	{% for tag in page.tags limit:6 %}
+	<meta property="article:tag" content="{{ tag }}">
+	{% endfor %}
+	{% endif %}
 
 	<link rel="canonical" href="{{ site.url }}{{ page.url }}">
 	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml">
 
-	{% if page.noindex or page.url contains '/page' %}
+	{% if page.noindex %}
 	<meta name="robots" content="noindex, follow">
 	{% endif %}
 
@@ -32,10 +55,28 @@
 	  "headline": {{ page.title | jsonify }},
 	  "description": {{ page.description | jsonify }},
 	  "url": "{{ site.url }}{{ page.url }}",
+	  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ site.url }}{{ page.url }}" },
 	  "datePublished": "{{ page.date | date_to_xmlschema }}",
-	  "author": { "@type": "Person", "name": "root" },
-	  "publisher": { "@type": "Organization", "name": "{{ site.title }}", "logo": { "@type": "ImageObject", "url": "{{ site.url }}/img/archlinux-logo.png" } },
-	  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ site.url }}{{ page.url }}" }
+	  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+	  "inLanguage": "ru",
+	  "image": "{{ site.url }}{{ og_img | default: '/img/archlinux-logo.png' }}",
+	  "articleSection": {{ page.categories | first | default: site.title | jsonify }},
+	  "keywords": {{ page.tags | jsonify }},
+	  "wordCount": {{ page.content | number_of_words }},
+	  "isAccessibleForFree": true,
+	  "author": { "@type": "Person", "name": "{{ site.author | default: site.title }}" },
+	  "publisher": { "@type": "Organization", "name": "{{ site.title }}", "logo": { "@type": "ImageObject", "url": "{{ site.url }}/img/archlinux-logo.png" } }
+	}
+	</script>
+	<script type="application/ld+json">
+	{
+	  "@context": "https://schema.org",
+	  "@type": "BreadcrumbList",
+	  "itemListElement": [
+	    { "@type": "ListItem", "position": 1, "name": "Главная", "item": "{{ site.url }}/" },
+	    { "@type": "ListItem", "position": 2, "name": "Все статьи", "item": "{{ site.url }}/news/" },
+	    { "@type": "ListItem", "position": 3, "name": {{ page.title | jsonify }}, "item": "{{ site.url }}{{ page.url }}" }
+	  ]
 	}
 	</script>
 	{% else %}
@@ -45,14 +86,15 @@
 	  "@type": "WebSite",
 	  "name": "{{ site.title }}",
 	  "url": "{{ site.url }}",
-	  "description": "{{ site.description }}",
-	  "publisher": { "@type": "Person", "name": "root" }
+	  "description": {{ site.description | jsonify }},
+	  "inLanguage": "ru",
+	  "potentialAction": {
+	    "@type": "SearchAction",
+	    "target": { "@type": "EntryPoint", "urlTemplate": "{{ site.url }}/search?q={search_term_string}" },
+	    "query-input": "required name=search_term_string"
+	  }
 	}
 	</script>
-	{% endif %}
-
-	{% if seo %}
-	<script type="application/ld+json">{{ seo | jsonify }}</script>
 	{% endif %}
 
 	{% include icon.html %}

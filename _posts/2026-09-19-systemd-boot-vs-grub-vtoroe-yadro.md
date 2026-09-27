@@ -123,7 +123,7 @@ default  arch-lts.conf
 
 ### UKI вместо entries
 
-Если собираешь unified kernel image (ядро + initramfs + параметры в одном файле), клади его в `/boot/EFI/Linux/` — systemd-boot найдёт его сам, без файлов в `entries`. Про сборку UKI и подпись под Secure Boot — в статьях про [разрешение экрана и UKI](https://ordanax.github.io/gop-simpledrm-uki-razreshenie) и [Secure Boot через sbctl](https://ordanax.github.io/secure-boot-arch-sbctl).
+Если собираешь unified kernel image (ядро + initramfs + параметры в одном файле), клади его в `/boot/EFI/Linux/` — systemd-boot найдёт его сам, без файлов в `entries`. Про сборку UKI и подпись под Secure Boot — в статьях про [разрешение экрана и UKI](/gop-simpledrm-uki-razreshenie) и [Secure Boot через sbctl](/secure-boot-arch-sbctl).
 
 ## Как вернуться на GRUB
 
@@ -140,7 +140,7 @@ grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-Для Windows в dualboot поставь `os-prober` и включи его в `/etc/default/grub` — [отдельная статья](https://ordanax.github.io/os-prober-grub-windows). А если GRUB сломался после обновления — [переустановка GRUB](https://ordanax.github.io/pereustanovka-grub-posle-polomki).
+Для Windows в dualboot поставь `os-prober` и включи его в `/etc/default/grub` — [отдельная статья](/os-prober-grub-windows). А если GRUB сломался после обновления — [переустановка GRUB](/pereustanovka-grub-posle-polomki).
 
 ## Частые вопросы
 
@@ -161,7 +161,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 ## Заключение
 
-Для большинства установок Arch на UEFI systemd-boot — правильный выбор: он проще, быстрее и уже в системе. GRUB бери осознанно — под dualboot, шифрование или кастомизацию. А второе ядро linux-lts — это один файл в `/boot/loader/entries/`, и запасной вариант всегда под рукой. Если только начинаешь — сначала пройди [пошаговую установку Arch](https://ordanax.github.io/ustanovka-archlinux-2026-poshagovaya), а загрузчик выбирай на работающей системе.
+Для большинства установок Arch на UEFI systemd-boot — правильный выбор: он проще, быстрее и уже в системе. GRUB бери осознанно — под dualboot, шифрование или кастомизацию. А второе ядро linux-lts — это один файл в `/boot/loader/entries/`, и запасной вариант всегда под рукой. Если только начинаешь — сначала пройди [пошаговую установку Arch](/ustanovka-archlinux-2026-poshagovaya), а загрузчик выбирай на работающей системе.
 
 ## Полезные ресурсы
 

@@ -184,4 +184,4 @@ PortProton может работать вместе со Steam Proton:
 
 ---
 
-**Автор:** [ordanax.github.io](https://ordanax.github.io/)  
+**Автор:** [ordanax.github.io](/)  

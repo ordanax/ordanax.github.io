@@ -45,7 +45,7 @@ edit: true
 /dev/nvme0n1p4   16G   swap
 ```
 
-Разметка через `gdisk` или `cfdisk` — стандартный GPT. Подробности процесса описаны в [разборе GPT и MBR](https://ordanax.github.io/razmetka-diska-gpt-mbr).
+Разметка через `gdisk` или `cfdisk` — стандартный GPT. Подробности процесса описаны в [разборе GPT и MBR](/razmetka-diska-gpt-mbr).
 
 ### Вариант 2: LVM для гибкости
 
@@ -59,11 +59,11 @@ lvcreate -L 50G -n lvroot2 vg0
 lvcreate -L 16G -n lvswap vg0
 ```
 
-Каждый корень — отдельный логический том. Потом `mkfs.ext4 /dev/vg0/lvroot1` и аналогично для второго. Подробнее — в [руководстве по Arch с LVM](https://ordanax.github.io/ustanovka-arch-s-lvm).
+Каждый корень — отдельный логический том. Потом `mkfs.ext4 /dev/vg0/lvroot1` и аналогично для второго. Подробнее — в [руководстве по Arch с LVM](/ustanovka-arch-s-lvm).
 
 ### Вариант 3: Btrfs с подтомами
 
-Два подтома (`@root1`, `@root2`) на одном разделе Btrfs. Компактно, но при ошибке одному подтому достанется другому. Зато снапшоты — на блюдечке. Детали — в [статье про Arch и Btrfs-снапшоты](https://ordanax.github.io/ustanovka-arch-btrfs-snapshoty).
+Два подтома (`@root1`, `@root2`) на одном разделе Btrfs. Компактно, но при ошибке одному подтому достанется другому. Зато снапшоты — на блюдечке. Детали — в [статье про Arch и Btrfs-снапшоты](/ustanovka-arch-btrfs-snapshoty).
 
 ## Стоит ли делать общий /home
 
@@ -165,7 +165,7 @@ hostnamectl set-hostname arch2
 
 **Удалит ли второй Arch данные первого?**
 
-Нет, если не форматируешь чужой корневой раздел. При установке выбери конкретный раздел для монтирования и проверь `lsblk`, что всё совпадает. Подробный чек-лист — в [пошаговом руководстве по установке](https://ordanax.github.io/ustanovka-archlinux-2026-poshagovaya).
+Нет, если не форматируешь чужой корневой раздел. При установке выбери конкретный раздел для монтирования и проверь `lsblk`, что всё совпадает. Подробный чек-лист — в [пошаговом руководстве по установке](/ustanovka-archlinux-2026-poshagovaya).
 
 **Можно ли ставить GRUB второй раз поверх первого?**
 
@@ -181,7 +181,7 @@ hostnamectl set-hostname arch2
 
 **Как удалить второй Arch без последствий?**
 
-Удали его корневой раздел (через `gdisk` или LVM `lvremove`), вычисти запись из `grub.cfg` (или перегенерируй через `grub-mkconfig`). Про общую ESP для двух систем и конфликт загрузчика написано в статье про [один EFI-раздел для двух ОС](https://ordanax.github.io/odin-efi-razdel-dualboot).
+Удали его корневой раздел (через `gdisk` или LVM `lvremove`), вычисти запись из `grub.cfg` (или перегенерируй через `grub-mkconfig`). Про общую ESP для двух систем и конфликт загрузчика написано в статье про [один EFI-раздел для двух ОС](/odin-efi-razdel-dualboot).
 
 ## Заключение
 
@@ -190,4 +190,4 @@ hostnamectl set-hostname arch2
 ## Полезные ресурсы
 
 - [GRUB](https://wiki.archlinux.org/title/GRUB) на ArchWiki: установка, настройка, dual-boot
-- [EFI variables not supported](https://ordanax.github.io/efi-variables-not-supported-efibootmgr) — если прошивка не отдаёт UEFI-переменные
+- [EFI variables not supported](/efi-variables-not-supported-efibootmgr) — если прошивка не отдаёт UEFI-переменные

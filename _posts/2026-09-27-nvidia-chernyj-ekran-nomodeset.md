@@ -163,11 +163,11 @@ downgrade nvidia
 ## Полезные ресурсы
 
 - [ArchWiki: NVIDIA — установка, модули, конфигурация и диагностика](https://wiki.archlinux.org/title/NVIDIA)
-- [Драйвер NVIDIA в Arch Linux: ядро и версии](https://ordanax.github.io/nvidia-drayver-na-arch-linux)
-- [После обновления ядра GRUB не видит ядро](https://ordanax.github.io/grub-ne-vidit-yadra-posle-obnovleniya)
-- [Зависание после обновления ядра](https://ordanax.github.io/zavisanie-posle-obnovleniya-yadra)
-- [NVIDIA open: асинхронная работа с VRAM](https://ordanax.github.io/nvidia-open-rasinhron-s-yadrom)
-- [NVIDIA и Wayland: как включить](https://ordanax.github.io/nvidia-wayland-kak-vklyuchit)
+- [Драйвер NVIDIA в Arch Linux: ядро и версии](/nvidia-drayver-arch-linux)
+- [После обновления ядра GRUB не видит ядро](/grub-ne-vidit-yadra-posle-obnovleniya)
+- [Зависание после обновления ядра](/zavisanie-posle-obnovleniya-yadra)
+- [NVIDIA open: асинхронная работа с VRAM](/nvidia-open-rasinhron-s-yadrom)
+- [NVIDIA и Wayland: как включить](/nvidia-wayland-kak-vklyuchit)
 
 ## Заключение
 

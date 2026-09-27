@@ -91,7 +91,7 @@ GRUB_CMDLINE_LINUX="modprobe.blacklist=nouveau"
 
 `quiet` не отключает сообщения полностью, а снижает их поток до минимума. Критические ошибки всё равно появятся на экране. `splash` работает только вместе с установленной темой или заставкой, иначе просто нечего показывать.
 
-Если что-то не грузится и нужна диагностика, убери `quiet` и `splash` на время. Ядро покажет все сообщения. Как настроить саму заставку, разобрано в статье «[Тема оформления GRUB: фон и стиль](https://ordanax.github.io/tema-oformleniya-grub-fon)».
+Если что-то не грузится и нужна диагностика, убери `quiet` и `splash` на время. Ядро покажет все сообщения. Как настроить саму заставку, разобрано в статье «[Тема оформления GRUB: фон и стиль](/tema-oformleniya-grub-fon)».
 
 ### loglevel=3
 
@@ -113,7 +113,7 @@ GRUB_CMDLINE_LINUX="modprobe.blacklist=nouveau"
 
 ### nvidia-drm.modeset=1
 
-Включает ранний KMS для драйвера NVIDIA. Требуется для Wayland, корректной работы некоторых приложений и переключения виртуальных терминалов без мерцания. Подробнее про установку драйвера читай в статье «[Установка драйвера NVIDIA на Arch Linux](https://ordanax.github.io/nvidia-drayver-na-arch-linux)».
+Включает ранний KMS для драйвера NVIDIA. Требуется для Wayland, корректной работы некоторых приложений и переключения виртуальных терминалов без мерцания. Подробнее про установку драйвера читай в статье «[Установка драйвера NVIDIA на Arch Linux](/nvidia-drayver-arch-linux)».
 
 ### nowatchdog
 
@@ -195,7 +195,7 @@ sudo cp /etc/default/grub /etc/default/grub.bak
 
 Если что-то пойдёт не так, вернёшь файл одной командой `sudo cp /etc/default/grub.bak /etc/default/grub` и снова перегенерируешь конфиг.
 
-Если система не загружается после экспериментов с аргументами, загружайся с live-USB, отредактируй `/etc/default/grub` через chroot и перегенерируй конфиг. Методика та же, что при восстановлении загрузчика: «[grub rescue: что делать, когда grub rescue>](https://ordanax.github.io/grub-rescue-chto-delat)».
+Если система не загружается после экспериментов с аргументами, загружайся с live-USB, отредактируй `/etc/default/grub` через chroot и перегенерируй конфиг. Методика та же, что при восстановлении загрузчика: «[grub rescue: что делать, когда grub rescue>](/grub-rescue-chto-delat)».
 
 ## Частые вопросы
 
@@ -217,13 +217,13 @@ sudo cp /etc/default/grub /etc/default/grub.bak
 
 ### Можно ли задать аргументы только для одного ядра?
 
-GRUB применяет аргументы из `/etc/default/grub` ко всем ядрам сразу. Чтобы задать параметры только одному, придётся править `grub.cfg` вручную после каждой генерации, а это неудобно. Проще держать несколько ядер с общими аргументами, как описано в статье «[Несколько ядер в меню GRUB: linux, linux-lts, linux-hardened](https://ordanax.github.io/neskolko-yader-v-menyu-linux-lts-hardened)».
+GRUB применяет аргументы из `/etc/default/grub` ко всем ядрам сразу. Чтобы задать параметры только одному, придётся править `grub.cfg` вручную после каждой генерации, а это неудобно. Проще держать несколько ядер с общими аргументами, как описано в статье «[Несколько ядер в меню GRUB: linux, linux-lts, linux-hardened](/neskolko-yader-v-menyu-linux-lts-hardened)».
 
 ## Полезные ресурсы
 
 - [Kernel parameters (ArchWiki)](https://wiki.archlinux.org/title/Kernel_parameters): полный список параметров ядра с пояснениями.
 - [GRUB (ArchWiki)](https://wiki.archlinux.org/title/GRUB): основная страница по настройке загрузчика.
-- [Смена загрузчика с GRUB на systemd-boot](https://ordanax.github.io/smena-zagruzchika-s-grub-na-systemd-boot): если GRUB кажется тяжёлым, а аргументы нужны только базовые.
+- [Смена загрузчика с GRUB на systemd-boot](/smena-zagruzchika-s-grub-na-systemd-boot): если GRUB кажется тяжёлым, а аргументы нужны только базовые.
 
 ## Заключение
 

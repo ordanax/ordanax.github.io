@@ -150,10 +150,10 @@ downgrade nvidia-open
 
 - [ArchWiki: NVIDIA — драйверы, версии и диагностика](https://wiki.archlinux.org/title/NVIDIA)
 - [ArchWiki: NVIDIA open kernel modules](https://wiki.archlinux.org/title/NVIDIA_open_kernel_modules)
-- [Драйвер NVIDIA в Arch Linux: ядро и версии](https://ordanax.github.io/nvidia-drayver-na-arch-linux)
-- [Как выбрать ядро: Linux, LTS и Zen Hardened](https://ordanax.github.io/kakoe-yadro-vybrat-linux-lts-zen-hardened)
-- [NVIDIA: чёрный экран после обновления и nomodeset](https://ordanax.github.io/nvidia-chernyj-ekran-nomodeset)
-- [NVIDIA и Wayland: как включить](https://ordanax.github.io/nvidia-wayland-kak-vklyuchit)
+- [Драйвер NVIDIA в Arch Linux: ядро и версии](/nvidia-drayver-arch-linux)
+- [Как выбрать ядро: Linux, LTS и Zen Hardened](/kakoe-yadro-vybrat-linux-lts-zen-hardened)
+- [NVIDIA: чёрный экран после обновления и nomodeset](/nvidia-chernyj-ekran-nomodeset)
+- [NVIDIA и Wayland: как включить](/nvidia-wayland-kak-vklyuchit)
 
 ## Заключение
 

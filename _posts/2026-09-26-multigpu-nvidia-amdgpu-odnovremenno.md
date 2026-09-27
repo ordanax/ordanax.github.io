@@ -23,7 +23,7 @@ edit: true
 
 ## Что ставить, чтобы обе карты работали одновременно?
 
-Драйвер amdgpu уже входит в ядро Arch (CONFIG_DRM_AMDGPU), его достаточно — отдельно ставить нечего. А вот для NVIDIA нужен внешний модуль, и тут есть выбор между nvidia из репозитория и nvidia-dkms: разница в том, пересобирается ли модуль под каждое новое ядро. Почему это важно и чем чреваты ошибки при сборке, разобрано в статье про [dkms и статическое ядро](https://ordanax.github.io/dkms-ili-staticheskoe-yadro).
+Драйвер amdgpu уже входит в ядро Arch (CONFIG_DRM_AMDGPU), его достаточно — отдельно ставить нечего. А вот для NVIDIA нужен внешний модуль, и тут есть выбор между nvidia из репозитория и nvidia-dkms: разница в том, пересобирается ли модуль под каждое новое ядро. Почему это важно и чем чреваты ошибки при сборке, разобрано в статье про [dkms и статическое ядро](/dkms-ili-staticheskoe-yadro).
 
 ```bash
 sudo pacman -S nvidia-dkms nvidia-utils mesa libglvnd vulkan-icd-loader vulkan-radeon
@@ -108,7 +108,7 @@ xrandr --setprovideroutputsource 0 1
 DRI_PRIME=1 glxinfo -B | grep -E 'OpenGL vendor|OpenGL renderer'
 ```
 
-`DRI_PRIME` ждёт номера карт в порядке перечисления `lspci`, то есть 1 и 2, а не 0 и 1. На постоянной основе задай переменную в `/etc/environment` или в `~/.profile`, а для отдельных игр удобнее обёртка `prime-run` — как её настроить вместе со Steam, описано в статье о [гибридной графике и prime-run](https://ordanax.github.io/gibridnaya-grafika-prime-run-steam).
+`DRI_PRIME` ждёт номера карт в порядке перечисления `lspci`, то есть 1 и 2, а не 0 и 1. На постоянной основе задай переменную в `/etc/environment` или в `~/.profile`, а для отдельных игр удобнее обёртка `prime-run` — как её настроить вместе со Steam, описано в статье о [гибридной графике и prime-run](/gibridnaya-grafika-prime-run-steam).
 
 Vulkan на двух картах выбирается отдельно, именем ICD-файла:
 
@@ -120,7 +120,7 @@ VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/radeon_icd.x86_64.json vulkaninfo --sum
 
 ## Что меняется в Wayland?
 
-Главное требование — включить modeset у nvidia_drm, иначе Wayland-композитор не сможет получить поверхности. Без этого на NVIDIA обычно чёрный экран, и разбор такой поломки с привязкой к параметрам modeset я делал в статье про [чёрный экран и nomodeset](https://ordanax.github.io/nvidia-chernyj-ekran-nomodeset).
+Главное требование — включить modeset у nvidia_drm, иначе Wayland-композитор не сможет получить поверхности. Без этого на NVIDIA обычно чёрный экран, и разбор такой поломки с привязкой к параметрам modeset я делал в статье про [чёрный экран и nomodeset](/nvidia-chernyj-ekran-nomodeset).
 
 ```
 # /etc/modprobe.d/nvidia.conf
@@ -148,7 +148,7 @@ journalctl -b | grep -Ei 'drm|nvidia|amdgpu|gbm' | tail -40
 1. Сверь `BusID` в конфиге с выводом `lspci -Dnn` — опечатка в шине, устройстве или функции даёт пустой Xserver с сообщением про отсутствие устройств.
 2. Сними modeset, если сломалось именно от его включения: `options nvidia_drm modeset=0` в `/etc/modprobe.d/nvidia.conf` плюс `mkinitcpio -P`. Это осознанный откат к рабочей конфигурации, а не попытка вылечить всё.
 3. Отключи проблемную карту в X, оставив вторую: в её секции `Device` добавь `Option "Accel" "off"` и `Option "NoAccel" "True"`.
-4. Проверь, что модуль пересобрался после последнего обновления ядра: `dkms status` и лог `/var/log/Xorg.0.log`. Разбор типовых ошибок в этом логе — в статье про [ошибки Xorg и NVIDIA](https://ordanax.github.io/oshibki-xorg-nvidia-smotrim-logi).
+4. Проверь, что модуль пересобрался после последнего обновления ядра: `dkms status` и лог `/var/log/Xorg.0.log`. Разбор типовых ошибок в этом логе — в статье про [ошибки Xorg и NVIDIA](/oshibki-xorg-nvidia-smotrim-logi).
 
 ## Частые вопросы
 

@@ -74,7 +74,7 @@ efibootmgr
 efibootmgr --delete-bootnum --bootnum 0001
 ```
 
-Номер подставь из вывода `efibootmgr`. Про порядок записей и работу с NVRAM подробнее в статье «[Порядок загрузки и NVRAM через efibootmgr](https://ordanax.github.io/poryadok-zagruzki-nvram-efibootmgr)».
+Номер подставь из вывода `efibootmgr`. Про порядок записей и работу с NVRAM подробнее в статье «[Порядок загрузки и NVRAM через efibootmgr](/poryadok-zagruzki-nvram-efibootmgr)».
 
 Если ESP смонтирована не в `/boot`, а в `/efi`, pacman не увидит её как каталог ядра. Тогда после каждого обновления копируй `vmlinuz-linux` и `initramfs-linux.img` на ESP вручную или повесь pacman-хук, который делает это за тебя. Вариант с `/boot` проще, поэтому в примерах выше он и используется.
 
@@ -149,7 +149,7 @@ ls -lh /boot/EFI/Linux/
 bootctl install
 ```
 
-Если systemd-boot уже стоит, просто перезагрузись: новый образ появится в меню автоматически. Как перейти на него с GRUB, описано в статье «[Смена загрузчика с GRUB на systemd-boot](https://ordanax.github.io/smena-zagruzchika-s-grub-na-systemd-boot)».
+Если systemd-boot уже стоит, просто перезагрузись: новый образ появится в меню автоматически. Как перейти на него с GRUB, описано в статье «[Смена загрузчика с GRUB на systemd-boot](/smena-zagruzchika-s-grub-na-systemd-boot)».
 
 ### Через efibootmgr
 
@@ -198,7 +198,7 @@ mkinitcpio -P
 - после обновления ядра образ пересобирается (`mkinitcpio -P`), хотя pacman-хуки делают это автоматически;
 - параметры меняются только пересборкой, «на лету» их не подправить.
 
-Если Secure Boot для тебя важен, UKI самый удобный путь. Про ключи и подпись через sbctl читай в статье «[Secure Boot в Arch Linux через sbctl](https://ordanax.github.io/secure-boot-arch-sbctl)». А про выбор между загрузчиками читай «[systemd-boot против GRUB](https://ordanax.github.io/systemd-boot-vs-grub-vtoroe-yadro)». Для dualboot с Windows загрузчик всё же удобнее: он сам находит чужие системы. UKI про другое, про один чистый образ своей системы.
+Если Secure Boot для тебя важен, UKI самый удобный путь. Про ключи и подпись через sbctl читай в статье «[Secure Boot в Arch Linux через sbctl](/secure-boot-arch-sbctl)». А про выбор между загрузчиками читай «[systemd-boot против GRUB](/systemd-boot-vs-grub-vtoroe-yadro)». Для dualboot с Windows загрузчик всё же удобнее: он сам находит чужие системы. UKI про другое, про один чистый образ своей системы.
 
 ## Какие подводные камни у прямой загрузки?
 
@@ -206,7 +206,7 @@ mkinitcpio -P
 
 Второй момент: после обновления ядра старый UKI остаётся на диске. Хуки пересобирают образ, но не чистят мусор. Раз в пару месяцев заглядывай в `/boot/EFI/Linux/` и удаляй лишнее вручную.
 
-Третий: если после перехода на UKI у тебя сломалось разрешение экрана или пропала загрузка, не паникуй. Про разрешение и драйвер simpledrm есть отдельная статья «[UKI и разрешение экрана](https://ordanax.github.io/gop-simpledrm-uki-razreshenie)». А вернуть старый загрузчик всегда можно из live-системы через `arch-chroot`.
+Третий: если после перехода на UKI у тебя сломалось разрешение экрана или пропала загрузка, не паникуй. Про разрешение и драйвер simpledrm есть отдельная статья «[UKI и разрешение экрана](/gop-simpledrm-uki-razreshenie)». А вернуть старый загрузчик всегда можно из live-системы через `arch-chroot`.
 
 Четвёртый: гибернация. Для resume нужен параметр `resume=UUID=...` в `/etc/kernel/cmdline`. Забыл его добавить, система не проснётся из swap. В схеме с GRUB параметр живёт в `grub.cfg`, здесь он вшит в образ, так что правь файл и пересобирай.
 

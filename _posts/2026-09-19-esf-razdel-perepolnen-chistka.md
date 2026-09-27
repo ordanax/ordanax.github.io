@@ -93,7 +93,7 @@ pacman -Rsn linux-lts
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-Какое ядро оставить, а какое выкинуть — разобрано в статье «[Какое ядро выбрать: linux, linux-lts, linux-zen или hardened](https://ordanax.github.io/kakoe-yadro-vybrat-linux-lts-zen-hardened)». Если в меню GRUB накопилось много ядер — смотри «[Несколько ядер в меню: linux, linux-lts, hardened](https://ordanax.github.io/neskolko-yader-v-menyu-linux-lts-hardened)».
+Какое ядро оставить, а какое выкинуть — разобрано в статье «[Какое ядро выбрать: linux, linux-lts, linux-zen или hardened](/kakoe-yadro-vybrat-linux-lts-zen-hardened)». Если в меню GRUB накопилось много ядер — смотри «[Несколько ядер в меню: linux, linux-lts, hardened](/neskolko-yader-v-menyu-linux-lts-hardened)».
 
 ### Удали старые резервные копии GRUB
 
@@ -107,7 +107,7 @@ ls -d /boot/grub.bak /boot/grub.prev 2>/dev/null
 rm -rf /boot/grub.bak /boot/grub.prev
 ```
 
-Про откат GRUB на случай, если свежая версия сломает загрузку, — в статье «[Откат обновления GRUB](https://ordanax.github.io/otkat-obnovleniya-grub)».
+Про откат GRUB на случай, если свежая версия сломает загрузку, — в статье «[Откат обновления GRUB](/otkat-obnovleniya-grub)».
 
 ### Разберись с дублями в EFI/
 
@@ -137,7 +137,7 @@ ls -lh /boot
 snapper -c root list
 ```
 
-Старые снапшоты удаляются через `snapper delete`. Про настройку btrfs со снапшотами — в статье «[Установка Arch Linux с btrfs и снапшотами](https://ordanax.github.io/ustanovka-arch-btrfs-snapshoty)».
+Старые снапшоты удаляются через `snapper delete`. Про настройку btrfs со снапшотами — в статье «[Установка Arch Linux с btrfs и снапшотами](/ustanovka-arch-btrfs-snapshoty)».
 
 ## Как увеличить EFI-раздел?
 
@@ -174,7 +174,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 Внимание: `fdisk`-метод удаляет раздел. Если ошибиться с номером — потеряешь файлы. Перед работой сделай резервную копию `/boot` на флешку.
 
-После пересоздания раздела проверь, что файлы на месте, и перезагрузись. Если GRUB не стартует — загрузись с live-USB и повтори `grub-install` из chroot, как описано в статье «[grub rescue: что делать](https://ordanax.github.io/grub-rescue-chto-delat)».
+После пересоздания раздела проверь, что файлы на месте, и перезагрузись. Если GRUB не стартует — загрузись с live-USB и повтори `grub-install` из chroot, как описано в статье «[grub rescue: что делать](/grub-rescue-chto-delat)».
 
 ## Как перенести ESP на больший раздел?
 
@@ -230,7 +230,7 @@ paccache -rk1
 ls -lh /boot
 ```
 
-Если видишь лишнее — чисти сразу, пока раздел не заполнился до отказа. После каждого обновления ядра тоже проверяй, что старые файлы не остались висеть. Про общий случай, когда заполняется корневой раздел, — в статье «[Корневой раздел заполняется: что делать](https://ordanax.github.io/kornevoy-razdel-zapolnyaetsya)».
+Если видишь лишнее — чисти сразу, пока раздел не заполнился до отказа. После каждого обновления ядра тоже проверяй, что старые файлы не остались висеть. Про общий случай, когда заполняется корневой раздел, — в статье «[Корневой раздел заполняется: что делать](/kornevoy-razdel-zapolnyaetsya)».
 
 ## Частые вопросы
 

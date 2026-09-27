@@ -131,11 +131,11 @@ grub-probe: error: failed to get canonical path of `airootfs`
 
 ### Используй arch-chroot вместо ручного chroot
 
-`arch-chroot` автоматически настраивает bind-монтирования и копирует `resolv.conf`. Это исключает классическую ошибку «забыл примонтировать `/dev`». Если хочешь разобраться в процессе инсталляции глубже — смотри [пошаговое руководство по установке Arch Linux](https://ordanax.github.io/ustanovka-archlinux-2026-poshagovaya).
+`arch-chroot` автоматически настраивает bind-монтирования и копирует `resolv.conf`. Это исключает классическую ошибку «забыл примонтировать `/dev`». Если хочешь разобраться в процессе инсталляции глубже — смотри [пошаговое руководство по установке Arch Linux](/ustanovka-archlinux-2026-poshagovaya).
 
 ### Сохрани вывод grub-install
 
-Перед выходом из chroot сохрани лог установки. Если после перезагрузки окажется чёрный экран — загляни в руководство по исправлению [чёрного экрана после установки](https://ordanax.github.io/ne-gruzitsya-posle-ustanovki-chernyi-ekran). А если GRUB поломался уже после установки — поможет статья о [переустановке GRUB после поломки](https://ordanax.github.io/pereustanovka-grub-posle-polomki).
+Перед выходом из chroot сохрани лог установки. Если после перезагрузки окажется чёрный экран — загляни в руководство по исправлению [чёрного экрана после установки](/ne-gruzitsya-posle-ustanovki-chernyi-ekran). А если GRUB поломался уже после установки — поможет статья о [переустановке GRUB после поломки](/pereustanovka-grub-posle-polomki).
 
 ## Частые вопросы
 
@@ -157,7 +157,7 @@ grub-probe: error: failed to get canonical path of `airootfs`
 
 ## Заключение
 
-Ошибка «airootfs» при установке GRUB — типичная проблема при работе из live-окружения archiso. Загрузчик запущен вне chroot или без необходимых bind-монтирований. Исправление: войди через `arch-chroot /mnt`, убедись, что пакеты `grub` и `efibootmgr` установлены, и запусти `grub-install` с правильными параметрами. Для BIOS указывай диск, для UEFI — целевой EFI-каталог. Если возникли трудности с разметкой — проверь [разметку диска GPT/MBR](https://ordanax.github.io/razmetka-diska-gpt-mbr).
+Ошибка «airootfs» при установке GRUB — типичная проблема при работе из live-окружения archiso. Загрузчик запущен вне chroot или без необходимых bind-монтирований. Исправление: войди через `arch-chroot /mnt`, убедись, что пакеты `grub` и `efibootmgr` установлены, и запусти `grub-install` с правильными параметрами. Для BIOS указывай диск, для UEFI — целевой EFI-каталог. Если возникли трудности с разметкой — проверь [разметку диска GPT/MBR](/razmetka-diska-gpt-mbr).
 
 ## Полезные ресурсы
 

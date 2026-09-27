@@ -154,11 +154,11 @@ journalctl --user -b | grep -Ei 'kwin|mutter|wayland|nvidia|portal'
 ## Полезные ресурсы
 
 - [ArchWiki: Wayland — сессии, compositor и portals](https://wiki.archlinux.org/title/Wayland)
-- [Драйвер NVIDIA в Arch Linux: ядро и версии](https://ordanax.github.io/nvidia-drayver-na-arch-linux)
-- [Параметры ядра и командная строка](https://ordanax.github.io/parametry-yadra-komandnaya-stroka)
-- [KDE Plasma крашится после обновления](https://ordanax.github.io/kde-plasma-krashitsya-posle-obnovleniya)
-- [NVIDIA: чёрный экран после обновления и nomodeset](https://ordanax.github.io/nvidia-chernyj-ekran-nomodeset)
-- [NVIDIA open: переходить или оставаться на проприетарном модуле](https://ordanax.github.io/nvidia-open-rasinhron-s-yadrom)
+- [Драйвер NVIDIA в Arch Linux: ядро и версии](/nvidia-drayver-arch-linux)
+- [Параметры ядра и командная строка](/parametry-yadra-komandnaya-stroka)
+- [KDE Plasma крашится после обновления](/kde-plasma-krashitsya-posle-obnovleniya)
+- [NVIDIA: чёрный экран после обновления и nomodeset](/nvidia-chernyj-ekran-nomodeset)
+- [NVIDIA open: переходить или оставаться на проприетарном модуле](/nvidia-open-rasinhron-s-yadrom)
 
 ## Заключение
 

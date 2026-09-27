@@ -62,7 +62,7 @@ sudo pacman -S nvidia nvidia-utils
 cat /sys/module/nvidia_drm/parameters/modeset
 ```
 
-Вывод `Y` — всё в порядке. Если `N`, добавь `nvidia_drm.modeset=1` в параметры ядра. Подробнее — в статье [драйвер NVIDIA для Arch Linux](https://ordanax.github.io/nvidia-drayver-arch-linux).
+Вывод `Y` — всё в порядке. Если `N`, добавь `nvidia_drm.modeset=1` в параметры ядра. Подробнее — в статье [драйвер NVIDIA для Arch Linux](/nvidia-drayver-arch-linux).
 
 ## Что такое emergency shell и как из него выйти
 
@@ -181,7 +181,7 @@ reboot
 3. **Ядро и initramfs** — модули для файловой системы и контроллера на месте? mkinitcpio пересобран?
 4. **Видеодрайвер** — `nomodeset` решает временно, правильный пакет — постоянно.
 
-В девяти случаях из десяти проблема в первых двух пунктах. Ничего не помогло? Сверь каждый шаг с [чек-листом установки Arch Linux](https://ordanax.github.io/chek-list-po-ustanovke-archlinux-2019).
+В девяти случаях из десяти проблема в первых двух пунктах. Ничего не помогло? Сверь каждый шаг с [чек-листом установки Arch Linux](/chek-list-po-ustanovke-archlinux-2019).
 
 ## Частые вопросы
 
@@ -208,5 +208,5 @@ sudo pacman -U /var/cache/pacman/pkg/nvidia-utils-<старая_версия>.pk
 ## Полезные ресурсы
 
 - [ArchWiki: General troubleshooting](https://wiki.archlinux.org/title/General_troubleshooting) — общие методы диагностики
-- [Полная установка Arch Linux 2026: пошаговое руководство](https://ordanax.github.io/ustanovka-archlinux-2026-poshagovaya)
-- [Установка Arch Linux за 15 минут](https://ordanax.github.io/ustanovka-archlinux-2019-za-15-minut)
+- [Полная установка Arch Linux 2026: пошаговое руководство](/ustanovka-archlinux-2026-poshagovaya)
+- [Установка Arch Linux за 15 минут](/ustanovka-archlinux-2019-za-15-minut)

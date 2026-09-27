@@ -204,4 +204,4 @@ sudo reflector --score 10 --sort rate
 
 ---
 
-**Автор:** [ordanax.github.io](https://ordanax.github.io/)  
+**Автор:** [ordanax.github.io](/)  

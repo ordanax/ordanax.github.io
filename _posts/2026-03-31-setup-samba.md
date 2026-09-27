@@ -222,4 +222,4 @@ sudo chmod 755 /home/username/Public
 
 ---
 
-**Автор:** [ordanax.github.io](https://ordanax.github.io/)  
+**Автор:** [ordanax.github.io](/)  

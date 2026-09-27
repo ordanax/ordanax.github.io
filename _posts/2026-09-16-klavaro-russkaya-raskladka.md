@@ -55,7 +55,7 @@ input {
 
 Hyprland передаёт эти параметры через xkbcommon, так что работает без X11. В GNOME на Wayland раскладки добавляются через Настройки, раздел «Клавиатура».
 
-Если ещё не выбрали окружение, смотрите гайды по [установке Hyprland](https://ordanax.github.io/hyprland-arch-linux) и [установке GNOME](https://ordanax.github.io/gnome-ustanovka-linux).
+Если ещё не выбрали окружение, смотрите гайды по [установке Hyprland](/hyprland-arch-linux) и [установке GNOME](/gnome-ustanovka-linux).
 
 ## Переключение между us и ru
 
@@ -96,7 +96,7 @@ sudo localectl set-x11-keymap us,ru "" "" grp:win_switch
 
 ## Как Klavaro помогает именно с русской печатью
 
-Тренажёр [Klavaro](https://klavaro.sourceforge.io/) поддерживает курсы на разных языках, включая Russian. Выбираете язык курса, и упражнения строятся на реальных русских словах, а не на случайном наборе букв. Если Klavaro ещё не установлен, начните с [гайда по установке](https://ordanax.github.io/klavaro-ustanovka).
+Тренажёр [Klavaro](https://klavaro.sourceforge.io/) поддерживает курсы на разных языках, включая Russian. Выбираете язык курса, и упражнения строятся на реальных русских словах, а не на случайном наборе букв. Если Klavaro ещё не установлен, начните с [гайда по установке](/klavaro-ustanovka).
 
 Это принципиально. Английский тренажёр с русскими буквами не заменит русский курс: частотность букв другая. В русском Е, О, А, И, Н встречаются гораздо чаще, чем Ь или Ъ. Klavaro это учитывает: сначала домашний ряд и ходовые буквы, нижний ряд с Б, Ь, Ю подключается постепенно.
 
@@ -154,4 +154,4 @@ hyprctl devices    # Hyprland
 
 - [ArchWiki: Xorg Keyboard Configuration](https://wiki.archlinux.org/title/Xorg/Keyboard_configuration)
 - [Klavaro — тренажёр слепой печати](https://klavaro.sourceforge.io/)
-- [Установка Hyprland на Arch Linux](https://ordanax.github.io/hyprland-arch-linux)
+- [Установка Hyprland на Arch Linux](/hyprland-arch-linux)

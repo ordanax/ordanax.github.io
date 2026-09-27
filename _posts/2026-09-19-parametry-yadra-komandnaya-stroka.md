@@ -40,9 +40,9 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 В том же файле есть строка `GRUB_CMDLINE_LINUX` — она добавляет параметры только к обычной загрузке, но не к аварийным записям вроде «Advanced options». На практике почти всегда правят именно `GRUB_CMDLINE_LINUX_DEFAULT`: она применяется ко всем пунктам меню, включая fallback-ядра.
 
-Как GRUB собирает аргументы из разных строк, разобрано в статье «[Кастомные аргументы ядра в GRUB](https://ordanax.github.io/kastomnye-argumenty-yadra-v-grub)».
+Как GRUB собирает аргументы из разных строк, разобрано в статье «[Кастомные аргументы ядра в GRUB](/kastomnye-argumenty-yadra-v-grub)».
 
-Если ты используешь systemd-boot или прямую загрузку через EFISTUB, параметры живут в файлах записей в `/boot/loader/entries/` — строка `options quiet mem_sleep_default=deep`. При создании записи через `efibootmgr` параметры передаются в опции `-u`. Разница между загрузчиками описана в статье «[Прямая загрузка ядра через EFISTUB и UKI](https://ordanax.github.io/pryamaya-zagruzka-yadra-efistub-uki)».
+Если ты используешь systemd-boot или прямую загрузку через EFISTUB, параметры живут в файлах записей в `/boot/loader/entries/` — строка `options quiet mem_sleep_default=deep`. При создании записи через `efibootmgr` параметры передаются в опции `-u`. Разница между загрузчиками описана в статье «[Прямая загрузка ядра через EFISTUB и UKI](/pryamaya-zagruzka-yadra-efistub-uki)».
 
 ## Как проверить параметр на один запуск?
 
@@ -80,7 +80,7 @@ cat /sys/power/mem_sleep
 
 На современных процессорах потери от защит меньше, поэтому `mitigations=off` там даёт мало выгоды. А вот на старых CPU, особенно в связке с виртуализацией, разница ощутимая. Если сомневаешься — оставь `auto` и померяй производительность до и после.
 
-Как выбрать ядро под свои задачи, рассказано в статье «[Какое ядро выбрать: linux, lts, zen или hardened](https://ordanax.github.io/kakoe-yadro-vybrat-linux-lts-zen-hardened)».
+Как выбрать ядро под свои задачи, рассказано в статье «[Какое ядро выбрать: linux, lts, zen или hardened](/kakoe-yadro-vybrat-linux-lts-zen-hardened)».
 
 ### nowatchdog
 
@@ -104,7 +104,7 @@ cat /sys/power/mem_sleep
 
 ### rd.luks.name и resume
 
-Параметры для шифрования и гибернации. `rd.luks.name=UUID=xxxx-xxxx=luksroot` подключает LUKS-раздел на этапе initramfs, а `cryptdevice=UUID=...:luksroot` — более старый вариант того же. `resume=UUID=...` указывает раздел подкачки для гибернации. Оба параметра работают внутри initramfs-сценариев, о которых подробно рассказано в статье «[mkinitcpio: хуки и модули](https://ordanax.github.io/mkinitcpio-podrobno-huki-moduli)». Для `rd.luks.name` в initramfs должен быть хук `systemd` или `encrypt`, а для `resume` — хук `resume`. Без них параметры просто проигнорируются.
+Параметры для шифрования и гибернации. `rd.luks.name=UUID=xxxx-xxxx=luksroot` подключает LUKS-раздел на этапе initramfs, а `cryptdevice=UUID=...:luksroot` — более старый вариант того же. `resume=UUID=...` указывает раздел подкачки для гибернации. Оба параметра работают внутри initramfs-сценариев, о которых подробно рассказано в статье «[mkinitcpio: хуки и модули](/mkinitcpio-podrobno-huki-moduli)». Для `rd.luks.name` в initramfs должен быть хук `systemd` или `encrypt`, а для `resume` — хук `resume`. Без них параметры просто проигнорируются.
 
 ### init=/usr/bin/...
 
@@ -140,7 +140,7 @@ cat /proc/cmdline
 
 Неправильный параметр обычно приводит к зависанию на раннем этапе загрузки или к панике ядра. Лечится без live-USB: перезагрузись, в меню GRUB нажми `e`, найди строку `linux` и удали из неё проблемный параметр. Затем `Ctrl+X` — система загрузится, а ты вернёшься к конфигу и поправишь его.
 
-Если параметр сломал загрузку настолько, что не видно даже меню GRUB, — загрузись с live-USB и отредактируй `/etc/default/grub` через `arch-chroot`. Методика восстановления загрузчика описана в статье «[grub rescue: что делать](https://ordanax.github.io/grub-rescue-chto-delat)».
+Если параметр сломал загрузку настолько, что не видно даже меню GRUB, — загрузись с live-USB и отредактируй `/etc/default/grub` через `arch-chroot`. Методика восстановления загрузчика описана в статье «[grub rescue: что делать](/grub-rescue-chto-delat)».
 
 Добавляй параметры по одному и проверяй каждый после перезагрузки — так проще понять, что именно сломало систему. Некоторые аргументы можно указывать несколько раз: ядро возьмёт последнее значение. Дубли не ломают загрузку, но захламляют конфиг.
 

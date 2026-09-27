@@ -35,7 +35,7 @@ sbctl status
 
 Утилита покажет, установлены ли ключи и в каком режиме прошивка — User Mode (Secure Boot активен) или Setup Mode (ключи можно менять). Альтернатива — `bootctl status`, строка `Secure Boot:`.
 
-Важно: чтобы записать свои ключи, прошивка должна быть в Setup Mode. Если она в User Mode — зайди в BIOS и удали текущий Platform Key (опция «Clear Secure Boot Keys»). Об особенностях UEFI — в статье про [ошибку EFI variables not supported](https://ordanax.github.io/efi-variables-not-supported-efibootmgr).
+Важно: чтобы записать свои ключи, прошивка должна быть в Setup Mode. Если она в User Mode — зайди в BIOS и удали текущий Platform Key (опция «Clear Secure Boot Keys»). Об особенностях UEFI — в статье про [ошибку EFI variables not supported](/efi-variables-not-supported-efibootmgr).
 
 ## Что такое sbctl и почему это стандарт
 
@@ -145,7 +145,7 @@ sudo sbctl sign -s /usr/lib/modules/$(uname -r)/kernel/drivers/video/nvidia-drm.
 
 ### Подписывает ли sbctl только ядро?
 
-Нет, sbctl подписывает любой EFI-бинарник: ядро, загрузчик, UKI, модули. Про сборку и подписание UKI читай в статье про [разрешение проблем с gop-simpledrm и UKI](https://ordanax.github.io/gop-simpledrm-uki-razreshenie).
+Нет, sbctl подписывает любой EFI-бинарник: ядро, загрузчик, UKI, модули. Про сборку и подписание UKI читай в статье про [разрешение проблем с gop-simpledrm и UKI](/gop-simpledrm-uki-razreshenie).
 
 ### Можно ли откатить Secure Boot?
 
@@ -157,7 +157,7 @@ sudo sbctl sign -s /usr/lib/modules/$(uname -r)/kernel/drivers/video/nvidia-drm.
 
 ## Заключение
 
-Secure Boot на Arch через `sbctl` — это реально и не больно. Десять минут: ставишь пакет, генерируешь ключи, подписываешь ядро и загрузчик, записываешь ключи с флагом `-m`, включаешь Secure Boot в BIOS. Дальше обновления ядра подписываются автоматически. Главное — проверь, что прошивка входит в Setup Mode и принимает ключи. Если прошивка кривая, смотри статью про [EFI variables not supported](https://ordanax.github.io/efi-variables-not-supported-efibootmgr). А если ставишь Arch с нуля — загляни в [пошаговое руководство по установке](https://ordanax.github.io/ustanovka-archlinux-2026-poshagovaya) или в [установку с LVM](https://ordanax.github.io/ustanovka-arch-s-lvm).
+Secure Boot на Arch через `sbctl` — это реально и не больно. Десять минут: ставишь пакет, генерируешь ключи, подписываешь ядро и загрузчик, записываешь ключи с флагом `-m`, включаешь Secure Boot в BIOS. Дальше обновления ядра подписываются автоматически. Главное — проверь, что прошивка входит в Setup Mode и принимает ключи. Если прошивка кривая, смотри статью про [EFI variables not supported](/efi-variables-not-supported-efibootmgr). А если ставишь Arch с нуля — загляни в [пошаговое руководство по установке](/ustanovka-archlinux-2026-poshagovaya) или в [установку с LVM](/ustanovka-arch-s-lvm).
 
 ## Полезные ресурсы
 

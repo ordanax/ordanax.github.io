@@ -196,8 +196,8 @@ pacman -Q | wc -l
 Варианты восстановления:
 
 - Вернуть базу из резервной копии, см. следующий раздел.
-- Переустановить пакеты. Полный разбор в статье «[Переустановка всех пакетов](https://ordanax.github.io/pereustanovka-vseh-paketov)».
-- Если повреждён один пакет, переустанови его из кеша: «[Установка конкретной версии из кеша](https://ordanax.github.io/ustanovka-konkretnoy-versii-iz-kesha)».
+- Переустановить пакеты. Полный разбор в статье «[Переустановка всех пакетов](/pereustanovka-vseh-paketov)».
+- Если повреждён один пакет, переустанови его из кеша: «[Установка конкретной версии из кеша](/ustanovka-konkretnoy-versii-iz-kesha)».
 
 После любого восстановления прогони проверку целостности.
 
@@ -286,7 +286,7 @@ pacman-key --init
 pacman-key --populate archlinux
 ```
 
-После этого повтори `pacman -Syy`. Разбор в статье «[Ошибка gpg: unknown public key при pacman-key](https://ordanax.github.io/gpg-unknown-public-key-pacman-key)».
+После этого повтори `pacman -Syy`. Разбор в статье «[Ошибка gpg: unknown public key при pacman-key](/gpg-unknown-public-key-pacman-key)».
 
 ## Частые вопросы
 

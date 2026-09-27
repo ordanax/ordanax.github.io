@@ -62,7 +62,7 @@ error: target not found: linux
 
 Проверить, когда синхронизировалась база, можно по дате файла `/var/lib/pacman/sync/core.db`. Если дата старая, база давно не обновлялась.
 
-Первая: неверное имя пакета. В Arch нет пакета `kernel`. Есть `linux`, `linux-lts`, `linux-zen`, `linux-hardened`. Если ты привык к Debian и ищешь `linux-image-...`, забудь: в Arch имена другие. Как выбрать подходящее ядро, разобрано в статье «[Какое ядро выбрать: linux, linux-lts, linux-zen или linux-hardened](https://ordanax.github.io/kakoe-yadro-vybrat-linux-lts-zen-hardened)».
+Первая: неверное имя пакета. В Arch нет пакета `kernel`. Есть `linux`, `linux-lts`, `linux-zen`, `linux-hardened`. Если ты привык к Debian и ищешь `linux-image-...`, забудь: в Arch имена другие. Как выбрать подходящее ядро, разобрано в статье «[Какое ядро выбрать: linux, linux-lts, linux-zen или linux-hardened](/kakoe-yadro-vybrat-linux-lts-zen-hardened)».
 
 Вторая: устаревшая или рассинхронизированная база пакетов. Если ты давно не обновлялся, локальные базы могут не содержать актуальную запись о пакете `linux`. Лечится полным обновлением `pacman -Syu`.
 
@@ -88,7 +88,7 @@ error: target not found: linux
 pacman -Syu
 ```
 
-Только после успешного завершения ставь ядро. Подробно про частичные обновления и их последствия читай в статье «[Частичное обновление pacman: почему это опасно](https://ordanax.github.io/pacman-chastichnoe-obnovlenie)».
+Только после успешного завершения ставь ядро. Подробно про частичные обновления и их последствия читай в статье «[Частичное обновление pacman: почему это опасно](/pacman-chastichnoe-obnovlenie)».
 
 ## Что делать, если ядро не появляется в GRUB
 
@@ -104,7 +104,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 ls /boot/vmlinuz-linux /boot/initramfs-linux.img
 ```
 
-Если файлов нет, переустанови ядро (`pacman -S linux`). Если файлы есть, а записи в меню нет, разбирайся с GRUB отдельно: «[GRUB не видит ядра после обновления](https://ordanax.github.io/grub-ne-vidit-yadra-posle-obnovleniya)».
+Если файлов нет, переустанови ядро (`pacman -S linux`). Если файлы есть, а записи в меню нет, разбирайся с GRUB отдельно: «[GRUB не видит ядра после обновления](/grub-ne-vidit-yadra-posle-obnovleniya)».
 
 Иногда `/boot` переполнен, и файлы ядра не записались. Проверь свободное место командой `df -h /boot`. Если раздел забит, сначала освободи место, потом переустанавливай ядро.
 
@@ -123,7 +123,7 @@ ls /boot/vmlinuz-linux /boot/initramfs-linux.img
 - пропавший `/boot/vmlinuz-linux`;
 - устаревший конфиг GRUB.
 
-Если initramfs был собран с другим ядром, а ты переключился на `linux`, переустановка приведёт всё в порядок. Про эту ситуацию читай статью «[initramfs создан с другим ядром](https://ordanax.github.io/initramfs-sozdan-s-drugim-yadrom)».
+Если initramfs был собран с другим ядром, а ты переключился на `linux`, переустановка приведёт всё в порядок. Про эту ситуацию читай статью «[initramfs создан с другим ядром](/initramfs-sozdan-s-drugim-yadrom)».
 
 То же самое работает для любого ядра: `pacman -S linux-lts`, `pacman -S linux-zen` и так далее. Это штатный способ переустановить ядро начисто, без удаления и повторной установки.
 
@@ -159,7 +159,7 @@ pacman -Q linux
 Server = https://geo.mirror.pkgbuild.com/$repo/os/$arch
 ```
 
-Затем снова выполни `pacman -Syu`. Настройка зеркал подробно описана в статье «[Настройка mirrorlist в Arch Linux](https://ordanax.github.io/arch-linux-mirrorlist-nastroyka)».
+Затем снова выполни `pacman -Syu`. Настройка зеркал подробно описана в статье «[Настройка mirrorlist в Arch Linux](/arch-linux-mirrorlist-nastroyka)».
 
 Посмотреть все доступные ядра можно так: `pacman -Ss '^linux'`. В выдаче будут и пакеты ядер, и связанные пакеты вроде `linux-headers`. Версия в поле `Version` у пакета `linux` и есть версия ядра в репозитории.
 

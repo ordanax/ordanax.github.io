@@ -40,9 +40,9 @@ mkinitcpio v42 сломал TPM-разблокировку LUKS потому, ч
 - PCR 11 — командная строка ядра (systemd-boot, UKI);
 - PCR 10 и 12 — компоненты загрузчика и initramfs (раскладка зависит от загрузчика и версии systemd).
 
-Обновление initramfs меняет PCR 10 или 12, загрузчика или cmdline — PCR 9 или 11, Secure Boot — PCR 7. Поэтому после mkinitcpio v42 у кого-то «отвалился» один регистр, у кого-то сразу несколько. Выбор загрузчика влияет на расклад — [GRUB против systemd-boot](https://ordanax.github.io/systemd-boot-vs-grub-vtoroe-yadro).
+Обновление initramfs меняет PCR 10 или 12, загрузчика или cmdline — PCR 9 или 11, Secure Boot — PCR 7. Поэтому после mkinitcpio v42 у кого-то «отвалился» один регистр, у кого-то сразу несколько. Выбор загрузчика влияет на расклад — [GRUB против systemd-boot](/systemd-boot-vs-grub-vtoroe-yadro).
 
-Это не баг. TPM честно говорит: «система изменилась, ключ не отдам». Так и задумано — иначе злоумышленник подменил бы initramfs и получил ключ. Не настраивал? [Вот как с нуля](https://ordanax.github.io/tpm2-arch-chto-mozhno).
+Это не баг. TPM честно говорит: «система изменилась, ключ не отдам». Так и задумано — иначе злоумышленник подменил бы initramfs и получил ключ. Не настраивал? [Вот как с нуля](/tpm2-arch-chto-mozhno).
 
 ## Как проверить, что PCR изменились
 
@@ -52,7 +52,7 @@ mkinitcpio v42 сломал TPM-разблокировку LUKS потому, ч
 journalctl -b -p err
 ```
 
-Ищи строки про TPM: «Failed to enroll», «Unsealing failed», «Operation cancelled». Нашёл — дело в PCR. Про чтение журнала — [в статье про journalctl -b](https://ordanax.github.io/chitat-journalctl-b-pervaya-zagruzka).
+Ищи строки про TPM: «Failed to enroll», «Unsealing failed», «Operation cancelled». Нашёл — дело в PCR. Про чтение журнала — [в статье про journalctl -b](/chitat-journalctl-b-pervaya-zagruzka).
 
 Теперь посмотри текущие значения регистров. Пакет tpm2-tools:
 
@@ -75,7 +75,7 @@ systemd-analyze pcrs
 ls /sys/firmware/efi/efivars
 ```
 
-Пусто или нет директории — Secure Boot выключен, PCR 7 изменился. Подробности — в [статье про sbctl](https://ordanax.github.io/secure-boot-arch-sbctl).
+Пусто или нет директории — Secure Boot выключен, PCR 7 изменился. Подробности — в [статье про sbctl](/secure-boot-arch-sbctl).
 
 ## Как починить TPM-разблокировку
 
@@ -83,7 +83,7 @@ ls /sys/firmware/efi/efivars
 
 ### Шаг 1. Бэкап заголовков LUKS
 
-Перед манипуляциями со слотами сделай бэкап заголовков. Потеря заголовка = потеря данных. Как — в [статье про смену паролей LUKS2](https://ordanax.github.io/luks2-keyfile-smena-parolei).
+Перед манипуляциями со слотами сделай бэкап заголовков. Потеря заголовка = потеря данных. Как — в [статье про смену паролей LUKS2](/luks2-keyfile-smena-parolei).
 
 ### Шаг 2. Стереть старый TPM-слот
 
@@ -115,7 +115,7 @@ sudo systemd-cryptenroll --tpm2-device=auto --tpm2-pcrs=0+7 /dev/nvme0n1p2
 
 **Читай новости Arch перед обновлением.** Крупные релизы mkinitcpio, systemd и ядра обсуждают заранее. Увидел предупреждение — знаешь, чего ждать.
 
-**Не паникуй при первом же пароле.** Это не поломка, а штатная защита. Диагностика по журналу — [отдельная методика](https://ordanax.github.io/metodika-resheniya-problem-arch).
+**Не паникуй при первом же пароле.** Это не поломка, а штатная защита. Диагностика по журналу — [отдельная методика](/metodika-resheniya-problem-arch).
 
 ## Частые вопросы
 

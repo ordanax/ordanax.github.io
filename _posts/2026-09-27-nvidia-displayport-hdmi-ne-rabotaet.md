@@ -164,10 +164,10 @@ grep -Ei 'DP|HDMI|EDID|modeset|link' ~/.local/share/xorg/Xorg.0.log /var/log/Xor
 ## Полезные ресурсы
 
 - [ArchWiki: Xrandr — режимы и несколько мониторов](https://wiki.archlinux.org/title/Xrandr)
-- [Драйвер NVIDIA в Arch Linux: ядро и версии](https://ordanax.github.io/nvidia-drayver-na-arch-linux)
-- [NVIDIA и Wayland: как включить и что работает](https://ordanax.github.io/nvidia-wayland-kak-vklyuchit)
-- [Параметры ядра и командная строка](https://ordanax.github.io/parametry-yadra-komandnaya-stroka)
-- [NVIDIA: чёрный экран после обновления и nomodeset](https://ordanax.github.io/nvidia-chernyj-ekran-nomodeset)
+- [Драйвер NVIDIA в Arch Linux: ядро и версии](/nvidia-drayver-arch-linux)
+- [NVIDIA и Wayland: как включить и что работает](/nvidia-wayland-kak-vklyuchit)
+- [Параметры ядра и командная строка](/parametry-yadra-komandnaya-stroka)
+- [NVIDIA: чёрный экран после обновления и nomodeset](/nvidia-chernyj-ekran-nomodeset)
 
 ## Заключение
 

@@ -1,5 +1,9 @@
 User-agent: *
+Allow: /
 Disallow: /index.html
-Disallow: /assets/
-Host: https://ordanax.github.io
+Disallow: /search.html
+Disallow: /tag.html
+Disallow: /tag
+Disallow: /color_key.html
+
 Sitemap: https://ordanax.github.io/sitemap.xml

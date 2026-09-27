@@ -32,7 +32,7 @@ edit: true
 
 ### Зависание GRUB
 
-Меню GRUB появляется, но после выбора пункта ничего не происходит: чёрный экран или мигающий курсор. Загрузчик не смог передать управление ядру. Причины: повреждённый `grub.cfg`, битые модули, проблема с initramfs. Заодно проверь порядок загрузки в прошивке: система могла начать грузиться с другого диска. Если GRUB вообще не стартует и падает в `grub rescue>`, смотри статью «[grub rescue: что делать](https://ordanax.github.io/grub-rescue-chto-delat)».
+Меню GRUB появляется, но после выбора пункта ничего не происходит: чёрный экран или мигающий курсор. Загрузчик не смог передать управление ядру. Причины: повреждённый `grub.cfg`, битые модули, проблема с initramfs. Заодно проверь порядок загрузки в прошивке: система могла начать грузиться с другого диска. Если GRUB вообще не стартует и падает в `grub rescue>`, смотри статью «[grub rescue: что делать](/grub-rescue-chto-delat)».
 
 ### Зависание ядра и initramfs
 
@@ -99,7 +99,7 @@ systemctl status <unit>
 journalctl -b -u <unit>
 ```
 
-`systemctl status` покажет текущее состояние и последние строки лога юнита, `journalctl -b -u` выведет весь его журнал за текущую загрузку. Про чтение журнала подробнее рассказано в статье «[Как читать journalctl -b](https://ordanax.github.io/chitat-journalctl-b-pervaya-zagruzka)».
+`systemctl status` покажет текущее состояние и последние строки лога юнита, `journalctl -b -u` выведет весь его журнал за текущую загрузку. Про чтение журнала подробнее рассказано в статье «[Как читать journalctl -b](/chitat-journalctl-b-pervaya-zagruzka)».
 
 Если юнит не стартует вовсе, проверь список упавших:
 
@@ -167,7 +167,7 @@ systemctl disable NetworkManager-wait-online.service
 UUID=xxxx-xxxx  /mnt/data  ext4  defaults,nofail  0  2
 ```
 
-С `nofail` отсутствующее устройство не блокирует загрузку. Про поля `fstab` подробнее рассказано в статье «[Поля fstab на практике](https://ordanax.github.io/fstab-polya-na-praktike)».
+С `nofail` отсутствующее устройство не блокирует загрузку. Про поля `fstab` подробнее рассказано в статье «[Поля fstab на практике](/fstab-polya-na-praktike)».
 
 ### Устройство не появляется вовремя
 
@@ -204,7 +204,7 @@ amd_iommu=off
 pci=noacpi
 ```
 
-Меняй по одному параметру за раз и перезагружайся. Так ты отделишь виновника от случайных совпадений. Когда параметр найден, пропиши его в постоянную строку ядра в `/etc/default/grub` и перегенерируй `grub.cfg`. Общая методика таких экспериментов описана в статье «[Методика решения проблем в Arch Linux](https://ordanax.github.io/metodika-resheniya-problem-arch)».
+Меняй по одному параметру за раз и перезагружайся. Так ты отделишь виновника от случайных совпадений. Когда параметр найден, пропиши его в постоянную строку ядра в `/etc/default/grub` и перегенерируй `grub.cfg`. Общая методика таких экспериментов описана в статье «[Методика решения проблем в Arch Linux](/metodika-resheniya-problem-arch)».
 
 ### Загрузись с fallback initramfs
 
@@ -246,8 +246,8 @@ lsinitcpio /boot/initramfs-linux-fallback.img
 
 - [Ускорение загрузки systemd (ArchWiki)](https://wiki.archlinux.org/title/Improve_systemd_boot_time): разбор таймингов и оптимизации загрузки.
 - [Fstab (ArchWiki)](https://wiki.archlinux.org/title/Fstab): опции монтирования, включая `nofail`.
-- [systemd-analyze: ускорение загрузки](https://ordanax.github.io/uskorenie-zagruzki-systemd-analyze): практика работы с таймингами на живой системе.
-- [Чистка старых ядер и initramfs](https://ordanax.github.io/chistka-staryh-yader-initramfs): как не потерять рабочий fallback-образ.
+- [systemd-analyze: ускорение загрузки](/uskorenie-zagruzki-systemd-analyze): практика работы с таймингами на живой системе.
+- [Чистка старых ядер и initramfs](/chistka-staryh-yader-initramfs): как не потерять рабочий fallback-образ.
 
 ## Заключение
 

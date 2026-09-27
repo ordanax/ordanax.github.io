@@ -192,11 +192,11 @@ paccache -rk1
 
 - [Makepkg (ArchWiki)](https://wiki.archlinux.org/title/Makepkg): официальная документация по переменным `SRCDEST`, `PKGDEST` и остальным опциям.
 - [Pacman/Tips and tricks (ArchWiki)](https://wiki.archlinux.org/title/Pacman/Tips_and_tricks): про `paccache` и управление кэшем пакетов.
-- [makepkg: всё, что нужно знать](https://ordanax.github.io/makepkg-vse-chto-nuzhno-znat): разбор флагов и процесса сборки.
-- [Чистка кэша пакетов: paccache](https://ordanax.github.io/chistka-paketov-kesha-paccache): как настроить автоочистку кэша.
-- [Установка конкретной версии из кэша](https://ordanax.github.io/ustanovka-konkretnoy-versii-iz-kesha): как поставить старую версию пакета из кэша pacman.
-- [Восстановление без сети: pacman](https://ordanax.github.io/vosstanovlenie-bez-seti-pacman-u): что делать, когда система осталась без интернета.
-- [Ускорить сборку: ccache и tmpfs](https://ordanax.github.io/uskorit-sborku-ccache-tmpfs): как ускорить повторные сборки.
+- [makepkg: всё, что нужно знать](/makepkg-vse-chto-nuzhno-znat): разбор флагов и процесса сборки.
+- [Чистка кэша пакетов: paccache](/chistka-paketov-kesha-paccache): как настроить автоочистку кэша.
+- [Установка конкретной версии из кэша](/ustanovka-konkretnoy-versii-iz-kesha): как поставить старую версию пакета из кэша pacman.
+- [Восстановление без сети: pacman](/vosstanovlenie-bez-seti-pacman-u): что делать, когда система осталась без интернета.
+- [Ускорить сборку: ccache и tmpfs](/uskorit-sborku-ccache-tmpfs): как ускорить повторные сборки.
 
 ## Заключение
 

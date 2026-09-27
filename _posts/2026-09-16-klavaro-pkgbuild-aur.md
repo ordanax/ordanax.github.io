@@ -30,7 +30,7 @@ edit: true
 
 ## Подготовка: что установить и где взять исходники
 
-Нужен набор `base-devel` и утилита `git`. Если ставите Arch недавно, проверьте [чек-лист после установки](https://ordanax.github.io/chek-list-po-ustanovke-archlinux-2019), там есть все базовые пакеты.
+Нужен набор `base-devel` и утилита `git`. Если ставите Arch недавно, проверьте [чек-лист после установки](/chek-list-po-ustanovke-archlinux-2019), там есть все базовые пакеты.
 
 ```bash
 sudo pacman -S base-devel git
@@ -167,10 +167,10 @@ source=("git+https://github.com/ordanax/klavaro-custom.git#branch=main")
 
 ## Заключение
 
-PKGBUILD для личного форка Klavaro — это пять минут на написание и десять секунд на сборку. Вы получаете полноценный pacman-пакет, который ставится, обновляется и удаляется штатными средствами. Если вы уже собирали [Klavaro из исходников](https://ordanax.github.io/klavaro-fork-error-practice), то PKGBUILD лишь обернёт тот же процесс в стандартный формат Arch Linux.
+PKGBUILD для личного форка Klavaro — это пять минут на написание и десять секунд на сборку. Вы получаете полноценный pacman-пакет, который ставится, обновляется и удаляется штатными средствами. Если вы уже собирали [Klavaro из исходников](/klavaro-fork-error-practice), то PKGBUILD лишь обернёт тот же процесс в стандартный формат Arch Linux.
 
 ## Полезные ресурсы
 
 - [PKGBUILD — ArchWiki](https://wiki.archlinux.org/title/PKGBUILD) — полная структура файла, все переменные и функции.
 - [Makepkg — ArchWiki](https://wiki.archlinux.org/title/Makepkg) — флаги, опции сборки, подсказки.
-- [GitHub — как работать с репозиториями](https://ordanax.github.io/github) — клонирование, форки, pull-реквесты.
+- [GitHub — как работать с репозиториями](/github) — клонирование, форки, pull-реквесты.

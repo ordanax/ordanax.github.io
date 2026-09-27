@@ -27,7 +27,7 @@ edit: true
 
 Флаг `-b` означает «только текущая загрузка». Без него — логи всех загрузок, десятки тысяч строк. С `-b` — только то, что произошло после последнего включения.
 
-После первой загрузки свежеустановленного Arch это критично: какой сервис упал, поднялась ли сеть, почему чёрный экран. В [методике диагностики](https://ordanax.github.io/metodika-resheniya-problem-arch) подход описан шире, здесь — только первые минуты.
+После первой загрузки свежеустановленного Arch это критично: какой сервис упал, поднялась ли сеть, почему чёрный экран. В [методике диагностики](/metodika-resheniya-problem-arch) подход описан шире, здесь — только первые минуты.
 
 ## Как посмотреть ошибки только этой загрузки
 
@@ -116,7 +116,7 @@ journalctl -b -1 --no-pager
 journalctl -b -1 -p err --no-pager
 ```
 
-Полезно, когда хочешь понять, было ли так раньше. О первых шагах — в статье про [первый час после установки Arch](https://ordanax.github.io/pervyi-chas-posle-ustanovki-arch).
+Полезно, когда хочешь понять, было ли так раньше. О первых шагах — в статье про [первый час после установки Arch](/pervyi-chas-posle-ustanovki-arch).
 
 ## Как ограничить размер журнала
 
@@ -128,7 +128,7 @@ SystemMaxUse=100M
 
 Затем перезапусти: `sudo systemctl restart systemd-journald`.
 
-Если журнал раздулся — почисти: `sudo journalctl --vacuum-size=100M`. Актуально, если [система не грузится после установки](https://ordanax.github.io/ne-gruzitsya-posle-ustanovki-chernyi-ekran).
+Если журнал раздулся — почисти: `sudo journalctl --vacuum-size=100M`. Актуально, если [система не грузится после установки](/ne-gruzitsya-posle-ustanovki-chernyi-ekran).
 
 ## Частые вопросы
 
@@ -173,5 +173,5 @@ sudo systemctl restart systemd-journald
 
 - [Systemd/Journal — ArchWiki](https://wiki.archlinux.org/title/Systemd/Journal) — полная документация по journalctl, фильтрам и настройке журнала
 - [Journald — ArchWiki](https://wiki.archlinux.org/title/Journald) — архитектура и конфигурация systemd-journald
-- [systemd-boot vs GRUB: второе ядро](https://ordanax.github.io/systemd-boot-vs-grub-vtoroe-yadro) — загрузчики и ядра: что выбрать
-- [fstab: поля на практике](https://ordanax.github.io/fstab-polya-na-praktike) — как работает fstab и что в нём менять
+- [systemd-boot vs GRUB: второе ядро](/systemd-boot-vs-grub-vtoroe-yadro) — загрузчики и ядра: что выбрать
+- [fstab: поля на практике](/fstab-polya-na-praktike) — как работает fstab и что в нём менять

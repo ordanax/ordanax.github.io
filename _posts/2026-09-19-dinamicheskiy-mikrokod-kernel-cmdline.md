@@ -28,7 +28,7 @@ edit: true
 
 По отдельности не всегда помогает. Микрокод исправляет ошибку процессора, но не меняет поведение драйверов и ACPI. Параметр ядра обходит симптом, но не лечит причину. Классический пример: ноутбук, который не просыпается из сна. Обновлённый микрокод чинит баг C-состояний, а `mem_sleep_default=deep` заставляет ядро использовать полноценный S3 вместо s2idle. Один без другого даёт лишь половину результата.
 
-Зачем вообще обновлять микрокод и как он попадает в initramfs, разобрано в статье «[Микрокоды CPU: зачем и когда](https://ordanax.github.io/mikrokody-cpu-zachem-i-kogda)».
+Зачем вообще обновлять микрокод и как он попадает в initramfs, разобрано в статье «[Микрокоды CPU: зачем и когда](/mikrokody-cpu-zachem-i-kogda)».
 
 ## Как проверить, что микрокод реально загрузился?
 
@@ -121,7 +121,7 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet resume=UUID=5678-90ab intel_idle.max_cstate=1"
 sudo pacman -Syu linux-firmware
 ```
 
-Что именно обновляется в этом пакете, описано в статье «[linux-firmware: что обновляется](https://ordanax.github.io/linux-firmware-chto-obnovlyaetsya)». Перед обновлением посмотри текущую версию прошивки GPU: `dmesg | grep -i firmware`. После обновления и перезагрузки версия должна вырасти.
+Что именно обновляется в этом пакете, описано в статье «[linux-firmware: что обновляется](/linux-firmware-chto-obnovlyaetsya)». Перед обновлением посмотри текущую версию прошивки GPU: `dmesg | grep -i firmware`. После обновления и перезагрузки версия должна вырасти.
 
 Если не помогло, добавь параметр отладки Display Core:
 
@@ -167,9 +167,9 @@ grub-mkconfig -o /boot/grub/grub.cfg
 cat /proc/cmdline
 ```
 
-Как GRUB собирает аргументы из разных строк, разобрано в статье «[Кастомные аргументы ядра в GRUB](https://ordanax.github.io/kastomnye-argumenty-yadra-v-grub)». Полный справочник параметров есть в статье «[Параметры ядра в командной строке](https://ordanax.github.io/parametry-yadra-komandnaya-stroka)».
+Как GRUB собирает аргументы из разных строк, разобрано в статье «[Кастомные аргументы ядра в GRUB](/kastomnye-argumenty-yadra-v-grub)». Полный справочник параметров есть в статье «[Параметры ядра в командной строке](/parametry-yadra-komandnaya-stroka)».
 
-Если ты используешь systemd-boot, параметры живут в файле записи в `/boot/loader/entries/` в строке `options`. Там же работает проверка на один запуск: нажми `e` в меню загрузки, отредактируй строку и запусти запись. Разница между загрузчиками описана в статье «[Прямая загрузка ядра через EFISTUB и UKI](https://ordanax.github.io/pryamaya-zagruzka-yadra-efistub-uki)».
+Если ты используешь systemd-boot, параметры живут в файле записи в `/boot/loader/entries/` в строке `options`. Там же работает проверка на один запуск: нажми `e` в меню загрузки, отредактируй строку и запусти запись. Разница между загрузчиками описана в статье «[Прямая загрузка ядра через EFISTUB и UKI](/pryamaya-zagruzka-yadra-efistub-uki)».
 
 ## Какие параметры лучше не оставлять навсегда?
 
@@ -201,7 +201,7 @@ cat /proc/cmdline
 
 - [Microcode, ArchWiki](https://wiki.archlinux.org/title/Microcode): установка и ранняя загрузка микрокода.
 - [Kernel parameters, ArchWiki](https://wiki.archlinux.org/title/Kernel_parameters): полный список параметров и способы их передачи.
-- [Остановка загрузки: диагностика таймингов](https://ordanax.github.io/ostanovka-zagruzki-diagnostika-taymingov): как читать логи загрузки и находить виновника зависаний.
+- [Остановка загрузки: диагностика таймингов](/ostanovka-zagruzki-diagnostika-taymingov): как читать логи загрузки и находить виновника зависаний.
 
 ## Заключение
 

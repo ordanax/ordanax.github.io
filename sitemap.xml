@@ -10,7 +10,7 @@ search: exclude
         {% unless page.url contains '/assets/' or page.url contains '/feed.xml' or page.url contains '/sitemap.xml' or page.url contains '/page' or page.search == "exclude" or page.sitemap == false %}
         <url>
             <loc>{{ site.url | default: 'https://ordanax.github.io' }}{{ page.url | remove: 'index.html' }}</loc>
-            <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+            <lastmod>{% if page.last_modified_at %}{{ page.last_modified_at | date_to_xmlschema }}{% elsif page.date %}{{ page.date | date_to_xmlschema }}{% else %}{{ site.time | date_to_xmlschema }}{% endif %}</lastmod>
             <changefreq>
                 {% if page.url == '/' %}weekly{% else %}monthly{% endif %}
             </changefreq>

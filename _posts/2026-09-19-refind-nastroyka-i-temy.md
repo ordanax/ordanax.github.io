@@ -49,7 +49,7 @@ sudo pacman -S refind
 sudo refind-install
 ```
 
-Команда находит ESP, копирует туда каталог `EFI/refind` и регистрирует загрузчик как «rEFInd Boot Manager». После перезагрузки в меню UEFI появится новый пункт. Порядок загрузки при необходимости меняется через `efibootmgr`, разбор команд в статье «[Порядок загрузки в NVRAM через efibootmgr](https://ordanax.github.io/poryadok-zagruzki-nvram-efibootmgr)».
+Команда находит ESP, копирует туда каталог `EFI/refind` и регистрирует загрузчик как «rEFInd Boot Manager». После перезагрузки в меню UEFI появится новый пункт. Порядок загрузки при необходимости меняется через `efibootmgr`, разбор команд в статье «[Порядок загрузки в NVRAM через efibootmgr](/poryadok-zagruzki-nvram-efibootmgr)».
 
 Если запись в NVRAM не нужна, например ты хочешь загружаться с флешки или управлять порядком вручную, установи только файлы на ESP:
 
@@ -148,7 +148,7 @@ sudo tar -xzf rEFInd-minimal.tar.gz -C /boot/EFI/refind/themes
 include themes/rEFInd-minimal/theme.conf
 ```
 
-Путь относительный, от каталога с `refind.conf`. Внутри `theme.conf` прописаны баннер, иконки и цвета. После перезагрузки меню сменит оформление. Для GRUB похожий приём разобран в статье «[Тема оформления GRUB: фон и шрифты](https://ordanax.github.io/tema-oformleniya-grub-fon)».
+Путь относительный, от каталога с `refind.conf`. Внутри `theme.conf` прописаны баннер, иконки и цвета. После перезагрузки меню сменит оформление. Для GRUB похожий приём разобран в статье «[Тема оформления GRUB: фон и шрифты](/tema-oformleniya-grub-fon)».
 
 ### Иконки для ОС
 
@@ -178,7 +178,7 @@ sudo efibootmgr -b 0003 -B
 sudo rm -rf /boot/EFI/refind
 ```
 
-Если rEFInd ставился с `--usedefault`, файлы лежат в `/boot/EFI/BOOT/` под именем `bootx64.efi`. В этом случае запись в NVRAM не создавалась, достаточно удалить каталог. После этого в меню UEFI останется только GRUB. Смена загрузчика без переустановки системы разобрана в статье «[Смена загрузчика с GRUB на systemd-boot](https://ordanax.github.io/smena-zagruzchika-s-grub-na-systemd-boot)»: приём тот же, только в обратную сторону.
+Если rEFInd ставился с `--usedefault`, файлы лежат в `/boot/EFI/BOOT/` под именем `bootx64.efi`. В этом случае запись в NVRAM не создавалась, достаточно удалить каталог. После этого в меню UEFI останется только GRUB. Смена загрузчика без переустановки системы разобрана в статье «[Смена загрузчика с GRUB на systemd-boot](/smena-zagruzchika-s-grub-na-systemd-boot)»: приём тот же, только в обратную сторону.
 
 ## Какие подводные камни бывают
 
@@ -198,7 +198,7 @@ sudo refind-install --alldrivers
 
 ### rEFInd не видит Windows
 
-Проверь `scanfor` и что раздел Windows не скрыт. Для dualboot с общим ESP смотри статью «[Один EFI-раздел для dualboot](https://ordanax.github.io/odin-efi-razdel-dualboot)».
+Проверь `scanfor` и что раздел Windows не скрыт. Для dualboot с общим ESP смотри статью «[Один EFI-раздел для dualboot](/odin-efi-razdel-dualboot)».
 
 ## Частые вопросы
 

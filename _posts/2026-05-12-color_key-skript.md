@@ -70,13 +70,13 @@ div {
 
 ### Кодирование
 
-1. Откройте [color_key.html](https://ordanax.github.io/color_key.html)
+1. Откройте [color_key.html](/color_key.html)
 2. Введите текст в поле ввода
 3. Скопируйте сгенерированный CSS-код
 
 ### Расшифровка
 
-1. Откройте [color_key.html](https://ordanax.github.io/color_key.html)
+1. Откройте [color_key.html](/color_key.html)
 2. Вставьте CSS-код в поле для парсинга
 3. Нажмите кнопку расшифровки
 4. Получите исходный текст
@@ -112,8 +112,8 @@ div {
 
 ## Демонстрация
 
-Попробуйте скрипт: [https://ordanax.github.io/color_key.html](https://ordanax.github.io/color_key.html)
+Попробуйте скрипт: [страницу подбора цветов](/color_key.html)
 
 ---
 
-**Автор:** [ordanax.github.io](https://ordanax.github.io/)  
+**Автор:** [ordanax.github.io](/)  

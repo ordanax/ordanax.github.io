@@ -168,10 +168,10 @@ sudo -l
 
 ## Заключение
 
-Создание пользователя в Arch — это `useradd -m -G wheel -s /bin/bash имя`, пароль через `passwd` и sudo через `visudo`. Группу users забудь, wheel — твой друг, а остальные группы добавляй по мере надобности. Не работай под root — для этого есть sudo. Про первый час после установки, включая настройку пароля и обновление системы, читай в статье [Что делать после установки Arch](https://ordanax.github.io/pervyi-chas-posle-ustanovki-arch). А если пользователь уже есть, но корень забит — глянь [Корневой раздел заполняется](https://ordanax.github.io/kornevoy-razdel-zapolnyaetsya).
+Создание пользователя в Arch — это `useradd -m -G wheel -s /bin/bash имя`, пароль через `passwd` и sudo через `visudo`. Группу users забудь, wheel — твой друг, а остальные группы добавляй по мере надобности. Не работай под root — для этого есть sudo. Про первый час после установки, включая настройку пароля и обновление системы, читай в статье [Что делать после установки Arch](/pervyi-chas-posle-ustanovki-arch). А если пользователь уже есть, но корень забит — глянь [Корневой раздел заполняется](/kornevoy-razdel-zapolnyaetsya).
 
 ## Полезные ресурсы
 
 - [ArchWiki: Users and groups](https://wiki.archlinux.org/title/Users_and_groups): полный список групп и управление пользователями
 - [ArchWiki: Sudo](https://wiki.archlinux.org/title/Sudo): настройка sudoers, visudo, примеры конфигов
-- [Пошаговая установка Arch 2026](https://ordanax.github.io/ustanovka-archlinux-2026-poshagovaya): если система ещё только ставится
+- [Пошаговая установка Arch 2026](/ustanovka-archlinux-2026-poshagovaya): если система ещё только ставится

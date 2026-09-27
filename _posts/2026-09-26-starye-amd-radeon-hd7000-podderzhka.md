@@ -46,9 +46,9 @@ lspci -nnk | grep -A3 -Ei 'vga|3d controller|display controller'
 dmesg | grep -iE 'amdgpu|radeon|drm' | tail -20
 ```
 
-Для amdgpu в выводе dmesg будет строка вида `amdgpu 0000:01:00.0: [drm] card0: ...`, для TeraScale — `radeon 0000:01:00.0: [drm]`. Разница между этими драйверами подробно разобрана в статье про [AMD APU, Radeon и amdgpu](https://ordanax.github.io/amd-apu-radeon-ili-amdgpu) — начни с неё, если только что поставил систему.
+Для amdgpu в выводе dmesg будет строка вида `amdgpu 0000:01:00.0: [drm] card0: ...`, для TeraScale — `radeon 0000:01:00.0: [drm]`. Разница между этими драйверами подробно разобрана в статье про [AMD APU, Radeon и amdgpu](/amd-apu-radeon-ili-amdgpu) — начни с неё, если только что поставил систему.
 
-Отдельный подводный камень: amdgpu при инициализации дисплея требует, чтобы в BIOS карты был UEFI-модуль GOP. Если после переключения на amdgpu на GCN1 получаешь чёрный экран, дело почти наверняка в прошивке — разбор этого случая в материале про [amdgpu и поломки после linux-firmware](https://ordanax.github.io/amdgpu-polomki-posle-linux-firmware).
+Отдельный подводный камень: amdgpu при инициализации дисплея требует, чтобы в BIOS карты был UEFI-модуль GOP. Если после переключения на amdgpu на GCN1 получаешь чёрный экран, дело почти наверняка в прошивке — разбор этого случая в материале про [amdgpu и поломки после linux-firmware](/amdgpu-polomki-posle-linux-firmware).
 
 ## Что делать, если хочется amdgpu на TeraScale?
 
@@ -80,7 +80,7 @@ echo 'options amdgpu dpm=0 ppfeaturemask=0xfff7ffff gpu_recovery=1' | sudo tee /
 
 ## Какой Vulkan и OpenGL ты получишь?
 
-RADV работает только поверх amdgpu и только начиная с GCN1. То есть на TeraScale его нет вообще, а на GCN1/2 он полноценен: gfx8 и gfx9, RADV_PERFTEST, компилятор ACO. Настройку пакетов, проверку того, какой драйвер реально подхватился, и тюнинг шейдеров я разбирал в статье про [AMDGPU-Vulkan и Mesa](https://ordanax.github.io/nastrojka-amdgpu-vulkan-mesa-dlya-igr).
+RADV работает только поверх amdgpu и только начиная с GCN1. То есть на TeraScale его нет вообще, а на GCN1/2 он полноценен: gfx8 и gfx9, RADV_PERFTEST, компилятор ACO. Настройку пакетов, проверку того, какой драйвер реально подхватился, и тюнинг шейдеров я разбирал в статье про [AMDGPU-Vulkan и Mesa](/nastrojka-amdgpu-vulkan-mesa-dlya-igr).
 
 Ловушка на TeraScale выглядит так: ты ставишь `vulkan-tools`, запускаешь `vulkaninfo --summary` и видишь устройство. Оно есть, но оно программное — lavapipe на CPU. Аппаратной поддержки нет и не появится: игра на lavapipe либо не запустится, либо пойдёт считать на процессоре.
 

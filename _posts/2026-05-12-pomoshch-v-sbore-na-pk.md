@@ -39,7 +39,7 @@ tags:
 
 ## Где найти меня
 
-- **Чат по Linux в Telegram:** 👉 [https://ordanax.github.io/telegram.html](https://ordanax.github.io/telegram.html)
+- **Чат по Linux в Telegram:** 👉 [чат в Telegram](/telegram.html)
 - **Чат в MAX:** 👉 [https://max.ru/join/X9LNZmlPqmGHweB7EtIRwbdNwtwmhY4JnhX0jDKyaxs](https://max.ru/join/X9LNZmlPqmGHweB7EtIRwbdNwtwmhY4JnhX0jDKyaxs)
 
 ## Что вы получите взамен
@@ -72,4 +72,4 @@ tags:
 
 ---
 
-**Автор:** [ordanax.github.io](https://ordanax.github.io/)  
+**Автор:** [ordanax.github.io](/)  

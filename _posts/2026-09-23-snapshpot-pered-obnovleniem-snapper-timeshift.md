@@ -148,10 +148,10 @@ sudo snapper rollback
 
 ## Полезные ресурсы
 
-- [Установка Arch с Btrfs-снапшотами](https://ordanax.github.io/ustanovka-arch-btrfs-snapshoty) — настройка snapper, snap-pac и grub-btrfs с нуля
-- [Сломалось после обновления: единый гайд по откату](https://ordanax.github.io/slomalos-posle-obnovleniya-otkat) — все способы отката в одном месте
-- [Восстановление системы без сети](https://ordanax.github.io/vosstanovlenie-bez-seti-pacman-u) — если интернета нет, а система сломалась
-- [Откат одного пакета: примеры](https://ordanax.github.io/otkat-odnogo-paketa-primery) — когда снапшот не нужен, а хватает `pacman -U`
+- [Установка Arch с Btrfs-снапшотами](/ustanovka-arch-btrfs-snapshoty) — настройка snapper, snap-pac и grub-btrfs с нуля
+- [Сломалось после обновления: единый гайд по откату](/slomalos-posle-obnovleniya-otkat) — все способы отката в одном месте
+- [Восстановление системы без сети](/vosstanovlenie-bez-seti-pacman-u) — если интернета нет, а система сломалась
+- [Откат одного пакета: примеры](/otkat-odnogo-paketa-primery) — когда снапшот не нужен, а хватает `pacman -U`
 - [Snapper — ArchWiki](https://wiki.archlinux.org/title/Snapper) — конфигурации, расписания, восстановление
 - [Timeshift — ArchWiki](https://wiki.archlinux.org/title/Timeshift) — настройка и откат
 

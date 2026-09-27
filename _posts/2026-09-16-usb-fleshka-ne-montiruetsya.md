@@ -31,7 +31,7 @@ edit: true
 2. Пакет udisks2 есть, но сервис `udisks2.service` не запущен.
 3. Нет gvfs для интеграции в файловый менеджер.
 
-В [GNOME](https://ordanax.github.io/gnome-ustanovka-linux) и [XFCE](https://ordanax.github.io/xfce) всё это уже на месте. Тайлинговый WM без DE — монтирование через udisks2 в консоли.
+В [GNOME](/gnome-ustanovka-linux) и [XFCE](/xfce) всё это уже на месте. Тайлинговый WM без DE — монтирование через udisks2 в консоли.
 
 ## Как проверить и запустить udisks2
 
@@ -133,7 +133,7 @@ ls -la /run/media/$USER/
 sudo mount -o uid=1000,gid=1000 /dev/sdb1 /mnt/usb
 ```
 
-**Правила udev.** Кастомные [правила udev](https://ordanax.github.io/udev-pravila-ustroystv) могут конфликтовать со стандартным монтированием. Проверьте `/etc/udev/rules.d/` и `~/.config/udev/rules.d/`.
+**Правила udev.** Кастомные [правила udev](/udev-pravila-ustroystv) могут конфликтовать со стандартным монтированием. Проверьте `/etc/udev/rules.d/` и `~/.config/udev/rules.d/`.
 
 **Диск с шифрованием LUKS.** Сначала раскройте его:
 
@@ -177,7 +177,7 @@ lsblk -f | grep sdb
 
 **Можно ли сделать автоматическое монтирование для конкретного USB без fstab?**
 
-Да, через правила udev или через автозапуск `udisks2.service` в конфигурации вашего оконного менеджера. Подробнее о [настройке Ventoy и мультизагрузочных флешек](https://ordanax.github.io/ventoy) читайте в отдельной статье.
+Да, через правила udev или через автозапуск `udisks2.service` в конфигурации вашего оконного менеджера. Подробнее о [настройке Ventoy и мультизагрузочных флешек](/ventoy) читайте в отдельной статье.
 
 ## Заключение
 

@@ -101,7 +101,7 @@ GRUB_RECORDFAIL_TIMEOUT=5
 GRUB_DISABLE_RECORDFAIL=true
 ```
 
-После этого меню ведёт себя одинаково и после сбоя, и после чистой загрузки. Если GRUB после обновления начал вести себя странно — смотри статью «[Откат обновления GRUB](https://ordanax.github.io/otkat-obnovleniya-grub)».
+После этого меню ведёт себя одинаково и после сбоя, и после чистой загрузки. Если GRUB после обновления начал вести себя странно — смотри статью «[Откат обновления GRUB](/otkat-obnovleniya-grub)».
 
 ## Как сделать нужное ядро пунктом по умолчанию без правки файлов?
 
@@ -130,7 +130,7 @@ grub-set-default "Advanced options for Arch Linux>Arch Linux, with Linux linux-l
 grub-reboot "Advanced options for Arch Linux>Arch Linux, with Linux linux-zen"
 ```
 
-Удобно, когда нужно один раз загрузиться в другое ядро, например для теста. После `grub-reboot` выбор действует только на одну загрузку: перезагрузился — и снова старый пункт по умолчанию. Это удобно для теста ядра или загрузки в recovery-режим без постоянной смены настроек. Обе утилиты принимают и номер, и имя пункта: номер удобен для скриптов, имя — для людей. Подробнее про выбор ядра — в статье «[Какое ядро выбрать: linux, linux-lts, linux-zen, linux-hardened](https://ordanax.github.io/kakoe-yadro-vybrat-linux-lts-zen-hardened)». А если пунктов в меню слишком много — поможет статья «[Несколько ядер в меню: linux, linux-lts, linux-hardened](https://ordanax.github.io/neskolko-yader-v-menyu-linux-lts-hardened)».
+Удобно, когда нужно один раз загрузиться в другое ядро, например для теста. После `grub-reboot` выбор действует только на одну загрузку: перезагрузился — и снова старый пункт по умолчанию. Это удобно для теста ядра или загрузки в recovery-режим без постоянной смены настроек. Обе утилиты принимают и номер, и имя пункта: номер удобен для скриптов, имя — для людей. Подробнее про выбор ядра — в статье «[Какое ядро выбрать: linux, linux-lts, linux-zen, linux-hardened](/kakoe-yadro-vybrat-linux-lts-zen-hardened)». А если пунктов в меню слишком много — поможет статья «[Несколько ядер в меню: linux, linux-lts, linux-hardened](/neskolko-yader-v-menyu-linux-lts-hardened)».
 
 Имена пунктов смотри в выводе `grub-mkconfig` или через `grep menuentry /boot/grub/grub.cfg`. Вложенные пункты подменю разделяются символом `>`. После изменения `GRUB_DEFAULT` не забудь перегенерировать конфиг.
 
@@ -150,7 +150,7 @@ GRUB_DISABLE_SUBMENU=y
 GRUB_THEME="/boot/grub/themes/arch/theme.txt"
 ```
 
-Для корректного отображения темы обычно нужен и `GRUB_GFXMODE` с подходящим разрешением, например `1920x1080`, а `GRUB_GFXPAYLOAD_LINUX=keep` сохранит это разрешение при загрузке ядра. Если не знаешь, какое разрешение поддерживает твой экран, поставь `GRUB_GFXMODE=auto` — GRUB сам выберет подходящее. Настройка фона и темы разобрана в статье «[Тема оформления GRUB: фон](https://ordanax.github.io/tema-oformleniya-grub-fon)».
+Для корректного отображения темы обычно нужен и `GRUB_GFXMODE` с подходящим разрешением, например `1920x1080`, а `GRUB_GFXPAYLOAD_LINUX=keep` сохранит это разрешение при загрузке ядра. Если не знаешь, какое разрешение поддерживает твой экран, поставь `GRUB_GFXMODE=auto` — GRUB сам выберет подходящее. Настройка фона и темы разобрана в статье «[Тема оформления GRUB: фон](/tema-oformleniya-grub-fon)».
 
 ### Почему в меню нет Windows или второй системы?
 
@@ -160,7 +160,7 @@ GRUB_THEME="/boot/grub/themes/arch/theme.txt"
 GRUB_DISABLE_OS_PROBER=false
 ```
 
-После включения перегенерируй конфиг. Убедись, что пакет `os-prober` установлен — без него переменная не даст эффекта. Подробности — в статье «[Windows пропала из меню GRUB](https://ordanax.github.io/dualboot-windows-propala-iz-grub)».
+После включения перегенерируй конфиг. Убедись, что пакет `os-prober` установлен — без него переменная не даст эффекта. Подробности — в статье «[Windows пропала из меню GRUB](/dualboot-windows-propala-iz-grub)».
 
 ## Почему таймаут не применяется?
 

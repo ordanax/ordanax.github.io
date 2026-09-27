@@ -129,7 +129,7 @@ sudo pacman -U /var/cache/pacman/pkg/wireplumber-1.0.13-1-x86_64.pkg.tar.zst
 systemctl --user restart wireplumber
 ```
 
-Механизм отката подробно разобран в статье про [откат одного пакета](https://ordanax.github.io/otkat-odnogo-paketa-primery).
+Механизм отката подробно разобран в статье про [откат одного пакета](/otkat-odnogo-paketa-primery).
 
 Вторая по частоте причина — старый менеджер сессии. `pipewire-media-session` устарел и заменён на WirePlumber; если он остался в системе, два менеджера дерутся за один граф, и устройства пропадают. Проверь и удали:
 
@@ -139,7 +139,7 @@ sudo pacman -Rns pipewire-media-session
 systemctl --user restart wireplumber
 ```
 
-Когда ломает не один пакет, а обновление целиком, порядок работы другой — об этом в статье [что делать, если после обновления сломалось](https://ordanax.github.io/slomalos-posle-obnovleniya-otkat).
+Когда ломает не один пакет, а обновление целиком, порядок работы другой — об этом в статье [что делать, если после обновления сломалось](/slomalos-posle-obnovleniya-otkat).
 
 ## Как проверить автозапуск pipewire в systemd --user?
 
@@ -225,7 +225,7 @@ sudo pacman -S pipewire wireplumber pipewire-pulse libpulse
 pacman -Q pipewire-jack || sudo pacman -S pipewire-jack
 ```
 
-Отдельная боль — звук с HDMI на карте NVIDIA: там нужно правильно выбрать вывод на стороне PulseAudio-слоя, об этом в статье [PipeWire и HDMI на NVIDIA](https://ordanax.github.io/nvidia-pipewire-hdmi-zvuk).
+Отдельная боль — звук с HDMI на карте NVIDIA: там нужно правильно выбрать вывод на стороне PulseAudio-слоя, об этом в статье [PipeWire и HDMI на NVIDIA](/nvidia-pipewire-hdmi-zvuk).
 
 ## Частые вопросы
 

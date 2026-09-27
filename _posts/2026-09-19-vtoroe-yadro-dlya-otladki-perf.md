@@ -31,9 +31,9 @@ edit: true
 
 Когда это реально нужно? Три типовых сценария. Первый: система периодически зависает, и ты хочешь понять, какая подсистема виновата — `perf top` на втором ядре покажет горячие функции без пересборки. Второй: ядро падает в панику, и нужен дамп для разбора — тут без `kdump` и `crash` не обойтись. Третий: свежее обновление ядра сломало загрузку, а работать надо прямо сейчас — LTS поднимает систему за минуту.
 
-Практичный вариант — `linux-lts`. Он ставится рядом с основным ядром и работает как безопасное запасное: если свежее ядро не загрузилось, выбираешь LTS в меню GRUB и продолжаешь работать. Подробнее про выбор — в статье «[Какое ядро выбрать: linux, linux-lts, zen или hardened](https://ordanax.github.io/kakoe-yadro-vybrat-linux-lts-zen-hardened)».
+Практичный вариант — `linux-lts`. Он ставится рядом с основным ядром и работает как безопасное запасное: если свежее ядро не загрузилось, выбираешь LTS в меню GRUB и продолжаешь работать. Подробнее про выбор — в статье «[Какое ядро выбрать: linux, linux-lts, zen или hardened](/kakoe-yadro-vybrat-linux-lts-zen-hardened)».
 
-Второй вариант — собрать своё ядро с `CONFIG_DEBUG_INFO=y`. Это даёт полные символы и для `perf`, и для `crash`. Процесс описан в статье «[Сборка своего ядра за 5 шагов](https://ordanax.github.io/sborka-svoego-yadra-5-shagov)».
+Второй вариант — собрать своё ядро с `CONFIG_DEBUG_INFO=y`. Это даёт полные символы и для `perf`, и для `crash`. Процесс описан в статье «[Сборка своего ядра за 5 шагов](/sborka-svoego-yadra-5-shagov)».
 
 ## Как поставить второе ядро рядом с основным?
 
@@ -43,7 +43,7 @@ mkinitcpio -P
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-`mkinitcpio -P` пересобирает initramfs для всех установленных ядер, а `grub-mkconfig` добавляет новые пункты в меню загрузчика. После этого в меню GRUB появляются оба ядра. Как различать их в меню, разобрано в статье «[Несколько ядер в меню: linux, linux-lts, hardened](https://ordanax.github.io/neskolko-yader-v-menyu-linux-lts-hardened)».
+`mkinitcpio -P` пересобирает initramfs для всех установленных ядер, а `grub-mkconfig` добавляет новые пункты в меню загрузчика. После этого в меню GRUB появляются оба ядра. Как различать их в меню, разобрано в статье «[Несколько ядер в меню: linux, linux-lts, hardened](/neskolko-yader-v-menyu-linux-lts-hardened)».
 
 Для отладки загружайся в LTS с подробным выводом. Убери `quiet` из параметров ядра:
 
@@ -223,13 +223,13 @@ GRUB_CMDLINE_LINUX_DEFAULT="console=ttyS0,115200"
 
 ### Как часто чистить старые ядра?
 
-Ядра копятся в `/boot` и занимают место. Раз в пару месяцев удаляй неиспользуемые — как это сделать, описано в статье «[Чистка старых ядер и initramfs](https://ordanax.github.io/chistka-staryh-yader-initramfs)».
+Ядра копятся в `/boot` и занимают место. Раз в пару месяцев удаляй неиспользуемые — как это сделать, описано в статье «[Чистка старых ядер и initramfs](/chistka-staryh-yader-initramfs)».
 
 ## Полезные ресурсы
 
 - [Perf — ArchWiki](https://wiki.archlinux.org/title/Perf) — документация по установке и использованию perf.
 - [Kdump — ArchWiki](https://wiki.archlinux.org/title/Kdump) — настройка kdump в Arch Linux.
-- [Подпись ядра для Secure Boot](https://ordanax.github.io/podpis-yadra-secure-boot-sbctl) — если Secure Boot включён, второе ядро тоже нужно подписать.
+- [Подпись ядра для Secure Boot](/podpis-yadra-secure-boot-sbctl) — если Secure Boot включён, второе ядро тоже нужно подписать.
 
 ## Заключение
 

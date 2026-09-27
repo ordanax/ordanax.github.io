@@ -58,7 +58,7 @@ w       → записать
 sudo mkfs.fat -F 32 /dev/nvme0n1p1
 ```
 
-Подробнее про GPT и типы разделов — в статье [«Разметка диска с нуля: GPT vs MBR»](https://ordanax.github.io/razmetka-diska-gpt-mbr).
+Подробнее про GPT и типы разделов — в статье [«Разметка диска с нуля: GPT vs MBR»](/razmetka-diska-gpt-mbr).
 
 ## Как создать PV, VG и LV
 
@@ -98,7 +98,7 @@ sudo mount /dev/vg0/home /mnt/home
 sudo pacstrap -K /mnt base linux linux-firmware lvm2
 ```
 
-После `genfstab` и `arch-chroot` продолжайте по [пошаговому руководству установки Arch 2026](https://ordanax.github.io/ustanovka-archlinux-2026-poshagovaya).
+После `genfstab` и `arch-chroot` продолжайте по [пошаговому руководству установки Arch 2026](/ustanovka-archlinux-2026-poshagovaya).
 
 ## Как настроить mkinitcpio для LVM
 
@@ -178,7 +178,7 @@ sudo vgextend vg0 /dev/sdb1
 
 **Что делать после установки?**
 
-Стандартный набор: sudo, пароль, обновление, зеркала. Подробнее — в статье [«Что делать после установки Arch: первый час»](https://ordanax.github.io/pervyi-chas-posle-ustanovki-arch).
+Стандартный набор: sudo, пароль, обновление, зеркала. Подробнее — в статье [«Что делать после установки Arch: первый час»](/pervyi-chas-posle-ustanovki-arch).
 
 ## Заключение
 

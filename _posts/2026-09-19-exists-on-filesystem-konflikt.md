@@ -56,7 +56,7 @@ Errors occurred, no packages were upgraded.
 
 Чаще всего конфликт возникает по одной из причин:
 
-- Пакет из AUR установил файл вручную. Например, PKGBUILD с `make install` вместо `make DESTDIR="$pkgdir" install` кладёт файлы прямо в систему, минуя базу pacman. Подробнее про установку из AUR — в статье «[Установка пакетов из AUR](https://ordanax.github.io/aur-install)».
+- Пакет из AUR установил файл вручную. Например, PKGBUILD с `make install` вместо `make DESTDIR="$pkgdir" install` кладёт файлы прямо в систему, минуя базу pacman. Подробнее про установку из AUR — в статье «[Установка пакетов из AUR](/aur-install)».
 - Шрифты, бинарники или systemd-юниты, скопированные вручную в `/usr/share`, `/usr/bin` или `/etc/systemd/system`. Классика — ручная установка шрифтов в `/usr/share/fonts` вместо `~/.local/share/fonts`.
 - Пакет переименовали, а старый оставил файлы на диске. Новый пакет хочет создать те же пути, но старые файлы никто не удалил.
 - Остатки конфигурации после удаления пакета без `pacman -Rns` (без удаления конфигов).
@@ -110,7 +110,7 @@ pacman -Syu
 rm /usr/share/fonts/opentype/some-font/SomeFont.otf
 ```
 
-И снова `pacman -Syu`. Общая методика диагностики таких проблем — в статье «[Методика решения проблем в Arch Linux](https://ordanax.github.io/metodika-resheniya-problem-arch)».
+И снова `pacman -Syu`. Общая методика диагностики таких проблем — в статье «[Методика решения проблем в Arch Linux](/metodika-resheniya-problem-arch)».
 
 ## Когда --overwrite оправдан
 
@@ -161,7 +161,7 @@ pacman -Qkk <имя-пакета>
 journalctl -b -p err
 ```
 
-Так ты заметишь проблемы, которые могли возникнуть из-за замены файлов. Полный разбор команд pacman — в статье «[pacman от А до Я: команды](https://ordanax.github.io/pacman-ot-a-do-ya-komandy)». А если после обновления pacman ругается на повреждённую базу — смотри «[pacman fails to commit: invalid or corrupted](https://ordanax.github.io/pacman-fails-to-commit-invalid-corrupted)».
+Так ты заметишь проблемы, которые могли возникнуть из-за замены файлов. Полный разбор команд pacman — в статье «[pacman от А до Я: команды](/pacman-ot-a-do-ya-komandy)». А если после обновления pacman ругается на повреждённую базу — смотри «[pacman fails to commit: invalid or corrupted](/pacman-fails-to-commit-invalid-corrupted)».
 
 ## Частые вопросы
 

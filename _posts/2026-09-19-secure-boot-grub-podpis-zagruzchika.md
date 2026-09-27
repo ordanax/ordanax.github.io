@@ -96,7 +96,7 @@ sbctl verify
 
 Если подписать только GRUB, а ядро нет — система всё равно загрузится, потому что ядро запускает GRUB, а не прошивка. Но подпись ядра нужна для прямой загрузки (EFISTUB, UKI) и для systemd-boot. Подписывай ядро сразу, чтобы потом не переделывать.
 
-Подробный разбор sbctl с примерами — в статье «[Secure Boot в Arch Linux через sbctl](https://ordanax.github.io/secure-boot-arch-sbctl)».
+Подробный разбор sbctl с примерами — в статье «[Secure Boot в Arch Linux через sbctl](/secure-boot-arch-sbctl)».
 
 ## Как подписать GRUB через shim-signed и MokManager?
 
@@ -124,7 +124,7 @@ sudo grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-Загрузочная запись должна указывать на shimx64.efi, а не на grubx64.efi. Создать запись и проверить порядок загрузки можно через efibootmgr — разбор в статье «[Порядок загрузки в NVRAM через efibootmgr](https://ordanax.github.io/poryadok-zagruzki-nvram-efibootmgr)».
+Загрузочная запись должна указывать на shimx64.efi, а не на grubx64.efi. Создать запись и проверить порядок загрузки можно через efibootmgr — разбор в статье «[Порядок загрузки в NVRAM через efibootmgr](/poryadok-zagruzki-nvram-efibootmgr)».
 
 Пример создания записи: `sudo efibootmgr --create --disk /dev/nvme0n1 --part 1 --label "Arch Linux (shim)" --loader '\EFI\shimx64.efi'`. Номер диска и раздела подставляй свои.
 
@@ -202,7 +202,7 @@ Exec = /usr/bin/sbsign --key /etc/efi-keys/MOK.key --cert /etc/efi-keys/MOK.crt 
 
 Если у тебя несколько ядер (linux и linux-lts) — подписывай каждое. Для sbctl: `sbctl sign --save /boot/vmlinuz-linux-lts`.
 
-Если после обновления GRUB не видит новое ядро — смотри «[GRUB не видит ядра после обновления](https://ordanax.github.io/grub-ne-vidit-yadra-posle-obnovleniya)».
+Если после обновления GRUB не видит новое ядро — смотри «[GRUB не видит ядра после обновления](/grub-ne-vidit-yadra-posle-obnovleniya)».
 
 ### Модули Nvidia
 
@@ -216,7 +216,7 @@ sudo mokutil --import /usr/share/nvidia/nvidia-modsign-crt.der
 
 ### Initramfs
 
-С GRUB initramfs загружает сам GRUB, и прошивка её не проверяет. initramfs-linux.img — обычный файл, который GRUB читает с диска. Но если перейдёшь на прямую загрузку ядра (EFISTUB или UKI) — подписывать придётся весь образ целиком. Про разницу способов загрузки — в статье «[Смена загрузчика с GRUB на systemd-boot](https://ordanax.github.io/smena-zagruzchika-s-grub-na-systemd-boot)».
+С GRUB initramfs загружает сам GRUB, и прошивка её не проверяет. initramfs-linux.img — обычный файл, который GRUB читает с диска. Но если перейдёшь на прямую загрузку ядра (EFISTUB или UKI) — подписывать придётся весь образ целиком. Про разницу способов загрузки — в статье «[Смена загрузчика с GRUB на systemd-boot](/smena-zagruzchika-s-grub-na-systemd-boot)».
 
 ## Частые вопросы
 

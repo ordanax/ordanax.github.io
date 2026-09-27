@@ -59,11 +59,11 @@ upower --dump | grep -A4 'energy-rate'
 
 ## Как переключать графику: nvidia-prime и опции ядра?
 
-Классическая схема — офлоад в переменных окружения. `prime-run` перед игрой выставляет `__GLX_VENDOR_LIBRARY_NAME`, `__NV_PRIME_RENDER_OFFLOAD` и `__GLFW_LIBRARY_PATH`, и процесс уходит на NVIDIA. Про остальные тонкости — [Prime, Run и Steam на гибридной графике](https://ordanax.github.io/gibridnaya-grafika-prime-run-steam).
+Классическая схема — офлоад в переменных окружения. `prime-run` перед игрой выставляет `__GLX_VENDOR_LIBRARY_NAME`, `__NV_PRIME_RENDER_OFFLOAD` и `__GLFW_LIBRARY_PATH`, и процесс уходит на NVIDIA. Про остальные тонкости — [Prime, Run и Steam на гибридной графике](/gibridnaya-grafika-prime-run-steam).
 
 Остаток мощности можно держать под рукой и без перезапуска: `prime-select ondemand` переводит систему в режим экономии, `prime-select off` полностью отключает dGPU в текущей сессии.
 
-Два параметра ядра стоит зафиксировать сразу. Первый включает эмуляцию fbdev на карте NVIDIA — без неё консоль может не отрисоваться на нужном выходе, и это же лечит часть проблем с [чёрным экраном и nomodeset](https://ordanax.github.io/nvidia-chernyj-ekran-nomodeset). Второй убирает nouveau из уравнения, если он мешает:
+Два параметра ядра стоит зафиксировать сразу. Первый включает эмуляцию fbdev на карте NVIDIA — без неё консоль может не отрисоваться на нужном выходе, и это же лечит часть проблем с [чёрным экраном и nomodeset](/nvidia-chernyj-ekran-nomodeset). Второй убирает nouveau из уравнения, если он мешает:
 
 ```bash
 # /etc/modprobe.d/blacklist-nouveau.conf
@@ -145,7 +145,7 @@ sudo nvidia-smi -pl 60
 nvidia-smi -pl 100
 ```
 
-Ограничение мощности упирается в запрос карты и помогает сильнее, чем снижение частот. Про частоты, turbo и limits — отдельный разбор про [перегрев, вентиляторы и Coolbits](https://ordanax.github.io/nvidia-peregrev-ventilyatory-coolbits).
+Ограничение мощности упирается в запрос карты и помогает сильнее, чем снижение частот. Про частоты, turbo и limits — отдельный разбор про [перегрев, вентиляторы и Coolbits](/nvidia-peregrev-ventilyatory-coolbits).
 
 Для замера эффекта помогает `powertop` — он показывает, какие устройства просыпаются и сколько съедают:
 

@@ -51,9 +51,9 @@ sudo localectl set-keymap ru
 KEYMAP=ru
 ```
 
-После перезагрузки консоль будет загружаться с русской раскладкой. Важный момент: в консоли полноценное переключение через `Alt+Shift` не работает так же удобно, как в графическом окружении. Подробнее — в статье про [setlocale и кракозябры](https://ordanax.github.io/setlocale-karakuli).
+После перезагрузки консоль будет загружаться с русской раскладкой. Важный момент: в консоли полноценное переключение через `Alt+Shift` не работает так же удобно, как в графическом окружении. Подробнее — в статье про [setlocale и кракозябры](/setlocale-karakuli).
 
-Если хочешь тренировать слепую печать на русской раскладке, посмотри [настройку Klavaro для русской раскладки](https://ordanax.github.io/klavaro-russkaya-raskladka).
+Если хочешь тренировать слепую печать на русской раскладке, посмотри [настройку Klavaro для русской раскладки](/klavaro-russkaya-raskladka).
 
 ## Как настроить русскую раскладку в X11/Wayland
 
@@ -85,7 +85,7 @@ Section "InputClass"
 EndSection
 ```
 
-Этот конфиг работает для Xorg напрямую — i3, Openbox,bspwm, LightDM. Настройка терминала Ghostty — в отдельной статье — [конфигурация Ghostty](https://ordanax.github.io/ghostty-terminal-konfiguraciya).
+Этот конфиг работает для Xorg напрямую — i3, Openbox,bspwm, LightDM. Настройка терминала Ghostty — в отдельной статье — [конфигурация Ghostty](/ghostty-terminal-konfiguraciya).
 
 ### GNOME
 
@@ -131,7 +131,7 @@ sudo locale-gen
 echo "LANG=ru_RU.UTF-8" | sudo tee /etc/locale.conf
 ```
 
-Подробности — в статье про [setlocale и кракозябры](https://ordanax.github.io/setlocale-karakuli).
+Подробности — в статье про [setlocale и кракозябры](/setlocale-karakuli).
 
 ### Устанавливаем шрифты
 
@@ -165,4 +165,4 @@ sudo pacman -S terminus-font ttf-dejavu ttf-liberation
 
 - [ArchWiki: Linux console — Keyboard configuration](https://wiki.archlinux.org/title/Linux_console/Keyboard_configuration)
 - [ArchWiki: Xorg — Keyboard configuration](https://wiki.archlinux.org/title/Xorg/Keyboard_configuration)
-- [Первый час после установки Arch](https://ordanax.github.io/pervyi-chas-posle-ustanovki-arch) — локали, часы и базовые пакеты после установки
+- [Первый час после установки Arch](/pervyi-chas-posle-ustanovki-arch) — локали, часы и базовые пакеты после установки

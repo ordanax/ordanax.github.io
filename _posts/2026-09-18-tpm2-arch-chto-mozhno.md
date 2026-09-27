@@ -63,7 +63,7 @@ systemd-analyze has-tpm2
 
 Главный кейс: при загрузке система сама открывает зашифрованный раздел, без ввода пароля. Пароль при этом остаётся в LUKS-слоте как запасной вариант.
 
-Перед любыми манипуляциями сделай [бэкап заголовков LUKS](https://ordanax.github.io/luks2-keyfile-smena-parolei) — потеря заголовка равна потере данных.
+Перед любыми манипуляциями сделай [бэкап заголовков LUKS](/luks2-keyfile-smena-parolei) — потеря заголовка равна потере данных.
 
 ### Шаг 1. Проверить список TPM-устройств
 
@@ -87,7 +87,7 @@ sudo systemd-cryptenroll --tpm2-device=auto --tpm2-pcrs=0+7 /dev/sdaX
 sudo systemd-cryptenroll /dev/sdaX
 ```
 
-В выводе появится строка `tpm2` — новый слот создан. Для корневого раздела на Arch потребуется настроить initramfs с хуками `systemd` и `sd-encrypt`. Порядок важен — неправильная последовательность сделает систему незагружаемой. Если ставил Arch недавно, в [пошаговом руководстве](https://ordanax.github.io/ustanovka-archlinux-2026-poshagovaya) это уже может быть сделано.
+В выводе появится строка `tpm2` — новый слот создан. Для корневого раздела на Arch потребуется настроить initramfs с хуками `systemd` и `sd-encrypt`. Порядок важен — неправильная последовательность сделает систему незагружаемой. Если ставил Arch недавно, в [пошаговом руководстве](/ustanovka-archlinux-2026-poshagovaya) это уже может быть сделано.
 
 ## Что такое PCR и как их трогать
 
@@ -123,7 +123,7 @@ systemd-analyze pcrs
 
 **Не обновлять прошивку без понимания PCR.** Обновление UEFI меняет PCR 0, и TPM-ключ перестанет работать. Не критично — пароль спасёт, но неприятно.
 
-**Не полагаться на TPM как на замену хорошей разметке диска.** TPM — дополнительный слой. Базовая защита — это всё ещё правильная [разметка GPT с LUKS](https://ordanax.github.io/razmetka-diska-gpt-mbr).
+**Не полагаться на TPM как на замену хорошей разметке диска.** TPM — дополнительный слой. Базовая защита — это всё ещё правильная [разметка GPT с LUKS](/razmetka-diska-gpt-mbr).
 
 ### Отзыв TPM-ключа
 
@@ -160,4 +160,4 @@ TPM 2.0 на Arch Linux — не экзотика, а штатная фича sy
 
 - [Trusted_Platform_Module](https://wiki.archlinux.org/title/Trusted_Platform_Module) — ArchWiki: проверка TPM, PCR, LUKS, SSH, GnuPG
 - [Systemd-cryptenroll](https://wiki.archlinux.org/title/Systemd-cryptenroll) — ArchWiki: запись TPM/FIDO2/паролей в LUKS2-слоты
-- [Secure Boot на Arch](https://ordanax.github.io/secure-boot-arch-sbctl) — PCR 7 меняется при включении Secure Boot, разблокировка может сломаться
+- [Secure Boot на Arch](/secure-boot-arch-sbctl) — PCR 7 меняется при включении Secure Boot, разблокировка может сломаться

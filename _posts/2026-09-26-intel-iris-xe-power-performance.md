@@ -24,7 +24,7 @@ edit: true
 
 Iris Xe встречается в 11-м поколении (Tiger Lake, 96 EU) и 12-м (Alder Lake-P, Xe-LP), плюс у UHD-графики 8-го и 10-го поколений — там ядер меньше, а частота ниже. Отдельная Iris Xe MAX в ноутбуках с Tiger Lake-H несёт на борту HBM, но в Arch на ноутбуках с обычной графикой ты имеешь дело с UMA-вариантом.
 
-Ключевая особенность — общий power budget. Пакет PL1/PL2 ограничивает CPU и GPU вместе, поэтому turbo процессора напрямую забирает частоты у GT. При отладке похожего класса проблем на Ryzen у меня уже есть разбор: [низкая частота кадров на Ryzen iGPU](https://ordanax.github.io/nizkaya-chastota-kadrov-ryzen-igpu). На Intel то же самое выглядит иначе — вместо игры на драйвере решает энергетический лимит, а не сам GPU.
+Ключевая особенность — общий power budget. Пакет PL1/PL2 ограничивает CPU и GPU вместе, поэтому turbo процессора напрямую забирает частоты у GT. При отладке похожего класса проблем на Ryzen у меня уже есть разбор: [низкая частота кадров на Ryzen iGPU](/nizkaya-chastota-kadrov-ryzen-igpu). На Intel то же самое выглядит иначе — вместо игры на драйвере решает энергетический лимит, а не сам GPU.
 
 ```bash
 # кто сидит на GPU и какой драйвер загружен
@@ -112,7 +112,7 @@ INTEL_PERF=1 glxgears -v
 INTEL_PERF=1 vkcube
 ```
 
-Температуры GPU и общие кривые по частоте я разбирал отдельно — [температура и частота через sysfs/class/drm](https://ordanax.github.io/temperatura-chastota-sys-class-drm).
+Температуры GPU и общие кривые по частоте я разбирал отдельно — [температура и частота через sysfs/class/drm](/temperatura-chastota-sys-class-drm).
 
 ## Как измерить и изменить лимиты мощности?
 
@@ -173,7 +173,7 @@ sudo dmidecode -t 17 | grep -iE 'channel|size|locator'
 
 - [ArchWiki: Intel graphics](https://wiki.archlinux.org/title/Intel_graphics) — установка Mesa, VAAPI, switcheroo-control, разбор известных проблем с Xe.
 - [ArchWiki: Kernel module parameters](https://wiki.archlinux.org/title/Kernel_module_parameters) — полный список параметров ядра с синтаксисом `module.param=value`.
-- [Параметры ядра из командной строки](https://ordanax.github.io/parametry-yadra-komandnaya-stroka) — как читать и задавать параметры модулей, cmdline и sysfs.
+- [Параметры ядра из командной строки](/parametry-yadra-komandnaya-stroka) — как читать и задавать параметры модулей, cmdline и sysfs.
 
 ## Заключение
 

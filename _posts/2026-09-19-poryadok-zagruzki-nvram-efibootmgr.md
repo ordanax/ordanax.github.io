@@ -102,7 +102,7 @@ efibootmgr --create --disk /dev/nvme0n1 --part 1 --label "Arch Linux" --loader "
 ls /boot/EFI
 ```
 
-Если ESP смонтирована в `/boot`. Подробнее про раскладку разделов — в статье «[Один EFI-раздел на две системы](https://ordanax.github.io/odin-efi-razdel-dualboot)».
+Если ESP смонтирована в `/boot`. Подробнее про раскладку разделов — в статье «[Один EFI-раздел на две системы](/odin-efi-razdel-dualboot)».
 
 После создания проверь результат:
 
@@ -130,7 +130,7 @@ efibootmgr -o 0002,0001,0000
 
 Запись, которой нет в `BootOrder`, прошивка при старте не трогает. Она останется в списке, но загрузиться с неё можно только через `BootNext` или меню выбора загрузки в BIOS. Если хочешь полностью убрать запись из порядка, просто не включай её номер в список.
 
-Хочешь, чтобы первой всегда грузилась Windows, а Arch оставался вторым? Поставь номер Windows-записи в начало списка. Если Windows-запись пропала после установки Arch, её можно восстановить — разбор в статье «[Восстановление UEFI-записи Windows после установки Arch](https://ordanax.github.io/vosstanovlenie-uefi-zapisi-windows-posle-arch)».
+Хочешь, чтобы первой всегда грузилась Windows, а Arch оставался вторым? Поставь номер Windows-записи в начало списка. Если Windows-запись пропала после установки Arch, её можно восстановить — разбор в статье «[Восстановление UEFI-записи Windows после установки Arch](/vosstanovlenie-uefi-zapisi-windows-posle-arch)».
 
 ## Как загрузиться один раз с другого устройства
 
@@ -190,7 +190,7 @@ efibootmgr -t 5
 
 ### Команда выполняется на live-USB
 
-`efibootmgr` работает только на реальном железе с доступом к переменным UEFI. В виртуальной машине или в chroot без проброса переменных получишь ошибку `Could not delete Boot variable` или `EFI variables are not supported`. Разбор этой ошибки — в статье «[EFI variables are not supported: efibootmgr](https://ordanax.github.io/efi-variables-not-supported-efibootmgr)».
+`efibootmgr` работает только на реальном железе с доступом к переменным UEFI. В виртуальной машине или в chroot без проброса переменных получишь ошибку `Could not delete Boot variable` или `EFI variables are not supported`. Разбор этой ошибки — в статье «[EFI variables are not supported: efibootmgr](/efi-variables-not-supported-efibootmgr)».
 
 С live-USB всё работает: переменные NVRAM общие для прошивки, а не для установленной системы. Загрузился с флешки — и можешь править записи той же командой. Главное — указывать реальные диски и разделы, а не те, что видит live-система.
 
@@ -204,7 +204,7 @@ efibootmgr -t 5
 
 ### Пропал пункт загрузки — экран «No bootable device»
 
-Если прошивка не находит ни одной рабочей записи, появляется сообщение вроде `No bootable device`. Это не значит, что система сломана — просто запись в NVRAM потерялась. Пошаговое восстановление — в статье «[Пропал пункт загрузки: No bootable device](https://ordanax.github.io/propal-punkt-zagruzki-no-bootable-device)».
+Если прошивка не находит ни одной рабочей записи, появляется сообщение вроде `No bootable device`. Это не значит, что система сломана — просто запись в NVRAM потерялась. Пошаговое восстановление — в статье «[Пропал пункт загрузки: No bootable device](/propal-punkt-zagruzki-no-bootable-device)».
 
 ### Запись есть, но система не грузится
 

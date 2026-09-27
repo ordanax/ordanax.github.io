@@ -103,7 +103,7 @@ sudo mount /dev/sda2 /mnt/windows
 
 Если Windows и Arch живут на разных дисках и у каждого свой EFI-раздел — это классическая проблема. `os-prober` ищет загрузчик Windows на разделах текущего ESP. Если Windows boot-менеджер лежит на другом диске, он не будет найден.
 
-Решение: убедись, что оба загрузчика используют один ESP, либо добавь запись Windows вручную через `/etc/grub.d/40_custom`. Подробнее — в статье [Один EFI-раздел для dual boot](https://ordanax.github.io/odin-efi-razdel-dualboot).
+Решение: убедись, что оба загрузчика используют один ESP, либо добавь запись Windows вручную через `/etc/grub.d/40_custom`. Подробнее — в статье [Один EFI-раздел для dual boot](/odin-efi-razdel-dualboot).
 
 ### Windows на отдельном диске
 
@@ -134,7 +134,7 @@ menuentry "Windows 11" --class windows {
 
 ### systemd-boot и os-prober
 
-Если ты используешь `systemd-boot` вместо GRUB, `os-prober` не нужен — systemd-boot автоматически подхватывает Windows Boot Manager через ESP. А вот если GRUB после обновления перестал видеть ядра — смотри [GRUB не видит ядра после обновления](https://ordanax.github.io/grub-ne-vidit-yadra-posle-obnovleniya).
+Если ты используешь `systemd-boot` вместо GRUB, `os-prober` не нужен — systemd-boot автоматически подхватывает Windows Boot Manager через ESP. А вот если GRUB после обновления перестал видеть ядра — смотри [GRUB не видит ядра после обновления](/grub-ne-vidit-yadra-posle-obnovleniya).
 
 ## Частые вопросы
 
@@ -144,7 +144,7 @@ menuentry "Windows 11" --class windows {
 
 ### os-prober не видит Windows на втором диске
 
-Убедись, что раздел NTFS виден через `lsblk`, и проверь наличие `ntfs-3g`. Если Windows на отдельном диске с отдельным ESP — в этом случае лучше добавить запись вручную через `40_custom`. Также смотри статью [Dualboot: Windows пропала из GRUB](https://ordanax.github.io/dualboot-windows-propala-iz-grub).
+Убедись, что раздел NTFS виден через `lsblk`, и проверь наличие `ntfs-3g`. Если Windows на отдельном диске с отдельным ESP — в этом случае лучше добавить запись вручную через `40_custom`. Также смотри статью [Dualboot: Windows пропала из GRUB](/dualboot-windows-propala-iz-grub).
 
 ### Нужен ли os-prober, если в меню только Arch и Windows?
 
@@ -168,8 +168,8 @@ sudo os-prober
 
 - [GRUB — ArchWiki](https://wiki.archlinux.org/title/GRUB): полная документация по настройке GRUB.
 - [Dual boot with Windows — ArchWiki](https://wiki.archlinux.org/title/Dual_boot_with_Windows): пошаговое руководство по dual boot.
-- [Разметка диска GPT/MBR](https://ordanax.github.io/razmetka-diska-gpt-mbr): как правильно разметить диск перед установкой.
-- [Переустановка GRUB после поломки](https://ordanax.github.io/pereustanovka-grub-posle-polomki): если GRUB потерялся целиком.
+- [Разметка диска GPT/MBR](/razmetka-diska-gpt-mbr): как правильно разметить диск перед установкой.
+- [Переустановка GRUB после поломки](/pereustanovka-grub-posle-polomki): если GRUB потерялся целиком.
 
 ## Заключение
 

@@ -23,7 +23,7 @@ edit: true
 
 Встроенная графика не имеет собственной видеопамяти: она берёт системную DDR. Отсюда первая и самая частая причина — одноканальный режим памяти. Двухканальный контроллер даёт iGPU почти вдвое больше суммарной полосы, и в сценариях, где GPU упирается в пропускную способность (растеризация, текстуры, шейдеры без окклюзии), просадка легко превышает 30%.
 
-Вторая причина — сама память. Стандартный JEDEC-профиль держит DDR4/DDR5 на низких частотах с высокой латентностью, пока не включён XMP (или EXPO для Ryzen). Пока профиль не активирован, iGPU получает и полосу, и отзывчивость ниже заявленных для платы значений. Подробнее про сам графический стек и драйвер — в статье [AMD GPU: Radeon или amdgpu](https://ordanax.github.io/amd-apu-radeon-ili-amdgpu).
+Вторая причина — сама память. Стандартный JEDEC-профиль держит DDR4/DDR5 на низких частотах с высокой латентностью, пока не включён XMP (или EXPO для Ryzen). Пока профиль не активирован, iGPU получает и полосу, и отзывчивость ниже заявленных для платы значений. Подробнее про сам графический стек и драйвер — в статье [AMD GPU: Radeon или amdgpu](/amd-apu-radeon-ili-amdgpu).
 
 Третий фактор — CPU-bound сценарии. Когда узкое место не в памяти, а в логике игры, «разгон GPU» не даёт ничего: узко место в процессоре, и iGPU лишь отображает готовые кадры. Именно в таких сценариях помогают governor `performance` и отключение энергосбережения — об этом ниже.
 
@@ -44,7 +44,7 @@ glxinfo -B | grep "OpenGL core profile version"
 vulkaninfo --summary | grep -E "deviceName|driverName|apiVersion"
 ```
 
-В `deviceName` ищи `RADV`, в `driverInfo` — версию Mesa. Если в списке RADV нет, а есть llvmpipe или lavapipe, проблема снова в драйвере, а не в железе. Вторую половину проверки — как настроен Vulkan для игр — разбирали в гайде [по настройке amdgpu, Vulkan и Mesa](https://ordanax.github.io/nastrojka-amdgpu-vulkan-mesa-dlya-igr).
+В `deviceName` ищи `RADV`, в `driverInfo` — версию Mesa. Если в списке RADV нет, а есть llvmpipe или lavapipe, проблема снова в драйвере, а не в железе. Вторую половину проверки — как настроен Vulkan для игр — разбирали в гайде [по настройке amdgpu, Vulkan и Mesa](/nastrojka-amdgpu-vulkan-mesa-dlya-igr).
 
 Проверь частоту и режим памяти:
 
@@ -152,7 +152,7 @@ sudo pacman -S cpupower cpufrequtils
 
 - [AMDGPU — ArchWiki](https://wiki.archlinux.org/title/AMDGPU) — параметры ядра, power play, DRI.
 - [CPU frequency scaling — ArchWiki](https://wiki.archlinux.org/title/CPU_frequency_scaling) — governors, EPP, amd_pstate.
-- [FreeSync на AMD: как включить](https://ordanax.github.io/freesync-na-amd-kak-vklyuchit) — если после настроек остаётся разрыв между FPS и ощущением плавности.
+- [FreeSync на AMD: как включить](/freesync-na-amd-kak-vklyuchit) — если после настроек остаётся разрыв между FPS и ощущением плавности.
 
 ## Заключение
 

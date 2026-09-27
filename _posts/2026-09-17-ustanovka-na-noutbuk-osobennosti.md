@@ -100,7 +100,7 @@ sudo pacman -S iwd
 sudo systemctl enable --now iwd
 ```
 
-Подключение — тем же `iwctl`, что и на этапе установки. Про классический вариант через wpa_supplicant я писал отдельно — [настройка Wi-Fi через wpa_supplicant](https://ordanax.github.io/wifi-nastroyka-wpa-supplicant).
+Подключение — тем же `iwctl`, что и на этапе установки. Про классический вариант через wpa_supplicant я писал отдельно — [настройка Wi-Fi через wpa_supplicant](/wifi-nastroyka-wpa-supplicant).
 
 ## Что учесть с тачпадом
 
@@ -154,9 +154,9 @@ sudo pacman -S amd-ucode     # для процессоров AMD
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-Про графику: для встроенной Intel и AMD ничего ставить не нужно — драйверы уже в ядре. Для ноутбуков с NVIDIA (в том числе гибридных) есть отдельный гайд — [драйвер NVIDIA в Arch Linux](https://ordanax.github.io/nvidia-drayver-arch-linux).
+Про графику: для встроенной Intel и AMD ничего ставить не нужно — драйверы уже в ядре. Для ноутбуков с NVIDIA (в том числе гибридных) есть отдельный гайд — [драйвер NVIDIA в Arch Linux](/nvidia-drayver-arch-linux).
 
-Полный порядок действий от загрузки ISO до первого входа — в [чек-листе установки Arch Linux](https://ordanax.github.io/chek-list-po-ustanovke-archlinux-2019), а свежее пошаговое руководство — в статье [установка Arch Linux 2026](https://ordanax.github.io/ustanovka-archlinux-2026-poshagovaya).
+Полный порядок действий от загрузки ISO до первого входа — в [чек-листе установки Arch Linux](/chek-list-po-ustanovke-archlinux-2019), а свежее пошаговое руководство — в статье [установка Arch Linux 2026](/ustanovka-archlinux-2026-poshagovaya).
 
 ## Частые вопросы
 

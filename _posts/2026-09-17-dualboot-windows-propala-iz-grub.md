@@ -107,7 +107,7 @@ efibootmgr
 sudo efibootmgr -o 0000,0001
 ```
 
-Подставь свои номера: сначала GRUB, потом Windows. BIOS снова увидит обе системы. Если `efibootmgr` ругается на `EFI variables are not supported` — это отдельная история про кривые прошивки, разобрана в статье про [EFI variables not supported](https://ordanax.github.io/efi-variables-not-supported-efibootmgr).
+Подставь свои номера: сначала GRUB, потом Windows. BIOS снова увидит обе системы. Если `efibootmgr` ругается на `EFI variables are not supported` — это отдельная история про кривые прошивки, разобрана в статье про [EFI variables not supported](/efi-variables-not-supported-efibootmgr).
 
 ## Если GRUB вообще не грузится
 
@@ -171,5 +171,5 @@ Windows пропала из GRUB почти всегда по одной при�
 
 - [ArchWiki: GRUB](https://wiki.archlinux.org/title/GRUB): официальная документация по установке и настройке загрузчика
 - [ArchWiki: Dual boot with Windows](https://wiki.archlinux.org/title/Dual_boot_with_Windows): тонкости сосуществования Arch и Windows
-- [Установка Arch Linux за 15 минут](https://ordanax.github.io/ustanovka-archlinux-2019-za-15-minut): если загрузчик сломался, а переустановить систему проще, чем чинить
-- [Чек-лист по установке Arch Linux](https://ordanax.github.io/chek-list-po-ustanovke-archlinux-2019): порядок шагов, включая установку GRUB
+- [Установка Arch Linux за 15 минут](/ustanovka-archlinux-2019-za-15-minut): если загрузчик сломался, а переустановить систему проще, чем чинить
+- [Чек-лист по установке Arch Linux](/chek-list-po-ustanovke-archlinux-2019): порядок шагов, включая установку GRUB

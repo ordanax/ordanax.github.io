@@ -78,7 +78,7 @@ pacman -Syu
 pacman -Sy archlinux-keyring
 ```
 
-После этого повтори установку проблемного пакета. Чаще всего ошибка уходит. Важно: `pacman -Sy` без полного обновления это частичное обновление, а оно в Arch не поддерживается. Подробнее в статье «[Частичное обновление pacman](https://ordanax.github.io/pacman-chastichnoe-obnovlenie)». Поэтому после `-Sy archlinux-keyring` сразу выполняй `pacman -Syu`.
+После этого повтори установку проблемного пакета. Чаще всего ошибка уходит. Важно: `pacman -Sy` без полного обновления это частичное обновление, а оно в Arch не поддерживается. Подробнее в статье «[Частичное обновление pacman](/pacman-chastichnoe-obnovlenie)». Поэтому после `-Sy archlinux-keyring` сразу выполняй `pacman -Syu`.
 
 ## Как обновить ключи вручную?
 
@@ -194,9 +194,9 @@ ID ключа и точные команды бери с сайта репози
 
 - [Pacman/Package signing, ArchWiki](https://wiki.archlinux.org/title/Pacman/Package_signing): как устроена проверка подписей в pacman.
 - [Pacman-key, ArchWiki](https://wiki.archlinux.org/title/Pacman-key): команды и настройка keyring.
-- [pacman от А до Я: команды](https://ordanax.github.io/pacman-ot-a-do-ya-komandy): шпаргалка по командам pacman.
-- [pacman fails to commit: invalid or corrupted](https://ordanax.github.io/pacman-fails-to-commit-invalid-corrupted): похожая ошибка при повреждении базы пакетов.
-- [Методика решения проблем в Arch Linux](https://ordanax.github.io/metodika-resheniya-problem-arch): общий подход к диагностике.
+- [pacman от А до Я: команды](/pacman-ot-a-do-ya-komandy): шпаргалка по командам pacman.
+- [pacman fails to commit: invalid or corrupted](/pacman-fails-to-commit-invalid-corrupted): похожая ошибка при повреждении базы пакетов.
+- [Методика решения проблем в Arch Linux](/metodika-resheniya-problem-arch): общий подход к диагностике.
 
 ## Заключение
 

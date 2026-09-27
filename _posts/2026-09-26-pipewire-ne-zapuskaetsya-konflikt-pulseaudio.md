@@ -29,7 +29,7 @@ systemctl --user status pipewire wireplumber pipewire-pulse
 
 Норма — три строки `Active: active (running)`. Если в выводе `Loaded: not found`, проблема не в конфиге, а в том, что пакеты не установлены. Если `active (exited)` — демон умер, смотри логи. Если рядом с `wireplumber` написано `Job for wireplumber.service failed`, скорее всего, упал `pipewire`: wireplumber требует живой сокет и не умеет ждать.
 
-Отдельный признак успеха — `pactl info`, где в поле `Server Name` стоит `PulseAudio (on PipeWire 1.2.x)`. Если wireplumber уже установлен и настроен, начни с [этой статьи](https://ordanax.github.io/net-zvuka-posle-ustanovki-wireplumber) — там разобран нормальный рабочий вариант.
+Отдельный признак успеха — `pactl info`, где в поле `Server Name` стоит `PulseAudio (on PipeWire 1.2.x)`. Если wireplumber уже установлен и настроен, начни с [этой статьи](/net-zvuka-posle-ustanovki-wireplumber) — там разобран нормальный рабочий вариант.
 
 ## Почему systemctl --user не находит юнит pipewire?
 
@@ -217,7 +217,7 @@ wpctl status
 pw-cli ls Node
 ```
 
-В `wpctl status` должны быть реальные устройства. Если в списке только `Dummy Output`, демон работает, но не видит звуковых карт — это уже про уровни громкости и переключение между наушниками и колонками, и тут поможет [отдельный разбор](https://ordanax.github.io/zvuk-tolko-naushniki-pereklyuchenie).
+В `wpctl status` должны быть реальные устройства. Если в списке только `Dummy Output`, демон работает, но не видит звуковых карт — это уже про уровни громкости и переключение между наушниками и колонками, и тут поможет [отдельный разбор](/zvuk-tolko-naushniki-pereklyuchenie).
 
 ## Частые вопросы
 
@@ -261,7 +261,7 @@ systemctl --user enable --now pulseaudio.socket
 
 - [ArchWiki: PipeWire](https://wiki.archlinux.org/title/PipeWire) — устройства, маршруты, split-моно и прочие тонкости поверх работающего демона.
 - [ArchWiki: PulseAudio](https://wiki.archlinux.org/title/PulseAudio) — почему coexistence с PipeWire ломает звук и какие файлы конфига читает старый сервер.
-- [Pacman от А до Я: команды](https://ordanax.github.io/pacman-ot-a-do-ya-komandy) — установка комплекта пакетов, поиск владельца файла, безопасное удаление с зависимостями.
+- [Pacman от А до Я: команды](/pacman-ot-a-do-ya-komandy) — установка комплекта пакетов, поиск владельца файла, безопасное удаление с зависимостями.
 
 ## Заключение
 

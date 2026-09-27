@@ -324,4 +324,4 @@ vulkaninfo | grep "GPU id"
 
 ---
 
-**Автор:** [ordanax.github.io](https://ordanax.github.io/)  
+**Автор:** [ordanax.github.io](/)  

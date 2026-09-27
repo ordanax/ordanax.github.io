@@ -49,7 +49,7 @@ networkctl
 
 ### Как выбрать нужный интерфейс
 
-Обычно нужен проводной адаптер — имя начинается на `en` (например, `enp1s0`). В виртуальной машине интерфейс может называться `ens3` или `eth0` — зависит от гипервизора, подробнее в [статье про Arch в VirtualBox/QEMU](https://ordanax.github.io/arch-v-vm-virtualbox-qemu).
+Обычно нужен проводной адаптер — имя начинается на `en` (например, `enp1s0`). В виртуальной машине интерфейс может называться `ens3` или `eth0` — зависит от гипервизора, подробнее в [статье про Arch в VirtualBox/QEMU](/arch-v-vm-virtualbox-qemu).
 
 ## Как настроить статический IP через systemd-networkd
 
@@ -157,7 +157,7 @@ sudo systemctl restart systemd-networkd
 journalctl -u systemd-networkd -f
 ```
 
-Они покажут, если интерфейс не найден или адрес уже занят. Как читать логи — в [статье про journalctl при первой загрузке](https://ordanax.github.io/chitat-journalctl-b-pervaya-zagruzka).
+Они покажут, если интерфейс не найден или адрес уже занят. Как читать логи — в [статье про journalctl при первой загрузке](/chitat-journalctl-b-pervaya-zagruzka).
 
 ## Можно ли использовать NetworkManager вместо systemd-networkd
 
@@ -171,7 +171,7 @@ nmcli con mod "Wired connection 1" ipv4.method manual
 nmcli con up "Wired connection 1"
 ```
 
-Не смешивай `systemd-networkd` и `NetworkManager` на одном интерфейсе — конфликт. Если NetworkManager уже стоит, работай с ним. Для минимальной системы без GUI systemd-networkd — лёгкое и надёжное решение. О настройке после установки — в [«Первом часе после установки Arch»](https://ordanax.github.io/pervyi-chas-posle-ustanovki-arch).
+Не смешивай `systemd-networkd` и `NetworkManager` на одном интерфейсе — конфликт. Если NetworkManager уже стоит, работай с ним. Для минимальной системы без GUI systemd-networkd — лёгкое и надёжное решение. О настройке после установки — в [«Первом часе после установки Arch»](/pervyi-chas-posle-ustanovki-arch).
 
 ## Частые вопросы
 
@@ -198,13 +198,13 @@ Gateway=192.168.1.1
 
 ### Стоит ли использовать статический IP на Wi-Fi?
 
-Обычно нет: роутер стабильно выдаёт один и тот же адрес по DHCP. Статический IP на Wi-Fi нужен, только если ты вещаешь сервисы (медиасервер, принтсервер). Настройка аналогична проводной — только имя интерфейса будет `wlp2s0`. Wi-Fi вручную настраивается через wpa_supplicant — [отдельная статья](https://ordanax.github.io/wifi-nastroyka-wpa-supplicant).
+Обычно нет: роутер стабильно выдаёт один и тот же адрес по DHCP. Статический IP на Wi-Fi нужен, только если ты вещаешь сервисы (медиасервер, принтсервер). Настройка аналогична проводной — только имя интерфейса будет `wlp2s0`. Wi-Fi вручную настраивается через wpa_supplicant — [отдельная статья](/wifi-nastroyka-wpa-supplicant).
 
 ## Полезные ресурсы
 
 - [systemd-networkd — ArchWiki](https://wiki.archlinux.org/title/Systemd-networkd) — полная документация по конфигурационным файлам и сервисам.
 - [Network configuration — ArchWiki](https://wiki.archlinux.org/title/Network_configuration) — обзор всех способов настройки сети в Arch Linux.
-- [fstab: поля на практике](https://ordanax.github.io/fstab-polya-na-praktike) — ещё одна практичная статья о ручной настройке системы.
+- [fstab: поля на практике](/fstab-polya-na-praktike) — ещё одна практичная статья о ручной настройке системы.
 
 ## Заключение
 

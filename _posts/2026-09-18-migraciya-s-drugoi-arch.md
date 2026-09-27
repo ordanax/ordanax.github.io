@@ -61,7 +61,7 @@ scp -r user@old-pc:~/.config ~/
 
 ## Что принципиально иначе устроено в Arch
 
-**Нет sudo по умолчанию.** После установки работает только root. Пользователь создаётся вручную, `sudo` ставится отдельно. Подробнее — [«Создание пользователя: useradd vs adduser»](https://ordanax.github.io/sozdanie-polzovatelya-useradd).
+**Нет sudo по умолчанию.** После установки работает только root. Пользователь создаётся вручную, `sudo` ставится отдельно. Подробнее — [«Создание пользователя: useradd vs adduser»](/sozdanie-polzovatelya-useradd).
 
 **Pacman вместо apt/dnf.** Команды другие, логика другая:
 
@@ -81,19 +81,19 @@ git clone https://aur.archlinux.org/yay.git
 cd yay && makepkg -si
 ```
 
-Подробно — в [«Установке AUR-пакетов»](https://ordanax.github.io/aur-install).
+Подробно — в [«Установке AUR-пакетов»](/aur-install).
 
-**Зеркала.** В Arch ты сам выбираешь, откуда качать. Файл `/etc/pacman.d/mirrorlist` определяет скорость обновлений. Настройка — в [«Настройке зеркал Arch Linux»](https://ordanax.github.io/arch-linux-mirrorlist-nastroyka).
+**Зеркала.** В Arch ты сам выбираешь, откуда качать. Файл `/etc/pacman.d/mirrorlist` определяет скорость обновлений. Настройка — в [«Настройке зеркал Arch Linux»](/arch-linux-mirrorlist-nastroyka).
 
-**Rolling release.** Arch обновляется постоянно. Полное обновление — `sudo pacman -Syu`. Про [частичное обновление](https://ordanax.github.io/pacman-chastichnoe-obnovlenie) и его последствия стоит знать.
+**Rolling release.** Arch обновляется постоянно. Полное обновление — `sudo pacman -Syu`. Про [частичное обновление](/pacman-chastichnoe-obnovlenie) и его последствия стоит знать.
 
 ## Что проверить после переезда: чек-лист
 
-1. **Создать пользователя и настроить sudo** — root-only система опасна. Статья [«Создание пользователя»](https://ordanax.github.io/sozdanie-polzovatelya-useradd).
+1. **Создать пользователя и настроить sudo** — root-only система опасна. Статья [«Создание пользователя»](/sozdanie-polzovatelya-useradd).
 
 2. **Настроить сеть** — Wi-Fi через `iwctl`, проводное подключение обычно работает сразу.
 
-3. **Настроить зеркала** — быстрое зеркало = быстрые обновления. Инструкция в [«Настройке зеркал»](https://ordanax.github.io/arch-linux-mirrorlist-nastroyka).
+3. **Настроить зеркала** — быстрое зеркало = быстрые обновления. Инструкция в [«Настройке зеркал»](/arch-linux-mirrorlist-nastroyka).
 
 4. **Установить DE и базовые пакеты:**
 
@@ -136,5 +136,5 @@ pacman -Qdtq | sudo pacman -Rns -
 
 - [ArchWiki: Mirrors](https://wiki.archlinux.org/title/Mirrors) — документация по зеркалам
 - [ArchWiki: AUR helpers](https://wiki.archlinux.org/title/AUR_helpers) — сравнение AUR-хелперов
-- [Всё про yay: ошибка EOF/IPv6](https://ordanax.github.io/yay-eof-ipv6-gai-conf) — если AUR-хелпер падает при первом запуске
-- [Что делать после установки Arch](https://ordanax.github.io/pervyi-chas-posle-ustanovki-arch) — чек-лист первого часа на новой системе
+- [Всё про yay: ошибка EOF/IPv6](/yay-eof-ipv6-gai-conf) — если AUR-хелпер падает при первом запуске
+- [Что делать после установки Arch](/pervyi-chas-posle-ustanovki-arch) — чек-лист первого часа на новой системе

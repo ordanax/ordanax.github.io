@@ -24,7 +24,7 @@ edit: true
 
 ## Зачем переходить с GRUB на systemd-boot?
 
-systemd-boot — минималистичный загрузчик, который входит в состав systemd. Он читает конфиги в формате ini, сам находит ядра в `/boot` и не генерирует сложные скрипты при каждом обновлении. GRUB мощнее: умеет грузить корень с LUKS2, поддерживает темы и os-prober для поиска Windows. Но если у тебя одна система на UEFI — systemd-boot стартует быстрее, а настройка умещается в два файла. Сравнение обоих загрузчиков — в статье «[systemd-boot или GRUB: что выбрать](https://ordanax.github.io/systemd-boot-vs-grub-vtoroe-yadro)».
+systemd-boot — минималистичный загрузчик, который входит в состав systemd. Он читает конфиги в формате ini, сам находит ядра в `/boot` и не генерирует сложные скрипты при каждом обновлении. GRUB мощнее: умеет грузить корень с LUKS2, поддерживает темы и os-prober для поиска Windows. Но если у тебя одна система на UEFI — systemd-boot стартует быстрее, а настройка умещается в два файла. Сравнение обоих загрузчиков — в статье «[systemd-boot или GRUB: что выбрать](/systemd-boot-vs-grub-vtoroe-yadro)».
 
 Есть случаи, когда переходить не стоит. Если корень зашифрован LUKS2 и ты грузишься через GRUB — systemd-boot не умеет расшифровывать корень сам, понадобится отдельный initramfs с шифрованием. Если система на BIOS (Legacy) — systemd-boot вообще не работает, это загрузчик только для UEFI. И если в dualboot живут несколько дистрибутивов с разными загрузчиками — GRUB с os-prober соберёт их в одно меню, а systemd-boot придётся настраивать руками.
 
@@ -153,7 +153,7 @@ options root=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx rw
 
 systemd-boot не сканирует раздел в поисках ядер. Он читает файлы из `/boot/loader/entries/` — каждый `.conf` становится пунктом меню. Если каталог пуст, загрузчик сам находит `vmlinuz-*` и `initramfs-*.img` в корне ESP и строит меню без твоих правок. Но тогда ты не контролируешь параметры ядра, поэтому обычно создают один `arch.conf` с нужными `options`.
 
-При обновлении ядра pacman-хук mkinitcpio пересоздаёт initramfs, а entry-файл не трогает — он остаётся рабочим, потому что ссылается на `/vmlinuz-linux` и `/initramfs-linux.img` по именам. Если поставил несколько ядер — linux, linux-lts, linux-hardened — для каждого нужен свой entry-файл или общий с автодетектом. Как это устроить — в статье «[Несколько ядер в меню: linux, linux-lts, linux-hardened](https://ordanax.github.io/neskolko-yader-v-menyu-linux-lts-hardened)».
+При обновлении ядра pacman-хук mkinitcpio пересоздаёт initramfs, а entry-файл не трогает — он остаётся рабочим, потому что ссылается на `/vmlinuz-linux` и `/initramfs-linux.img` по именам. Если поставил несколько ядер — linux, linux-lts, linux-hardened — для каждого нужен свой entry-файл или общий с автодетектом. Как это устроить — в статье «[Несколько ядер в меню: linux, linux-lts, linux-hardened](/neskolko-yader-v-menyu-linux-lts-hardened)».
 
 Свежие версии systemd поддерживают установку ядер через kernel-install — тогда entry-файлы генерируются автоматически. Но классический Arch Linux с mkinitcpio так не работает: entry-файл создаётся один раз вручную и живёт годами. Если хочешь грузить ядро вообще без загрузчика — посмотри в сторону EFISTUB и UKI, это отдельная тема.
 
@@ -184,13 +184,13 @@ sudo bootctl uninstall
 sudo rm -r /boot/loader
 ```
 
-`bootctl uninstall` убирает файлы загрузчика из ESP и удаляет запись из NVRAM. Если после перехода система не загрузилась — методика восстановления из live-USB описана в статье «[grub rescue: что делать](https://ordanax.github.io/grub-rescue-chto-delat)».
+`bootctl uninstall` убирает файлы загрузчика из ESP и удаляет запись из NVRAM. Если после перехода система не загрузилась — методика восстановления из live-USB описана в статье «[grub rescue: что делать](/grub-rescue-chto-delat)».
 
 ## Какие подводные камни встречаются при смене загрузчика?
 
 ### Записи в NVRAM и порядок загрузки
 
-После `bootctl install` в NVRAM появляется запись `Linux Boot Manager`, а старая запись GRUB остаётся на месте. Если порядок загрузки не изменился — система продолжит стартовать через GRUB, и ты решишь, что переход не сработал. Проверяй порядок через `efibootmgr` и переставляй нужную запись первой. Разбор работы с NVRAM — в статье «[Порядок загрузки в NVRAM: efibootmgr](https://ordanax.github.io/poryadok-zagruzki-nvram-efibootmgr)».
+После `bootctl install` в NVRAM появляется запись `Linux Boot Manager`, а старая запись GRUB остаётся на месте. Если порядок загрузки не изменился — система продолжит стартовать через GRUB, и ты решишь, что переход не сработал. Проверяй порядок через `efibootmgr` и переставляй нужную запись первой. Разбор работы с NVRAM — в статье «[Порядок загрузки в NVRAM: efibootmgr](/poryadok-zagruzki-nvram-efibootmgr)».
 
 ### Несовпадение точки монтирования ESP
 
@@ -216,7 +216,7 @@ sudo bootctl update
 
 ### Ошибка про EFI variables
 
-Если `bootctl install` падает с ошибкой про EFI variables — прошивка не отдаёт переменные или включён Secure Boot. Разбор этой ошибки — в статье «[EFI variables not supported: efibootmgr](https://ordanax.github.io/efi-variables-not-supported-efibootmgr)».
+Если `bootctl install` падает с ошибкой про EFI variables — прошивка не отдаёт переменные или включён Secure Boot. Разбор этой ошибки — в статье «[EFI variables not supported: efibootmgr](/efi-variables-not-supported-efibootmgr)».
 
 ## Частые вопросы
 
