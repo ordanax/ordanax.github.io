@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ghostty терминал: установка и конфигурация
+title: "Ghostty терминал: установка и конфигурация"
 description: Практический гайд по установке и настройке Ghostty, современного терминала для Linux с поддержкой GPU
 date: 2026-05-12 09:00:00 +0300
 permalink: /ghostty-terminal-konfiguraciya

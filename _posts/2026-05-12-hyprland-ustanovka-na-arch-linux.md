@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hyprland на Arch Linux: полный гайд по установке и настройке
+title: "Hyprland на Arch Linux: полный гайд по установке и настройке"
 description: Hyprland это современный динамический тайлинговый WM на Wayland. Полный гайд по установке на Arch Linux с нуля
 date: 2026-05-12 00:00:00 +0300
 permalink: /hyprland-arch-linux

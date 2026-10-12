@@ -1,6 +1,6 @@
 ---
 layout: post
-title: NVIDIA драйверы на Arch Linux: полное руководство по установке и настройке
+title: "NVIDIA драйверы на Arch Linux: полное руководство по установке и настройке"
 description: Практический гайд по установке и настройке NVIDIA драйверов на Arch Linux для Wayland и X11 на основе реального опыта решения проблем с GPU
 date: 2026-05-12 03:00:00 +0300
 permalink: /nvidia-drayver-arch-linux
