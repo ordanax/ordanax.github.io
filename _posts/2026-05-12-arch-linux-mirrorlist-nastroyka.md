@@ -20,7 +20,7 @@ edit: true
 ---
 
 
-![Arch Linux Mirrors](/img/arch-mirrors.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Правильная настройка mirrorlist в Arch Linux критически важна для скорости обновлений системы. Reflector — инструмент для автоматического выбора самых быстрых зеркал.
+![Arch Linux Mirrors](/img/arch-mirrors.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Правильная настройка mirrorlist в Arch Linux критически важна для скорости обновлений системы. Reflector: инструмент для автоматического выбора самых быстрых зеркал.
 
 ## Установка Reflector
 
@@ -42,10 +42,10 @@ sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
 sudo reflector --latest 25 --country RU,NL,BY --sort rate --save /etc/pacman.d/mirrorlist
 ```
 
-- `--latest 25` — выбрать 25 последних обновлённых зеркал
-- `--country RU,NL,BY` — использовать зеркала из указанных стран
-- `--sort rate` — сортировать по скорости
-- `--save` — сохранить в указанный файл
+- `--latest 25`: выбрать 25 последних обновлённых зеркал
+- `--country RU,NL,BY`: использовать зеркала из указанных стран
+- `--sort rate`: сортировать по скорости
+- `--save`: сохранить в указанный файл
 
 ### Расширенная команда с фильтрацией
 
@@ -59,8 +59,8 @@ sudo reflector \
   --save /etc/pacman.d/mirrorlist
 ```
 
-- `--protocol https` — только HTTPS зеркала (безопаснее)
-- `--completion-percent 100` — только полностью синхронизированные зеркала
+- `--protocol https`: только HTTPS зеркала (безопаснее)
+- `--completion-percent 100`: только полностью синхронизированные зеркала
 - Дополнительные страны для большего выбора
 
 ## Проверка результата

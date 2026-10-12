@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "makepkg: всё, что нужно знать — флаги, -e, -f, --cleanbuild"
+title: "makepkg: всё, что нужно знать, флаги, -e, -f, --cleanbuild"
 description: "makepkg собирает пакет из PKGBUILD. Флаги -s, -i, -f, -e, --cleanbuild, настройка makepkg.conf и повторная сборка без ошибок."
 date: 2026-09-20 00:00:00 +0300
 permalink: /makepkg-vse-chto-nuzhno-znat

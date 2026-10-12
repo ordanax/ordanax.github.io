@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Исправление ошибки picom при перезагрузке Arch Linux
-description: "После обновления пакетов Arch Linux при перезагрузке компьютера может появиться ошибка запуска compositor **picom**. В этой статье расскажу, как исправить…"
+description: "После обновления пакетов Arch Linux при перезагрузке компьютера может появиться ошибка запуска compositor **picom**. Расскажу, как исправить…"
 categories:
 - configs
 - desktop
@@ -13,7 +13,7 @@ tags:
 ---
 
 
-![Ошибка picom](/img/picom.png) После обновления пакетов Arch Linux при перезагрузке компьютера может появиться ошибка запуска compositor **picom**. В этой статье расскажу, как исправить проблему с устаревшими опциями GLX, которые были удалены в новых версиях picom.
+![Ошибка picom](/img/picom.png) После обновления пакетов Arch Linux при перезагрузке компьютера может появиться ошибка запуска compositor **picom**. Расскажу, как исправить проблему с устаревшими опциями GLX, которые были удалены в новых версиях picom.
 
 ## Причина ошибки
 
@@ -115,7 +115,7 @@ picom --experimental-backends
 
 ## Альтернативные опции (если нужна оптимизация GLX)
 
-Если вы использовали `--glx-no-rebind-pixmap` для оптимизации, в новых версиях picom эта опция не требуется — backend GLX был значительно улучшен.
+Если вы использовали `--glx-no-rebind-pixmap` для оптимизации, в новых версиях picom эта опция не требуется, backend GLX был значительно улучшен.
 
 Для тонкой настройки производительности используйте файл `picom.conf`:
 
@@ -126,7 +126,7 @@ vsync = true;
 
 ## Полезные ссылки
 
-- [Arch Wiki — Picom](https://wiki.archlinux.org/title/Picom)
+- [Arch Wiki: Picom](https://wiki.archlinux.org/title/Picom)
 - [Репозиторий picom на GitHub](https://github.com/yshui/picom)
 - [История изменений picom (Changelog)](https://github.com/yshui/picom/blob/master/CHANGELOG.md)
 

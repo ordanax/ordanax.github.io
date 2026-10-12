@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Дуалбут: Windows пропал из GRUB — как вернуть"
+title: "Дуалбут: Windows пропал из GRUB, как вернуть"
 description: "Windows пропал из меню GRUB? Разбираем, почему os-prober отключён, как вернуть пункт Windows Boot Manager и починить порядок загрузки через efibootmgr."
 date: 2026-09-17 00:00:00 +0300
 permalink: /dualboot-windows-propala-iz-grub
@@ -20,7 +20,7 @@ edit: true
 ---
 
 
-Windows пропал из меню GRUB не потому, что система сломалась. С 2022 года GRUB по умолчанию не сканирует другие операционные системы: os-prober отключён, и пункт Windows Boot Manager просто не генерируется. Лечится это тремя командами: поставить os-prober, включить его в `/etc/default/grub` и пересобрать конфиг. Ниже разберу весь путь — от простого случая до восстановления загрузчика из live-USB.
+Windows пропал из меню GRUB не потому, что система сломалась. С 2022 года GRUB по умолчанию не сканирует другие операционные системы: os-prober отключён, и пункт Windows Boot Manager просто не генерируется. Лечится это тремя командами: поставить os-prober, включить его в `/etc/default/grub` и пересобрать конфиг. Ниже разберу весь путь: от простого случая до восстановления загрузчика из live-USB.
 
 ## Почему Windows пропал из меню GRUB
 
@@ -46,7 +46,7 @@ sudo pacman -S os-prober
 #GRUB_DISABLE_OS_PROBER=false
 ```
 
-Раскомментируй её — убери решётку в начале:
+Раскомментируй её, убери решётку в начале:
 
 ```
 GRUB_DISABLE_OS_PROBER=false
@@ -68,13 +68,13 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 Found Windows Boot Manager on /dev/nvme0n1p1@/EFI/Microsoft/Boot/bootmgfw.efi
 ```
 
-Перезагружайся — в меню GRUB теперь есть пункт Windows Boot Manager. Это решение проверено практикой: в чате сообщества на вопрос «Windows пропал из GRUB» первым делом отвечают «ос-пробер установи», дальше `pacman -S os-prober` и `grub-mkconfig`. Работает.
+Перезагружайся, в меню GRUB теперь есть пункт Windows Boot Manager. Это решение проверено практикой: в чате сообщества на вопрос «Windows пропал из GRUB» первым делом отвечают «ос-пробер установи», дальше `pacman -S os-prober` и `grub-mkconfig`. Работает.
 
 ## Что делать, если os-prober не находит Windows
 
 Если пункт не появился, проверяй по порядку.
 
-**Windows установлен после Arch.** Тогда Windows перезаписала загрузочные записи, и GRUB может вообще не грузиться. Решение — переустановить GRUB заново, чтобы он вернул себя в NVRAM:
+**Windows установлен после Arch.** Тогда Windows перезаписала загрузочные записи, и GRUB может вообще не грузиться. Решение: переустановить GRUB заново, чтобы он вернул себя в NVRAM:
 
 ```bash
 sudo grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
@@ -89,9 +89,9 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 sudo pacman -S ntfs-3g
 ```
 
-**Windows в режиме BIOS/MBR, а Arch в UEFI.** GRUB из UEFI не умеет цеплять загрузчик из BIOS/MBR и наоборот. Проверь режим Windows через `msinfo32` (строка «BIOS mode»). Если режимы разные — это не баг, а ограничение, пункт меню не появится никак.
+**Windows в режиме BIOS/MBR, а Arch в UEFI.** GRUB из UEFI не умеет цеплять загрузчик из BIOS/MBR и наоборот. Проверь режим Windows через `msinfo32` (строка «BIOS mode»). Если режимы разные, это не баг, а ограничение, пункт меню не появится никак.
 
-**Secure Boot.** Если включён Secure Boot, GRUB может не видеть Windows Boot Manager. Временное решение — отключить Secure Boot в прошивке, постоянное — настроить его через sbctl.
+**Secure Boot.** Если включён Secure Boot, GRUB может не видеть Windows Boot Manager. Временное решение: отключить Secure Boot в прошивке, постоянное: настроить его через sbctl.
 
 ## Как восстановить запись Windows в NVRAM
 
@@ -107,7 +107,7 @@ efibootmgr
 sudo efibootmgr -o 0000,0001
 ```
 
-Подставь свои номера: сначала GRUB, потом Windows. BIOS снова увидит обе системы. Если `efibootmgr` ругается на `EFI variables are not supported` — это отдельная история про кривые прошивки, разобрана в статье про [EFI variables not supported](/efi-variables-not-supported-efibootmgr).
+Подставь свои номера: сначала GRUB, потом Windows. BIOS снова увидит обе системы. Если `efibootmgr` ругается на `EFI variables are not supported`, это отдельная история про кривые прошивки, разобрана в статье про [EFI variables not supported](/efi-variables-not-supported-efibootmgr).
 
 ## Если GRUB вообще не грузится
 
@@ -134,7 +134,7 @@ grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-Имена разделов подставь свои — проверь их через `lsblk`. После перезагрузки GRUB снова на месте, а с включённым os-prober вернётся и Windows.
+Имена разделов подставь свои: проверь их через `lsblk`. После перезагрузки GRUB снова на месте, а с включённым os-prober вернётся и Windows.
 
 ## Частые вопросы
 
@@ -144,7 +144,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 **os-prober установлен, а Windows всё равно не находится. Что ещё проверить?**
 
-Проверь, что Windows-раздел доступен: поставь ntfs-3g, убедись, что режимы загрузки совпадают (UEFI с UEFI, BIOS с BIOS), и отключи Secure Boot для проверки. Если Windows стоит на втором диске — убедись, что диск подключён и виден в `lsblk`.
+Проверь, что Windows-раздел доступен: поставь ntfs-3g, убедись, что режимы загрузки совпадают (UEFI с UEFI, BIOS с BIOS), и отключи Secure Boot для проверки. Если Windows стоит на втором диске, убедись, что диск подключён и виден в `lsblk`.
 
 **Можно ли добавить Windows в GRUB вручную, без os-prober?**
 
@@ -157,7 +157,7 @@ menuentry "Windows Boot Manager" {
 }
 ```
 
-UUID ESP найдёшь через `blkid`. Но проще один раз настроить os-prober — он сам найдёт Windows.
+UUID ESP найдёшь через `blkid`. Но проще один раз настроить os-prober: он сам найдёт Windows.
 
 **Почему после установки Windows пропал GRUB?**
 
@@ -165,7 +165,7 @@ Windows при установке перезаписывает загрузоч�
 
 ## Заключение
 
-Windows пропала из GRUB почти всегда по одной причине: os-prober отключён по умолчанию, и `grub-mkconfig` не ищет соседние системы. Решение простое — `pacman -S os-prober`, строка `GRUB_DISABLE_OS_PROBER=false` в `/etc/default/grub` и пересборка конфига. Если загрузчик пропал целиком — live-USB, chroot и `grub-install`. Порядок загрузки чинится через `efibootmgr`. Все три сценария закрываются за десять минут.
+Windows пропала из GRUB почти всегда по одной причине: os-prober отключён по умолчанию, и `grub-mkconfig` не ищет соседние системы. Решение простое: `pacman -S os-prober`, строка `GRUB_DISABLE_OS_PROBER=false` в `/etc/default/grub` и пересборка конфига. Если загрузчик пропал целиком: live-USB, chroot и `grub-install`. Порядок загрузки чинится через `efibootmgr`. Все три сценария закрываются за десять минут.
 
 ## Полезные ресурсы
 

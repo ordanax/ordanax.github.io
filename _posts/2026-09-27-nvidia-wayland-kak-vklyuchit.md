@@ -45,7 +45,7 @@ EOF
 sudo mkinitcpio -P
 ```
 
-После этого нужна полная перезагрузка, а не только перезапуск compositor. Проверить применённые параметры можно так:
+Затем нужна полная перезагрузка, а не только перезапуск compositor. Проверить применённые параметры можно так:
 
 ```bash
 cat /sys/module/nvidia_drm/parameters/modeset
@@ -56,7 +56,7 @@ cat /sys/module/nvidia_drm/parameters/fbdev
 
 ## Почему выбирают GBM, а не EGLStreams?
 
-GBM — стандартный буферный путь DRM, который compositor и приложения используют через Mesa. EGLStreams — исторический интерфейс NVIDIA, созданный до широкого распространения общего DRM-пути. EGLStreams ещё встречается в старых проверках, но для Plasma 6 и GNOME 47+ GBM стал нормальным выбором: он лучше согласуется с compositor, Vulkan, screen capture и мультиплатформенными приложениями.
+GBM это стандартный буферный путь DRM, который compositor и приложения используют через Mesa. EGLStreams это исторический интерфейс NVIDIA, созданный до широкого распространения общего DRM-пути. EGLStreams ещё встречается в старых проверках, но для Plasma 6 и GNOME 47+ GBM стал нормальным выбором: он лучше согласуется с compositor, Vulkan, screen capture и мультиплатформенными приложениями.
 
 Специально переключать compositor на EGLStreams не нужно. Современный драйвер и GBM включаются автоматически, если драйвер, kernel API и userspace совпадают. Старые советы вроде глобального `LIBGL_DRIVERS_PATH=/usr/lib/nvidia` способны дать артефакты или сломать запуск программ, поэтому применяй их только после проверки конкретной ошибки.
 
@@ -85,7 +85,7 @@ kscreen-doctor -o
 
 `kscreen-doctor` показывает режимы, частоты и несколько мониторов. На ноутбуке с гибридной графикой профили экрана удобнее переключать через kanshi: он применяет заданное разрешение, частоту и активный дисплей при смене док-станции.
 
-В GNOME 47+ Wayland — стандартный путь в `gdm`. Выбирай сессию `GNOME` на Wayland, а не `GNOME on Xorg`. После входа та же команда `echo $XDG_SESSION_TYPE` должна вывести `wayland`. Если GNOME запускает X11, проверь настройки display manager и не остался ли включённым старый параметр `WaylandEnable=false`.
+В GNOME 47+ Wayland это стандартный путь в `gdm`. Выбирай сессию `GNOME` на Wayland, а не `GNOME on Xorg`. После входа та же команда `echo $XDG_SESSION_TYPE` должна вывести `wayland`. Если GNOME запускает X11, проверь настройки display manager и не остался ли включённым старый параметр `WaylandEnable=false`.
 
 Для захвата экрана в обоих рабочих столах нужны portal и PipeWire:
 
@@ -93,7 +93,7 @@ kscreen-doctor -o
 systemctl --user status pipewire wireplumber xdg-desktop-portal
 ```
 
-KDE обычно использует `xdg-desktop-portal-kde`, GNOME — `xdg-desktop-portal-gnome`, а базовый пакет `xdg-desktop-portal` связывает их с рабочим столом. В трее включи «Запись экрана» или «Отправлять экран», затем выбирай окно или весь дисплей. После установки портала иногда нужен выход из сессии и новый вход.
+KDE обычно использует `xdg-desktop-portal-kde`, GNOME `xdg-desktop-portal-gnome`, а базовый пакет `xdg-desktop-portal` связывает их с рабочим столом. В трее включи «Запись экрана» или «Отправлять экран», затем выбирай окно или весь дисплей. После установки портала иногда нужен выход из сессии и новый вход.
 
 ## Какие проблемы встречаются чаще всего?
 
@@ -111,7 +111,7 @@ Wayland намеренно не даёт приложению доступ ко 
 
 ### Игры и геймерские функции
 
-Игры без Wayland-порта запускаются через Xwayland — это нормально, но просадки, tearing и ошибки синхронизации могут быть заметнее. Проверь версию Vulkan, обнови compositor и драйвер, а для отдельной игры используй её нативный Wayland-режим, если он есть. Не обещай одинаковую производительность Xwayland и native Wayland для каждого движка.
+Игры без Wayland-порта запускаются через Xwayland, это нормально, но просадки, tearing и ошибки синхронизации могут быть заметнее. Проверь версию Vulkan, обнови compositor и драйвер, а для отдельной игры используй её нативный Wayland-режим, если он есть. Не обещай одинаковую производительность Xwayland и native Wayland для каждого движка.
 
 ## Как проверить, что Wayland действительно работает?
 
@@ -153,7 +153,7 @@ journalctl --user -b | grep -Ei 'kwin|mutter|wayland|nvidia|portal'
 
 ## Полезные ресурсы
 
-- [ArchWiki: Wayland — сессии, compositor и portals](https://wiki.archlinux.org/title/Wayland)
+- [ArchWiki: Wayland: сессии, compositor и portals](https://wiki.archlinux.org/title/Wayland)
 - [Драйвер NVIDIA в Arch Linux: ядро и версии](/nvidia-drayver-arch-linux)
 - [Параметры ядра и командная строка](/parametry-yadra-komandnaya-stroka)
 - [KDE Plasma крашится после обновления](/kde-plasma-krashitsya-posle-obnovleniya)

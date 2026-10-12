@@ -201,9 +201,9 @@ sudo pacman -U /var/cache/pacman/pkg/mesa-24.2.8-1-x86_64.pkg.tar.zst \
 
 ## Полезные ресурсы
 
-- [Kernel parameters — ArchWiki](https://wiki.archlinux.org/title/Kernel_parameters) — все параметры ядра, включая nomodeset.
-- [NVIDIA — ArchWiki](https://wiki.archlinux.org/title/NVIDIA) — установка и устранение неполадок драйвера.
-- [Чёрный экран после установки](/ne-gruzitsya-posle-ustanovki-chernyi-ekran) — похожая проблема на этапе установки.
+- [Kernel parameters (ArchWiki)](https://wiki.archlinux.org/title/Kernel_parameters): все параметры ядра, включая nomodeset.
+- [NVIDIA (ArchWiki)](https://wiki.archlinux.org/title/NVIDIA): установка и устранение неполадок драйвера.
+- [Чёрный экран после установки](/ne-gruzitsya-posle-ustanovki-chernyi-ekran): похожая проблема на этапе установки.
 
 ## Заключение
 

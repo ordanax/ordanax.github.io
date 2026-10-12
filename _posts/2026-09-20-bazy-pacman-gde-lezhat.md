@@ -254,7 +254,7 @@ rm -rf /var/lib/pacman
 cp -a /root/pacman.bak /var/lib/pacman
 ```
 
-После этого `pacman -Qkk` покажет, какие пакеты изменились с момента копии.
+Затем `pacman -Qkk` покажет, какие пакеты изменились с момента копии.
 
 ## Что делать с ошибкой «db file could not be verified»?
 
@@ -286,7 +286,7 @@ pacman-key --init
 pacman-key --populate archlinux
 ```
 
-После этого повтори `pacman -Syy`. Разбор в статье «[Ошибка gpg: unknown public key при pacman-key](/gpg-unknown-public-key-pacman-key)».
+Затем повтори `pacman -Syy`. Разбор в статье «[Ошибка gpg: unknown public key при pacman-key](/gpg-unknown-public-key-pacman-key)».
 
 ## Частые вопросы
 

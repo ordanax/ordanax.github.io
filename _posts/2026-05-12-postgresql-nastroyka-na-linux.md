@@ -1,7 +1,7 @@
 ---
 layout: post
-title: PostgreSQL настройка на Linux — полное руководство
-description: "PostgreSQL — мощная объектно-реляционная СУБД с открытым исходным кодом. Этот гайд поможет установить и настроить PostgreSQL на Linux."
+title: PostgreSQL настройка на Linux: полное руководство
+description: "PostgreSQL это мощная объектно-реляционная СУБД с открытым исходным кодом. Этот гайд поможет установить и настроить PostgreSQL на Linux."
 date: 2026-05-12 08:00:00 +0300
 permalink: /postgresql-nastroyka-linux
 categories:
@@ -20,7 +20,7 @@ edit: true
 ---
 
 
-![PostgreSQL](/img/postgresql.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} PostgreSQL — мощная объектно-реляционная СУБД с открытым исходным кодом. Этот гайд поможет установить и настроить PostgreSQL на Linux.
+![PostgreSQL](/img/postgresql.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} PostgreSQL это мощная объектно-реляционная СУБД с открытым исходным кодом. Этот гайд поможет установить и настроить PostgreSQL на Linux.
 
 ## Установка PostgreSQL
 
@@ -150,8 +150,8 @@ psql -U myuser -d mydb
 
 ### Файлы конфигурации
 
-- `/var/lib/postgres/data/postgresql.conf` — основные настройки
-- `/var/lib/postgres/data/pg_hba.conf` — аутентификация
+- `/var/lib/postgres/data/postgresql.conf`: основные настройки
+- `/var/lib/postgres/data/pg_hba.conf`: аутентификация
 
 ### Разрешение удалённых подключений
 

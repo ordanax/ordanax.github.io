@@ -143,7 +143,7 @@ systemctl enable --now paccache.timer
 
 Он запускает `paccache` раз в неделю с параметрами по умолчанию. Дальше можно не вспоминать про кэш.
 
-Важно понимать: `paccache` и `pacman -Sc` чистят `/var/cache/pacman/pkg`, а не `/boot`. Если у тебя отдельный ESP и он забит именно ядрами, кэш тут не поможет. Нужны `pacman -Rns` и ручная чистка `/boot`. Подробнее про команды pacman можно почитать в статье «[pacman от А до Я: команды](/pacman-ot-a-do-ya-komandy)».
+`paccache` и `pacman -Sc` чистят `/var/cache/pacman/pkg`, а не `/boot`. Если у тебя отдельный ESP и он забит именно ядрами, кэш тут не поможет. Нужны `pacman -Rns` и ручная чистка `/boot`. Подробнее про команды pacman можно почитать в статье «[pacman от А до Я: команды](/pacman-ot-a-do-ya-komandy)».
 
 ## Как обновить меню GRUB после чистки
 

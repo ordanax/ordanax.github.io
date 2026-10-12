@@ -161,7 +161,7 @@ pacman -S --overwrite '/usr/bin/foo' aur-package
 pacman -R old-package
 ```
 
-После этого проверь целостность системы:
+Затем проверь целостность системы:
 
 ```bash
 pacman -Qk

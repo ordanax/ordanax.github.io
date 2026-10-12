@@ -78,7 +78,7 @@ pacman -Syu
 pacman -Sy archlinux-keyring
 ```
 
-После этого повтори установку проблемного пакета. Чаще всего ошибка уходит. Важно: `pacman -Sy` без полного обновления это частичное обновление, а оно в Arch не поддерживается. Подробнее в статье «[Частичное обновление pacman](/pacman-chastichnoe-obnovlenie)». Поэтому после `-Sy archlinux-keyring` сразу выполняй `pacman -Syu`.
+Затем повтори установку проблемного пакета. Чаще всего ошибка уходит. Важно: `pacman -Sy` без полного обновления это частичное обновление, а оно в Arch не поддерживается. Подробнее в статье «[Частичное обновление pacman](/pacman-chastichnoe-obnovlenie)». Поэтому после `-Sy archlinux-keyring` сразу выполняй `pacman -Syu`.
 
 ## Как обновить ключи вручную?
 
@@ -118,7 +118,7 @@ pacman-key --init
 pacman-key --populate archlinux
 ```
 
-`--init` создаёт новую связку и мастер-ключ. `--populate archlinux` загружает официальные ключи Arch из пакета `archlinux-keyring`. После этого обнови ключи с сервера:
+`--init` создаёт новую связку и мастер-ключ. `--populate archlinux` загружает официальные ключи Arch из пакета `archlinux-keyring`. Затем обнови ключи с сервера:
 
 ```bash
 pacman-key --refresh-keys
@@ -192,8 +192,8 @@ ID ключа и точные команды бери с сайта репози
 
 ## Полезные ресурсы
 
-- [Pacman/Package signing, ArchWiki](https://wiki.archlinux.org/title/Pacman/Package_signing): как устроена проверка подписей в pacman.
-- [Pacman-key, ArchWiki](https://wiki.archlinux.org/title/Pacman-key): команды и настройка keyring.
+- [Pacman/Package signing (ArchWiki)](https://wiki.archlinux.org/title/Pacman/Package_signing): как устроена проверка подписей в pacman.
+- [Pacman-key (ArchWiki)](https://wiki.archlinux.org/title/Pacman-key): команды и настройка keyring.
 - [pacman от А до Я: команды](/pacman-ot-a-do-ya-komandy): шпаргалка по командам pacman.
 - [pacman fails to commit: invalid or corrupted](/pacman-fails-to-commit-invalid-corrupted): похожая ошибка при повреждении базы пакетов.
 - [Методика решения проблем в Arch Linux](/metodika-resheniya-problem-arch): общий подход к диагностике.

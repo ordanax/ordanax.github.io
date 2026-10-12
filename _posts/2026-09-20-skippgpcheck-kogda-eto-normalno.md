@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Не собрался пакет: --skippgpcheck — когда это нормально"
+title: "Не собрался пакет: --skippgpcheck, когда это нормально"
 description: "Ошибка проверки GPG-подписи при сборке: когда --skippgpcheck оправдан, чем он опасен и какие есть безопасные альтернативы."
 date: 2026-09-20 00:00:00 +0300
 permalink: /skippgpcheck-kogda-eto-normalno

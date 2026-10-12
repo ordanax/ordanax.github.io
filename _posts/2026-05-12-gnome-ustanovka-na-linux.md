@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Gnome установка на Linux — полное руководство
-description: "Gnome — популярная графическая среда для Linux с современным дизайном и удобным интерфейсом. Этот гайд поможет установить и настроить Gnome на различных…"
+title: Gnome установка на Linux: полное руководство
+description: "Gnome это популярная графическая среда для Linux с современным дизайном и удобным интерфейсом. Этот гайд поможет установить и настроить Gnome на различных…"
 date: 2026-05-12 13:00:00 +0300
 permalink: /gnome-ustanovka-linux
 categories:
@@ -18,7 +18,7 @@ tags:
 edit: true
 ---
 
-![Gnome](/img/gnome.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Gnome — популярная графическая среда для Linux с современным дизайном и удобным интерфейсом. Этот гайд поможет установить и настроить Gnome на различных дистрибутивах.
+![Gnome](/img/gnome.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Gnome это популярная графическая среда для Linux с современным дизайном и удобным интерфейсом. Этот гайд поможет установить и настроить Gnome на различных дистрибутивах.
 
 ## Установка Gnome на Arch Linux
 
@@ -28,8 +28,8 @@ edit: true
 sudo pacman -S gnome gnome-extra
 ```
 
-- `gnome` — базовая среда Gnome
-- `gnome-extra` — дополнительные приложения
+- `gnome`: базовая среда Gnome
+- `gnome-extra`: дополнительные приложения
 
 ### Минимальная установка
 
@@ -141,11 +141,11 @@ sudo pacman -S gnome-shell-extensions
 
 ### Популярные расширения
 
-- **Dash to Dock** — док-панель
-- **Top Bar** — настройка верхней панели
-- **User Themes** — управление темами
-- **Caffeine** — предотвращение сна
-- **Clipboard Indicator** — история буфера обмена
+- **Dash to Dock**: док-панель
+- **Top Bar**: настройка верхней панели
+- **User Themes**: управление темами
+- **Caffeine**: предотвращение сна
+- **Clipboard Indicator**: история буфера обмена
 
 ## Настройка шрифтов
 
@@ -169,11 +169,11 @@ sudo apt install fonts-dejavu-core fonts-liberation fonts-noto
 
 ### Стандартные горячие клавиши
 
-- `Super` — открытие меню приложений
-- `Super + Tab` — переключение приложений
-- `Super + A` — показ всех приложений
-- `Print Screen` — скриншот
-- `Alt + Tab` — переключение окон
+- `Super`: открытие меню приложений
+- `Super + Tab`: переключение приложений
+- `Super + A`: показ всех приложений
+- `Print Screen`: скриншот
+- `Alt + Tab`: переключение окон
 
 ### Кастомизация через gnome-tweaks
 

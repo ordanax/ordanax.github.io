@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Ghostty терминал — установка и конфигурация
-description: Практический гайд по установке и настройке Ghostty — современного терминала для Linux с поддержкой GPU
+title: Ghostty терминал: установка и конфигурация
+description: Практический гайд по установке и настройке Ghostty, современного терминала для Linux с поддержкой GPU
 date: 2026-05-12 09:00:00 +0300
 permalink: /ghostty-terminal-konfiguraciya
 categories:
@@ -19,7 +19,7 @@ edit: true
 ---
 
 
-![Ghostty Terminal](/img/ghostty.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Ghostty — современный терминал с поддержкой GPU ускорения, написанный на Zig. Отличается высокой производительностью и гибкой конфигурацией.
+![Ghostty Terminal](/img/ghostty.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Ghostty это современный терминал с поддержкой GPU ускорения, написанный на Zig. Отличается высокой производительностью и гибкой конфигурацией.
 
 ## Установка Ghostty
 

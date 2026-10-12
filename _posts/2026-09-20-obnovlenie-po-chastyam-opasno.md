@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Обновление «по частям» опасно — объясняем"
+title: "Обновление «по частям» опасно: объясняем"
 description: "Почему обновление Arch «по частям» ломает систему: soname, glibc, IgnorePkg, тестовая зона. Правильный порядок: pacman -Syu, потом установка."
 date: 2026-09-20 00:00:00 +0300
 permalink: /obnovlenie-po-chastyam-opasno

@@ -185,10 +185,10 @@ free -h
 
 ## Полезные ресурсы
 
-- [Ccache на ArchWiki](https://wiki.archlinux.org/title/Ccache) — настройка кэша компиляции и его параметры.
-- [Makepkg на ArchWiki](https://wiki.archlinux.org/title/Makepkg) — все переменные конфигурации, включая MAKEFLAGS и BUILDDIR.
-- [makepkg: всё, что нужно знать](/makepkg-vse-chto-nuzhno-znat) — разбор процесса сборки пакета.
-- [Сборка из исходников: configure и make](/sborka-iz-iskhodnikov-configure-make) — что происходит под капотом у make.
+- [Ccache на ArchWiki](https://wiki.archlinux.org/title/Ccache): настройка кэша компиляции и его параметры.
+- [Makepkg на ArchWiki](https://wiki.archlinux.org/title/Makepkg): все переменные конфигурации, включая MAKEFLAGS и BUILDDIR.
+- [makepkg: всё, что нужно знать](/makepkg-vse-chto-nuzhno-znat): разбор процесса сборки пакета.
+- [Сборка из исходников: configure и make](/sborka-iz-iskhodnikov-configure-make): что происходит под капотом у make.
 
 ## Заключение
 

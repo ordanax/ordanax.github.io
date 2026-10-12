@@ -17,27 +17,27 @@ tags:
 edit: true
 ---
 
-Если у тебя в корпусе AMD Radeon из поколения 2011–2013 годов, менять карту прямо сейчас не обязательно: под Linux она работает, просто на разных уровнях. HD 7950, R9 270X, R7 265 — это GCN1 и GCN2, они сидят на amdgpu и получают полноценный OpenGL 4.5, Vulkan и VA-API. А вот HD 4000, HD 5000 и HD 6000 — это TeraScale, и там остаётся только драйвер radeon с потолком OpenGL 3.3 и без Vulkan вообще. Где именно проходит эта граница, какой драйвер выбрать и стоит ли экспериментировать — разбираю ниже.
+Если у тебя в корпусе AMD Radeon из поколения 2011–2013 годов, менять карту прямо сейчас не обязательно: под Linux она работает, просто на разных уровнях. HD 7950, R9 270X, R7 265, это GCN1 и GCN2, они сидят на amdgpu и получают полноценный OpenGL 4.5, Vulkan и VA-API. А вот HD 4000, HD 5000 и HD 6000, это TeraScale, и там остаётся только драйвер radeon с потолком OpenGL 3.3 и без Vulkan вообще. Где именно проходит эта граница, какой драйвер выбрать и стоит ли экспериментировать: разбираю ниже.
 
 ## Какие Radeon считать старыми и где проходит граница?
 
 Под «старыми» удобно понимать всё, что старше GCN3, и разбить это на два лагеря с разными судьбами.
 
-**TeraScale** (ядро r600): RV670 и RV780 из серий HD 2000/3000, а также Evergreen — HD 4000 (RV730), HD 5000 и HD 6000 (Cedar, Redwood, Juniper, Cypress, Hemlock). Эти чипы проектировались для DirectX 9 и 10.1, и Linux-сообщество для них так и не сделало OpenGL 4.
+**TeraScale** (ядро r600): RV670 и RV780 из серий HD 2000/3000, а также Evergreen: HD 4000 (RV730), HD 5000 и HD 6000 (Cedar, Redwood, Juniper, Cypress, Hemlock). Эти чипы проектировались для DirectX 9 и 10.1, и Linux-сообщество для них так и не сделало OpenGL 4.
 
-**GCN1 (Southern Islands)** — HD 7750/7770/7850/7950/7970, R7 250, R9 270 и 270X, HD 6970/6970M. **GCN2 (Sea Islands)** — R7 265, R9 280/280X, R9 290/290X, HD 7790, R7 360X, R9 360X. Это уже GCN: DirectX 11, OpenGL 4.5, нормальный VA-API и Vulkan.
+**GCN1 (Southern Islands)**: HD 7750/7770/7850/7950/7970, R7 250, R9 270 и 270X, HD 6970/6970M. **GCN2 (Sea Islands)**: R7 265, R9 280/280X, R9 290/290X, HD 7790, R7 360X, R9 360X. Это уже GCN: DirectX 11, OpenGL 4.5, нормальный VA-API и Vulkan.
 
-Ориентир по названию: R9 380/380X и выше — уже GCN3 (Tonga), там amdgpu работает без штрихов. То есть граница проходит между R9 360X и R9 380X. Точную архитектуру покажет device ID:
+Ориентир по названию: R9 380/380X и выше, уже GCN3 (Tonga), там amdgpu работает без штрихов. То есть граница проходит между R9 360X и R9 380X. Точную архитектуру покажет device ID:
 
 ```bash
 lspci -nn | grep -Ei 'vga|3d controller|display controller'
 ```
 
-Из найденного ID (например, `1002:67df` — Turks/HD 7970, `1002:67b0` — Bonaire/R7 260) уже видно семейство. Универсальный признак: если модель называется R7 2xx, R9 2xx или HD 6xxx/7xxx — это GCN1/2.
+Из найденного ID (например, `1002:67df`: Turks/HD 7970, `1002:67b0`: Bonaire/R7 260) уже видно семейство. Универсальный признак: если модель называется R7 2xx, R9 2xx или HD 6xxx/7xxx, это GCN1/2.
 
 ## Какой драйвер выбрать: radeon, amdgpu или nouveau?
 
-Правило простое и жёсткое. GCN1 и GCN2 — только amdgpu, он в ядре с 4.2 и с тех пор идёт драйвером по умолчанию. TeraScale — только radeon, потому что amdgpu на этих чипах официально не поддерживается: архитектура dGPU не та и стек регистров другой. nouveau остаётся запасным вариантом на случай сломанной системы: с ним хуже и X11, и видео-декодирование.
+Правило простое и жёсткое. GCN1 и GCN2: только amdgpu, он в ядре с 4.2 и с тех пор идёт драйвером по умолчанию. TeraScale: только radeon, потому что amdgpu на этих чипах официально не поддерживается: архитектура dGPU не та и стек регистров другой. nouveau остаётся запасным вариантом на случай сломанной системы: с ним хуже и X11, и видео-декодирование.
 
 Проверяем, что реально загрузилось:
 
@@ -46,9 +46,9 @@ lspci -nnk | grep -A3 -Ei 'vga|3d controller|display controller'
 dmesg | grep -iE 'amdgpu|radeon|drm' | tail -20
 ```
 
-Для amdgpu в выводе dmesg будет строка вида `amdgpu 0000:01:00.0: [drm] card0: ...`, для TeraScale — `radeon 0000:01:00.0: [drm]`. Разница между этими драйверами подробно разобрана в статье про [AMD APU, Radeon и amdgpu](/amd-apu-radeon-ili-amdgpu) — начни с неё, если только что поставил систему.
+Для amdgpu в выводе dmesg будет строка вида `amdgpu 0000:01:00.0: [drm] card0: ...`, для TeraScale, `radeon 0000:01:00.0: [drm]`. Разница между этими драйверами подробно разобрана в статье про [AMD APU, Radeon и amdgpu](/amd-apu-radeon-ili-amdgpu): начни с неё, если только что поставил систему.
 
-Отдельный подводный камень: amdgpu при инициализации дисплея требует, чтобы в BIOS карты был UEFI-модуль GOP. Если после переключения на amdgpu на GCN1 получаешь чёрный экран, дело почти наверняка в прошивке — разбор этого случая в материале про [amdgpu и поломки после linux-firmware](/amdgpu-polomki-posle-linux-firmware).
+Отдельный подводный камень: amdgpu при инициализации дисплея требует, чтобы в BIOS карты был UEFI-модуль GOP. Если после переключения на amdgpu на GCN1 получаешь чёрный экран, дело почти наверняка в прошивке: разбор этого случая в материале про [amdgpu и поломки после linux-firmware](/amdgpu-polomki-posle-linux-firmware).
 
 ## Что делать, если хочется amdgpu на TeraScale?
 
@@ -76,26 +76,26 @@ echo 'options amdgpu dpm=0 ppfeaturemask=0xfff7ffff gpu_recovery=1' | sudo tee /
 
 ### Mesa, LLVM и radeonsi
 
-`mesa` в Arch обновляется вместе с ядром и даёт нужный OpenGL: radeonsi на GCN1/2 выдаёт 4.5, r600 на TeraScale остаётся на 3.3. Ломается это только если Mesa собрана без поддержки r600 — тогда в `glxinfo -B` вместо карты появится llvmpipe. Второй момент — LLVM: слишком свежая версия иногда ломает компиляцию шейдеров для r600, и тогда помогает откат версии Mesa.
+`mesa` в Arch обновляется вместе с ядром и даёт нужный OpenGL: radeonsi на GCN1/2 выдаёт 4.5, r600 на TeraScale остаётся на 3.3. Ломается это только если Mesa собрана без поддержки r600, тогда в `glxinfo -B` вместо карты появится llvmpipe. Второй момент, LLVM: слишком свежая версия иногда ломает компиляцию шейдеров для r600, и тогда помогает откат версии Mesa.
 
 ## Какой Vulkan и OpenGL ты получишь?
 
 RADV работает только поверх amdgpu и только начиная с GCN1. То есть на TeraScale его нет вообще, а на GCN1/2 он полноценен: gfx8 и gfx9, RADV_PERFTEST, компилятор ACO. Настройку пакетов, проверку того, какой драйвер реально подхватился, и тюнинг шейдеров я разбирал в статье про [AMDGPU-Vulkan и Mesa](/nastrojka-amdgpu-vulkan-mesa-dlya-igr).
 
-Ловушка на TeraScale выглядит так: ты ставишь `vulkan-tools`, запускаешь `vulkaninfo --summary` и видишь устройство. Оно есть, но оно программное — lavapipe на CPU. Аппаратной поддержки нет и не появится: игра на lavapipe либо не запустится, либо пойдёт считать на процессоре.
+Ловушка на TeraScale выглядит так: ты ставишь `vulkan-tools`, запускаешь `vulkaninfo --summary` и видишь устройство. Оно есть, но оно программное: lavapipe на CPU. Аппаратной поддержки нет и не появится: игра на lavapipe либо не запустится, либо пойдёт считать на процессоре.
 
 ```bash
 sudo pacman -S vulkan-tools
 vulkaninfo --summary
 ```
 
-Смотри на два поля: `deviceType` должен быть `DISCRETE_GPU`, а `driverName` — `radeon` (это RADV). Значения `CPU` и `llvmpipe` означают, что Vulkan у тебя нет даже в виде картинки.
+Смотри на два поля: `deviceType` должен быть `DISCRETE_GPU`, а `driverName`: `radeon` (это RADV). Значения `CPU` и `llvmpipe` означают, что Vulkan у тебя нет даже в виде картинки.
 
-С OpenGL картина честнее: 4.5 на GCN1/2 — игры 2012–2015 годов идут нормально, 3.3 на TeraScale — только старые проекты, плюс у r600 нет 16-битных текстур, на которых ломается часть движков даже при формальной совместимости. OpenCL на TeraScale отсутствует полностью: Clover вырезали из Mesa ещё в 2020 году, остаётся только программный pocl. На GCN1/2 OpenCL даёт rusticl из Mesa, но ему нужны пользовательские библиотеки ROCm — без них `clinfo` покажет только cpu.
+С OpenGL картина честнее: 4.5 на GCN1/2: игры 2012–2015 годов идут нормально, 3.3 на TeraScale: только старые проекты, плюс у r600 нет 16-битных текстур, на которых ломается часть движков даже при формальной совместимости. OpenCL на TeraScale отсутствует полностью: Clover вырезали из Mesa ещё в 2020 году, остаётся только программный pocl. На GCN1/2 OpenCL даёт rusticl из Mesa, но ему нужны пользовательские библиотеки ROCm, без них `clinfo` покажет только cpu.
 
 ## А как дела с видео и Wayland?
 
-С видео у двух лагерей разный уровень. TeraScale под radeon отдаёт только VDPAU — это отличное декодирование, но API для него отдельное, и VA-API поверх VDPAU моста в Mesa не существует. Проверить и использовать можно так:
+С видео у двух лагерей разный уровень. TeraScale под radeon отдаёт только VDPAU, это отличное декодирование, но API для него отдельное, и VA-API поверх VDPAU моста в Mesa не существует. Проверить и использовать можно так:
 
 ```bash
 vdpauinfo
@@ -109,9 +109,9 @@ ffmpeg -hwaccel vdpau -i ~/video.mkv -f null -
 mpv --hwdec=vaapi ~/video.mkv
 ```
 
-VA-API появился в Mesa только недавно, поэтому в некоторых версиях его ещё нет — тогда откатывайся на VDPAU, amdgpu для GCN этот интерфейс тоже умеет. Кодекы ограничены возрастом карты: H.264, MPEG-2, VC-1, в лучшем случае VP9, никакого AV1.
+VA-API появился в Mesa только недавно, поэтому в некоторых версиях его ещё нет, тогда откатывайся на VDPAU, amdgpu для GCN этот интерфейс тоже умеет. Кодекы ограничены возрастом карты: H.264, MPEG-2, VC-1, в лучшем случае VP9, никакого AV1.
 
-С Wayland на TeraScale всё заметно хуже: VA-API нет, поэтому скринкасты в Firefox и HDR в mpv не работают, атомарный modesetting поддержан не везде, и в играх идёт Xwayland. Практический совет — оставаться на Xorg. На GCN1/2 Wayland работает нормально, и если нужна VA-API для Firefox, это лучшее время переехать.
+С Wayland на TeraScale всё заметно хуже: VA-API нет, поэтому скринкасты в Firefox и HDR в mpv не работают, атомарный modesetting поддержан не везде, и в играх идёт Xwayland. Практический совет: оставаться на Xorg. На GCN1/2 Wayland работает нормально, и если нужна VA-API для Firefox, это лучшее время переехать.
 
 ## Как проверить, что карта жива и какой у неё уровень?
 
@@ -139,7 +139,7 @@ sudo amdgpu_top -d          # для amdgpu
 sudo radeontop -d          # для radeon
 ```
 
-Если в `glxinfo -B` ты видишь llvmpipe, значит 3D-ускорение не заработало. Проверяй `lsmod | grep -E 'radeon|amdgpu'`, смотри Xorg-лог командой `grep -iE 'drm|glx' /var/log/Xorg.0.log | tail -30` и убедись, что в `dmesg` нет failed to init. Типичная причина — nouveau вместо radeon на TeraScale.
+Если в `glxinfo -B` ты видишь llvmpipe, значит 3D-ускорение не заработало. Проверяй `lsmod | grep -E 'radeon|amdgpu'`, смотри Xorg-лог командой `grep -iE 'drm|glx' /var/log/Xorg.0.log | tail -30` и убедись, что в `dmesg` нет failed to init. Типичная причина: nouveau вместо radeon на TeraScale.
 
 ## Почему radeon греется и гудит, и что с этим делать?
 
@@ -157,7 +157,7 @@ echo low | sudo tee /sys/class/drm/card0/device/pp_dpm_performance_level
 watch -n1 'cat /sys/class/drm/card0/device/pp_dpm_state'
 ```
 
-Для amdgpu всё проще — есть готовые профили питания от 0 (battery) до 2 (performance):
+Для amdgpu всё проще: есть готовые профили питания от 0 (battery) до 2 (performance):
 
 ```bash
 echo 0 | sudo tee /sys/class/drm/card0/device/power_dpm_state
@@ -169,15 +169,15 @@ echo 0 | sudo tee /sys/class/drm/card0/device/power_dpm_state
 
 ### Как понять, GCN у меня или TeraScale?
 
-По таблице моделей: R7 2xx, R9 2xx, HD 6xxx и 7xxx — это GCN1/2, драйвер amdgpu. HD 4xxx, 5xxx и 6xxx с буквами HD — TeraScale, драйвер radeon. Если сомневаешься, смотри device ID через `lspci -nn` и строку OpenGL renderer в `glxinfo -B`: на TeraScale в имени карты стоит Turks/Cypress/Barts/BarTS.
+По таблице моделей: R7 2xx, R9 2xx, HD 6xxx и 7xxx, это GCN1/2, драйвер amdgpu. HD 4xxx, 5xxx и 6xxx с буквами HD, TeraScale, драйвер radeon. Если сомневаешься, смотри device ID через `lspci -nn` и строку OpenGL renderer в `glxinfo -B`: на TeraScale в имени карты стоит Turks/Cypress/Barts/BarTS.
 
 ### Почему после переключения radeon на amdgpu чёрный экран?
 
-Нет UEFI-модуля GOP в BIOS карты. Проверяй `dmesg | grep -i firmware` — amdgpu пишет про failed to load firmware. Лечится прошивкой либо возвратом к radeon, и для TeraScale второй путь всё равно единственный рабочий.
+Нет UEFI-модуля GOP в BIOS карты. Проверяй `dmesg | grep -i firmware`: amdgpu пишет про failed to load firmware. Лечится прошивкой либо возвратом к radeon, и для TeraScale второй путь всё равно единственный рабочий.
 
 ### Можно ли на TeraScale запустить Vulkan-игру?
 
-Аппаратно — нет. lavapipe из состава Mesa работает через процессор, и на игре ты получишь 1–5 кадров в секунду. Смысл в Vulkan-стеке на TeraScale есть только у редакторов и утилит, которым достаточно программного рендера.
+Аппаратно нет. lavapipe из состава Mesa работает через процессор, и на игре ты получишь 1-5 кадров в секунду. Смысл в Vulkan-стеке на TeraScale есть только у редакторов и утилит, которым достаточно программного рендера.
 
 ### В radeontop карта молчит, состояние не меняется
 
@@ -185,13 +185,13 @@ echo 0 | sudo tee /sys/class/drm/card0/device/power_dpm_state
 
 ### Стоит ли ставить amdgpu на HD 6000?
 
-Не стоит. Уровень OpenGL не изменится, Vulkan не появится, VA-API не появится, а риск получить нестабильную карту с перегревом вместо десктопа — артефакты. Radeon на 4000/5000/6000 в связке с Xorg и VDPAU — куда разумнее.
+Не стоит. Уровень OpenGL не изменится, Vulkan не появится, VA-API не появится, а риск получить нестабильную карту с перегревом вместо десктопа: артефакты. Radeon на 4000/5000/6000 в связке с Xorg и VDPAU, куда разумнее.
 
 ## Полезные ресурсы
 
-- [AMDGPU — ArchWiki](https://wiki.archlinux.org/title/AMDGPU) — таблица поддерживаемых чипов, параметры модуля, версии и GCN-специфика.
-- [Radeon — ArchWiki](https://wiki.archlinux.org/title/Radeon) — всё про драйвер radeon на TeraScale: sysfs, DPM, VDPAU, X11.
+- [AMDGPU (ArchWiki)](https://wiki.archlinux.org/title/AMDGPU): таблица поддерживаемых чипов, параметры модуля, версии и GCN-специфика.
+- [Radeon (ArchWiki)](https://wiki.archlinux.org/title/Radeon): всё про драйвер radeon на TeraScale: sysfs, DPM, VDPAU, X11.
 
 ## Заключение
 
-Старые Radeon под Linux не мертвы, но живут по разным законам. GCN1 и GCN2 дают почти всё, что нужно, на amdgpu: OpenGL 4.5, Vulkan, VA-API и нормальный Wayland, а dpm=0 и ppfeaturemask чинят самые частые болячки. TeraScale — это radeon, Xorg, OpenGL 3.3 и VDPAU: зато стабильно и холоднее, а Vulkan там не появится ни при каком раскладе. Для офиса, браузера с аппаратным видео и рабочего стола связка radeon + VDPAU закрывает задачу, а вот для игр даже на GCN1 пора менять карту.
+Старые Radeon под Linux не мертвы, но живут по разным законам. GCN1 и GCN2 дают почти всё, что нужно, на amdgpu: OpenGL 4.5, Vulkan, VA-API и нормальный Wayland, а dpm=0 и ppfeaturemask чинят самые частые болячки. TeraScale, это radeon, Xorg, OpenGL 3.3 и VDPAU: зато стабильно и холоднее, а Vulkan там не появится ни при каком раскладе. Для офиса, браузера с аппаратным видео и рабочего стола связка radeon + VDPAU закрывает задачу, а вот для игр даже на GCN1 пора менять карту.

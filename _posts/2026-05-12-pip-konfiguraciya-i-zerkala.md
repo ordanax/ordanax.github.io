@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pip конфигурация и зеркала в Linux
-description: "Pip — стандартный менеджер пакетов Python. Правильная конфигурация критически важна для скорости установки пакетов и безопасности."
+description: "Pip это стандартный менеджер пакетов Python. Правильная конфигурация критически важна для скорости установки пакетов и безопасности."
 date: 2026-05-12 06:00:00 +0300
 permalink: /pip-konfiguraciya-zerkala
 categories:
@@ -20,7 +20,7 @@ edit: true
 ---
 
 
-![Pip Configuration](/img/pip-config.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Pip — стандартный менеджер пакетов Python. Правильная конфигурация критически важна для скорости установки пакетов и безопасности.
+![Pip Configuration](/img/pip-config.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Pip это стандартный менеджер пакетов Python. Правильная конфигурация критически важна для скорости установки пакетов и безопасности.
 
 ## Проверка текущей конфигурации
 

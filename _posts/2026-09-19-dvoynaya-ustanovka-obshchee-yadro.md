@@ -191,7 +191,7 @@ mkinitcpio -P
 
 ### Что будет, если обновить ядро в одной системе при общем ядре?
 
-Вторая система получит новый vmlinuz, но initramfs пересоберётся под корень первой. При загрузке второй системы образ не найдёт её корень и уронит систему в emergency mode. Именно поэтому общее ядро это плохая идея.
+Вторая система получит новый vmlinuz, но initramfs пересоберётся под корень первой. При загрузке второй системы образ не найдёт её корень и уронит систему в emergency mode. Поэтому общее ядро это плохая идея.
 
 ### Можно ли оставить один GRUB для обеих систем?
 
@@ -199,8 +199,8 @@ mkinitcpio -P
 
 ## Полезные ресурсы
 
-- [Arch boot process — ArchWiki](https://wiki.archlinux.org/title/Arch_boot_process) — как устроена загрузка Arch от UEFI до initramfs.
-- [EFI system partition — ArchWiki](https://wiki.archlinux.org/title/EFI_system_partition) — требования к ESP и варианты монтирования.
+- [Arch boot process, ArchWiki](https://wiki.archlinux.org/title/Arch_boot_process): как устроена загрузка Arch от UEFI до initramfs.
+- [EFI system partition, ArchWiki](https://wiki.archlinux.org/title/EFI_system_partition): требования к ESP и варианты монтирования.
 
 ## Заключение
 

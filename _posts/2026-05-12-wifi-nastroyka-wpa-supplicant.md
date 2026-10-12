@@ -20,7 +20,7 @@ edit: true
 ---
 
 
-![WiFi Setup](/img/wifi-setup.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Настройка Wi-Fi через командную строку — важный навык для любого пользователя Linux. В Arch Linux это делается через wpa_supplicant и dhcpcd. Этот гайд поможет настроить Wi-Fi без графического интерфейса.
+![WiFi Setup](/img/wifi-setup.png){:style="float: left;margin-right: 25px;margin-top: 10px;"} Настройка Wi-Fi через командную строку это важный навык для любого пользователя Linux. В Arch Linux это делается через wpa_supplicant и dhcpcd. Этот гайд поможет настроить Wi-Fi без графического интерфейса.
 
 ## Установка необходимых пакетов
 
@@ -28,9 +28,9 @@ edit: true
 sudo pacman -S wpa_supplicant dhcpcd dialog
 ```
 
-- `wpa_supplicant` — для аутентификации в Wi-Fi сетях
-- `dhcpcd` — DHCP клиент для получения IP-адреса
-- `dialog` — для интерактивных меню (опционально)
+- `wpa_supplicant`: для аутентификации в Wi-Fi сетях
+- `dhcpcd`: DHCP клиент для получения IP-адреса
+- `dialog`: для интерактивных меню (опционально)
 
 ## Определение Wi-Fi адаптера
 
@@ -115,9 +115,9 @@ network={
 sudo wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
-- `-B` — запуск в фоновом режиме
-- `-i wlan0` — интерфейс
-- `-c` — конфигурационный файл
+- `-B`: запуск в фоновом режиме
+- `-i wlan0`: интерфейс
+- `-c`: конфигурационный файл
 
 Получите IP-адрес через dhcpcd:
 ```bash
@@ -260,7 +260,7 @@ nameserver 8.8.4.4
 
 ## Управление Wi-Fi через iwctl (iwd)
 
-Альтернатива wpa_supplicant — iwd (iwctl):
+Альтернатива wpa_supplicant это iwd (iwctl):
 
 ```bash
 sudo pacman -S iwd

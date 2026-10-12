@@ -194,7 +194,7 @@ pacman -U /var/cache/pacman/pkg/libfoo-5.0-1-x86_64.pkg.tar.zst
 yay -S --rebuild --answerclean All
 ```
 
-Если какой-то пакет не собирается, смотри ошибку: возможно, PKGBUILD отстал и нужна правка. Про типичные ошибки сборки читай в статье «[Сборка AUR падает: submodules и checksum](/sborka-aur-padaet-submodules-checksum)». А про пересборку всех пакетов разом — в статье «[Переустановка всех пакетов](/pereustanovka-vseh-paketov)».
+Если какой-то пакет не собирается, смотри ошибку: возможно, PKGBUILD отстал и нужна правка. Про типичные ошибки сборки читай в статье «[Сборка AUR падает: submodules и checksum](/sborka-aur-padaet-submodules-checksum)». А про пересборку всех пакетов разом в статье «[Переустановка всех пакетов](/pereustanovka-vseh-paketov)».
 
 ### Найди забытые бинарники через rebuild-detector
 
@@ -278,8 +278,8 @@ sudo pacman -Syu
 
 ## Полезные ресурсы
 
-- [Arch User Repository, ArchWiki](https://wiki.archlinux.org/title/Arch_User_Repository) — официальная документация по AUR.
-- [Downgrading packages, ArchWiki](https://wiki.archlinux.org/title/Downgrading_packages) — откат пакетов на старые версии.
+- [Arch User Repository, ArchWiki](https://wiki.archlinux.org/title/Arch_User_Repository): официальная документация по AUR.
+- [Downgrading packages, ArchWiki](https://wiki.archlinux.org/title/Downgrading_packages): откат пакетов на старые версии.
 
 ## Заключение
 

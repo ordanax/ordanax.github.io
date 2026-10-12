@@ -101,11 +101,11 @@ makepkg -si
 
 ### Типичные ошибки и как их чинить
 
-**`autoreconf: command not found`** — не установлены инструменты сборки. Проверьте, что `autoconf`, `automake`, `libtool` и `intltool` стоят. `pacman -S autoconf automake libtool intltool` решает.
+**`autoreconf: command not found`**: не установлены инструменты сборки. Проверьте, что `autoconf`, `automake`, `libtool` и `intltool` стоят. `pacman -S autoconf automake libtool intltool` решает.
 
-**`configure: error: Package requirements (gtk+-3.0) were not met`** — нет GTK3 или gtkdatabox. `sudo pacman -S gtk3 gtkdatabox`.
+**`configure: error: Package requirements (gtk+-3.0) were not met`**: нет GTK3 или gtkdatabox. `sudo pacman -S gtk3 gtkdatabox`.
 
-**`makepkg` ругается на конфликтующие файлы** — добавьте `--cleanbuild` для полной пересборки:
+**`makepkg` ругается на конфликтующие файлы**: добавьте `--cleanbuild` для полной пересборки:
 
 ```bash
 makepkg -sirc
@@ -161,16 +161,16 @@ source=("git+https://github.com/ordanax/klavaro-custom.git#branch=main")
 
 **Чем `makepkg -si` отличается от `yay -S`?** AUR-хелперы делают то же самое, но автоматически. Для личного PKGBUILD makepkg проще и не требует настройки хелпера.
 
-**Пакет конфликтует с `klavaro` из официального репозитория. Что делать?** Если у вас стоит `klavaro` из pacman, удалите его: `sudo pacman -R klavaro`. После этого `klavaro-custom` встанет без конфликтов.
+**Пакет конфликтует с `klavaro` из официального репозитория. Что делать?** Если у вас стоит `klavaro` из pacman, удалите его: `sudo pacman -R klavaro`. Затем `klavaro-custom` встанет без конфликтов.
 
 **Как проверить, что пакет установился правильно?** Запустите `klavaro` из терминала или через меню приложений. Проверьте версию: `pacman -Qi klavaro-custom`.
 
 ## Заключение
 
-PKGBUILD для личного форка Klavaro — это пять минут на написание и десять секунд на сборку. Вы получаете полноценный pacman-пакет, который ставится, обновляется и удаляется штатными средствами. Если вы уже собирали [Klavaro из исходников](/klavaro-fork-error-practice), то PKGBUILD лишь обернёт тот же процесс в стандартный формат Arch Linux.
+PKGBUILD для личного форка Klavaro: пять минут на написание и десять секунд на сборку. Вы получаете полноценный pacman-пакет, который ставится, обновляется и удаляется штатными средствами. Если вы уже собирали [Klavaro из исходников](/klavaro-fork-error-practice), то PKGBUILD лишь обернёт тот же процесс в стандартный формат Arch Linux.
 
 ## Полезные ресурсы
 
-- [PKGBUILD — ArchWiki](https://wiki.archlinux.org/title/PKGBUILD) — полная структура файла, все переменные и функции.
-- [Makepkg — ArchWiki](https://wiki.archlinux.org/title/Makepkg) — флаги, опции сборки, подсказки.
-- [GitHub — как работать с репозиториями](/github) — клонирование, форки, pull-реквесты.
+- [PKGBUILD в ArchWiki](https://wiki.archlinux.org/title/PKGBUILD): полная структура файла, все переменные и функции.
+- [Makepkg в ArchWiki](https://wiki.archlinux.org/title/Makepkg): флаги, опции сборки, подсказки.
+- [GitHub: как работать с репозиториями](/github): клонирование, форки, pull-реквесты.

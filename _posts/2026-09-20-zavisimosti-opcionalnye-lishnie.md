@@ -149,7 +149,7 @@ pacman -Qtdq
 pacman -D --asexplicit <пакет>
 ```
 
-После этого pacman перестанет считать его сиротой.
+Затем pacman перестанет считать его сиротой.
 
 ## Как удалить пакет вместе с зависимостями
 
@@ -245,7 +245,7 @@ pacman -S - < ~/packages.txt
 pacman -Fy
 ```
 
-Команда скачает базу файлов всех пакетов репозиториев. После этого поиск по файлу:
+Команда скачает базу файлов всех пакетов репозиториев. Затем поиск по файлу:
 
 ```bash
 pacman -F /usr/bin/какой-то-файл
@@ -291,8 +291,8 @@ pacman -Dk
 
 ## Полезные ресурсы
 
-- [Pacman (ArchWiki)](https://wiki.archlinux.org/title/Pacman) — основная документация по менеджеру пакетов.
-- [Pacman/Tips and tricks (ArchWiki)](https://wiki.archlinux.org/title/Pacman/Tips_and_tricks) — приёмы работы, включая удаление сирот.
+- [Pacman (ArchWiki)](https://wiki.archlinux.org/title/Pacman): основная документация по менеджеру пакетов.
+- [Pacman/Tips and tricks (ArchWiki)](https://wiki.archlinux.org/title/Pacman/Tips_and_tricks): приёмы работы, включая удаление сирот.
 
 ## Заключение
 

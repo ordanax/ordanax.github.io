@@ -45,7 +45,7 @@ echo 'precedence ::ffff:0:0/96  100' | sudo tee -a /etc/gai.conf
 getent ahosts aur.archlinux.org | head -3
 ```
 
-Первой строкой должен появиться IPv4-адрес, например `209.126.35.78`, а не IPv6. После этого yay обновляется штатно:
+Первой строкой должен появиться IPv4-адрес, например `209.126.35.78`, а не IPv6. Затем yay обновляется штатно:
 
 ```bash
 yay -Syu
@@ -107,5 +107,5 @@ EOF от yay при обновлении AUR вызван приоритетом
 
 ## Полезные ресурсы
 
-- [AUR helpers](https://wiki.archlinux.org/title/AUR_helpers) — ArchWiki: обзор AUR-хелперов
-- [getaddrinfo](https://wiki.archlinux.org/title/getaddrinfo) — ArchWiki: настройка резолвера
+- [AUR helpers](https://wiki.archlinux.org/title/AUR_helpers), ArchWiki: обзор AUR-хелперов
+- [getaddrinfo](https://wiki.archlinux.org/title/getaddrinfo), ArchWiki: настройка резолвера

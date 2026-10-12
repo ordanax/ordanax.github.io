@@ -188,7 +188,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-После этого пункт появится.
+Затем пункт появится.
 
 ### Что выбрать для ноутбука?
 

@@ -21,7 +21,7 @@ edit: true
 
 
 
-GRUB не видит LUKS2-корень или btrfs-подтом из-за нехватки модулей: в core image загрузчика нет cryptodisk, luks2, lvm и btrfs, а в параметрах ядра не указан корень. Включи `GRUB_ENABLE_CRYPTODISK=y` в `/etc/default/grub`, добавь модули в `grub-install`, пропиши `root=/dev/mapper/arch-root` и `rootflags=subvol=@`, перегенерируй `grub.cfg`. После этого загрузка заработает.
+GRUB не видит LUKS2-корень или btrfs-подтом из-за нехватки модулей: в core image загрузчика нет cryptodisk, luks2, lvm и btrfs, а в параметрах ядра не указан корень. Включи `GRUB_ENABLE_CRYPTODISK=y` в `/etc/default/grub`, добавь модули в `grub-install`, пропиши `root=/dev/mapper/arch-root` и `rootflags=subvol=@`, перегенерируй `grub.cfg`. Затем загрузка заработает.
 
 ## Почему GRUB не видит зашифрованный корень
 

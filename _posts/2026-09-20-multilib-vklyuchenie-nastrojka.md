@@ -221,8 +221,8 @@ Multilib содержит стабильные 32-битные пакеты, tes
 
 ## Полезные ресурсы
 
-- [Official repositories — ArchWiki](https://wiki.archlinux.org/title/Official_repositories) — описание всех официальных репозиториев, включая multilib.
-- [Wine — ArchWiki](https://wiki.archlinux.org/title/Wine) — установка и настройка Wine, в том числе 32-битного.
+- [Official repositories (ArchWiki)](https://wiki.archlinux.org/title/Official_repositories): описание всех официальных репозиториев, включая multilib.
+- [Wine (ArchWiki)](https://wiki.archlinux.org/title/Wine): установка и настройка Wine, в том числе 32-битного.
 
 ## Заключение
 

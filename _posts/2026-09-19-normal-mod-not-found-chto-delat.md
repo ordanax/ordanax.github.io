@@ -112,7 +112,7 @@ boot
 
 ```bash
 lsblk
-mount /dev/nvme0n1p2 /mnt          # корень, подставь свой раздел
+mount /dev/nvme0n1p2 /mnt          # корень: подставь свой раздел
 mount /dev/nvme0n1p1 /mnt/boot     # ESP, если /boot отдельный раздел
 arch-chroot /mnt
 ```
@@ -129,7 +129,7 @@ arch-chroot /mnt
 pacman -S grub --force
 ```
 
-Флаг `--force` перезапишет файлы, даже если pacman считает пакет уже установленным. После этого проверь, что модуль на месте:
+Флаг `--force` перезапишет файлы, даже если pacman считает пакет уже установленным. Затем проверь, что модуль на месте:
 
 ```bash
 ls /boot/grub/x86_64-efi/normal.mod
